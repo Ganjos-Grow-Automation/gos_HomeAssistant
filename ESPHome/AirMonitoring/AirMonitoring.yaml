@@ -1,0 +1,68 @@
+esphome:
+  name: airmonitoring-grow
+  friendly_name: AirMonitoring-Grow
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "mVZe3zUYEQbGcdX0k8zDWqWWBoMylTDSmI+JUcQ4aqg="
+
+ota:
+  password: "5061c4844b0ff33c415e3b18e52c937e"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Airmonitoring-Grow"
+    password: "3RGnyLbTn2bN"
+
+captive_portal:
+
+i2c:
+  sda: 21
+  scl: 22
+  scan: true
+  id: bus_a
+
+sensor:
+  - platform: am2315c 
+    address: 0x40
+    i2c_id: bus_a
+    temperature:
+      name: "Grow Temperature"
+      unit_of_measurement: "°C"
+      icon: "mdi:water-percent"
+      device_class: "temperature"
+      state_class: "measurement"
+      accuracy_decimals: 1
+      id: grow_temperature
+    humidity:
+      name: "Grow Humidity"
+      state_class: measurement
+      id: grow_humidity
+    update_interval: 30s
+  
+  - platform: ens160
+    eco2:
+      name: "Grow eCO2"
+    tvoc:
+      name: "Grow Total Volatile Organic Compounds"
+    aqi:
+      name: "Grow Air Quality Index"
+    update_interval: 60s
+    i2c_id: bus_a
+    address: 0x53
+    compensation:
+      temperature: grow_temperature
+      humidity: grow_humidity
