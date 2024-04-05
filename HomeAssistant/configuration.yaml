@@ -5,56 +5,14 @@ default_config:
 frontend:
   themes: !include_dir_merge_named themes
 
-automation: !include automations.yaml
+homeassistant: !include homeassistant.yaml
+automation: !include_dir_list automations/
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
-influxdb:
-  username: gbinfluxuser
-  password: growbot
-  tags:
-    source: HA
-  tags_attributes:
-    - friendly_name
-  default_measurement: state
-
-sensor:
-  - platform: template
-    sensors:
-      vpd:
-        friendly_name: "VPD_Grow"
-        value_template: >
-          {% set temp = states('sensor.airmonitoring_grow_grow_temperature') | float %}
-          {% set humidity = states('sensor.airmonitoring_grow_grow_humidity') | float %}
-          {% if temp is defined and humidity is defined %}
-            {% set svp = 6.1078 * 10 ** (7.5 * temp / (temp + 237.3)) %}
-            {% set vp = svp * (humidity / 100.0) %}
-            {% set vpd = svp - vp %}
-            {{ vpd | round(2) }}
-          {% else %}
-            N/A
-          {% endif %}
-        unit_of_measurement: "hPa"
-
-  - platform: template
-    sensors:
-      days_since_grow_start:
-        friendly_name: "Days_Since_Grow_Start"
-        icon_template: mdi:calendar
-        value_template: "{{ ((as_timestamp(now()) - (states.input_datetime.plant1_startdate.attributes.timestamp)) | int /60/1440) | round(0) }}"
-      current_week_of_grow:
-        friendly_name: "Current_Week_of_Grow"
-        icon_template: mdi:calendar
-        value_template: "{{ ((as_timestamp(now()) - (states.input_datetime.plant1_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0) }}"
-      days_until_flower: 
-        friendly_name: "days_until_flower"
-        icon_template: mdi:calendar
-        value_template: "{{ ((states.input_datetime.plant1_startdate.attributes.timestamp) + (14) - (as_timestamp(now())) | int /60/1440//7 +1)  | round(0) }}"
-      days_until_drying:
-        friendly_name: "days_until_drying"
-        icon_template: mdi:calendar
-        value_template: "{{ ((states.input_datetime.plant1_startdate.attributes.timestamp) + (84) - (as_timestamp(now())) | int /60/1440//7 +1)  | round(0) }}"
-      days_until_comsumption:
-        friendly_name: "days_until_comsumption"
-        icon_template: mdi:calendar
-        value_template: "{{ ((states.input_datetime.plant1_startdate.attributes.timestamp) + (84) - (as_timestamp(now()) + 14 ) | int /60/1440//7 +1)  | round(0) }}"
+influxdb: !include influxdb.yaml
+input_number: !include input_number.yaml
+input_text: !include input_text.yaml
+input_select: !include input_select.yaml
+sensor: !include sensor.yaml
+schedule: !include schedule.yaml
