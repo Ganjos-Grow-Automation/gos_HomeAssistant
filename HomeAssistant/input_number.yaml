@@ -1,0 +1,105 @@
+# target values
+## humidity
+target_humidity_seed:
+  name: target_humidity_seed
+  initial: 60
+  min: 40
+  max: 80
+  step: 5
+  unit_of_measurement: \%
+  mode: box
+  icon: mdi:water-percent
+target_humidity_veg:
+  name: target_humidity_veg
+  initial: 60
+  min: 40
+  max: 80
+  step: 5
+  unit_of_measurement: \%
+  mode: box
+  icon: mdi:water-percent
+target_humidity_flower:
+  name: target_humidity_flower
+  initial: 60
+  min: 40
+  max: 80
+  step: 5
+  unit_of_measurement: \%
+  mode: box
+  icon: mdi:water-percent
+target_humidity_dry:
+  name: target_humidity_dry
+  initial: 60
+  min: 40
+  max: 80
+  step: 5
+  unit_of_measurement: \%
+  mode: box
+  icon: mdi:water-percent
+
+##temperature
+target_temperature_seed:
+  name: target_temperature_seed
+  initial: 20
+  min: 20
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_veg:
+  name: target_temperature_ved
+  initial: 20
+  min: 20
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_flower:
+  name: target_temperature_flower
+  initial: 20
+  min: 20
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_dry:
+  name: target_temperature_dry
+  initial: 20
+  min: 20
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+
+# dates of plant number 1
+plant1_daysofseed:
+  name: plant1_daysofseed
+  initial: 3
+  min: 1
+  max: 7
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:seed
+plant1_daysofveg:
+  name: plant1_daysofveg
+  initial: 14
+  min: 7
+  max: 28
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:sprout
+plant1_daysofflower:
+  name: plant1_daysofflower
+  initial: 70
+  min: 64
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:flower
