@@ -1,0 +1,7 @@
+host: a0d7b954-influxdb
+port: 8086
+database: growbot
+username: growbotuser
+password: password
+max_retries: 3
+default_measurement: state
