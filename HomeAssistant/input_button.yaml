@@ -1,0 +1,3 @@
+backup_manual:
+  name: backup_manual
+  icon: mdi:cloud-upload
