@@ -1,0 +1,5 @@
+name: "GrowBot Open Source"
+latitude: !secret latitude
+longitude: !secret longitude
+unit_system: metric
+time_zone: "Europe/Berlin"
