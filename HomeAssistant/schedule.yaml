@@ -1,0 +1,89 @@
+# light schedule
+
+lightschedule_veg:
+  name: lightplan_veg
+  monday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  tuesday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  wednesday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  thursday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  friday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  saturday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  sunday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+
+lightschedule_flower:
+  name: lightplan_flower
+  monday:
+    - from: "00:00:00"
+      to: "12:00:00"
+  tuesday:
+    - from: "00:00:00"
+      to: "12:00:00"
+  wednesday:
+    - from: "00:00:00"
+      to: "12:00:00"
+  thursday:
+    - from: "00:00:00"
+      to: "12:00:00"
+  friday:
+    - from: "00:00:00"
+      to: "12:00:00"
+  saturday:
+    - from: "00:00:00"
+      to: "12:00:00"
+  sunday:
+    - from: "00:00:00"
+      to: "12:00:00"
+
+# backup schedule
+
+backup_schedule:
+  name: backup_schedule
+  monday:
+    - from: "00:00:00"
+      to: "00:00:01"
+  tuesday:
+    - from: "00:00:00"
+      to: "00:00:01"
+  wednesday:
+    - from: "00:00:00"
+      to: "00:00:01"
+  thursday:
+    - from: "00:00:00"
+      to: "00:00:01"
+  friday:
+    - from: "00:00:00"
+      to: "00:00:01"
+  saturday:
+    - from: "00:00:00"
+      to: "00:00:01"
+  sunday:
+    - from: "00:00:00"
+      to: "00:00:01"
