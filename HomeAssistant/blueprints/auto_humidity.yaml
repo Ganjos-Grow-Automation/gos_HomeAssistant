@@ -58,13 +58,13 @@ blueprint:
       selector:
         entity:
           include_entities:
-            - switch.steckdose3_schalter
+            - script.humidifier_control
     target_script_dehumidifier:
       name: target_script_dehumidifier
       selector:
         entity:
           include_entities:
-            - switch.airflowfan_schalter
+            - script.airflowfan_control
 
 mode: single
 
