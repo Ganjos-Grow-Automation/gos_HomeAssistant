@@ -1,0 +1,123 @@
+blueprint:
+  name: GrowBot automatic temperature control
+  description: ---- DESCRIPTION HERE -----
+  domain: automation
+  author: GrowBot Open Source
+  input:
+    temperature_sensor:
+      name: temperature_sensor
+      selector:
+        entity:
+          include_entities:
+            - sensor.airmonitoring_grow_temperature
+    temperature_min_value:
+      name: temperature_min_value
+      selector:
+        entity:
+          include_entities:
+            - sensor.temperature_min_seed
+            - sensor.temperature_min_veg
+            - sensor.temperature_min_flower
+            - sensor.temperature_min_dry
+    temperature_target_value:
+      name: temperature_target_value
+      selector:
+        entity:
+          include_entities:
+            - input_number.target_temperature_seed
+            - input_number.target_temperature_veg
+            - input_number.target_temperature_flower
+            - input_number.target_temperature_dry
+    temperature_max_value:
+      name: temperature_max_value
+      selector:
+        entity:
+          include_entities:
+            - sensor.temperature_max_seed
+            - sensor.temperature_max_veg
+            - sensor.temperature_max_flower
+            - sensor.temperature_max_dry
+    grow_stage_inputselector:
+      name: grow_stage_inputselector
+      selector:
+        entity:
+          include_entities:
+            - input_select.plant1_stage
+    grow_stage_value:
+      name: grow_stage_value
+      selector:
+        select:
+          options:
+            - Seed
+            - Veg
+            - Flower
+            - Dry
+          mode: dropdown
+    target_script_heater:
+      name: target_script_humidifier
+      selector:
+        entity:
+          include_entities:
+            - switch.steckdose3_schalter
+    target_script_ac:
+      name: target_script_dehumidifier
+      selector:
+        entity:
+          include_entities:
+            - switch.airflowfan_schalter
+
+mode: single
+
+trigger:
+  - platform: numeric_state
+    entity_id: !input temperature_sensor
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+    above: !input temperature_max_value
+    id: "high"
+  - platform: numeric_state
+    entity_id: !input temperature_sensor
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+    below: !input temperature_min_value
+    id: "low"
+condition:
+  - condition: state
+    entity_id: !input grow_stage_inputselector
+    state: !input grow_stage_value
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+action:
+  - if:
+      - condition: trigger
+        id:
+          - "low"
+    then:
+      - service: !input target_script_heater
+        data:
+          state: true
+  - if:
+      - condition: trigger
+        id:
+          - "high"
+    then:
+      - service: !input target_script_ac
+        data:
+          state: true
+  - if:
+      - condition: trigger
+        id:
+          - "good"
+    then:
+      - service: !input target_script_ac
+        data:
+          state: false
+      - service: !input target_script_heater
+        data:
+          state: false

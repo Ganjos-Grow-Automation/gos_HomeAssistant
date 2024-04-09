@@ -1,0 +1,73 @@
+blueprint:
+  name: GrowBot schedule controled light
+  description: --- Description has to be inserted ---
+  domain: automation
+  author: GrowBot Open Source
+  input:
+    light_schedule:
+      name: light_schedule
+      selector:
+        entity:
+          include_entities:
+            - schedule.lightschedule_flower
+            - schedule.lightschedule_seed
+            - schedule.lightschedule_veg
+    grow_stage_inputselector:
+      name: grow_stage_inputselector
+      selector:
+        entity:
+          include_entities:
+            - input_select.plant1_stage
+    grow_stage_value:
+      name: grow_stage_value
+      selector:
+        select:
+          options:
+            - Seed
+            - Veg
+            - Flower
+            - Dry
+          mode: dropdown
+    target_script:
+      name: target_script
+      selector:
+        entity:
+          include_entities:
+            - script.light_control
+
+mode: single
+
+trigger:
+  - platform: state
+    entity_id: !input light_schedule
+    id: "on"
+    from: "off"
+    to: "on"
+  - platform: state
+    entity_id: !input light_schedule
+    id: "off"
+    from: "on"
+    to: "off"
+condition:
+  - condition: state
+    entity_id: !input grow_stage_inputselector
+    state: !input grow_stage_value
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+action:
+  - if:
+      - condition: trigger
+        id:
+          - "on"
+    then:
+      - service: !input target_script
+        metadata: {}
+        data:
+          state: true
+    else:
+      - service: !input target_script
+        metadata: {}
+        data:
+          state: false
