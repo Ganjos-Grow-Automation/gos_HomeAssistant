@@ -82,7 +82,7 @@ blueprint:
         entity:
           include_entities:
           # Add your humidifier script entities here
-            - script.humidifier_control_on
+            - script.device_control_humidifier_on
     target_script_humidifier_off:
       name: Luftbefeuchter Skript zum Ausschalten
       description: Das Skript, das den Luftbefeuchter steuert
@@ -90,7 +90,7 @@ blueprint:
         entity:
           include_entities:
           # Add your humidifier script entities here
-            - script.humidifier_control_off
+            - script.device_control_humidifier_off
     target_script_dehumidifier_on:
       name: Luftentfeuchter Skript zum Einschalten
       description: Das Skript, das den Luftentfeuchter steuert
@@ -98,7 +98,7 @@ blueprint:
         entity:
           include_entities:
           # Add your dehumidifier script entities here
-            - script.device_control_humidifier_on
+            - script.device_control_airflowfan_on
     target_script_dehumidifier_off:
       name: Luftentfeuchter Skript zum Ausschalten
       description: Das Skript, das den Luftentfeuchter steuert
@@ -106,7 +106,7 @@ blueprint:
         entity:
           include_entities:
           # Add your dehumidifier script entities here
-            - script.device_control_humidifier_off
+            - script.device_control_airflowfan_off
 
 
 mode: single
