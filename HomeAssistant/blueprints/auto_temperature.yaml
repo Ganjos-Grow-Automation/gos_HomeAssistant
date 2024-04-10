@@ -1,123 +1,178 @@
 blueprint:
-  name: GrowBot automatic temperature control
-  description: ---- DESCRIPTION HERE -----
+  name: GrowBot automatic temperature control 
+  description: >
+    Die Datei auto_temperature.yaml ist Teil des GrowBot Open Source-Projekts und dient zur automatischen Steuerung der Temperatur in Ihrer Grow-Umgebung.   
   domain: automation
   author: GrowBot Open Source
   input:
     temperature_sensor:
-      name: temperature_sensor
+      name: Temperatursensor
+      description: Der Sensor für die aktuelle Temperatur
       selector:
         entity:
           include_entities:
+          # Add your temperature sensor entities here
             - sensor.airmonitoring_grow_temperature
-    temperature_min_value:
-      name: temperature_min_value
+    humidity_trigger_low_toFix:
+      name: Min-Temperatur Trigger
+      description: Der Trigger für die minimale Luftfeuchtigkeit
       selector:
         entity:
+          domain: binary_sensor
           include_entities:
-            - sensor.temperature_min_seed
-            - sensor.temperature_min_veg
-            - sensor.temperature_min_flower
-            - sensor.temperature_min_dry
-    temperature_target_value:
-      name: temperature_target_value
+          # Add your humidity min trigger entities here
+            - binary_sensor.humidity_low_toFix_seed
+            - binary_sensor.humidity_low_toFix_veg
+            - binary_sensor.humidity_low_toFix_flower
+            - binary_sensor.humidity_low_toFix_dry 
+    humidity_trigger_low_fixed:
+      name: Min-Temperatur Trigger Fixiert
+      description: Der Trigger für die minimale Luftfeuchtigkeit (fixiert)
       selector:
         entity:
+          domain: binary_sensor
           include_entities:
-            - input_number.target_temperature_seed
-            - input_number.target_temperature_veg
-            - input_number.target_temperature_flower
-            - input_number.target_temperature_dry
-    temperature_max_value:
-      name: temperature_max_value
+          # Add your humidity min trigger entities here
+            - binary_sensor.humidity_low_fixed_seed
+            - binary_sensor.humidity_low_fixed_veg
+            - binary_sensor.humidity_low_fixed_flower
+            - binary_sensor.humidity_low_fixed_dry 
+    humidity_trigger_high_toFix:
+      name: Max-Temperatur Trigger
+      description: Der Trigger für die maximale Luftfeuchtigkeit
       selector:
         entity:
+          domain: binary_sensor
           include_entities:
-            - sensor.temperature_max_seed
-            - sensor.temperature_max_veg
-            - sensor.temperature_max_flower
-            - sensor.temperature_max_dry
+          # Add your humidity max trigger entities here
+            - binary_sensor.humidity_high_toFix_seed
+            - binary_sensor.humidity_high_toFix_veg
+            - binary_sensor.humidity_high_toFix_flower
+            - binary_sensor.humidity_high_toFix_dry 
+    humidity_trigger_high_fixed:
+      name: Max-Temperatur Trigger fixiert
+      description: Der Trigger für die maximale Luftfeuchtigkeit (fixiert)
+      selector:
+        entity:
+          domain: binary_sensor
+          include_entities:
+          # Add your humidity max trigger entities here
+            - binary_sensor.humidity_high_fixed_seed
+            - binary_sensor.humidity_high_fixed_veg
+            - binary_sensor.humidity_high_fixed_flower
+            - binary_sensor.humidity_high_fixed_dry 
     grow_stage_inputselector:
-      name: grow_stage_inputselector
+      name: Pflanzenstadiums Auswahl
+      description: Der Input-Selektor für das Wachstumsstadium
       selector:
         entity:
           include_entities:
+          # Add your grow stage input selector entities here
             - input_select.plant1_stage
     grow_stage_value:
-      name: grow_stage_value
+      name: Pflanzenstadiums Wert
+      description: Der Wert für das Wachstumsstadium
       selector:
         select:
           options:
+          # Add your grow stage values here
             - Seed
             - Veg
             - Flower
             - Dry
           mode: dropdown
-    target_script_heater:
-      name: target_script_humidifier
+    target_script_humidifier_on:
+      name: Luftbefeuchter Skript zum Einschalten
+      description: Das Skript, das den Luftbefeuchter steuert
       selector:
         entity:
           include_entities:
-            - script.light_control
-    target_script_ac:
-      name: target_script_dehumidifier
+          # Add your humidifier script entities here
+            - script.device_control_humidifier_on
+    target_script_humidifier_off:
+      name: Luftbefeuchter Skript zum Ausschalten
+      description: Das Skript, das den Luftbefeuchter steuert
       selector:
         entity:
           include_entities:
-            - script.airflowfan_control
+          # Add your humidifier script entities here
+            - script.device_control_humidifier_off
+    target_script_dehumidifier_on:
+      name: Luftentfeuchter Skript zum Einschalten
+      description: Das Skript, das den Luftentfeuchter steuert
+      selector:
+        entity:
+          include_entities:
+          # Add your dehumidifier script entities here
+            - script.device_control_airflowfan_on
+    target_script_dehumidifier_off:
+      name: Luftentfeuchter Skript zum Ausschalten
+      description: Das Skript, das den Luftentfeuchter steuert
+      selector:
+        entity:
+          include_entities:
+          # Add your dehumidifier script entities here
+            - script.device_control_airflowfan_off
+
 
 mode: single
 
 trigger:
-  - platform: numeric_state
-    entity_id: !input temperature_sensor
-    for:
-      hours: 0
-      minutes: 2
-      seconds: 0
-    above: !input temperature_max_value
-    id: "high"
-  - platform: numeric_state
-    entity_id: !input temperature_sensor
-    for:
-      hours: 0
-      minutes: 2
-      seconds: 0
-    below: !input temperature_min_value
-    id: "low"
+# Wenn der Zustand von humidity_trigger_low_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+  - platform: state
+    entity_id: !input humidity_trigger_low_toFix
+    from: "off"
+    to: "on"
+    id: "low_toFix"
+# Wenn der Zustand von humidity_trigger_low_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+
+  - platform: state
+    entity_id: !input humidity_trigger_low_fixed
+    from: "off"
+    to: "on"
+    id: "low_fixed"
+# Wenn der Zustand von humidity_trigger_high_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+
+  - platform: state
+    entity_id: !input humidity_trigger_high_toFix
+    from: "off"
+    to: "on"
+    id: "high_toFix"
+# Wenn der Zustand von humidity_trigger_high_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+  - platform: state
+    entity_id: !input humidity_trigger_high_fixed
+    from: "off"
+    to: "on"
+    id: "high_fixed"
+
 condition:
+  # Die Automatisierung wird nur ausgeführt, wenn der Zustand von grow_stage_inputselector einen bestimmten Wert hat
   - condition: state
     entity_id: !input grow_stage_inputselector
     state: !input grow_stage_value
-    for:
-      hours: 0
-      minutes: 2
-      seconds: 0
+
 action:
   - if:
       - condition: trigger
         id:
-          - "low"
+          - "low_toFix"
     then:
-      - service: !input target_script_heater
-        data:
-          state: true
+      - service: !input target_script_humidifier_on
+  - if:
+      - condition: trigger
+        id:
+          - "low_fixed"
+    then:
+      - service: !input target_script_humidifier_off
   - if:
       - condition: trigger
         id:
           - "high"
     then:
-      - service: !input target_script_ac
-        data:
-          state: true
+      - service: !input target_script_dehumidifier_on
   - if:
       - condition: trigger
         id:
-          - "good"
+          - "high_fixed"
     then:
-      - service: !input target_script_ac
-        data:
-          state: false
-      - service: !input target_script_heater
-        data:
-          state: false
+      - service: !input target_script_dehumidifier_off
