@@ -22,37 +22,37 @@ blueprint:
       description: Der Trigger für die minimale Luftfeuchtigkeit
       selector:
         entity:
-          domain: sensor
+          domain: binary_sensor
           include_entities:
           # Add your humidity min trigger entities here
-            - sensor.humidity_low_seed
-            - sensor.humidity_low_veg
-            - sensor.humidity_low_flower
-            - sensor.humidity_low_dry 
+            - binary_sensor.humidity_low_seed
+            - binary_sensor.humidity_low_veg
+            - binary_sensor.humidity_low_flower
+            - binary_sensor.humidity_low_dry 
     humidity_trigger_target:
       name: Ziel-Temperatur Trigger
       description: Der Trigger für die Ziel-Luftfeuchtigkeit
       selector:
         entity:
-          domain: sensor     
+          domain: binary_sensor     
           include_entities:
         # Add your humidity target trigger entities here
-            - sensor.humidity_good_seed
-            - sensor.humidity_good_veg
-            - sensor.humidity_good_flower
-            - sensor.humidity_good_dry 
+            - binary_sensor.humidity_good_seed
+            - binary_sensor.humidity_good_veg
+            - binary_sensor.humidity_good_flower
+            - binary_sensor.humidity_good_dry 
     humidity_trigger_high:
       name: Max-Temperatur Trigger
       description: Der Trigger für die maximale Luftfeuchtigkeit
       selector:
         entity:
-          domain: sensor
+          domain: binary_sensor
           include_entities:
           # Add your humidity max trigger entities here
-            - sensor.humidity_high_seed
-            - sensor.humidity_high_veg
-            - sensor.humidity_high_flower
-            - sensor.humidity_high_dry 
+            - binary_sensor.humidity_high_seed
+            - binary_sensor.humidity_high_veg
+            - binary_sensor.humidity_high_flower
+            - binary_sensor.humidity_high_dry 
     grow_stage_inputselector:
       name: Pflanzenstadiums Auswahl
       description: Der Input-Selektor für das Wachstumsstadium
@@ -95,15 +95,17 @@ mode: single
 trigger:
   - platform: state
     entity_id: !input humidity_trigger_high
-    to: "True"
+    from: "off"
+    to: "on"
     id: "high"
   - platform: state
     entity_id: !input humidity_trigger_low
-    to: "True"
-    id: "low"
+    from: "off"
+    to: "on"
   - platform: state
     entity_id: !input humidity_trigger_target
-    to: "True"
+    from: "off"
+    to: "on"
     id: "good"
 
 condition:
