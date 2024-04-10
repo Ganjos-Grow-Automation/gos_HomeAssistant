@@ -3,7 +3,7 @@ blueprint:
   description: >
     Die Datei auto_humidity.yaml ist Teil des GrowBot Open Source-Projekts und dient zur automatischen Steuerung der Luftfeuchtigkeit in Ihrer Grow-Umgebung. Sie enthält ein Blueprint für eine Home Assistant-Automation, die Sensoren für die aktuelle Luftfeuchtigkeit, minimale, ziel- und maximale Luftfeuchtigkeitswerte sowie den aktuellen Wachstumsstadium verwendet, um die Luftfeuchtigkeit optimal zu steuern.
     
-    Sie können die Datei auto_humidity.yaml auf GitHub unter folgendem Link einsehen und herunterladen: GitHub Link
+    Sie können die Datei auto_humidity.yaml auf GitHub einsehen und herunterladen.
     
     Das GrowBot Open Source-Projekt ist ein gemeinnütziges Projekt, das sich auf die Bereitstellung von Open-Source-Software für die Automatisierung von Pflanzenwachstumsprozessen konzentriert. Wenn Sie das Projekt unterstützen möchten, können Sie eine finanzielle Spende leisten. Ihre Unterstützung hilft dem Projekt, weiter zu wachsen und den Quellcode kostenlos zur Verfügung zu stellen. Jede Spende, egal wie klein, ist sehr geschätzt und hilft uns, unsere Mission fortzusetzen. Vielen Dank für Ihre Unterstützung!
   domain: automation
@@ -95,7 +95,7 @@ mode: single
 trigger:
   - platform: state
     entity_id: !input humidity_trigger_high
-    to: "true"
+    to: "True"
     for:
       hours: 0
       minutes: 1
@@ -103,7 +103,7 @@ trigger:
     id: "high"
   - platform: state
     entity_id: !input humidity_trigger_low
-    to: "true"
+    to: "True"
     for:
       hours: 0
       minutes: 1
@@ -111,7 +111,7 @@ trigger:
     id: "low"
   - platform: state
     entity_id: !input humidity_trigger_target
-    to: "true"
+    to: "True"
     for:
       hours: 0
       minutes: 1
