@@ -10,7 +10,8 @@ blueprint:
   author: GrowBot Open Source
   input:
     humidity_sensor:
-      name: humidity_sensor 
+      name: Feuchtigkeitssensor
+      description: Der Sensor für die aktuelle Luftfeuchtigkeit
       selector:
         entity:
           include_entities:
@@ -18,6 +19,7 @@ blueprint:
             - sensor.airmonitoring_grow_humidity
     humidity_trigger_low:
       name: Min-Temperatur Trigger
+      description: Der Trigger für die minimale Luftfeuchtigkeit
       selector:
         entity:
           domain: sensor
@@ -29,6 +31,7 @@ blueprint:
             - sensor.humidity_low_dry 
     humidity_trigger_target:
       name: Ziel-Temperatur Trigger
+      description: Der Trigger für die Ziel-Luftfeuchtigkeit
       selector:
         entity:
           domain: sensor     
@@ -40,6 +43,7 @@ blueprint:
             - sensor.humidity_good_dry 
     humidity_trigger_high:
       name: Max-Temperatur Trigger
+      description: Der Trigger für die maximale Luftfeuchtigkeit
       selector:
         entity:
           domain: sensor
@@ -50,14 +54,16 @@ blueprint:
             - sensor.humidity_high_flower
             - sensor.humidity_high_dry 
     grow_stage_inputselector:
-      name: grow_stage_inputselector
+      name: Pflanzenstadiums Auswahl
+      description: Der Input-Selektor für das Wachstumsstadium
       selector:
         entity:
           include_entities:
           # Add your grow stage input selector entities here
             - input_select.plant1_stage
     grow_stage_value:
-      name: grow_stage_value
+      name: Pflanzenstadiums Wert
+      description: Der Wert für das Wachstumsstadium
       selector:
         select:
           options:
@@ -68,14 +74,16 @@ blueprint:
             - Dry
           mode: dropdown
     target_script_humidifier:
-      name: target_script_humidifier
+      name: Luftbefeuchter Skript
+      description: Das Skript, das den Luftbefeuchter steuert
       selector:
         entity:
           include_entities:
           # Add your humidifier script entities here
             - script.humidifier_control
     target_script_dehumidifier:
-      name: target_script_dehumidifier
+      name: Luftentfeuchter Skript
+      description: Das Skript, das den Luftentfeuchter steuert
       selector:
         entity:
           include_entities:
