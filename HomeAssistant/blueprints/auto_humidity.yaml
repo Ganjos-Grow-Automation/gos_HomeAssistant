@@ -112,10 +112,6 @@ trigger:
   - platform: state
     entity_id: !input humidity_trigger_target
     to: "True"
-    for:
-      hours: 0
-      minutes: 1
-      seconds: 0
     id: "good"
 
 condition:
