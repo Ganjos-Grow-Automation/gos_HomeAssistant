@@ -1,69 +1,82 @@
 blueprint:
-  name: GrowBot automatic humidity control
-  description: ---- DESCRIPTION HERE -----
+  name: GrowBot automatic humidity control 
+  description: >
+    Die Datei auto_humidity.yaml ist Teil des GrowBot Open Source-Projekts und dient zur automatischen Steuerung der Luftfeuchtigkeit in Ihrer Grow-Umgebung. Sie enthält ein Blueprint für eine Home Assistant-Automation, die Sensoren für die aktuelle Luftfeuchtigkeit, minimale, ziel- und maximale Luftfeuchtigkeitswerte sowie den aktuellen Wachstumsstadium verwendet, um die Luftfeuchtigkeit optimal zu steuern.
+    
+    Sie können die Datei auto_humidity.yaml auf GitHub unter folgendem Link einsehen und herunterladen: GitHub Link
+    
+    Das GrowBot Open Source-Projekt ist ein gemeinnütziges Projekt, das sich auf die Bereitstellung von Open-Source-Software für die Automatisierung von Pflanzenwachstumsprozessen konzentriert. Wenn Sie das Projekt unterstützen möchten, können Sie eine finanzielle Spende leisten. Ihre Unterstützung hilft dem Projekt, weiter zu wachsen und den Quellcode kostenlos zur Verfügung zu stellen. Jede Spende, egal wie klein, ist sehr geschätzt und hilft uns, unsere Mission fortzusetzen. Vielen Dank für Ihre Unterstützung!
   domain: automation
   author: GrowBot Open Source
   input:
     humidity_sensor:
-      name: Feuchtigkeitssensor
+      name: humidity_sensor 
       selector:
         entity:
           include_entities:
+          # Add your humidity sensor entities here
             - sensor.airmonitoring_grow_humidity
     humidity_min_trigger:
-      name: Min-Temperatur Trigger
+      name: humidity_min_trigger
       selector:
         entity:
           include_entities:
+          # Add your humidity min trigger entities here
             - sensor.humidity_low_seed
             - sensor.humidity_low_veg
             - sensor.humidity_low_flower
             - sensor.humidity_low_dry 
     humidity_target_trigger:
-      name: Ziel Temperatur Trigger
+      name: humidity_target_trigger
       selector:
         entity:
           include_entities:
+          # Add your humidity target trigger entities here
             - sensor.humidity_good_seed
             - sensor.humidity_good_veg
             - sensor.humidity_good_flower
             - sensor.humidity_good_dry 
     humidity_max_trigger:
-      name: Max-Temperatur Trigger
+      name: humidity_max_trigger
       selector:
         entity:
           include_entities:
+          # Add your humidity max trigger entities here
             - sensor.humidity_high_seed
             - sensor.humidity_high_veg
             - sensor.humidity_high_flower
             - sensor.humidity_high_dry 
     grow_stage_inputselector:
-      name: Pflanzenstadium Auswahl
+      name: grow_stage_inputselector
       selector:
         entity:
           include_entities:
+          # Add your grow stage input selector entities here
             - input_select.plant1_stage
     grow_stage_value:
-      name: Pflanzenstadium
+      name: grow_stage_value
       selector:
         select:
           options:
+          # Add your grow stage values here
             - Seed
             - Veg
             - Flower
             - Dry
           mode: dropdown
     target_script_humidifier:
-      name: Luftbefeuchter
+      name: target_script_humidifier
       selector:
         entity:
           include_entities:
+          # Add your humidifier script entities here
             - script.humidifier_control
     target_script_dehumidifier:
-      name: Luftentfeuchter
+      name: target_script_dehumidifier
       selector:
         entity:
           include_entities:
+          # Add your dehumidifier script entities here
             - script.airflowfan_control
 
 mode: single
