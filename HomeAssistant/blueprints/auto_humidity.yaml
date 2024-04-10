@@ -1,7 +1,7 @@
 blueprint:
-  name: GrowBot automatic temperature control 
+  name: GrowBot automatic humidity control 
   description: >
-    Die Datei auto_temperature.yaml ist Teil des GrowBot Open Source-Projekts und dient zur automatischen Steuerung der Temperatur in Ihrer Grow-Umgebung.   
+    Die Datei auto_humidity.yaml ist Teil des GrowBot Open Source-Projekts und dient zur automatischen Steuerung der Temperatur in Ihrer Grow-Umgebung.   
   domain: automation
   author: GrowBot Open Source
   input:
