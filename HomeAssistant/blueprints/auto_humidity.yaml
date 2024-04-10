@@ -114,10 +114,6 @@ condition:
   - condition: state
     entity_id: !input grow_stage_inputselector
     state: !input grow_stage_value
-    for:
-      hours: 0
-      minutes: 2
-      seconds: 0
 action:
   - if:
       - condition: trigger
