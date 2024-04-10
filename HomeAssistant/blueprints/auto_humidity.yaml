@@ -13,7 +13,7 @@ blueprint:
           include_entities:
           # Add your humidity sensor entities here
             - sensor.airmonitoring_grow_humidity
-    humidity_trigger_low_toFix:
+    humidity_trigger_low_adjustment:
       name: Min-Luftfeuchtigkeits Trigger
       description: Der Trigger für die minimale Luftfeuchtigkeit
       selector:
@@ -21,10 +21,10 @@ blueprint:
           domain: binary_sensor
           include_entities:
           # Add your humidity min trigger entities here
-            - binary_sensor.humidity_low_tofix_seed
-            - binary_sensor.humidity_low_tofix_veg
-            - binary_sensor.humidity_low_tofix_flower
-            - binary_sensor.humidity_low_tofix_dry 
+            - binary_sensor.humidity_low_adjustment_seed
+            - binary_sensor.humidity_low_adjustment_veg
+            - binary_sensor.humidity_low_adjustment_flower
+            - binary_sensor.humidity_low_adjustment_dry 
     humidity_trigger_low_fixed:
       name: Min-Luftfeuchtigkeits Trigger Fixiert
       description: Der Trigger für die minimale Luftfeuchtigkeit (fixiert)
@@ -37,7 +37,7 @@ blueprint:
             - binary_sensor.humidity_low_fixed_veg
             - binary_sensor.humidity_low_fixed_flower
             - binary_sensor.humidity_low_fixed_dry 
-    humidity_trigger_high_toFix:
+    humidity_trigger_high_adjustment:
       name: Max-Luftfeuchtigkeits Trigger
       description: Der Trigger für die maximale Luftfeuchtigkeit
       selector:
@@ -45,10 +45,10 @@ blueprint:
           domain: binary_sensor
           include_entities:
           # Add your humidity max trigger entities here
-            - binary_sensor.humidity_high_tofix_seed
-            - binary_sensor.humidity_high_tofix_veg
-            - binary_sensor.humidity_high_tofix_flower
-            - binary_sensor.humidity_high_tofix_dry 
+            - binary_sensor.humidity_high_adjustment_seed
+            - binary_sensor.humidity_high_adjustment_veg
+            - binary_sensor.humidity_high_adjustment_flower
+            - binary_sensor.humidity_high_adjustment_dry 
     humidity_trigger_high_fixed:
       name: Max-Luftfeuchtigkeits Trigger fixiert
       description: Der Trigger für die maximale Luftfeuchtigkeit (fixiert)
@@ -118,24 +118,24 @@ blueprint:
 mode: single
 
 trigger:
-# Wenn der Zustand von humidity_trigger_low_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+# Wenn der Zustand von humidity_trigger_low_adjustment von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
-    entity_id: !input humidity_trigger_low_tofix
+    entity_id: !input humidity_trigger_low_adjustment
     from: "off"
     to: "on"
-    id: "low_tofix"
+    id: "low_adjustment"
 # Wenn der Zustand von humidity_trigger_low_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
     entity_id: !input humidity_trigger_low_fixed
     from: "off"
     to: "on"
     id: "low_fixed"
-# Wenn der Zustand von humidity_trigger_high_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+# Wenn der Zustand von humidity_trigger_high_adjustment von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
-    entity_id: !input humidity_trigger_high_tofix
+    entity_id: !input humidity_trigger_high_adjustment
     from: "off"
     to: "on"
-    id: "high_tofix"
+    id: "high_adjustment"
 # Wenn der Zustand von humidity_trigger_high_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
     entity_id: !input humidity_trigger_high_fixed
@@ -151,7 +151,7 @@ action:
   - if:
       - condition: trigger
         id:
-          - "low_tofix"
+          - "low_adjustment"
     then:
       - service: !input target_script_humidifier_on
   - if:
@@ -163,7 +163,7 @@ action:
   - if:
       - condition: trigger
         id:
-          - "high_tofix"
+          - "high_adjustment"
     then:
       - service: !input target_script_dehumidifier_on
   - if:
