@@ -19,7 +19,7 @@ blueprint:
           include_entities:
           # Add your humidity sensor entities here
             - sensor.airmonitoring_grow_humidity
-    humidity_trigger_low:
+    humidity_trigger_low_toFix:
       name: Min-Temperatur Trigger
       description: Der Trigger für die minimale Luftfeuchtigkeit
       selector:
@@ -27,23 +27,23 @@ blueprint:
           domain: binary_sensor
           include_entities:
           # Add your humidity min trigger entities here
-            - binary_sensor.humidity_low_seed
-            - binary_sensor.humidity_low_veg
-            - binary_sensor.humidity_low_flower
-            - binary_sensor.humidity_low_dry 
-    humidity_trigger_target:
-      name: Ziel-Temperatur Trigger
-      description: Der Trigger für die Ziel-Luftfeuchtigkeit
+            - binary_sensor.humidity_low_toFix_seed
+            - binary_sensor.humidity_low_toFix_veg
+            - binary_sensor.humidity_low_toFix_flower
+            - binary_sensor.humidity_low_toFix_dry 
+    humidity_trigger_low_fixed:
+      name: Min-Temperatur Trigger Fixiert
+      description: Der Trigger für die minimale Luftfeuchtigkeit (fixiert)
       selector:
         entity:
-          domain: binary_sensor     
+          domain: binary_sensor
           include_entities:
-        # Add your humidity target trigger entities here
-            - binary_sensor.humidity_good_seed
-            - binary_sensor.humidity_good_veg
-            - binary_sensor.humidity_good_flower
-            - binary_sensor.humidity_good_dry 
-    humidity_trigger_high:
+          # Add your humidity min trigger entities here
+            - binary_sensor.humidity_low_fixed_seed
+            - binary_sensor.humidity_low_fixed_veg
+            - binary_sensor.humidity_low_fixed_flower
+            - binary_sensor.humidity_low_fixed_dry 
+    humidity_trigger_high_toFix:
       name: Max-Temperatur Trigger
       description: Der Trigger für die maximale Luftfeuchtigkeit
       selector:
@@ -51,10 +51,22 @@ blueprint:
           domain: binary_sensor
           include_entities:
           # Add your humidity max trigger entities here
-            - binary_sensor.humidity_high_seed
-            - binary_sensor.humidity_high_veg
-            - binary_sensor.humidity_high_flower
-            - binary_sensor.humidity_high_dry 
+            - binary_sensor.humidity_high_toFix_seed
+            - binary_sensor.humidity_high_toFix_veg
+            - binary_sensor.humidity_high_toFix_flower
+            - binary_sensor.humidity_high_toFix_dry 
+    humidity_trigger_high_fixed:
+      name: Max-Temperatur Trigger fixiert
+      description: Der Trigger für die maximale Luftfeuchtigkeit (fixiert)
+      selector:
+        entity:
+          domain: binary_sensor
+          include_entities:
+          # Add your humidity max trigger entities here
+            - binary_sensor.humidity_high_fixed_seed
+            - binary_sensor.humidity_high_fixed_veg
+            - binary_sensor.humidity_high_fixed_flower
+            - binary_sensor.humidity_high_fixed_dry 
     grow_stage_inputselector:
       name: Pflanzenstadiums Auswahl
       description: Der Input-Selektor für das Wachstumsstadium
@@ -113,49 +125,53 @@ mode: single
 
 trigger:
   - platform: state
-    entity_id: !input humidity_trigger_high
+    entity_id: !input humidity_trigger_low_toFix
     from: "off"
     to: "on"
-    id: "high"
+    id: "low_toFix"
   - platform: state
-    entity_id: !input humidity_trigger_low
+    entity_id: !input humidity_trigger_low_fixed
     from: "off"
     to: "on"
+    id: "low_fixed"
   - platform: state
-    entity_id: !input humidity_trigger_target
+    entity_id: !input humidity_trigger_high_toFix
     from: "off"
     to: "on"
-    id: "good"
+    id: "high_toFix"
+  - platform: state
+    entity_id: !input humidity_trigger_high_fixed
+    from: "off"
+    to: "on"
+    id: "high_fixed"
 
 condition:
   - condition: state
     entity_id: !input grow_stage_inputselector
     state: !input grow_stage_value
+
 action:
   - if:
       - condition: trigger
         id:
-          - "low"
+          - "low_toFix"
     then:
       - service: !input target_script_humidifier_on
-        data:
-          state: true
+  - if:
+      - condition: trigger
+        id:
+          - "low_fixed"
+    then:
+      - service: !input target_script_humidifier_off
   - if:
       - condition: trigger
         id:
           - "high"
     then:
       - service: !input target_script_dehumidifier_on
-        data:
-          state: true
   - if:
       - condition: trigger
         id:
-          - "good"
+          - "high_fixed"
     then:
-      - service: !input target_script_humidifier_off
-        data:
-          state: false
       - service: !input target_script_dehumidifier_off
-        data:
-          state: false
