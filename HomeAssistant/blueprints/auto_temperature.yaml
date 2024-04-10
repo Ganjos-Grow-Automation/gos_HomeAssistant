@@ -167,7 +167,7 @@ action:
   - if:
       - condition: trigger
         id:
-          - "high"
+          - "high_adjustment"
     then:
       - service: !input target_script_ac_on
   - if:
