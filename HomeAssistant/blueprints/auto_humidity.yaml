@@ -75,22 +75,39 @@ blueprint:
             - Flower
             - Dry
           mode: dropdown
-    target_script_humidifier:
-      name: Luftbefeuchter Skript
+    target_script_humidifier_on:
+      name: Luftbefeuchter Skript zum Einschalten
       description: Das Skript, das den Luftbefeuchter steuert
       selector:
         entity:
           include_entities:
           # Add your humidifier script entities here
-            - script.humidifier_control
-    target_script_dehumidifier:
-      name: Luftentfeuchter Skript
+            - script.humidifier_control_on
+    target_script_humidifier_off:
+      name: Luftbefeuchter Skript zum Ausschalten
+      description: Das Skript, das den Luftbefeuchter steuert
+      selector:
+        entity:
+          include_entities:
+          # Add your humidifier script entities here
+            - script.humidifier_control_off
+    target_script_dehumidifier_on:
+      name: Luftentfeuchter Skript zum Einschalten
       description: Das Skript, das den Luftentfeuchter steuert
       selector:
         entity:
           include_entities:
           # Add your dehumidifier script entities here
-            - script.airflowfan_control
+            - script.device_control_humidifier_on
+    target_script_dehumidifier_off:
+      name: Luftentfeuchter Skript zum Ausschalten
+      description: Das Skript, das den Luftentfeuchter steuert
+      selector:
+        entity:
+          include_entities:
+          # Add your dehumidifier script entities here
+            - script.device_control_humidifier_off
+
 
 mode: single
 
@@ -120,7 +137,7 @@ action:
         id:
           - "low"
     then:
-      - service: !input target_script_humidifier
+      - service: !input target_script_humidifier_on
         data:
           state: true
   - if:
@@ -128,7 +145,7 @@ action:
         id:
           - "high"
     then:
-      - service: !input target_script_dehumidifier
+      - service: !input target_script_dehumidifier_on
         data:
           state: true
   - if:
@@ -136,9 +153,9 @@ action:
         id:
           - "good"
     then:
-      - service: !input target_script_humidifier
+      - service: !input target_script_humidifier_off
         data:
           state: false
-      - service: !input target_script_dehumidifier
+      - service: !input target_script_dehumidifier_off
         data:
           state: false
