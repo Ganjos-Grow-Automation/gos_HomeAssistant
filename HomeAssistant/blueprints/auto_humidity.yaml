@@ -21,35 +21,34 @@ blueprint:
       selector:
         entity:
           domain: sensor
-      #    include_entities:
-      #    # Add your humidity min trigger entities here
-      #      - sensor.humidity_low_seed
-      #      - sensor.humidity_low_veg
-      #      - sensor.humidity_low_flower
-      #      - sensor.humidity_low_dry 
+          include_entities:
+          # Add your humidity min trigger entities here
+            - sensor.humidity_low_seed
+            - sensor.humidity_low_veg
+            - sensor.humidity_low_flower
+            - sensor.humidity_low_dry 
     humidity_trigger_target:
       name: Ziel-Temperatur Trigger
       selector:
         entity:
-          domain: sensor
-          
-      #    include_entities:
-      #   # Add your humidity target trigger entities here
-      #     - sensor.humidity_good_seed
-      #     - sensor.humidity_good_veg
-      #     - sensor.humidity_good_flower
-      #     - sensor.humidity_good_dry 
+          domain: sensor     
+          include_entities:
+        # Add your humidity target trigger entities here
+            - sensor.humidity_good_seed
+            - sensor.humidity_good_veg
+            - sensor.humidity_good_flower
+            - sensor.humidity_good_dry 
     humidity_trigger_high:
       name: Max-Temperatur Trigger
       selector:
         entity:
           domain: sensor
-      #    include_entities:
+          include_entities:
           # Add your humidity max trigger entities here
-      #     - sensor.humidity_high_seed
-      #     - sensor.humidity_high_veg
-      #     - sensor.humidity_high_flower
-      #     - sensor.humidity_high_dry 
+            - sensor.humidity_high_seed
+            - sensor.humidity_high_veg
+            - sensor.humidity_high_flower
+            - sensor.humidity_high_dry 
     grow_stage_inputselector:
       name: grow_stage_inputselector
       selector:
