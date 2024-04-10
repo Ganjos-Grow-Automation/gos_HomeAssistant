@@ -13,54 +13,54 @@ blueprint:
           include_entities:
           # Add your temperature sensor entities here
             - sensor.airmonitoring_grow_temperature
-    humidity_trigger_low_toFix:
+    temperature_trigger_low_toFix:
       name: Min-Temperatur Trigger
-      description: Der Trigger für die minimale Luftfeuchtigkeit
+      description: Der Trigger für die minimale Temperatur
       selector:
         entity:
           domain: binary_sensor
           include_entities:
-          # Add your humidity min trigger entities here
-            - binary_sensor.humidity_low_toFix_seed
-            - binary_sensor.humidity_low_toFix_veg
-            - binary_sensor.humidity_low_toFix_flower
-            - binary_sensor.humidity_low_toFix_dry 
-    humidity_trigger_low_fixed:
+          # Add your temperature min trigger entities here
+            - binary_sensor.temperature_low_toFix_seed
+            - binary_sensor.temperature_low_toFix_veg
+            - binary_sensor.temperature_low_toFix_flower
+            - binary_sensor.temperature_low_toFix_dry 
+    temperature_trigger_low_fixed:
       name: Min-Temperatur Trigger Fixiert
-      description: Der Trigger für die minimale Luftfeuchtigkeit (fixiert)
+      description: Der Trigger für die minimale Temperatur (fixiert)
       selector:
         entity:
           domain: binary_sensor
           include_entities:
-          # Add your humidity min trigger entities here
-            - binary_sensor.humidity_low_fixed_seed
-            - binary_sensor.humidity_low_fixed_veg
-            - binary_sensor.humidity_low_fixed_flower
-            - binary_sensor.humidity_low_fixed_dry 
-    humidity_trigger_high_toFix:
+          # Add your temperature min trigger entities here
+            - binary_sensor.temperature_low_fixed_seed
+            - binary_sensor.temperature_low_fixed_veg
+            - binary_sensor.temperature_low_fixed_flower
+            - binary_sensor.temperature_low_fixed_dry 
+    temperature_trigger_high_toFix:
       name: Max-Temperatur Trigger
-      description: Der Trigger für die maximale Luftfeuchtigkeit
+      description: Der Trigger für die maximale Temperatur
       selector:
         entity:
           domain: binary_sensor
           include_entities:
-          # Add your humidity max trigger entities here
-            - binary_sensor.humidity_high_toFix_seed
-            - binary_sensor.humidity_high_toFix_veg
-            - binary_sensor.humidity_high_toFix_flower
-            - binary_sensor.humidity_high_toFix_dry 
-    humidity_trigger_high_fixed:
+          # Add your temperature max trigger entities here
+            - binary_sensor.temperature_high_toFix_seed
+            - binary_sensor.temperature_high_toFix_veg
+            - binary_sensor.temperature_high_toFix_flower
+            - binary_sensor.temperature_high_toFix_dry 
+    temperature_trigger_high_fixed:
       name: Max-Temperatur Trigger fixiert
-      description: Der Trigger für die maximale Luftfeuchtigkeit (fixiert)
+      description: Der Trigger für die maximale Temperatur (fixiert)
       selector:
         entity:
           domain: binary_sensor
           include_entities:
-          # Add your humidity max trigger entities here
-            - binary_sensor.humidity_high_fixed_seed
-            - binary_sensor.humidity_high_fixed_veg
-            - binary_sensor.humidity_high_fixed_flower
-            - binary_sensor.humidity_high_fixed_dry 
+          # Add your temperature max trigger entities here
+            - binary_sensor.temperature_high_fixed_seed
+            - binary_sensor.temperature_high_fixed_veg
+            - binary_sensor.temperature_high_fixed_flower
+            - binary_sensor.temperature_high_fixed_dry 
     grow_stage_inputselector:
       name: Pflanzenstadiums Auswahl
       description: Der Input-Selektor für das Wachstumsstadium
@@ -81,66 +81,66 @@ blueprint:
             - Flower
             - Dry
           mode: dropdown
-    target_script_humidifier_on:
-      name: Luftbefeuchter Skript zum Einschalten
-      description: Das Skript, das den Luftbefeuchter steuert
+#    target_script_heater_on:
+#      name: Heizung Skript zum Einschalten
+#      description: Das Skript, das die Heizung steuert
+#      selector:
+#        entity:
+#          include_entities:
+#          # Add your heater script entities here
+#            - script.device_control_heater_on
+#    target_script_heater_off:
+#      name: Heizung Skript zum Ausschalten
+#      description: Das Skript, das die Heizung steuert
+#      selector:
+#        entity:
+#          include_entities:
+#          # Add your heater script entities here
+#            - script.device_control_heater_off
+    target_script_ac_on:
+      name: Klima / Abluft Skript zum Einschalten
+      description: Das Skript, das die Klima / Abluft steuert
       selector:
         entity:
           include_entities:
-          # Add your humidifier script entities here
-            - script.device_control_humidifier_on
-    target_script_humidifier_off:
-      name: Luftbefeuchter Skript zum Ausschalten
-      description: Das Skript, das den Luftbefeuchter steuert
-      selector:
-        entity:
-          include_entities:
-          # Add your humidifier script entities here
-            - script.device_control_humidifier_off
-    target_script_dehumidifier_on:
-      name: Luftentfeuchter Skript zum Einschalten
-      description: Das Skript, das den Luftentfeuchter steuert
-      selector:
-        entity:
-          include_entities:
-          # Add your dehumidifier script entities here
+          # Add your ac script entities here
             - script.device_control_airflowfan_on
-    target_script_dehumidifier_off:
-      name: Luftentfeuchter Skript zum Ausschalten
-      description: Das Skript, das den Luftentfeuchter steuert
+    target_script_ac_off:
+      name: Klima / Abluft Skript zum Ausschalten
+      description: Das Skript, das die Klima / Abluft steuert
       selector:
         entity:
           include_entities:
-          # Add your dehumidifier script entities here
+          # Add your ac script entities here
             - script.device_control_airflowfan_off
 
 
 mode: single
 
 trigger:
-# Wenn der Zustand von humidity_trigger_low_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
-  - platform: state
-    entity_id: !input humidity_trigger_low_toFix
-    from: "off"
-    to: "on"
-    id: "low_toFix"
-# Wenn der Zustand von humidity_trigger_low_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+# Wenn der Zustand von temperature_trigger_low_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+#  - platform: state
+#    entity_id: !input temperature_trigger_low_toFix
+#    from: "off"
+#    to: "on"
+#    id: "low_toFix"
+# Wenn der Zustand von temperature_trigger_low_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+
+#  - platform: state
+#    entity_id: !input temperature_trigger_low_fixed
+#    from: "off"
+#    to: "on"
+#    id: "low_fixed"
+# Wenn der Zustand von temperature_trigger_high_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
 
   - platform: state
-    entity_id: !input humidity_trigger_low_fixed
-    from: "off"
-    to: "on"
-    id: "low_fixed"
-# Wenn der Zustand von humidity_trigger_high_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
-
-  - platform: state
-    entity_id: !input humidity_trigger_high_toFix
+    entity_id: !input temperature_trigger_high_toFix
     from: "off"
     to: "on"
     id: "high_toFix"
-# Wenn der Zustand von humidity_trigger_high_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+# Wenn der Zustand von temperature_trigger_high_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
-    entity_id: !input humidity_trigger_high_fixed
+    entity_id: !input temperature_trigger_high_fixed
     from: "off"
     to: "on"
     id: "high_fixed"
@@ -152,27 +152,27 @@ condition:
     state: !input grow_stage_value
 
 action:
-  - if:
-      - condition: trigger
-        id:
-          - "low_toFix"
-    then:
-      - service: !input target_script_humidifier_on
-  - if:
-      - condition: trigger
-        id:
-          - "low_fixed"
-    then:
-      - service: !input target_script_humidifier_off
+#  - if:
+#      - condition: trigger
+#        id:
+#          - "low_toFix"
+#    then:
+#      - service: !input target_script_heater_on
+#  - if:
+#      - condition: trigger
+#        id:
+#          - "low_fixed"
+#    then:
+#      - service: !input target_script_heater_off
   - if:
       - condition: trigger
         id:
           - "high"
     then:
-      - service: !input target_script_dehumidifier_on
+      - service: !input target_script_ac_on
   - if:
       - condition: trigger
         id:
           - "high_fixed"
     then:
-      - service: !input target_script_dehumidifier_off
+      - service: !input target_script_ac_off

@@ -14,7 +14,7 @@ blueprint:
           # Add your humidity sensor entities here
             - sensor.airmonitoring_grow_humidity
     humidity_trigger_low_toFix:
-      name: Min-Temperatur Trigger
+      name: Min-Luftfeuchtigkeits Trigger
       description: Der Trigger für die minimale Luftfeuchtigkeit
       selector:
         entity:
@@ -26,7 +26,7 @@ blueprint:
             - binary_sensor.humidity_low_toFix_flower
             - binary_sensor.humidity_low_toFix_dry 
     humidity_trigger_low_fixed:
-      name: Min-Temperatur Trigger Fixiert
+      name: Min-Luftfeuchtigkeits Trigger Fixiert
       description: Der Trigger für die minimale Luftfeuchtigkeit (fixiert)
       selector:
         entity:
@@ -38,7 +38,7 @@ blueprint:
             - binary_sensor.humidity_low_fixed_flower
             - binary_sensor.humidity_low_fixed_dry 
     humidity_trigger_high_toFix:
-      name: Max-Temperatur Trigger
+      name: Max-Luftfeuchtigkeits Trigger
       description: Der Trigger für die maximale Luftfeuchtigkeit
       selector:
         entity:
@@ -50,7 +50,7 @@ blueprint:
             - binary_sensor.humidity_high_toFix_flower
             - binary_sensor.humidity_high_toFix_dry 
     humidity_trigger_high_fixed:
-      name: Max-Temperatur Trigger fixiert
+      name: Max-Luftfeuchtigkeits Trigger fixiert
       description: Der Trigger für die maximale Luftfeuchtigkeit (fixiert)
       selector:
         entity:
