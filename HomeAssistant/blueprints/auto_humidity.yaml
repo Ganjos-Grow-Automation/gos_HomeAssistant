@@ -5,46 +5,46 @@ blueprint:
   author: GrowBot Open Source
   input:
     humidity_sensor:
-      name: humidity_sensor
+      name: Feuchtigkeitssensor
       selector:
         entity:
           include_entities:
             - sensor.airmonitoring_grow_humidity
-    humidity_min_value:
-      name: humidity_min_value
+    humidity_min_trigger:
+      name: Min-Temperatur Trigger
       selector:
         entity:
           include_entities:
-            - sensor.humidity_min_seed
-            - sensor.humidity_min_veg
-            - sensor.humidity_min_flower
-            - sensor.humidity_min_dry
-    humidity_target_value:
-      name: humidity_target_value
+            - sensor.humidity_low_seed
+            - sensor.humidity_low_veg
+            - sensor.humidity_low_flower
+            - sensor.humidity_low_dry 
+    humidity_target_trigger:
+      name: Ziel Temperatur Trigger
       selector:
         entity:
           include_entities:
-            - input_number.target_humidity_seed
-            - input_number.target_humidity_veg
-            - input_number.target_humidity_flower
-            - input_number.target_humidity_dry
-    humidity_max_value:
-      name: humidity_max_value
+            - sensor.humidity_good_seed
+            - sensor.humidity_good_veg
+            - sensor.humidity_good_flower
+            - sensor.humidity_good_dry 
+    humidity_max_trigger:
+      name: Max-Temperatur Trigger
       selector:
         entity:
           include_entities:
-            - sensor.humidity_max_seed
-            - sensor.humidity_max_veg
-            - sensor.humidity_max_flower
-            - sensor.humidity_max_dry
+            - sensor.humidity_high_seed
+            - sensor.humidity_high_veg
+            - sensor.humidity_high_flower
+            - sensor.humidity_high_dry 
     grow_stage_inputselector:
-      name: grow_stage_inputselector
+      name: Pflanzenstadium Auswahl
       selector:
         entity:
           include_entities:
             - input_select.plant1_stage
     grow_stage_value:
-      name: grow_stage_value
+      name: Pflanzenstadium
       selector:
         select:
           options:
@@ -54,13 +54,13 @@ blueprint:
             - Dry
           mode: dropdown
     target_script_humidifier:
-      name: target_script_humidifier
+      name: Luftbefeuchter
       selector:
         entity:
           include_entities:
             - script.humidifier_control
     target_script_dehumidifier:
-      name: target_script_dehumidifier
+      name: Luftentfeuchter
       selector:
         entity:
           include_entities:
@@ -69,24 +69,29 @@ blueprint:
 mode: single
 
 trigger:
-  - platform: numeric_state
-    entity_id: !input humidity_sensor
+  - platform: state
+    entity_id: !input humidity_high_trigger
+    to: "true"
     for:
       hours: 0
-      minutes: 2
+      minutes: 1
       seconds: 0
-    above: !input humidity_max_value
     id: "high"
-  - platform: numeric_state
-    entity_id: !input humidity_sensor
+  - platform: state
+    entity_id: !input humidity_low_trigger
+    to: "true"
     for:
       hours: 0
-      minutes: 2
+      minutes: 1
       seconds: 0
-    below: !input humidity_min_value
     id: "low"
-  - platform: template
-    value_template: "{{ states('sensor.airmonitoring_grow_humidity') | float == states('input_number.target_humidity_flower') | float }}"
+  - platform: state
+    entity_id: !input humidity_good_trigger
+    to: "true"
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 0
     id: "good"
 
 condition:
