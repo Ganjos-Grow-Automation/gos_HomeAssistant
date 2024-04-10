@@ -96,18 +96,10 @@ trigger:
   - platform: state
     entity_id: !input humidity_trigger_high
     to: "True"
-    for:
-      hours: 0
-      minutes: 1
-      seconds: 0
     id: "high"
   - platform: state
     entity_id: !input humidity_trigger_low
     to: "True"
-    for:
-      hours: 0
-      minutes: 1
-      seconds: 0
     id: "low"
   - platform: state
     entity_id: !input humidity_trigger_target
