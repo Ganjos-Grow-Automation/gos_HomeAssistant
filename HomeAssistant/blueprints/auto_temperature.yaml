@@ -21,10 +21,10 @@ blueprint:
           domain: binary_sensor
           include_entities:
           # Add your temperature min trigger entities here
-            - binary_sensor.temperature_low_toFix_seed
-            - binary_sensor.temperature_low_toFix_veg
-            - binary_sensor.temperature_low_toFix_flower
-            - binary_sensor.temperature_low_toFix_dry 
+            - binary_sensor.temperature_low_tofix_seed
+            - binary_sensor.temperature_low_tofix_veg
+            - binary_sensor.temperature_low_tofix_flower
+            - binary_sensor.temperature_low_tofix_dry 
     temperature_trigger_low_fixed:
       name: Min-Temperatur Trigger Fixiert
       description: Der Trigger für die minimale Temperatur (fixiert)
@@ -45,10 +45,10 @@ blueprint:
           domain: binary_sensor
           include_entities:
           # Add your temperature max trigger entities here
-            - binary_sensor.temperature_high_toFix_seed
-            - binary_sensor.temperature_high_toFix_veg
-            - binary_sensor.temperature_high_toFix_flower
-            - binary_sensor.temperature_high_toFix_dry 
+            - binary_sensor.temperature_high_tofix_seed
+            - binary_sensor.temperature_high_tofix_veg
+            - binary_sensor.temperature_high_tofix_flower
+            - binary_sensor.temperature_high_tofix_dry 
     temperature_trigger_high_fixed:
       name: Max-Temperatur Trigger fixiert
       description: Der Trigger für die maximale Temperatur (fixiert)
@@ -134,7 +134,7 @@ trigger:
 # Wenn der Zustand von temperature_trigger_high_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
 
   - platform: state
-    entity_id: !input temperature_trigger_high_toFix
+    entity_id: !input temperature_trigger_high_tofix
     from: "off"
     to: "on"
     id: "high_toFix"

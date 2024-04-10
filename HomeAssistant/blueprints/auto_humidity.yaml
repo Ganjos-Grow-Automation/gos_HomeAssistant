@@ -21,10 +21,10 @@ blueprint:
           domain: binary_sensor
           include_entities:
           # Add your humidity min trigger entities here
-            - binary_sensor.humidity_low_toFix_seed
-            - binary_sensor.humidity_low_toFix_veg
-            - binary_sensor.humidity_low_toFix_flower
-            - binary_sensor.humidity_low_toFix_dry 
+            - binary_sensor.humidity_low_tofix_seed
+            - binary_sensor.humidity_low_tofix_veg
+            - binary_sensor.humidity_low_tofix_flower
+            - binary_sensor.humidity_low_tofix_dry 
     humidity_trigger_low_fixed:
       name: Min-Luftfeuchtigkeits Trigger Fixiert
       description: Der Trigger für die minimale Luftfeuchtigkeit (fixiert)
@@ -45,10 +45,10 @@ blueprint:
           domain: binary_sensor
           include_entities:
           # Add your humidity max trigger entities here
-            - binary_sensor.humidity_high_toFix_seed
-            - binary_sensor.humidity_high_toFix_veg
-            - binary_sensor.humidity_high_toFix_flower
-            - binary_sensor.humidity_high_toFix_dry 
+            - binary_sensor.humidity_high_tofix_seed
+            - binary_sensor.humidity_high_tofix_veg
+            - binary_sensor.humidity_high_tofix_flower
+            - binary_sensor.humidity_high_tofix_dry 
     humidity_trigger_high_fixed:
       name: Max-Luftfeuchtigkeits Trigger fixiert
       description: Der Trigger für die maximale Luftfeuchtigkeit (fixiert)
@@ -120,42 +120,38 @@ mode: single
 trigger:
 # Wenn der Zustand von humidity_trigger_low_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
-    entity_id: !input humidity_trigger_low_toFix
+    entity_id: !input humidity_trigger_low_tofix
     from: "off"
     to: "on"
-    id: "low_toFix"
+    id: "low_tofix"
 # Wenn der Zustand von humidity_trigger_low_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
-
   - platform: state
     entity_id: !input humidity_trigger_low_fixed
     from: "off"
     to: "on"
     id: "low_fixed"
 # Wenn der Zustand von humidity_trigger_high_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
-
   - platform: state
-    entity_id: !input humidity_trigger_high_toFix
+    entity_id: !input humidity_trigger_high_tofix
     from: "off"
     to: "on"
-    id: "high_toFix"
+    id: "high_tofix"
 # Wenn der Zustand von humidity_trigger_high_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
     entity_id: !input humidity_trigger_high_fixed
     from: "off"
     to: "on"
     id: "high_fixed"
-
 condition:
   # Die Automatisierung wird nur ausgeführt, wenn der Zustand von grow_stage_inputselector einen bestimmten Wert hat
   - condition: state
     entity_id: !input grow_stage_inputselector
     state: !input grow_stage_value
-
 action:
   - if:
       - condition: trigger
         id:
-          - "low_toFix"
+          - "low_tofix"
     then:
       - service: !input target_script_humidifier_on
   - if:
@@ -167,7 +163,7 @@ action:
   - if:
       - condition: trigger
         id:
-          - "high"
+          - "high_tofix"
     then:
       - service: !input target_script_dehumidifier_on
   - if:
