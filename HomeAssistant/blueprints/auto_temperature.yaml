@@ -13,30 +13,30 @@ blueprint:
           include_entities:
           # Add your temperature sensor entities here
             - sensor.airmonitoring_grow_temperature
-    temperature_trigger_low_adjustment:
-      name: Min-Temperatur Trigger
-      description: Der Trigger für die minimale Temperatur
-      selector:
-        entity:
-          domain: binary_sensor
-          include_entities:
-          # Add your temperature min trigger entities here
-            - binary_sensor.temperature_low_adjustment_seed
-            - binary_sensor.temperature_low_adjustment_veg
-            - binary_sensor.temperature_low_adjustment_flower
-            - binary_sensor.temperature_low_adjustment_dry 
-    temperature_trigger_low_fixed:
-      name: Min-Temperatur Trigger Fixiert
-      description: Der Trigger für die minimale Temperatur (fixiert)
-      selector:
-        entity:
-          domain: binary_sensor
-          include_entities:
-          # Add your temperature min trigger entities here
-            - binary_sensor.temperature_low_fixed_seed
-            - binary_sensor.temperature_low_fixed_veg
-            - binary_sensor.temperature_low_fixed_flower
-            - binary_sensor.temperature_low_fixed_dry 
+#    temperature_trigger_low_adjustment:
+#      name: Min-Temperatur Trigger
+#      description: Der Trigger für die minimale Temperatur
+#      selector:
+#        entity:
+#          domain: binary_sensor
+#          include_entities:
+#          # Add your temperature min trigger entities here
+#            - binary_sensor.temperature_low_adjustment_seed
+#            - binary_sensor.temperature_low_adjustment_veg
+#            - binary_sensor.temperature_low_adjustment_flower
+#            - binary_sensor.temperature_low_adjustment_dry 
+#    temperature_trigger_low_fixed:
+#      name: Min-Temperatur Trigger Fixiert
+#      description: Der Trigger für die minimale Temperatur (fixiert)
+#      selector:
+#        entity:
+#          domain: binary_sensor
+#          include_entities:
+#          # Add your temperature min trigger entities here
+#            - binary_sensor.temperature_low_fixed_seed
+#            - binary_sensor.temperature_low_fixed_veg
+#            - binary_sensor.temperature_low_fixed_flower
+#            - binary_sensor.temperature_low_fixed_dry 
     temperature_trigger_high_adjustment:
       name: Max-Temperatur Trigger
       description: Der Trigger für die maximale Temperatur
