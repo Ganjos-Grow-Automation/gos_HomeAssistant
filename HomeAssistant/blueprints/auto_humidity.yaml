@@ -16,8 +16,8 @@ blueprint:
           include_entities:
           # Add your humidity sensor entities here
             - sensor.airmonitoring_grow_humidity
-    humidity_min_trigger:
-      name: humidity_min_trigger
+    humidity_trigger_low:
+      name: Min-Temperatur Trigger
       selector:
         entity:
           include_entities:
@@ -26,8 +26,8 @@ blueprint:
             - sensor.humidity_low_veg
             - sensor.humidity_low_flower
             - sensor.humidity_low_dry 
-    humidity_target_trigger:
-      name: humidity_target_trigger
+    humidity_trigger_target:
+      name: Ziel-Temperatur Trigger
       selector:
         entity:
           include_entities:
@@ -36,8 +36,8 @@ blueprint:
             - sensor.humidity_good_veg
             - sensor.humidity_good_flower
             - sensor.humidity_good_dry 
-    humidity_max_trigger:
-      name: humidity_max_trigger
+    humidity_trigger_high:
+      name: Max-Temperatur Trigger
       selector:
         entity:
           include_entities:
@@ -83,7 +83,7 @@ mode: single
 
 trigger:
   - platform: state
-    entity_id: !input humidity_high_trigger
+    entity_id: !input humidity_trigger_high
     to: "true"
     for:
       hours: 0
@@ -91,7 +91,7 @@ trigger:
       seconds: 0
     id: "high"
   - platform: state
-    entity_id: !input humidity_low_trigger
+    entity_id: !input humidity_trigger_low
     to: "true"
     for:
       hours: 0
@@ -99,7 +99,7 @@ trigger:
       seconds: 0
     id: "low"
   - platform: state
-    entity_id: !input humidity_good_trigger
+    entity_id: !input humidity_trigger_target
     to: "true"
     for:
       hours: 0
