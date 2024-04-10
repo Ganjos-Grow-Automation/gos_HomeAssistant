@@ -1,7 +1,45 @@
 # light schedule
 
+lightschedule_seed:
+  name: lightschedule_seed
+  monday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  tuesday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  wednesday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  thursday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  friday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  saturday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+  sunday:
+    - from: "00:00:00"
+      to: "12:00:00"
+    - from: "18:00:00"
+      to: "24:00:00"
+
 lightschedule_veg:
-  name: lightplan_veg
+  name: lightschedule_veg
   monday:
     - from: "00:00:00"
       to: "12:00:00"
@@ -39,7 +77,7 @@ lightschedule_veg:
       to: "24:00:00"
 
 lightschedule_flower:
-  name: lightplan_flower
+  name: lightschedule_flower
   monday:
     - from: "00:00:00"
       to: "12:00:00"

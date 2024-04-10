@@ -2,20 +2,20 @@
 ## humidity
 target_humidity_seed:
   name: target_humidity_seed
-  initial: 60
+  initial: 75
   min: 40
   max: 80
   step: 5
-  unit_of_measurement: \%
+  unit_of_measurement: "%"
   mode: box
   icon: mdi:water-percent
 target_humidity_veg:
   name: target_humidity_veg
-  initial: 60
+  initial: 70
   min: 40
   max: 80
   step: 5
-  unit_of_measurement: \%
+  unit_of_measurement: "%"
   mode: box
   icon: mdi:water-percent
 target_humidity_flower:
@@ -24,23 +24,59 @@ target_humidity_flower:
   min: 40
   max: 80
   step: 5
-  unit_of_measurement: \%
+  unit_of_measurement: "%"
   mode: box
   icon: mdi:water-percent
 target_humidity_dry:
   name: target_humidity_dry
-  initial: 60
+  initial: 50
   min: 40
   max: 80
   step: 5
-  unit_of_measurement: \%
+  unit_of_measurement: "%"
   mode: box
   icon: mdi:water-percent
+target_humidity_tolerance_seed:
+  name: target_humidity_tolerance_seed
+  initial: 5
+  min: 0
+  max: 20
+  step: 1
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference
+target_humidity_tolerance_veg:
+  name: target_humidity_tolerance_veg
+  initial: 5
+  min: 0
+  max: 20
+  step: 1
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference
+target_humidity_tolerance_flower:
+  name: target_humidity_tolerance_flower
+  initial: 5
+  min: 0
+  max: 20
+  step: 1
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference
+target_humidity_tolerance_dry:
+  name: target_humidity_tolerance_dry
+  initial: 5
+  min: 0
+  max: 20
+  step: 1
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference
 
 ##temperature
 target_temperature_seed:
   name: target_temperature_seed
-  initial: 20
+  initial: 24
   min: 20
   max: 35
   step: 1
@@ -48,8 +84,8 @@ target_temperature_seed:
   mode: box
   icon: mdi:temperature-celsius
 target_temperature_veg:
-  name: target_temperature_ved
-  initial: 20
+  name: target_temperature_veg
+  initial: 27
   min: 20
   max: 35
   step: 1
@@ -58,7 +94,7 @@ target_temperature_veg:
   icon: mdi:temperature-celsius
 target_temperature_flower:
   name: target_temperature_flower
-  initial: 20
+  initial: 25
   min: 20
   max: 35
   step: 1
@@ -67,17 +103,289 @@ target_temperature_flower:
   icon: mdi:temperature-celsius
 target_temperature_dry:
   name: target_temperature_dry
-  initial: 20
+  initial: 21
   min: 20
   max: 35
   step: 1
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
+target_temperature_tolerance_seed:
+  name: target_temperature_tolerance_seed
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+target_temperature_tolerance_veg:
+  name: target_temperature_tolerance_veg
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+target_temperature_tolerance_flower:
+  name: target_temperature_tolerance_flower
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+target_temperature_tolerance_dry:
+  name: target_temperature_tolerance_dry
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+##ph
+target_ph_seed:
+  name: target_ph_seed
+  initial: 6
+  min: 4
+  max: 9
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:water-check-outline
+target_ph_veg:
+  name: target_ph_veg
+  initial: 6
+  min: 4
+  max: 9
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:water-check-outline
+target_ph_flower:
+  name: target_ph_flower
+  initial: 6
+  min: 4
+  max: 9
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:water-check-outline
+target_ph_tolerance_seed:
+  name: target_ph_tolerance_seed
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:vector-difference
+target_ph_tolerance_veg:
+  name: target_ph_tolerance_veg
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:vector-difference
+target_ph_tolerance_flower:
+  name: target_ph_tolerance_flower
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:vector-difference
+
+##ec
+### TODO: insert target values
+target_ec_seed:
+  name: target_ec_seed
+  initial: 20
+  min: 20
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:ec-celsius
+target_ec_veg:
+  name: target_ec_veg
+  initial: 20
+  min: 20
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:ec-celsius
+target_ec_flower:
+  name: target_ec_flower
+  initial: 20
+  min: 20
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:ec-celsius
+target_ec_dry:
+  name: target_ec_dry
+  initial: 20
+  min: 20
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:ec-celsius
+target_ec_tolerance_seed:
+  name: target_ec_tolerance_seed
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+target_ec_tolerance_veg:
+  name: target_ec_tolerance_veg
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+target_ec_tolerance_flower:
+  name: target_ec_tolerance_flower
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+target_ec_tolerance_dry:
+  name: target_ec_tolerance_dry
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+##watertemperature
+target_watertemperature_seed:
+  name: target_watertemperature_seed
+  initial: 20
+  min: 20
+  max: 30
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:water-thermometer-outline
+target_watertemperature_veg:
+  name: target_watertemperature_veg
+  initial: 20
+  min: 20
+  max: 30
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:water-thermometer-outline
+target_watertemperature_flower:
+  name: target_watertemperature_flower
+  initial: 20
+  min: 20
+  max: 30
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:water-thermometer-outline
+target_watertemperature_tolerance_seed:
+  name: target_watertemperature_tolerance_seed
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+target_watertemperature_tolerance_veg:
+  name: target_watertemperature_tolerance_veg
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+target_watertemperature_tolerance_flower:
+  name: target_watertemperature_tolerance_flower
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+# light distance
+target_light_distance:
+  name: target_light_distance
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+
+##light hours
+lighthours_seed:
+  name: lighthours_seed
+  initial: 18
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24
+lighthours_veg:
+  name: lighthours_veg
+  initial: 18
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24
+lighthours_flower:
+  name: lighthours_flower
+  initial: 12
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24
+lighthours_dry:
+  name: lighthours_dry
+  initial: 0
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24
 
 # dates of plant number 1
-plant1_daysofseed:
-  name: plant1_daysofseed
+plant1_planned_daysofseed:
+  name: plant1_planned_daysofseed
   initial: 3
   min: 1
   max: 7
@@ -85,8 +393,8 @@ plant1_daysofseed:
   unit_of_measurement: days
   mode: box
   icon: mdi:seed
-plant1_daysofveg:
-  name: plant1_daysofveg
+plant1_planned_daysofveg:
+  name: plant1_planned_daysofveg
   initial: 14
   min: 7
   max: 28
@@ -94,8 +402,8 @@ plant1_daysofveg:
   unit_of_measurement: days
   mode: box
   icon: mdi:sprout
-plant1_daysofflower:
-  name: plant1_daysofflower
+plant1_planned_daysofflower:
+  name: plant1_planned_daysofflower
   initial: 70
   min: 64
   max: 84
@@ -103,3 +411,581 @@ plant1_daysofflower:
   unit_of_measurement: days
   mode: box
   icon: mdi:flower
+plant1_planned_daysofdry:
+  name: plant1_planned_daysofdry
+  initial: 70
+  min: 64
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:fan
+plant1_actual_daysofseed:
+  name: plant1_actual_daysofseed
+  initial: 3
+  min: 1
+  max: 7
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:seed
+plant1_actual_daysofveg:
+  name: plant1_actual_daysofveg
+  initial: 14
+  min: 7
+  max: 28
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:sprout
+plant1_actual_daysofflower:
+  name: plant1_actual_daysofflower
+  initial: 70
+  min: 64
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:flower
+plant1_actual_daysofdry:
+  name: plant1_actual_daysofdry
+  initial: 70
+  min: 64
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:fan
+
+# pH adjustment
+phadjustment_down_grow:
+  name: phadjustment_up_grow
+  initial: 5
+  min: 0
+  max: 50
+  step: 5
+  unit_of_measurement: ml
+  mode: slider
+  icon: mdi:nutrition
+phadjustment_down_flower:
+  name: phadjustment_up_flower
+  initial: 5
+  min: 0
+  max: 50
+  step: 5
+  unit_of_measurement: ml
+  mode: slider
+  icon: mdi:nutrition
+phadjustment_up:
+  name: phadjustment_up
+  initial: 5
+  min: 0
+  max: 50
+  step: 5
+  unit_of_measurement: ml
+  mode: slider
+  icon: mdi:nutrition
+
+# nutrition template
+###### nutrition plan regarding official canna terra nutrition plan
+## seed - start
+nutrition_soil_plandays_seed:
+  name: nutrition_soil_plandays_seed
+  initial: 7
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:notebook-outline
+nutrition_soil_startday_seed:
+  name: nutrition_soil_startday_seed
+  initial: 1
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: day
+  mode: slider
+  icon: mdi:calendar-start
+nutrition_soil_wateramountperplant_seed:
+  name: nutrition_soil_wateramountperplant_seed
+  initial: 5
+  min: 0
+  max: 50
+  step: 0.5
+  unit_of_measurement: l/day/plant
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_start_seed:
+  name: nutrition_soil_cannaterra_start_seed
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_vega_seed:
+  name: nutrition_soil_cannaterra_vega_seed
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_rhizotonic_seed:
+  name: nutrition_soil_cannaterra_rhizotonic_seed
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+
+## veg - veg I
+nutrition_soil_plandays_veg:
+  name: nutrition_soil_plandays_veg
+  initial: 7
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:notebook-outline
+nutrition_soil_startday_veg:
+  name: nutrition_soil_startday_veg
+  initial: 1
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: day
+  mode: slider
+  icon: mdi:calendar-start
+nutrition_soil_wateramountperplant_veg:
+  name: nutrition_soil_wateramountperplant_veg
+  initial: 5
+  min: 0
+  max: 50
+  step: 0.5
+  unit_of_measurement: l/day/plant
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_vega_veg:
+  name: nutrition_soil_cannaterra_vega_veg
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_rhizotonic_veg:
+  name: nutrition_soil_cannaterra_rhizotonic_veg
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannazym_veg:
+  name: nutrition_soil_cannaterra_cannazym_veg
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+
+## flower 1 - vegy II
+nutrition_soil_plandays_flower_1:
+  name: nutrition_soil_plandays_flower_1
+  initial: 7
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:notebook-outline
+nutrition_soil_wateramountperplant_flower_1:
+  name: nutrition_soil_wateramountperplant_flower_1
+  initial: 5
+  min: 0
+  max: 50
+  step: 0.5
+  unit_of_measurement: l/day/plant
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_vega_flower_1:
+  name: nutrition_soil_cannaterra_vega_flower_1
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_rhizotonic_flower_1:
+  name: nutrition_soil_cannaterra_rhizotonic_flower_1
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannazym_flower_1:
+  name: nutrition_soil_cannaterra_cannazym_flower_1
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannaboost_flower_1:
+  name: nutrition_soil_cannaterra_cannaboost_flower_1
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+
+## flower 2 - generative I
+nutrition_soil_plandays_flower_2:
+  name: nutrition_soil_plandays_flower_2
+  initial: 7
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:notebook-outline
+nutrition_soil_startday_flower_2:
+  name: nutrition_soil_startday_flower_2
+  initial: 1
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: day
+  mode: slider
+  icon: mdi:calendar-start
+nutrition_soil_wateramountperplant_flower_2:
+  name: nutrition_soil_wateramountperplant_flower_2
+  initial: 5
+  min: 0
+  max: 50
+  step: 0.5
+  unit_of_measurement: l/day/plant
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_flores_flower_2:
+  name: nutrition_soil_cannaterra_flores_flower_2
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_rhizotonic_flower_2:
+  name: nutrition_soil_cannaterra_rhizotonic_flower_2
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannazym_flower_2:
+  name: nutrition_soil_cannaterra_cannazym_flower_2
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannaboost_flower_2:
+  name: nutrition_soil_cannaterra_cannaboost_flower_2
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+
+## flower 3 - generative II
+nutrition_soil_plandays_flower_3:
+  name: nutrition_soil_plandays_flower_3
+  initial: 7
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:notebook-outline
+nutrition_soil_startday_flower_3:
+  name: nutrition_soil_startday_flower_3
+  initial: 1
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: day
+  mode: slider
+  icon: mdi:calendar-start
+nutrition_soil_wateramountperplant_flower_3:
+  name: nutrition_soil_wateramountperplant_flower_3
+  initial: 5
+  min: 0
+  max: 50
+  step: 0.5
+  unit_of_measurement: l/day/plant
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_flores_flower_3:
+  name: nutrition_soil_cannaterra_flores_flower_3
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_rhizotonic_flower_3:
+  name: nutrition_soil_cannaterra_rhizotonic_flower_3
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannazym_flower_3:
+  name: nutrition_soil_cannaterra_cannazym_flower_3
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannaboost_flower_3:
+  name: nutrition_soil_cannaterra_cannaboost_flower_3
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_pk1314_flower_3:
+  name: nutrition_soil_cannaterra_pk1314_flower_3
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+
+## flower 4 - generative III
+nutrition_soil_plandays_flower_4:
+  name: nutrition_soil_plandays_flower_4
+  initial: 7
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:notebook-outline
+nutrition_soil_startday_flower_4:
+  name: nutrition_soil_startday_flower_4
+  initial: 1
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: day
+  mode: slider
+  icon: mdi:calendar-start
+nutrition_soil_wateramountperplant_flower_4:
+  name: nutrition_soil_wateramountperplant_flower_4
+  initial: 5
+  min: 0
+  max: 50
+  step: 0.5
+  unit_of_measurement: l/day/plant
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_flores_flower_4:
+  name: nutrition_soil_cannaterra_flores_flower_4
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_rhizotonic_flower_4:
+  name: nutrition_soil_cannaterra_rhizotonic_flower_4
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannazym_flower_4:
+  name: nutrition_soil_cannaterra_cannazym_flower_4
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannaboost_flower_4:
+  name: nutrition_soil_cannaterra_cannaboost_flower_4
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+
+## flower 5 - generative IV
+nutrition_soil_plandays_flower_5:
+  name: nutrition_soil_plandays_flower_5
+  initial: 7
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:notebook-outline
+nutrition_soil_startday_flower_5:
+  name: nutrition_soil_startday_flower_5
+  initial: 1
+  min: 1
+  max: 84
+  step: 1
+  unit_of_measurement: day
+  mode: slider
+  icon: mdi:calendar-start
+nutrition_soil_wateramountperplant_flower_5:
+  name: nutrition_soil_wateramountperplant_flower_5
+  initial: 5
+  min: 0
+  max: 50
+  step: 0.5
+  unit_of_measurement: l/day/plant
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannazym_flower_5:
+  name: nutrition_soil_cannaterra_cannazym_flower_5
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_soil_cannaterra_cannaboost_flower_5:
+  name: nutrition_soil_cannaterra_cannaboost_flower_5
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+
+## nutrition calculator
+nutrition_calculation_wateramount:
+  name: nutrition_calculation_wateramount
+  initial: 10
+  min: 1
+  max: 25
+  step: 1
+  unit_of_measurement: l
+  mode: slider
+  icon: mdi:water
+nutrition_calculation_waterreference:
+  name: nutrition_calculation_waterreference
+  initial: 10
+  min: 1
+  max: 25
+  step: 1
+  unit_of_measurement: l
+  mode: slider
+  icon: mdi:water
+nutrition_calculation_cannaterra_start:
+  name: nutrition_calculation_cannaterra_start
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_vega:
+  name: nutrition_calculation_cannaterra_vega
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_flores:
+  name: nutrition_calculation_cannaterra_flores
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_rhizotonic:
+  name: nutrition_calculation_cannaterra_rhizotonic
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_cannazym:
+  name: nutrition_calculation_cannaterra_cannazym
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_cannaboost:
+  name: nutrition_calculation_cannaterra_cannaboost
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_pk1314:
+  name: nutrition_calculation_cannaterra_pk1314
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition

@@ -1,0 +1,77 @@
+custom_message_to_phone:
+  alias: custom_message_to_phone
+  sequence:
+  - service: notify.notify
+    metadata: {}
+    data:
+      title: '{{title}}'
+      message: '{{message}}'
+  mode: single
+  icon: mdi:message-alert
+  fields:
+    title:
+      selector:
+        text:
+      name: Title
+      description: enter a title for your notification
+      required: true
+    message:
+      selector:
+        text:
+      name: message
+      description: enter the message of the alert
+      required: true
+device_control_humidifier_off:
+  alias: device_control_humidifier_off
+  sequence:
+  - type: turn_off
+    device_id: 0b58aa78a04b9476fc175fcacc952a56
+    entity_id: 1c270560ab795fdcc77a066b8cf9b0d8
+    domain: switch
+  mode: single
+  icon: mdi:air-humidifier-off
+device_control_humidifier_on:
+  alias: device_control_humidifier_on
+  sequence:
+  - type: turn_on
+    device_id: 0b58aa78a04b9476fc175fcacc952a56
+    entity_id: 1c270560ab795fdcc77a066b8cf9b0d8
+    domain: switch
+  mode: single
+  icon: mdi:air-humidifier
+device_control_airflowfan_on:
+  alias: device_control_airflowfan_on
+  sequence:
+  - type: turn_on
+    device_id: 1559456423284553fbc2585f41c692e0
+    entity_id: 204b089f9b60c2fe8962594779080cfe
+    domain: switch
+  mode: single
+  icon: mdi:air-conditioner
+device_control_airflowfan_off:
+  alias: device_control_airflowfan_off
+  sequence:
+  - type: turn_off
+    device_id: 1559456423284553fbc2585f41c692e0
+    entity_id: 204b089f9b60c2fe8962594779080cfe
+    domain: switch
+  mode: single
+  icon: mdi:air-conditioner
+device_control_led_off:
+  alias: device_control_led_off
+  sequence:
+  - type: turn_off
+    device_id: 198f8f298745cd58abb591f830b94d88
+    entity_id: e3fa0f71436ff94cc94d04541d337eaa
+    domain: switch
+  mode: single
+  icon: mdi:lightbulb-off
+device_control_led_on:
+  alias: device_control_led_on
+  sequence:
+  - type: turn_on
+    device_id: 198f8f298745cd58abb591f830b94d88
+    entity_id: e3fa0f71436ff94cc94d04541d337eaa
+    domain: switch
+  mode: single
+  icon: mdi:lightbulb-on

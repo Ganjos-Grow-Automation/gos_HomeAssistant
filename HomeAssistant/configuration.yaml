@@ -6,7 +6,7 @@ frontend:
   themes: !include_dir_merge_named themes
 
 homeassistant: !include homeassistant.yaml
-automation: !include_dir_list automations/
+automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
@@ -16,3 +16,6 @@ input_text: !include input_text.yaml
 input_select: !include input_select.yaml
 sensor: !include sensor.yaml
 schedule: !include schedule.yaml
+template:
+  - sensor: !include_dir_merge_list templates/sensor/
+  - binary_sensor: !include_dir_merge_list templates/binary_sensor/

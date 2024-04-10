@@ -7,5 +7,9 @@
 			"path": "../../gb_HomeAssistant.wiki"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"*.yaml": "home-assistant"
+		}
+	}
 }
