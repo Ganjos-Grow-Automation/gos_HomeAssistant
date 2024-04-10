@@ -124,21 +124,27 @@ blueprint:
 mode: single
 
 trigger:
+# Wenn der Zustand von humidity_trigger_low_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
     entity_id: !input humidity_trigger_low_toFix
     from: "off"
     to: "on"
     id: "low_toFix"
+# Wenn der Zustand von humidity_trigger_low_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+
   - platform: state
     entity_id: !input humidity_trigger_low_fixed
     from: "off"
     to: "on"
     id: "low_fixed"
+# Wenn der Zustand von humidity_trigger_high_toFix von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
+
   - platform: state
     entity_id: !input humidity_trigger_high_toFix
     from: "off"
     to: "on"
     id: "high_toFix"
+# Wenn der Zustand von humidity_trigger_high_fixed von "off" auf "on" wechselt, wird die Automatisierung ausgelöst
   - platform: state
     entity_id: !input humidity_trigger_high_fixed
     from: "off"
@@ -146,6 +152,7 @@ trigger:
     id: "high_fixed"
 
 condition:
+  # Die Automatisierung wird nur ausgeführt, wenn der Zustand von grow_stage_inputselector einen bestimmten Wert hat
   - condition: state
     entity_id: !input grow_stage_inputselector
     state: !input grow_stage_value
