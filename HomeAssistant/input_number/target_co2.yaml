@@ -1,61 +1,59 @@
 ### Status: to do
-## Status: to do
-
 ## Stage: clones
 ##### day values
 target_co2_day_clones:
   name: Ziel-CO2 Samen und Stecklinge Tag
-  initial: 70
-  min: 40
-  max: 80
-  step: 5
+  initial: 600
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_day_clones:
   name: Ziel-CO2-Toleranz Samen und Stecklinge
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ### night values
 target_co2_night_clones:
   name: Ziel-CO2 Samen und Stecklinge Nacht
-  initial: 70
-  min: 40
-  max: 80
-  step: 5
+  initial: 600
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_night_clones:
   name: Ziel-CO2-Toleranz Samen und Stecklinge
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ######## min & max co2 for alerts
 min_co2_clones:
-  name: Min-Luftfeuchtigkeit Samen und Stecklinge
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
+  name: Min-CO2 Samen und Stecklinge
+  initial: 600
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 max_co2_clones:
-  name: Max-Luftfeuchtigkeit Samen und Stecklinge
-  initial: 75
-  min: 40
-  max: 80
-  step: 5
+  name: Max-CO2 Samen und Stecklinge
+  initial: 600
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
@@ -64,57 +62,57 @@ max_co2_clones:
 ##### day values
 target_co2_day_veg:
   name: Ziel-CO2 Wachstum Tag
-  initial: 70
-  min: 40
-  max: 80
-  step: 5
+  initial: 1350
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_day_veg:
   name: Ziel-CO2-Toleranz Wachstum
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ### night values
 target_co2_night_veg:
   name: Ziel-CO2 Wachstum Nacht
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
+  initial: 1350
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_night_veg:
   name: Ziel-CO2-Toleranz Wachstum
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ######## min & max co2 for alerts
 min_co2_veg:
-  name: Min-Luftfeuchtigkeit Wachstum
-  initial: 58
-  min: 40
-  max: 80
-  step: 5
+  name: Min-CO2 Wachstum
+  initial: 1200
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 max_co2_veg:
-  name: Max-Luftfeuchtigkeit Wachstum
-  initial: 75
-  min: 40
-  max: 80
-  step: 5
+  name: Max-CO2 Wachstum
+  initial: 1500
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
@@ -123,57 +121,57 @@ max_co2_veg:
 ##### day values
 target_co2_day_flower_stretch:
   name: Ziel-CO2 Blüte Streckung Tag
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
+  initial: 1350
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_day_flower_stretch:
   name: Ziel-CO2-Toleranz Blüte Streckung
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ### night values
 target_co2_night_flower_stretch:
   name: Ziel-CO2 Blüte Streckung Nacht
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
+  initial: 1350
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_night_flower_stretch:
   name: Ziel-CO2-Toleranz Blüte Streckung
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ######## min & max co2 for alerts
 min_co2_flower_stretch:
-  name: Min-Luftfeuchtigkeit Blüte Streckung
-  initial: 60
-  min: 40
-  max: 80
-  step: 5
+  name: Min-CO2 Blüte Streckung
+  initial: 1200
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 max_co2_flower_stretch:
-  name: Max-Luftfeuchtigkeit Blüte Streckung
-  initial: 72
-  min: 40
-  max: 80
-  step: 5
+  name: Max-CO2 Blüte Streckung
+  initial: 1500
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
@@ -182,57 +180,57 @@ max_co2_flower_stretch:
 ##### day values
 target_co2_day_flower_bulk:
   name: Ziel-CO2 Blüte Bulk Tag
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
+  initial: 1350
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_day_flower_bulk:
   name: Ziel-CO2-Toleranz Blüte Bulk
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ### night values
 target_co2_night_flower_bulk:
   name: Ziel-CO2 Blüte Bulk Nacht
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
+  initial: 1350
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_night_flower_bulk:
   name: Ziel-CO2-Toleranz Blüte Bulk
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ######## min & max co2 for alerts
 min_co2_flower_bulk:
-  name: Min-Luftfeuchtigkeit Blüte Bulk
-  initial: 60
-  min: 40
-  max: 80
-  step: 5
+  name: Min-CO2 Blüte Bulk
+  initial: 1200
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 max_co2_flower_bulk:
-  name: Max-Luftfeuchtigkeit Blüte Bulk
-  initial: 70
-  min: 40
-  max: 80
-  step: 5
+  name: Max-CO2 Blüte Bulk
+  initial: 1500
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
@@ -241,115 +239,57 @@ max_co2_flower_bulk:
 ##### day values
 target_co2_day_flower_finish:
   name: Ziel-CO2 Blüte Ende Tag
-  initial: 55
-  min: 40
-  max: 80
-  step: 5
+  initial: 650
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_day_flower_finish:
   name: Ziel-CO2-Toleranz Blüte Ende
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ### night values
 target_co2_night_flower_finish:
   name: Ziel-CO2 Blüte Ende Nacht
-  initial: 55
-  min: 40
-  max: 80
-  step: 5
+  initial: 650
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 target_co2_tolerance_night_flower_finish:
   name: Ziel-CO2-Toleranz Blüte Ende
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
+  initial: 150
+  min: 50
+  max: 350
+  step: 50
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 ######## min & max co2 for alerts
 min_co2_flower_finish:
-  name: Min-Luftfeuchtigkeit Blüte Ende
-  initial: 50
-  min: 40
-  max: 80
-  step: 5
+  name: Min-CO2 Blüte Ende
+  initial: 500
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2
 max_co2_flower_finish:
-  name: Max-Luftfeuchtigkeit Blüte Ende
-  initial: 60
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
-
-## Stage: dry
-#####
-target_co2_day_dry:
-  name: Ziel-CO2 Trocknung
-  initial: 57
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
-target_co2_tolerance_day_dry:
-  name: Ziel-CO2-Toleranz Trocknung
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:vector-difference
-target_co2_night_dry:
-  name: Ziel-CO2 Trocknung
-  initial: 57
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
-target_co2_tolerance_night_dry:
-  name: Ziel-CO2-Toleranz Trocknung
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:vector-difference
-######## min & max co2 for alerts
-min_co2_dry:
-  name: Min-Luftfeuchtigkeit Trocknung
-  initial: 55
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
-max_co2_dry:
-  name: Max-Luftfeuchtigkeit Trocknung
-  initial: 60
-  min: 40
-  max: 80
-  step: 5
+  name: Max-CO2 Blüte Ende
+  initial: 800
+  min: 400
+  max: 2500
+  step: 100
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:molecule-co2

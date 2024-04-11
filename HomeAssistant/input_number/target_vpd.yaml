@@ -1,0 +1,296 @@
+## Status: to do
+
+## Stage: clones
+##### day values
+target_vpd_day_clones:
+  name: Ziel-VPD Samen und Stecklinge Tag
+  initial: 0.8
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_day_clones:
+  name: Ziel-VPD-Toleranz Samen und Stecklinge
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+### night values
+target_vpd_night_clones:
+  name: Ziel-VPD Samen und Stecklinge Nacht
+  initial: 0.8
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_night_clones:
+  name: Ziel-VPD-Toleranz Samen und Stecklinge
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+######## min & max vpd for alerts
+min_vpd_clones:
+  name: Min-VPD Samen und Stecklinge
+  initial: 0.6
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+max_vpd_clones:
+  name: Max-VPD Samen und Stecklinge
+  initial: 1.0
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+
+## Stage: veg
+##### day values
+target_vpd_day_veg:
+  name: Ziel-VPD Wachstum Tag
+  initial: 0.9
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_day_veg:
+  name: Ziel-VPD-Toleranz Wachstum
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+### night values
+target_vpd_night_veg:
+  name: Ziel-VPD Wachstum Nacht
+  initial: 0.9
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_night_veg:
+  name: Ziel-VPD-Toleranz Wachstum
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+######## min & max vpd for alerts
+min_vpd_veg:
+  name: Min--VPD Wachstum
+  initial: 0.7
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+max_vpd_veg:
+  name: Max--VPD Wachstum
+  initial: 1.1
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+
+## Stage: flower_stretch
+##### day values
+target_vpd_day_flower_stretch:
+  name: Ziel-VPD Blüte Streckung Tag
+  initial: 1.1
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_day_flower_stretch:
+  name: Ziel-VPD-Toleranz Blüte Streckung
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+### night values
+target_vpd_night_flower_stretch:
+  name: Ziel-VPD Blüte Streckung Nacht
+  initial: 1.1
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_night_flower_stretch:
+  name: Ziel-VPD-Toleranz Blüte Streckung
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+######## min & max vpd for alerts
+min_vpd_flower_stretch:
+  name: Min--VPD Blüte Streckung
+  initial: 0.9
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+max_vpd_flower_stretch:
+  name: Max--VPD Blüte Streckung
+  initial: 1.3
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+
+## Stage: flower_bulk
+##### day values
+target_vpd_day_flower_bulk:
+  name: Ziel-VPD Blüte Bulk Tag
+  initial: 1.1
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_day_flower_bulk:
+  name: Ziel-VPD-Toleranz Blüte Bulk
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+### night values
+target_vpd_night_flower_bulk:
+  name: Ziel-VPD Blüte Bulk Nacht
+  initial: 1.1
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_night_flower_bulk:
+  name: Ziel-VPD-Toleranz Blüte Bulk
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+######## min & max vpd for alerts
+min_vpd_flower_bulk:
+  name: Min--VPD Blüte Bulk
+  initial: 0.9
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+max_vpd_flower_bulk:
+  name: Max--VPD Blüte Bulk
+  initial: 1.3
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+
+## Stage: flower_finish
+##### day values
+target_vpd_day_flower_finish:
+  name: Ziel-VPD Blüte Ende Tag
+  initial: 1.3
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_day_flower_finish:
+  name: Ziel-VPD-Toleranz Blüte Ende
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+### night values
+target_vpd_night_flower_finish:
+  name: Ziel-VPD Blüte Ende Nacht
+  initial: 1.3
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+target_vpd_tolerance_night_flower_finish:
+  name: Ziel-VPD-Toleranz Blüte Ende
+  initial: 0.1
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+######## min & max vpd for alerts
+min_vpd_flower_finish:
+  name: Min--VPD Blüte Ende
+  initial: 1.1
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+max_vpd_flower_finish:
+  name: Max--VPD Blüte Ende
+  initial: 1.5
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target

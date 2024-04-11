@@ -297,7 +297,7 @@ max_humidity_flower_finish:
 
 ## Stage: dry
 #####
-target_humidity_day_dry:
+target_humidity_dry:
   name: Zielluftfeuchtigkeit Trocknung
   initial: 57
   min: 40
@@ -306,25 +306,7 @@ target_humidity_day_dry:
   unit_of_measurement: "%"
   mode: box
   icon: mdi:water-percent
-target_humidity_tolerance_day_dry:
-  name: Zielluftfeuchtigkeit-Toleranz Trocknung
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-target_humidity_night_dry:
-  name: Zielluftfeuchtigkeit Trocknung
-  initial: 57
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_night_dry:
+target_humidity_tolerance_dry:
   name: Zielluftfeuchtigkeit-Toleranz Trocknung
   initial: 5
   min: 0

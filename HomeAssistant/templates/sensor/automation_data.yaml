@@ -1,0 +1,41 @@
+###
+###
+# Area 1
+###
+##
+# current data
+##
+- name: area_1_temperature_air
+  state: >
+    {{states("sensor.airmonitoring_grow_temperature") | float }}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_1_temperature_leaf
+  state: >
+    {{states('sensor.airmonitoring_grow_temperature') | float - states('input_number.area_1_temperature_leaf_offset') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_1_temperature_humidity
+  state: >
+    {{states("sensor.airmonitoring_grow_humidity") | float }}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+
+- name: area_1_temperature_co2
+  state: >
+    {{states("sensor.airmonitoring_grow_eco2") | float }}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+
+##
+# concat data for NodeRed
+##
+
+- name: area_1_automation_air_control_data_current
+  state: >
+    {{ {"TempAir": states("sensor.area_1_temperature_air"), "TempLeaf": states("sensor.area_1_temperature_leaf"), "Hum": states("sensor.area_1_temperature_humidity"), "CO2": states("sensor.area_1_temperature_co2")} | tojson }}
+- name: area_1_automation_air_control_data_target
+  state: >
+    {{ {"MaxTempAir": states("sensor.area_1_max_temperature_air"), "TargetTempAir": states("sensor.area_1_target_temperature_air"), "MinTempAir": states("sensor.area_1_min_temperature_air"),"MaxHum": states("sensor.area_1_max_humidity"), "TargetHum": states("sensor.area_1_target_humidity"), "MinHum": states("sensor.area_1_min_humidity"), "MaxVpd": states("sensor.area_1_max_vpd"), "TargetVpd": states("sensor.area_1_target_vpd"), "MinVpd": states("sensor.area_1_min_vpd"),"MaxCO2": states("sensor.area_1_max_co2"), "TargetCO2": states("sensor.area_1_target_co2"), "MinCO2": states("sensor.area_1_min_co2")} | tojson }}

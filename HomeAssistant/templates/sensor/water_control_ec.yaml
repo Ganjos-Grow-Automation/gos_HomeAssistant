@@ -57,15 +57,3 @@
     {{ (states('input_number.target_ec_flower_finish') | float - states('input_number.target_ec_tolerance_flower_finish') | float)}}
   unit_of_measurement: ""
   icon: mdi:water-check
-
-### Stage: dry
-- name: ec_max_dry
-  state: >
-    {{ [states('input_number.target_ec_dry'), states('input_number.target_ec_tolerance_dry')] | map('float') | sum }}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-- name: ec_min_dry
-  state: >
-    {{ (states('input_number.target_ec_dry') | float - states('input_number.target_ec_tolerance_dry') | float)}}
-  unit_of_measurement: ""
-  icon: mdi:water-check
