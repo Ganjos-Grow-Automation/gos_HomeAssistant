@@ -44,7 +44,7 @@ blueprint:
         entity:
           include_entities:
           # Add your dehumidifier script entities here
-            - script.device_control_light_on
+            - script.device_control_light_off
 
 mode: single
 
