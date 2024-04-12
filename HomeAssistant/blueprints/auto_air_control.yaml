@@ -13,7 +13,7 @@ blueprint:
           domain: sensor
           include_entities:
           # Add your area job sensor entities here
-            - binary_sensor.air_control_job_area1
+            - sensor.air_control_job_area1
     target_script_humidifier_on:
       name: Luftbefeuchter Skript zum Einschalten
       description: Das Skript, das den Luftbefeuchter steuert
