@@ -84,68 +84,84 @@ mode: single
 
 trigger:
 # 
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'heater_on'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'heater_on'
     id: heater_on
 # 
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'ac_on'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'ac_on'
     id: ac_on
 #
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'humidifier_on'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'humidifier_on'
     id: humidifier_on
 #
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'dehumidifier_on'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'dehumidifier_on'
     id: dehumidifier_on
 # 
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'heater_and_humidifier_on'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'heater_and_humidifier_on'
     id: heater_and_humidifier_on
 # 
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'heater_and_dehumidifier_on'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'heater_and_dehumidifier_on'
     id: heater_and_dehumidifier_on
 #
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'ac_and_humidifier_on'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'ac_and_humidifier_on'
     id: ac_and_humidifier_on
 #
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'ac_and_dehumidifier_on'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'ac_and_dehumidifier_on'
     id: ac_and_dehumidifier_on
 # 
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'heater_off'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'heater_off'
     id: heater_off
 # 
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'ac_off'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'ac_off'
     id: ac_off
 #
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'humidifier_off'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'humidifier_off'
     id: humidifier_off
 #
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'dehumidifier_off'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'dehumidifier_off'
     id: dehumidifier_off
 # 
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'heater_and_humidifier_off'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'heater_and_humidifier_off'
     id: heater_and_humidifier_off
 # 
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'heater_and_dehumidifier_off'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'heater_and_dehumidifier_off'
     id: heater_and_dehumidifier_off
 #
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'ac_and_humidifier_off'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'ac_and_humidifier_off'
     id: ac_and_humidifier_off
 #
-  - platform: template
-    value_template: "{{states('sensor.air_control_job_area1') == 'ac_and_dehumidifier_off'}}"
+  - platform: state
+    entity_id: !input air_control_trigger_sensor
+    to:  'ac_and_dehumidifier_off'
     id: ac_and_dehumidifier_off
 
 action:
