@@ -87,7 +87,6 @@ blueprint:
           # Add your helper script entities here
             - script.air_control_last_status
 
-
 mode: single
 
 trigger:
@@ -182,6 +181,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_on
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -191,6 +191,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -200,6 +201,8 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
+
   - if:
       - condition: trigger
         id:
@@ -209,6 +212,7 @@ action:
       - service: !input target_script_dehumidifier_on
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -218,6 +222,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_on
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -227,6 +232,7 @@ action:
       - service: !input target_script_dehumidifier_on
       - service: !input target_script_ac_off
       - service: !input target_script_heater_on
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -236,6 +242,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -245,6 +252,7 @@ action:
       - service: !input target_script_dehumidifier_on
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -254,6 +262,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -263,6 +272,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -272,6 +282,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -281,6 +292,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -290,6 +302,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -299,6 +312,7 @@ action:
       - service: !input target_script_dehumidifier_on
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -308,6 +322,7 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_status
   - if:
       - condition: trigger
         id:
@@ -317,4 +332,5 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
+      - service: !input cript.air_control_last_statuss
 
