@@ -78,6 +78,14 @@ blueprint:
           include_entities:
           # Add your ac script entities here
             - script.device_control_ac_off
+    air_control_helper_script:
+      name: Helferskript zur Speicherung des letztes Jobs
+      description: Das Skript, das den letzten Job speichert
+      selector:
+        entity:
+          include_entities:
+          # Add your helper script entities here
+            - script.air_control_last_status
 
 
 mode: single
