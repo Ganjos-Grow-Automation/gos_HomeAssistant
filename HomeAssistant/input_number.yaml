@@ -384,8 +384,8 @@ lighthours_dry:
   icon: mdi:hours-24
 
 # dates of plant number 1
-area1planned_daysofseed:
-  name: area1planned_daysofseed
+area1_planned_daysofseed:
+  name: area1_planned_daysofseed
   initial: 3
   min: 1
   max: 7
@@ -393,8 +393,8 @@ area1planned_daysofseed:
   unit_of_measurement: days
   mode: box
   icon: mdi:seed
-area1planned_daysofveg:
-  name: area1planned_daysofveg
+area1_planned_daysofveg:
+  name: area1_planned_daysofveg
   initial: 14
   min: 7
   max: 28
@@ -402,8 +402,8 @@ area1planned_daysofveg:
   unit_of_measurement: days
   mode: box
   icon: mdi:sprout
-area1planned_daysofflower:
-  name: area1planned_daysofflower
+area1_planned_daysofflower:
+  name: area1_planned_daysofflower
   initial: 70
   min: 64
   max: 84
@@ -411,8 +411,8 @@ area1planned_daysofflower:
   unit_of_measurement: days
   mode: box
   icon: mdi:flower
-area1planned_daysofdry:
-  name: area1planned_daysofdry
+area1_planned_daysofdry:
+  name: area1_planned_daysofdry
   initial: 70
   min: 64
   max: 84
@@ -420,8 +420,8 @@ area1planned_daysofdry:
   unit_of_measurement: days
   mode: box
   icon: mdi:fan
-area1actual_daysofseed:
-  name: area1actual_daysofseed
+area1_actual_daysofseed:
+  name: area1_actual_daysofseed
   initial: 3
   min: 1
   max: 7
@@ -429,8 +429,8 @@ area1actual_daysofseed:
   unit_of_measurement: days
   mode: box
   icon: mdi:seed
-area1actual_daysofveg:
-  name: area1actual_daysofveg
+area1_actual_daysofveg:
+  name: area1_actual_daysofveg
   initial: 14
   min: 7
   max: 28
@@ -438,8 +438,8 @@ area1actual_daysofveg:
   unit_of_measurement: days
   mode: box
   icon: mdi:sprout
-area1actual_daysofflower:
-  name: area1actual_daysofflower
+area1_actual_daysofflower:
+  name: area1_actual_daysofflower
   initial: 70
   min: 64
   max: 84
@@ -447,8 +447,8 @@ area1actual_daysofflower:
   unit_of_measurement: days
   mode: box
   icon: mdi:flower
-area1actual_daysofdry:
-  name: area1actual_daysofdry
+area1_actual_daysofdry:
+  name: area1_actual_daysofdry
   initial: 70
   min: 64
   max: 84

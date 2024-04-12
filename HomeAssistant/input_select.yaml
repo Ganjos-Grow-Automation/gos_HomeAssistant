@@ -1,5 +1,5 @@
-area1stage:
-  name: area1stage
+area1_stage:
+  name: area1_stage
   options:
     - Seed
     - Veg
@@ -8,8 +8,8 @@ area1stage:
   initial: Seed
   icon: mdi:form-dropdown
 
-area1subtrate:
-  name: area1subtrate
+area1_subtrate:
+  name: area1_subtrate
   options:
     - soil
     - coco

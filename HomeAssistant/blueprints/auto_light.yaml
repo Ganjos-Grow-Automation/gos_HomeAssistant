@@ -18,7 +18,7 @@ blueprint:
       selector:
         entity:
           include_entities:
-            - input_select.area1stage
+            - input_select.area1__stage
     grow_stage_value:
       name: Pflanzenstadiums Wert
       selector:
