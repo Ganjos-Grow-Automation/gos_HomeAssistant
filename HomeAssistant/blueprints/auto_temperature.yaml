@@ -68,7 +68,7 @@ blueprint:
         entity:
           include_entities:
           # Add your grow stage input selector entities here
-            - input_select.plant1_stage
+            - input_select.area1stage
     grow_stage_value:
       name: Pflanzenstadiums Wert
       description: Der Wert für das Wachstumsstadium
