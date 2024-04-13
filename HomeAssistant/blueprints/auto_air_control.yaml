@@ -332,5 +332,5 @@ action:
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input script.air_control_last_statuss
+      - service: !input script.air_control_last_status
 
