@@ -85,7 +85,7 @@ blueprint:
         entity:
           include_entities:
           # Add your helper script entities here
-            - sscript.air_control_last_status
+            - script.air_control_last_status
 
 mode: single
 
