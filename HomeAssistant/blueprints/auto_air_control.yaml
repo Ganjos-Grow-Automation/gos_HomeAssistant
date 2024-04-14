@@ -187,7 +187,8 @@ action:
           - "ac_on"
     then:
       - service: !input target_script_humidifier_off
-      - service: !input target_script_dehumidifier_off
+      # temp off because dehumidifier = ac 
+      #- service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
       - service: !input air_control_helper_script
@@ -209,7 +210,8 @@ action:
     then:
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_on
-      - service: !input target_script_ac_off
+      # temp off because dehumidifier = ac 
+      #- service: !input target_script_ac_off
       - service: !input target_script_heater_off
       - service: !input air_control_helper_script
   - if:
