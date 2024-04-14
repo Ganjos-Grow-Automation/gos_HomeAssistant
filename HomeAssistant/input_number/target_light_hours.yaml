@@ -1,0 +1,54 @@
+## Stage: clones
+target_light_hours_clones:
+  name: Ziel-Belichtungsdauer Samen und Stecklinge
+  initial: 18
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24
+
+## Stage: veg
+target_light_hours_veg:
+  name: Ziel-Belichtungsdauer Wachstum
+  initial: 18
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24
+
+## Stage: flower_stretch
+target_light_hours_flower_stretch:
+  name: Ziel-Belichtungsdauer Blüte Streckung
+  initial: 18
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24
+
+## Stage: flower_bulk
+target_light_hours_flower_bulk:
+  name: Ziel-Belichtungsdauer Blüte Bulk
+  initial: 18
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24
+
+## Stage: flower_finish
+target_light_hours_flower_finish:
+  name: Ziel-Belichtungsdauer Blüte Ende
+  initial: 18
+  min: 0
+  max: 24
+  step: 1
+  unit_of_measurement: hours
+  mode: box
+  icon: mdi:hours-24

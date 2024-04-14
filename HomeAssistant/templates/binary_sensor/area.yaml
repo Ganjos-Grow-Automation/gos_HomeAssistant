@@ -1,0 +1,17 @@
+### Area 1
+- name: area_1_is_day
+  state: "{{states('switch.growlight_schalter')}}"
+  icon: mdi:theme-light-dark
+
+- name: area_1_is_ac_eq_dehumidifier
+  icon: mdi:toggle-switch
+  state: "True"
+
+- name: area_1_air_control_prio_temperature
+  icon: mdi:toggle-switch
+  state: "{{ is_state('binary_sensor.area_1_is_day', 'on') }}"
+
+
+- name: area_1_air_control_prio_humidity
+  icon: mdi:toggle-switch
+  state: "{{ is_state('binary_sensor.area_1_is_day', 'off') }}"

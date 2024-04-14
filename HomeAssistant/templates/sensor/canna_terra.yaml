@@ -1,0 +1,28 @@
+- name: nutrition_calculation_calculated_cannaterra_start
+  icon: mdi:nutrition
+  state: >
+    {{(states('input_number.nutrition_calculation_cannaterra_start') | float * states('sensor.nutrition_calculation_ratio') | float | round(2))}} ml
+- name: nutrition_calculation_calculated_cannaterra_vega
+  icon: mdi:nutrition
+  state: >
+    {{(states('input_number.nutrition_calculation_cannaterra_vega') | float * states('sensor.nutrition_calculation_ratio') | float | round(2))}} ml
+- name: nutrition_calculation_calculated_cannaterra_flores
+  icon: mdi:nutrition
+  state: >
+    {{(states('input_number.nutrition_calculation_cannaterra_flores') | float * states('sensor.nutrition_calculation_ratio') | float | round(2))}} ml
+- name: nutrition_calculation_calculated_cannaterra_rhizotonic
+  icon: mdi:nutrition
+  state: >
+    {{(states('input_number.nutrition_calculation_cannaterra_rhizotonic') | float * states('sensor.nutrition_calculation_ratio') | float | round(2))}} ml
+- name: nutrition_calculation_calculated_cannaterra_cannazym
+  icon: mdi:nutrition
+  state: >
+    {{(states('input_number.nutrition_calculation_cannaterra_cannazym') | float * states('sensor.nutrition_calculation_ratio') | float | round(2))}} ml
+- name: nutrition_calculation_calculated_cannaterra_cannaboost
+  icon: mdi:nutrition
+  state: >
+    {{(states('input_number.nutrition_calculation_cannaterra_cannaboost') | float * states('sensor.nutrition_calculation_ratio') | float | round(2))}} ml
+- name: nutrition_calculation_calculated_cannaterra_pk1314
+  icon: mdi:nutrition
+  state: >
+    {{(states('input_number.nutrition_calculation_cannaterra_pk1314') | float * states('sensor.nutrition_calculation_ratio') | float | round(2))}} ml

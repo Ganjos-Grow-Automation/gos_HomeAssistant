@@ -1,0 +1,106 @@
+###### Status: to do - insert different pH values for different subtrates 
+
+## Stage: clones
+target_ph_clones:
+  name: Ziel-pH-Wert Samen und Stecklinge
+  initial: 6
+  min: 4
+  max: 9
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ph_tolerance_clones:
+  name: Ziel-pH-Wert-Toleranz Samen und Stecklinge
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: veg
+target_ph_veg:
+  name: Ziel-pH-Wert Wachstum
+  initial: 6
+  min: 4
+  max: 9
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ph_tolerance_veg:
+  name: Ziel-pH-Wert-Toleranz Wachstum
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_stretch
+target_ph_flower_stretch:
+  name: Ziel-pH-Wert Blüte Streckung
+  initial: 6
+  min: 4
+  max: 9
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ph_tolerance_flower_stretch:
+  name: Ziel-pH-Wert-Toleranz Blüte Streckung
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_bulk
+target_ph_flower_bulk:
+  name: Ziel-pH-Wert Blüte Bulk
+  initial: 6
+  min: 4
+  max: 9
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ph_tolerance_flower_bulk:
+  name: Ziel-pH-Wert-Toleranz Blüte Bulk
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_finish
+target_ph_flower_finish:
+  name: Ziel-pH-Wert Blüte Ende
+  initial: 6
+  min: 4
+  max: 9
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ph_tolerance_flower_finish:
+  name: Ziel-pH-Wert-Toleranz Blüte Ende
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  unit_of_measurement: mol/l
+  mode: box
+  icon: mdi:vector-difference

@@ -1,0 +1,18 @@
+## Description and values of each plant in the garden
+### Plant 1
+plant_1_strain:
+  name: Pflanze 1 Strain
+plant_1_seedbank:
+  name: Pflanze 1 Seedbank
+
+### Plant 2
+plant_2_strain:
+  name: Pflanze 2 Strain
+plant_2_seedbank:
+  name: Pflanze 2 Seedbank
+
+### Plant 3
+plant_3_strain:
+  name: Pflanze 3 Strain
+plant_3_seedbank:
+  name: Pflanze 3 Seedbank
