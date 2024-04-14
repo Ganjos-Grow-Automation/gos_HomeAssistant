@@ -37,7 +37,7 @@ blueprint:
         entity:
           include_entities:
           # Add your dehumidifier script entities here
-            - script.device_control_airflowfan_on
+            - script.device_control_dehumidifier_on
     target_script_dehumidifier_off:
       name: Luftentfeuchter Skript zum Ausschalten
       description: Das Skript, das den Luftentfeuchter steuert
@@ -45,7 +45,7 @@ blueprint:
         entity:
           include_entities:
           # Add your dehumidifier script entities here
-            - script.device_control_airflowfan_off
+            - script.device_control_dehumidifier_off
     target_script_heater_on:
       name: Heizung Skript zum Einschalten
       description: Das Skript, das die Heizung steuert
