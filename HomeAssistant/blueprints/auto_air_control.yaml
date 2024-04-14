@@ -307,9 +307,9 @@ action:
         id:
           - "heater_and_dehumidifier_off"
     then:
-      - service: !input target_script_humidifier_on
-      - service: !input target_script_dehumidifier_on
-      - service: !input target_script_ac_on
+      - service: !input target_script_humidifier_off
+      - service: !input target_script_dehumidifier_off
+      - service: !input target_script_ac_off
       - service: !input target_script_heater_off
       - service: !input air_control_helper_script
   - if:
