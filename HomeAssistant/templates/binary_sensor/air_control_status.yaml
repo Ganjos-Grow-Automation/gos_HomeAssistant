@@ -16,7 +16,7 @@
   state: "{{states('sensor.area_1_min_humidity') | float > states('sensor.airmonitoring_grow_humidity') | float }}"
   ## Löst aus:
 - name: area_1_humidity_ok
-  state: "{{(( states('binary_sensor.area_1_is_day') == 'on' and states('sensor.area_1_max_humidity') | float > states('sensor.airmonitoring_grow_humidity') | float > states('sensor.area_1_target_humidity') | float) or ( states('binary_sensor.area_1_is_day') == 'off' and states('sensor.area_1_target_humidity') | float > states('sensor.airmonitoring_grow_humidity') | float > states('sensor.area_1_max_humidity') | float))}}"
+  state: "{{((( states('binary_sensor.area_1_is_day') == 'on') and ((states('sensor.area_1_max_humidity') | float) > (states('sensor.airmonitoring_grow_humidity') | float) > (states('sensor.area_1_target_humidity') | float ))) or ( (states('binary_sensor.area_1_is_day') == 'off') and (states('sensor.area_1_target_humidity') | float) > (states('sensor.airmonitoring_grow_humidity') | float) > (states('sensor.area_1_min_humidity') | float)))}}"
 - name: area_1_humidity_high_adjustment
   # Wenn die Luftfeuchtigkeit zu hoch ist = true
   state: "{{states('sensor.airmonitoring_grow_humidity') | float >  states('sensor.area_1_max_humidity')| float }}"
