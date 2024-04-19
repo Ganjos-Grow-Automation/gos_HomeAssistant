@@ -86,7 +86,7 @@ blueprint:
           include_entities:
           # Add your helper script entities here
             - script.area_1_air_control_last_status
-mode: single
+mode: restart
 
 trigger:
 # 
