@@ -1,0 +1,19 @@
+# all area select fields
+
+# area 1
+area_1_stage:
+  name: Bereich 1 Pflanzenstadium
+  options:
+    - Clone
+    - Veg
+    - Flower-stretch
+    - Flower-bulk
+    - Flower-finish
+    - Dry
+  icon: mdi:form-dropdown
+area_1_aircontrol_prio_current:
+  name: Bereich 1 Priorität bei den Luftbedingungen
+  options:
+    - Temperature
+    - Humidity
+  icon: mdi:form-dropdown

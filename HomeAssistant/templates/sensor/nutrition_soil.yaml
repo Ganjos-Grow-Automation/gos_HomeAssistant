@@ -1,0 +1,48 @@
+- name: nutrition_soil_startday_seed
+  icon: mdi:calendar-start
+  state: "Tag 1"
+- name: nutrition_soil_startdate_seed
+  icon: mdi:calendar-start
+  state: "{ { states('input_datetime.grow_startdate') } }"
+- name: nutrition_soil_startday_veg_1
+  icon: mdi:calendar-start
+  state: "Tag 1"
+- name: nutrition_soil_startdate_veg_1
+  icon: mdi:calendar-start
+  state: "Tag 1"
+- name: nutrition_soil_startday_veg_2
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_veg_1')] | map('int')| sum}}
+- name: nutrition_soil_startdate_veg_2
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_veg_1')] | map('int')| sum}}
+- name: nutrition_soil_startday_flower_1
+  icon: mdi:calendar-start
+  state: "Tag 1"
+- name: nutrition_soil_startdate_flower_1
+  icon: mdi:calendar-start
+  state: "Tag 1"
+- name: nutrition_soil_startday_flower_2
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_flower_1')] | map('int')| sum}}
+- name: nutrition_soil_startdate_flower_2
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_flower_1')] | map('int')| sum}}
+- name: nutrition_soil_startday_flower_3
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_flower_1'),states('input_number.nutrition_soil_plandays_flower_2')] | map('int')| sum}}
+- name: nutrition_soil_startdate_flower_3
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_flower_1'),states('input_number.nutrition_soil_plandays_flower_2')] | map('int')| sum}}
+- name: nutrition_soil_startday_flower_4
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_flower_1'),states('input_number.nutrition_soil_plandays_flower_2'),states('input_number.nutrition_soil_plandays_flower_3')] | map('int')| sum}}
+- name: nutrition_soil_startdate_flower_4
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_flower_1'),states('input_number.nutrition_soil_plandays_flower_2'),states('input_number.nutrition_soil_plandays_flower_3')] | map('int')| sum}}
+- name: nutrition_soil_startday_flower_5
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_flower_1'),states('input_number.nutrition_soil_plandays_flower_2'),states('input_number.nutrition_soil_plandays_flower_3'),states('input_number.nutrition_soil_plandays_flower_4')] | map('int')| sum}}
+- name: nutrition_soil_startdate_flower_5
+  icon: mdi:calendar-start
+  state: Tag {{ [1, states('input_number.nutrition_soil_plandays_flower_1'),states('input_number.nutrition_soil_plandays_flower_2'),states('input_number.nutrition_soil_plandays_flower_3'),states('input_number.nutrition_soil_plandays_flower_4')] | map('int')| sum}}

@@ -1,0 +1,138 @@
+#### area 1
+- name: area_1_days_until_flower
+  icon: mdi:calendar
+  unit_of_measurement: Tage
+  state: >
+    {{ ((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0)}}
+
+  #### temp values
+- name: general_startdate_veg
+  icon: mdi:calendar-start
+  state: >
+    {{ ((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0)}}
+- name: general_startdate_flower
+  icon: mdi:calendar-start
+  state: >
+    {{ ((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0)}}
+- name: general_startdate_dry
+  icon: mdi:calendar-start
+  state: >
+    {{ ((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0)}}
+
+#####################################################################################################################################
+
+#### grow general
+- name: area_1_days_since_grow_start
+  icon: mdi:calendar-start
+  state: >
+    {{((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+  unit_of_measurement: Tage
+- name: area_1_current_week_of_grow
+  icon: mdi:calendar
+  state: >
+    {{ ((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0)}}
+  unit_of_measurement: Weeks
+############ air control values
+- name: area_1_max_temperature_air
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_max_day_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_max_night_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_max_day_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_max_night_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_max_day_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_max_night_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_max_day_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_max_night_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_max_day_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_max_night_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_max_day_dry')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_max_night_dry')}}
+    {% endif %}
+  icon: mdi:temperature-celsius
+  unit_of_measurement: °C
+- name: area_1_target_temperature_air
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_temperature_air_day_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_temperature_air_night_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_temperature_air_day_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_temperature_air_night_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_temperature_air_day_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_temperature_air_night_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_temperature_air_day_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_temperature_air_night_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_temperature_air_day_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_temperature_air_night_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_temperature_air_day_dry')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_temperature_air_night_dry')}}
+    {% endif %}
+  icon: mdi:temperature-celsius
+  unit_of_measurement: °C
+- name: area_1_min_temperature_air
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_min_day_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_min_night_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_min_day_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_min_night_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_min_day_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_min_night_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_min_day_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_min_night_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_min_day_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_min_night_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.temperature_air_min_day_dry')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.temperature_air_min_night_dry')}}
+    {% endif %}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_1_max_humidity
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_max_day_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_max_night_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_max_day_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_max_night_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_max_day_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_max_night_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_max_day_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_max_night_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_max_day_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_max_night_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_max_day_dry')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_max_night_dry')}}
+    {% endif %}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+- name: area_1_target_humidity
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_humidity_day_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_humidity_night_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_humidity_day_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_humidity_night_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_humidity_day_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_humidity_night_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_humidity_day_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_humidity_night_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_humidity_day_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_humidity_night_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('input_number.target_humidity_day_dry')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_humidity_night_dry')}}
+    {% endif %}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+- name: area_1_min_humidity
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_min_day_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Clone' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_min_night_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_min_day_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Veg' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_min_night_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_min_day_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_min_night_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_min_day_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_min_night_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_min_day_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_min_night_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'on' %} {{states('sensor.humidity_min_day_dry')}}
+    {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.humidity_min_night_dry')}}
+    {% endif %}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent

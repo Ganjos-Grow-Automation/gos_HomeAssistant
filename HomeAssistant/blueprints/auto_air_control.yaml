@@ -37,7 +37,7 @@ blueprint:
         entity:
           include_entities:
           # Add your dehumidifier script entities here
-            - script.device_control_airflowfan_on
+            - script.device_control_dehumidifier_on
     target_script_dehumidifier_off:
       name: Luftentfeuchter Skript zum Ausschalten
       description: Das Skript, das den Luftentfeuchter steuert
@@ -45,7 +45,7 @@ blueprint:
         entity:
           include_entities:
           # Add your dehumidifier script entities here
-            - script.device_control_airflowfan_off
+            - script.device_control_dehumidifier_off
     target_script_heater_on:
       name: Heizung Skript zum Einschalten
       description: Das Skript, das die Heizung steuert
@@ -187,7 +187,8 @@ action:
           - "ac_on"
     then:
       - service: !input target_script_humidifier_off
-      - service: !input target_script_dehumidifier_off
+      # temp off because dehumidifier = ac 
+      #- service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
       - service: !input air_control_helper_script
@@ -209,7 +210,8 @@ action:
     then:
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_on
-      - service: !input target_script_ac_off
+      # temp off because dehumidifier = ac 
+      #- service: !input target_script_ac_off
       - service: !input target_script_heater_off
       - service: !input air_control_helper_script
   - if:
@@ -307,9 +309,9 @@ action:
         id:
           - "heater_and_dehumidifier_off"
     then:
-      - service: !input target_script_humidifier_on
-      - service: !input target_script_dehumidifier_on
-      - service: !input target_script_ac_on
+      - service: !input target_script_humidifier_off
+      - service: !input target_script_dehumidifier_off
+      - service: !input target_script_ac_off
       - service: !input target_script_heater_off
       - service: !input air_control_helper_script
   - if:

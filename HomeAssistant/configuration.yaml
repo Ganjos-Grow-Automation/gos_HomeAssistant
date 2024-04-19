@@ -11,11 +11,13 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 
 influxdb: !include influxdb.yaml
-input_number: !include input_number.yaml
-input_text: !include input_text.yaml
+input_number: !include_dir_merge_named input_number/
+input_text: !include_dir_merge_named input_text/
 input_select: !include input_select.yaml
-sensor: !include sensor.yaml
+#sensor: !include sensor.yaml
 schedule: !include schedule.yaml
 template:
   - sensor: !include_dir_merge_list templates/sensor/
   - binary_sensor: !include_dir_merge_list templates/binary_sensor/
+# Fields required:
+

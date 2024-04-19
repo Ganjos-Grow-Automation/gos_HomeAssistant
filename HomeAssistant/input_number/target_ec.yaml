@@ -1,0 +1,95 @@
+## Stage: clones
+target_ec_clones:
+  name: Ziel-EC-Wert Samen und Stecklinge
+  initial: 1
+  min: 0.5
+  max: 9
+  step: 0.1
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ec_tolerance_clones:
+  name: Ziel-EC-Wert-Toleranz Samen und Stecklinge
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: veg
+target_ec_veg:
+  name: Ziel-EC-Wert Wachstum
+  initial: 1
+  min: 0.5
+  max: 9
+  step: 0.1
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ec_tolerance_veg:
+  name: Ziel-EC-Wert-Toleranz Wachstum
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_stretch
+target_ec_flower_stretch:
+  name: Ziel-EC-Wert Blüte Streckung
+  initial: 1
+  min: 0.5
+  max: 9
+  step: 0.1
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ec_tolerance_flower_stretch:
+  name: Ziel-EC-Wert-Toleranz Blüte Streckung
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_bulk
+target_ec_flower_bulk:
+  name: Ziel-EC-Wert Blüte Bulk
+  initial: 1
+  min: 0.5
+  max: 9
+  step: 0.1
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ec_tolerance_flower_bulk:
+  name: Ziel-EC-Wert-Toleranz Blüte Bulk
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_finish
+target_ec_flower_finish:
+  name: Ziel-EC-Wert Blüte Ende
+  initial: 1
+  min: 0.5
+  max: 9
+  step: 0.1
+  mode: box
+  icon: mdi:water-check-outline
+#### tolerance
+target_ec_tolerance_flower_finish:
+  name: Ziel-EC-Wert-Toleranz Blüte Ende
+  initial: 0.2
+  min: 0
+  max: 1
+  step: 0.1
+
+  mode: box
+  icon: mdi:vector-difference
