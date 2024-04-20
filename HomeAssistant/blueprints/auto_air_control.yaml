@@ -169,6 +169,7 @@ trigger:
     entity_id: !input air_control_trigger_sensor
     to:  'ac_and_dehumidifier_off'
     id: ac_and_dehumidifier_off
+#
 
 action:
   - if:
@@ -188,8 +189,7 @@ action:
     then:
       - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
-      # temp off because dehumidifier = ac 
-      #- service: !input target_script_dehumidifier_off
+      - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
   - if:
@@ -211,8 +211,7 @@ action:
       - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_on
-      # temp off because dehumidifier = ac 
-      #- service: !input target_script_ac_off
+      - service: !input target_script_ac_off
       - service: !input target_script_heater_off
   - if:
       - condition: trigger
