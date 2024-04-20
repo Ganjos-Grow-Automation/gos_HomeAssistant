@@ -176,162 +176,162 @@ action:
         id:
           - "heater_on"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_on
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "ac_on"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       # temp off because dehumidifier = ac 
       #- service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "humidifier_on"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_on
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
 
   - if:
       - condition: trigger
         id:
           - "dehumidifier_on"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_on
       # temp off because dehumidifier = ac 
       #- service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "heater_and_humidifier_on"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_on
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_on
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "heater_and_dehumidifier_on"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_on
       - service: !input target_script_ac_off
       - service: !input target_script_heater_on
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "ac_and_humidifier_on"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_on
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "ac_and_dehumidifier_on"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_on
       - service: !input target_script_ac_on
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "heater_off"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "ac_off"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "humidifier_off"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "dehumidifier_off"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "heater_and_humidifier_off"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "heater_and_dehumidifier_off"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "ac_and_humidifier_off"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
   - if:
       - condition: trigger
         id:
           - "ac_and_dehumidifier_off"
     then:
+      - service: !input air_control_helper_script
       - service: !input target_script_humidifier_off
       - service: !input target_script_dehumidifier_off
       - service: !input target_script_ac_off
       - service: !input target_script_heater_off
-      - service: !input air_control_helper_script
 
