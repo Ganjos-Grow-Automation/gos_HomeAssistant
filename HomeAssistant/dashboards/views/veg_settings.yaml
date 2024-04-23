@@ -2,6 +2,7 @@ title: "Wachstum Einstellungen"
 path: "veg_settings"
 subview: true
 cards:
+### TODO: Insert: Lichtbedingungen
   - type: vertical-stack
     cards:
       - type: horizontal-stack

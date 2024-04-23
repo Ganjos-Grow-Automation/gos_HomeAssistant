@@ -2,6 +2,7 @@ title: "Grow Zelt"
 path: "area_1"
 subview: true
 cards:
+### TODO: Devices & GrowData
   - type: vertical-stack
     cards:
       - type: horizontal-stack

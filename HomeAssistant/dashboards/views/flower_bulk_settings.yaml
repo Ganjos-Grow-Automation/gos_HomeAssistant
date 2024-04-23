@@ -2,6 +2,7 @@ title: "Blüte Bulk Einstellungen"
 path: "flower_bulk_settings"
 subview: true
 cards:
+### TODO: Insert: general: lightdistance, light hours ph, temperature water, ec
   - type: vertical-stack
     cards:
       - type: horizontal-stack
