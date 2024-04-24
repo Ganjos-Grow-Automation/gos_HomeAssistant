@@ -4,9 +4,10 @@
 - name: area_1_temperature_low_adjustment
   # Wenn die Temperatur unter dem Toleranz Wert der Temperatur fällt = true
   state: "{{((states('sensor.area_1_min_temperature_air') | float) > (states('sensor.airmonitoring_grow_temperature') | float))}}"
+  #state: "{{((states('sensor.area_1_min_temperature_air') | float) > (states('sensor.airmonitoring_grow_temperature') | float)) and ((states('binary_sensor.area_1_humidity_ok') == 'on') or ((states('binary_sensor.area_1_is_ac_eq_dehumidifier') == 'on') and (states('binary_sensor.area_1_air_control_prio_temperature') == 'on') and (states('binary_sensor.area_1_air_control_prio_humidity') == 'off')))}}"
   ## Löst aus:
 - name: area_1_temperature_in_tolerance
-  state: "{{((states('binary_sensor.area_1_temperature_high_adjustment') == 'off') and (states('binary_sensor.area_1_temperature_low_adjustment') == 'off'))}}"
+  state: "{{((states('sensor.area_1_max_temperature_air') | float > states('sensor.airmonitoring_grow_temperature') | float) and (states('sensor.airmonitoring_grow_temperature') | float > states('sensor.area_1_min_temperature_air') | float))}}"
 - name: area_1_temperature_ok
   ## insert here not high oder low adjustment je nach tageszeit
   ## Statemenetbeschreibung: Wenn es Tag ist und die Temperatur entweder zwischen min und target ist oder kleiner gleich target?
@@ -15,14 +16,16 @@
 - name: area_1_temperature_high_adjustment
   # Wenn die Temperatur zu hoch ist = true
   state: "{{(states('sensor.airmonitoring_grow_temperature') | float) > (states('sensor.area_1_max_temperature_air') | float )}}"
+  #state: "{{((states('sensor.airmonitoring_grow_temperature') | float) > (states('sensor.area_1_max_temperature_air') | float )) and ((states('binary_sensor.area_1_humidity_ok') == 'on') or((states('binary_sensor.area_1_is_ac_eq_dehumidifier') == 'on') and (states('binary_sensor.area_1_air_control_prio_temperature') == 'on') and (states('binary_sensor.area_1_air_control_prio_humidity') == 'off')))}}"
   ## Löst aus:
 ####### humidity
 - name: area_1_humidity_low_adjustment
   # Wenn die Luftfeuchtigkeit unter dem Toleranz Wert der Luftfeuchtigkeit fällt = true
   state: "{{((states('sensor.area_1_min_humidity') | float) > (states('sensor.airmonitoring_grow_humidity') | float ))}}"
+  #state: "{{((states('sensor.area_1_min_humidity') | float) > (states('sensor.airmonitoring_grow_humidity') | float )) and ((states('binary_sensor.area_1_temperature_ok') == 'on') or ((states('binary_sensor.area_1_is_ac_eq_dehumidifier') == 'on') and (states('binary_sensor.area_1_air_control_prio_humidity') == 'on') and (states('binary_sensor.area_1_air_control_prio_temperature') == 'off')))}}"
   ## Löst aus:
 - name: area_1_humidity_in_tolerance
-  state: "{{((states('binary_sensor.area_1_humidity_high_adjustment') == 'off') and (states('binary_sensor.area_1_humidity_low_adjustment') == 'off'))}}"
+  state: "{{((states('sensor.area_1_max_humidity') | float > states('sensor.airmonitoring_grow_humidity') | float) and (states('sensor.airmonitoring_grow_humidity') | float > states('sensor.area_1_min_humidity') | float))}}"
 - name: area_1_humidity_ok
   ## isnert here not high oder not low adjustment
   ## Statemenetbeschreibung:
@@ -31,6 +34,7 @@
 - name: area_1_humidity_high_adjustment
   # Wenn die Luftfeuchtigkeit zu hoch ist = true
   state: "{{((states('sensor.airmonitoring_grow_humidity') | float) >  (states('sensor.area_1_max_humidity')| float ))}}"
+  #state: "{{((states('sensor.airmonitoring_grow_humidity') | float) >  (states('sensor.area_1_max_humidity')| float )) and ((states('binary_sensor.area_1_temperature_ok') == 'on') or ((states('binary_sensor.area_1_is_ac_eq_dehumidifier') == 'on') and (states('binary_sensor.area_1_air_control_prio_humidity') == 'on') and (states('binary_sensor.area_1_air_control_prio_temperature') == 'off')))}}"
   ## Löst aus:
 ############## jobs fixed - has to be fixed
 - name: area_1_air_fixed_job_done
@@ -46,15 +50,24 @@
   state: "{{states('input_text.area_1_air_control_last_job') == 'dehumidifier_on' and states('binary_sensor.area_1_humidity_ok') == 'on' }}"
 - name: area_1_air_fixed_heater_and_humidifier_off
   # maybe need a change here - just temperature ok - maybe should if temp is okay call the service to turn off the heater and same for humidifier
-  state: "{{states('input_text.area_1_air_control_last_job') == 'heater_and_humidifier_on' and states('binary_sensor.area_1_temperature_ok') == 'on' }}"
+  state: "{{states('input_text.area_1_air_control_last_job') == 'heater_and_humidifier_on' and states('binary_sensor.area_1_temperature_in_tolerance') == 'on' and states('binary_sensor.area_1_humidity_in_tolerance') == 'on' }}"
 - name: area_1_air_fixed_heater_and_dehumidifier_off
   # maybe need a change here - just temperature ok - maybe should if temp is okay call the service to turn off the heater and same for humidifier
-  state: "{{states('input_text.area_1_air_control_last_job') == 'heater_and_dehumidifier_on' and states('binary_sensor.area_1_temperature_ok') == 'on'}}"
+  state: "{{states('input_text.area_1_air_control_last_job') == 'heater_and_dehumidifier_on' and states('binary_sensor.area_1_temperature_in_tolerance') == 'on' and states('binary_sensor.area_1_humidity_in_tolerance') == 'on'}}"
 - name: area_1_air_fixed_ac_and_humidifier_off
   # maybe need a change here - just temperature ok - maybe should if temp is okay call the service to turn off the heater and same for humidifier
-  state: "{{states('input_text.area_1_air_control_last_job') == 'ac_and_humidifier_on' and states('binary_sensor.area_1_temperature_ok') == 'on' }}"
+  state: "{{states('input_text.area_1_air_control_last_job') == 'ac_and_humidifier_on' and states('binary_sensor.area_1_temperature_in_tolerance') == 'on' and states('binary_sensor.area_1_humidity_in_tolerance') == 'on'}}"
 - name: area_1_air_fixed_ac_and_dehumidifier_off
   # maybe need a change here - just temperature ok - maybe should if temp is okay call the service to turn off the heater and same for humidifier
-  state: "{{states('input_text.area_1_air_control_last_job') == 'ac_and_dehumidifier_on' and states('binary_sensor.area_1_temperature_ok') == 'on' }}"
+  state: "{{states('input_text.area_1_air_control_last_job') == 'ac_and_dehumidifier_on' and states('binary_sensor.area_1_temperature_in_tolerance') == 'on' and states('binary_sensor.area_1_humidity_in_tolerance') == 'on' }}"
 ##########################################################
-
+- name: area_1_air_control_is_job_no_job
+  state: "{{(states('sensor.area_1_air_control_job') == 'no_job')}}"
+- name: area_1_air_control_is_job_humidifier_on
+  state: "{{(states('sensor.area_1_air_control_job') == 'humidifier_on')}}"
+- name: area_1_air_control_is_job_dehumidifier_on
+  state: "{{(states('sensor.area_1_air_control_job') == 'dehumidifier_on')}}"
+- name: area_1_air_control_is_job_ac_on
+  state: "{{(states('sensor.area_1_air_control_job') == 'ac_on')}}"
+- name: area_1_air_control_is_job_heater_on
+  state: "{{(states('sensor.area_1_air_control_job') == 'heater_on')}}"

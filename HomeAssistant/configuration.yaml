@@ -19,5 +19,4 @@ schedule: !include schedule.yaml
 template:
   - sensor: !include_dir_merge_list templates/sensor/
   - binary_sensor: !include_dir_merge_list templates/binary_sensor/
-# Fields required:
 
