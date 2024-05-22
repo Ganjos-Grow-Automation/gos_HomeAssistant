@@ -2,6 +2,8 @@
 
 GrowBot Open Source ist ein Community-Projekt, das sich der Automatisierung des Homegrows widmet. Unser Ziel ist es, Heimzüchtern zu helfen, ihre Pflanzen optimal zu pflegen, indem wir moderne Automatisierungstechnologien nutzen. Das Projekt basiert auf Home Assistant, einer Open-Source-Plattform für Heimautomatisierung, die eine zentrale Steuerung und Überwachung ermöglicht. Wir verwenden ESP32-Platinen zur Integration verschiedener Sensoren. Diese Sensoren überwachen wichtige Umgebungsparameter wie Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtintensität, und liefern Echtzeitdaten an Home Assistant.
 
+Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des Projekts [hier](https://link.space/@growbotopensource).
+
 ## geplante Funktionen
 - **Echtzeitüberwachung**: Kontinuierliche Überwachung aller wichtigen Umgebungsbedingungen.
 - **Automatische Steuerung**: Anpassung von Licht, Bewässerung und Lüftung basierend auf den Sensordaten.
