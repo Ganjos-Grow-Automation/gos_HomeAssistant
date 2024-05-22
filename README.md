@@ -23,7 +23,7 @@ Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE).
 
 ## Kontakt
 
-Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/issues) oder unser Community-Forum auf [Discord](https://github.com/dein-repo/growbot/issues](https://discord.gg/neJdSvxnPf).
+Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/issues) oder unser Community-Forum auf [Discord](https://discord.gg/neJdSvxnPf).
 
 
 ## Bestandteile
