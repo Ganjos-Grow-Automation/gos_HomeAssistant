@@ -2,6 +2,10 @@
 
 ## Voraussetzungen
 
+### Was wird benötigt?
+
+### Welche Addons und Integrationen werden in Home Assistant benötigt?
+
 ## Die Installation
 
 ## Konfiguration
