@@ -12,6 +12,7 @@ GrowBot Open Source ist ein Community-Projekt, das sich der Automatisierung des 
 ## Mitmachen
 
 Wir laden alle Interessierten ein, Teil unserer Community zu werden und gemeinsam an der Verbesserung und Erweiterung von GrowBot Open Source zu arbeiten. Egal, ob du ein erfahrener Entwickler, ein Technik-Enthusiast oder ein Homegrower bist – jeder Beitrag ist willkommen!
+Bitte lese dir hier die [Mitwirkungsrichtlinien](./CONTRIBUTING.md) und den [Verhaltenskodex](./CODE_OF_CONDUCT.md) durch, um am Projekt mitzuwirken. 
 
 ## Installation
 
@@ -19,7 +20,7 @@ Detaillierte Anweisungen zur Installation und Konfiguration findest du in der [I
 
 ## Lizenz
 
-Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE.md).
+Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE).
 
 ## Kontakt
 
@@ -27,16 +28,12 @@ Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://g
 
 
 ## Bestandteile
-* [Home Assistant](http://www.dropwizard.io/1.0.2/docs/) - Die Basis
-* [ESPHome](https://maven.apache.org/) - Die Integration des ESP32 Platinen und Sensoren
-* Hardware - Die kompatible Hardware findest ist [hier](https://maven.apache.org/) hinterlegt. 
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* [Home Assistant](https://www.home-assistant.io/) - Die Basis
+* [ESPHome](https://esphome.io/) - Die Integration des ESP32 Platinen und Sensoren
+* Hardware - Die kompatible Hardware findest ist [hier](./HARDWARE.md) hinterlegt. 
 
 ## Sponsoren
-* **Drain Master** - *Founder* - [Kaufe deinen Abtropfständer hier](https://github.com/MrcoSchrnr)
+* **Drain Master** - *Perfekte Drainage & einfache EC/pH-Messung* - [Kaufe deinen Abtropfständer hier](https://drain-master.de/produkt/drainmaster-4er-set/?ref=GrowBot)
 
 
 ## Autoren
@@ -46,10 +43,11 @@ Die ausführliche Liste der Mitwirkenden am Projekt findest du [hier](https://gi
 
 
 ## Annerkennung
+Ehre wem Ehre gebührt - Folgende Personen haben direkt oder indirekt dazu beigetragen, dass dieses Projekt entstanden ist und weiterhin wächst.
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* HomeGrow Pro
+* Ben Green
+* LEDGardener
 
 
 ---
