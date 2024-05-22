@@ -19,7 +19,7 @@ Detaillierte Anweisungen zur Installation und Konfiguration findest du in der [I
 
 ## Lizenz
 
-Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE).
+Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE.md).
 
 ## Kontakt
 
