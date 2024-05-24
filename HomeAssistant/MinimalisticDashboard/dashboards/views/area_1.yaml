@@ -1,0 +1,353 @@
+title: "Grow Zelt"
+path: "area_1"
+subview: true
+cards:
+### TODO: Devices & GrowData
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            template: chip_back
+            variables:
+              ulm_chip_back_path: home
+          - type: "custom:button-card"
+            template: card_title
+            name: Grow Zelt
+      ##### Calendar ansicht hier einfügen mit Daten des Grows
+      ##### Wie viel % in aktueller Phase + Detailansicht
+
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Aktuelles Monitoring
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_navigate
+                label: "Detailansicht"
+                variables:
+                  ulm_chip_navigate_path: area_1_monitoring
+                  ulm_chip_navigate_icon: mdi:database
+          - type: custom:ha-vpd-chart
+            air_text: Temp.
+            rh_text: r.H.
+            min_temperature: 5
+            max_temperature: 35
+            min_humidity: 10
+            max_humidity: 100
+            steps_humidity: 1
+            steps_temperature: 0.5
+            is_bar_view: false
+            enable_tooltip: true
+            enable_axes: true
+            enable_ghostmap: true
+            enable_triangle: false
+            sensors:
+              - temperature: sensor.airmonitoring_grow_temperature
+                humidity: sensor.airmonitoring_grow_humidity
+                name: Grow
+            vpd_phases:
+              - upper: 0.4
+                className: under-transpiration
+              - lower: 0.4
+                upper: 0.8
+                className: early-veg
+              - lower: 0.8
+                upper: 1.2
+                className: late-veg
+              - lower: 1.2
+                upper: 1.6
+                className: mid-late-flower
+              - lower: 1.6
+                className: danger-zone
+          ######################
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.airmonitoring_grow_temperature
+                    aggregate_func: last
+                    color: white
+                    name: Temperatur
+                line_width: 4
+                font_size: 75
+                points_per_hour: 6
+                hours_to_show: 12
+                show:
+                  fill: true
+                  name: true
+                  legend: false
+                  icon: false
+                align_icon: center
+                align_state: center
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.airmonitoring_grow_humidity
+                    aggregate_func: last
+                    color: white
+                    name: Luftfeuchtigkeit
+                font_size: 75
+                points_per_hour: 6
+                hours_to_show: 12
+                show:
+                  fill: true
+                  name: true
+                  legend: false
+                  icon: false
+                align_icon: center
+                align_state: center
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.airmonitoring_grow_eco2
+                    aggregate_func: last
+                    color: white
+                    name: CO2
+                line_width: 4
+                font_size: 75
+                points_per_hour: 6
+                hours_to_show: 12
+                show:
+                  fill: true
+                  name: true
+                  legend: false
+                  icon: false
+                align_icon: center
+                align_state: center
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.airmonitoring_grow_temperature
+                    aggregate_func: last
+                    color: white
+                    name: pH
+                line_width: 4
+                font_size: 75
+                points_per_hour: 6
+                hours_to_show: 12
+                show:
+                  fill: true
+                  name: true
+                  legend: false
+                  icon: false
+                align_icon: center
+                align_state: center
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.airmonitoring_grow_humidity
+                    aggregate_func: last
+                    color: white
+                    name: EC
+                font_size: 75
+                points_per_hour: 6
+                hours_to_show: 12
+                show:
+                  fill: true
+                  name: true
+                  legend: false
+                  icon: false
+                align_icon: center
+                align_state: center
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.airmonitoring_grow_temperature
+                    aggregate_func: last
+                    color: white
+                    name: H20 Temperatur
+                line_width: 4
+                font_size: 75
+                points_per_hour: 6
+                hours_to_show: 12
+                show:
+                  fill: true
+                  name: true
+                  legend: false
+                  icon: false
+                align_icon: center
+                align_state: center
+      #####################################################
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Grow Daten
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_navigate
+                label: "Detailansicht"
+                variables:
+                  ulm_chip_navigate_path: area_1_growdata
+                  ulm_chip_navigate_icon: mdi:database
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Startdatum
+                icon: mdi:lightbulb
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Grow Tag
+                icon: mdi:lightbulb
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Grow Woche
+                icon: mdi:lightbulb
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Stage
+                icon: mdi:lightbulb
+              - type: "custom:button-card"
+                color_type: blank-card
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: custom_card_bar_card
+                variables:
+                  ulm_custom_card_bar_card_entity: sensor.airmonitoring_grow_temperature
+                  ulm_custom_card_bar_card_name: Wachstum
+                  ulm_custom_card_bar_card_value: true
+                  ulm_custom_card_bar_card_indicator: false
+                  ulm_custom_card_bar_card_color: "var(--google-green)"
+                  ulm_custom_card_bar_card_min: 10
+                  ulm_custom_card_bar_card_max: 35
+              - type: "custom:button-card"
+                template: custom_card_bar_card
+                variables:
+                  ulm_custom_card_bar_card_entity: sensor.airmonitoring_grow_temperature
+                  ulm_custom_card_bar_card_name: Blüte
+                  ulm_custom_card_bar_card_value: true
+                  ulm_custom_card_bar_card_indicator: false
+                  ulm_custom_card_bar_card_color: "var(--google-green)"
+                  ulm_custom_card_bar_card_min: 10
+                  ulm_custom_card_bar_card_max: 35
+              - entity: sensor.airmonitoring_grow_temperature
+                title: Severity
+                type: "custom:bar-card"
+                severity:
+                  - color: Red
+                    from: 0
+                    to: 25
+                  - color: Orange
+                    from: 26
+                    to: 50
+                  - color: Green
+                    from: 51
+                    to: 100
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Strain 1
+                icon: mdi:lightbulb
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Strain 2
+                icon: mdi:lightbulb
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Strain 3
+                icon: mdi:lightbulb
+              - type: "custom:button-card"
+                color_type: blank-card
+      ######################################################################
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Geräteübersicht
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_navigate
+                label: "Detailansicht"
+                variables:
+                  ulm_chip_navigate_path: area_1_devices
+                  ulm_chip_navigate_icon: mdi:database
+          #######################################################################
+          - type: vertical-stack
+            cards:
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Licht
+                icon: mdi:lightbulb
+              - type: vertical-stack
+                cards:
+                  - type: "custom:button-card"
+                    template: card_power_outlet
+                    variables:
+                      ulm_card_power_outlet_consumption_sensor:
+                      ulm_card_power_outlet_name: Sanlight Evo 6
+                    entity: switch.growlight_schalter
+                  ##################
+                  - type: custom:scheduler-card
+                    include:
+                      - automation.lighting_flower_stage
+                      - script.device_control_led_off
+                      - script.device_control_led_on
+                    exclude: []
+                    title: Belichtungsplan
+                    display_options:
+                      primary_info: default
+                      secondary_info:
+                        - relative-time
+                        - days
+                        - time
+                        - additional-tasks
+                      icon: action
+                    show_header_toggle: true
+                    show_add_button: false
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Klimasteuerung
+                icon: mdi:fan
+              - type: horizontal-stack
+                cards:
+                  - type: "custom:button-card"
+                    template: card_power_outlet
+                    variables:
+                      ulm_card_power_outlet_consumption_sensor:
+                      ulm_card_power_outlet_name: Abluft
+                    entity: switch.airflowfan_schalter
+                  - type: "custom:button-card"
+                    template: card_power_outlet
+                    variables:
+                      ulm_card_power_outlet_consumption_sensor:
+                      ulm_card_power_outlet_name: Umluft
+                    entity: switch.airflowfan_schalter
+                  - type: "custom:button-card"
+                    template: card_power_outlet
+                    variables:
+                      ulm_card_power_outlet_consumption_sensor:
+                      ulm_card_power_outlet_name: Heizung
+                    entity: switch.heater_schalter
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Luftfeuchtigkeit
+                icon: mdi:air-humidifier
+              - type: horizontal-stack
+                cards:
+                  - type: "custom:button-card"
+                    template: card_power_outlet
+                    variables:
+                      ulm_card_power_outlet_consumption_sensor:
+                      ulm_card_power_outlet_name: Luftbefeuchter
+                    entity: switch.humidifier_schalter
+                  - type: "custom:button-card"
+                    template: card_power_outlet
+                    variables:
+                      ulm_card_power_outlet_consumption_sensor:
+                      ulm_card_power_outlet_name: Luftentfeuchter
+                    entity: switch.dehumidifier_schalter

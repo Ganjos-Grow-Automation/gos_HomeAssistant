@@ -8,28 +8,28 @@ grow_general_start:
 
 ## plant specific
 
-plant1_start_seed:
-  name: plant1_start_seed
+area1_start_seed:
+  name: area1_start_seed
   has_date: true
   has_time: false
   icon: mdi:calendar-start
-plant1_start_veg:
-  name: plant1_start_veg
+area1_start_veg:
+  name: area1_start_veg
   has_date: true
   has_time: false
   icon: mdi:calendar-start
-plant1_start_flower:
-  name: plant1_start_flower
+area1_start_flower:
+  name: area1_start_flower
   has_date: true
   has_time: false
   icon: mdi:calendar-start
-plant1_start_dry:
-  name: plant1_start_dry
+area1_start_dry:
+  name: area1_start_dry
   has_date: true
   has_time: false
   icon: mdi:calendar-start
-plant1_start_readToSmoke:
-  name: plant1_start_readToSmoke
+area1_start_readToSmoke:
+  name: area1_start_readToSmoke
   has_date: true
   has_time: false
   icon: mdi:calendar-start

@@ -1,0 +1,23 @@
+---
+button_card_templates: !include_dir_merge_named "../../custom_components/ui_lovelace_minimalist/__ui_minimalist__/ulm_templates/"
+
+title: "Minimalist Growbot"
+theme: "minimalist-mobile"
+background: "var(--background-image)"
+views:
+  - !include views/home.yaml
+  - !include views/clones_settings.yaml
+  - !include views/veg_settings.yaml
+  - !include views/flower_stretch_settings.yaml
+  - !include views/flower_bulk_settings.yaml
+  - !include views/flower_finish_settings.yaml
+  - !include views/dry_settings.yaml
+  - !include views/target_settings.yaml
+  - !include views/settings.yaml
+  - !include views/area_1.yaml
+  - !include views/area_1_monitoring.yaml
+  - !include views/area_1_growdata.yaml
+  - !include views/area_1_devices.yaml
+  - !include views/debugging.yaml
+  - !include views/nutrition_calculator.yaml
+  - !include views/backup.yaml

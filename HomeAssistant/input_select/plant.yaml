@@ -1,0 +1,37 @@
+## substrate of each plant
+### Plant 1
+plant_1_subtrate:
+  name: plant1_subtrate
+  options:
+    - soil
+    - coco
+    - rock wool
+    - living soil
+    - hydro
+    - aero
+  icon: mdi:form-dropdown
+
+### Plant 2
+plant_2_subtrate:
+  name: plant2_subtrate
+  options:
+    - soil
+    - coco
+    - rock wool
+    - living soil
+    - hydro
+    - aero
+  icon: mdi:form-dropdown
+
+## substrate of each plant
+### Plant 3
+plant_3_subtrate:
+  name: plant3_subtrate
+  options:
+    - soil
+    - coco
+    - rock wool
+    - living soil
+    - hydro
+    - aero
+  icon: mdi:form-dropdown

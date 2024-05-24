@@ -1,0 +1,131 @@
+### Stage: clones
+- name: humidity_max_day_clones
+  state: >
+    {{ [states('input_number.target_humidity_day_clones'), states('input_number.target_humidity_tolerance_day_clones')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_day_clones
+  state: >
+    {{ states('input_number.target_humidity_day_clones') | float - states('input_number.target_humidity_tolerance_day_clones') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_max_night_clones
+  state: >
+    {{ [states('input_number.target_humidity_night_clones'), states('input_number.target_humidity_tolerance_night_clones')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_night_clones
+  state: >
+    {{ states('input_number.target_humidity_night_clones') | float - states('input_number.target_humidity_tolerance_night_clones') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+
+### Stage: veg
+- name: humidity_max_day_veg
+  state: >
+    {{ [states('input_number.target_humidity_day_veg'), states('input_number.target_humidity_tolerance_day_veg')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_day_veg
+  state: >
+    {{ states('input_number.target_humidity_day_veg') | float - states('input_number.target_humidity_tolerance_day_veg') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_max_night_veg
+  state: >
+    {{ [states('input_number.target_humidity_night_veg'), states('input_number.target_humidity_tolerance_night_veg')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_night_veg
+  state: >
+    {{ states('input_number.target_humidity_night_veg') | float - states('input_number.target_humidity_tolerance_night_veg') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+
+### Stage: flower_stretch
+- name: humidity_max_day_flower_stretch
+  state: >
+    {{ [states('input_number.target_humidity_day_flower_stretch'), states('input_number.target_humidity_tolerance_day_flower_stretch')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_day_flower_stretch
+  state: >
+    {{ states('input_number.target_humidity_day_flower_stretch') | float - states('input_number.target_humidity_tolerance_day_flower_stretch') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_max_night_flower_stretch
+  state: >
+    {{ [states('input_number.target_humidity_night_flower_stretch'), states('input_number.target_humidity_tolerance_night_flower_stretch')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_night_flower_stretch
+  state: >
+    {{ states('input_number.target_humidity_night_flower_stretch') | float - states('input_number.target_humidity_tolerance_night_flower_stretch') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+
+### Stage: flower_bulk
+- name: humidity_max_day_flower_bulk
+  state: >
+    {{ [states('input_number.target_humidity_day_flower_bulk'), states('input_number.target_humidity_tolerance_day_flower_bulk')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_day_flower_bulk
+  state: >
+    {{ states('input_number.target_humidity_day_flower_bulk') | float - states('input_number.target_humidity_tolerance_day_flower_bulk') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_max_night_flower_bulk
+  state: >
+    {{ [states('input_number.target_humidity_night_flower_bulk'), states('input_number.target_humidity_tolerance_night_flower_bulk')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_night_flower_bulk
+  state: >
+    {{ states('input_number.target_humidity_night_flower_bulk') | float - states('input_number.target_humidity_tolerance_night_flower_bulk') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+
+### Stage: flower_finish
+- name: humidity_max_day_flower_finish
+  state: >
+    {{ [states('input_number.target_humidity_day_flower_finish'), states('input_number.target_humidity_tolerance_day_flower_finish')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_day_flower_finish
+  state: >
+    {{ states('input_number.target_humidity_day_flower_finish') | float - states('input_number.target_humidity_tolerance_day_flower_finish') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_max_night_flower_finish
+  state: >
+    {{ [states('input_number.target_humidity_night_flower_finish'), states('input_number.target_humidity_tolerance_night_flower_finish')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_night_flower_finish
+  state: >
+    {{ states('input_number.target_humidity_night_flower_finish') | float - states('input_number.target_humidity_tolerance_night_flower_finish') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+
+### Stage: dry
+- name: humidity_max_day_dry
+  state: >
+    {{ [states('input_number.target_humidity_day_dry'), states('input_number.target_humidity_tolerance_day_dry')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_day_dry
+  state: >
+    {{ states('input_number.target_humidity_day_dry') | float - states('input_number.target_humidity_tolerance_day_dry') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_max_night_dry
+  state: >
+    {{ [states('input_number.target_humidity_night_dry'), states('input_number.target_humidity_tolerance_night_dry')] | map('float') | sum }}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius
+- name: humidity_min_night_dry
+  state: >
+    {{ states('input_number.target_humidity_night_dry') | float - states('input_number.target_humidity_tolerance_night_dry') | float}}
+  unit_of_measurement: '%'
+  icon: mdi:humidity-celsius

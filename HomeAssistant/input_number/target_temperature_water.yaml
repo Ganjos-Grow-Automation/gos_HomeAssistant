@@ -1,0 +1,127 @@
+### Status: ready to test
+
+## Stage: clones
+target_temperature_water_clones:
+  name: Zieltemperatur-Wasser Samen und Stecklinge
+  initial: 24
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+
+target_temperature_tolerance_water_clones:
+  name: Zieltemperatur-Wasser-Toleranz Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: veg
+target_temperature_water_veg:
+  name: Zieltemperatur-Wasser Wachstum
+  initial: 24
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+
+target_temperature_tolerance_water_veg:
+  name: Zieltemperatur-Wasser-Toleranz Wachstum
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_stretch
+target_temperature_water_flower_stretch:
+  name: Zieltemperatur-Wasser Blüte Streckung
+  initial: 24
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+
+target_temperature_tolerance_water_flower_stretch:
+  name: Zieltemperatur-Wasser-Toleranz Blüte Streckung
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_bulk
+target_temperature_water_flower_bulk:
+  name: Zieltemperatur-Wasser Blüte Bulk
+  initial: 24
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+
+target_temperature_tolerance_water_flower_bulk:
+  name: Zieltemperatur-Wasser-Toleranz Blüte Bulk
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_finish
+target_temperature_water_flower_finish:
+  name: Zieltemperatur-Wasser Blüte Ende
+  initial: 24
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+
+target_temperature_tolerance_water_flower_finish:
+  name: Zieltemperatur-Wasser-Toleranz Blüte Ende
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: dry
+target_temperature_water_dry:
+  name: Zieltemperatur-Wasser Trocknung
+  initial: 24
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+
+target_temperature_tolerance_water_dry:
+  name: Zieltemperatur-Wasser-Toleranz Trocknung
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference

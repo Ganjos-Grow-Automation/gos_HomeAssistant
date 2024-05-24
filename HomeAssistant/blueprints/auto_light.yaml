@@ -1,11 +1,12 @@
 blueprint:
   name: GrowBot schedule controled light
-  description: --- Description has to be inserted ---
+  description: >
+    This automation blueprint is used to control the light schedule based on the plant stage.
   domain: automation
   author: GrowBot Open Source
   input:
     light_schedule:
-      name: light_schedule
+      name: Belichtungsplan
       selector:
         entity:
           include_entities:
@@ -13,13 +14,13 @@ blueprint:
             - schedule.lightschedule_seed
             - schedule.lightschedule_veg
     grow_stage_inputselector:
-      name: grow_stage_inputselector
+      name: Pflanzenstadiums Eingangswähler
       selector:
         entity:
           include_entities:
-            - input_select.plant1_stage
+            - input_select.area1_stage
     grow_stage_value:
-      name: grow_stage_value
+      name: Pflanzenstadiums Wert
       selector:
         select:
           options:
@@ -28,12 +29,22 @@ blueprint:
             - Flower
             - Dry
           mode: dropdown
-    target_script:
-      name: target_script
+    target_script_light_on:
+      name: Licht Skript zum Einschalten
+      description: Das Skript, das den Licht steuert
       selector:
         entity:
           include_entities:
-            - script.light_control
+          # Add your dehumidifier script entities here
+            - script.device_control_led_on
+    target_script_light_off:
+      name: Licht Skript zum Einschalten
+      description: Das Skript, das den Licht steuert
+      selector:
+        entity:
+          include_entities:
+          # Add your dehumidifier script entities here
+            - script.device_control_led_off
 
 mode: single
 
@@ -62,12 +73,7 @@ action:
         id:
           - "on"
     then:
-      - service: !input target_script
-        metadata: {}
-        data:
-          state: true
+      - service: !input target_script_light_on
+
     else:
-      - service: !input target_script
-        metadata: {}
-        data:
-          state: false
+      - service: !input target_script_light_off

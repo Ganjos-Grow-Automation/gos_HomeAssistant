@@ -1,0 +1,105 @@
+## Stage: clones
+target_light_distance_clones:
+  name: Ziel-Lampenabstand Samen und Stecklinge
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+#### tolerance
+target_light_distance_tolerance_clones:
+  name: Ziel-Lichtabstandstoleranz Samen und Stecklinge
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+
+## Stage: veg
+target_light_distance_veg:
+  name: Ziel-Lampenabstand Wachstum
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+#### tolerance
+target_light_distance_tolerance_veg:
+  name: Ziel-Lichtabstandstoleranz Wachstum
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+
+## Stage: flower_stretch
+target_light_distance_flower_stretch:
+  name: Ziel-Lampenabstand Blüte Streckung
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+#### tolerance
+target_light_distance_tolerance_flower_stretch:
+  name: Ziel-Lichtabstandstoleranz Blüte Streckung
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+
+
+## Stage: flower_bulk
+target_light_distance_flower_bulk:
+  name: Ziel-Lampenabstand Blüte Bulk
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+#### tolerance
+target_light_distance_tolerance_flower_bulk:
+  name: Ziel-Lichtabstandstoleranz Blüte Bulk
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+
+## Stage: flower_finish
+target_light_distance_flower_finish:
+  name: Ziel-Lampenabstand Blüte Ende
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical
+#### tolerance
+target_light_distance_tolerance_flower_finish:
+  name: Ziel-Lichtabstandstoleranz Blüte Ende
+  initial: 0.30
+  min: 0.10
+  max: 1.5
+  step: 0.05
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:arrow-expand-vertical

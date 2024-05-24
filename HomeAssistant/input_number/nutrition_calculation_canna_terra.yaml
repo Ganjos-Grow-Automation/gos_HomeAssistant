@@ -1,0 +1,64 @@
+# imput numbers for the nutrition calculator for canna terra nutrition
+nutrition_calculation_cannaterra_start:
+  name: nutrition_calculation_cannaterra_start
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_vega:
+  name: nutrition_calculation_cannaterra_vega
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_flores:
+  name: nutrition_calculation_cannaterra_flores
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_rhizotonic:
+  name: nutrition_calculation_cannaterra_rhizotonic
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_cannazym:
+  name: nutrition_calculation_cannaterra_cannazym
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_cannaboost:
+  name: nutrition_calculation_cannaterra_cannaboost
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
+nutrition_calculation_cannaterra_pk1314:
+  name: nutrition_calculation_cannaterra_pk1314
+  initial: 10
+  min: 0
+  max: 100
+  step: 5
+  unit_of_measurement: ml/10l
+  mode: slider
+  icon: mdi:nutrition
