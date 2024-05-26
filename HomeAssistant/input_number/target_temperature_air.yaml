@@ -1,8 +1,9 @@
-### Status: ready to test
+## Status: to do
 
 ## Stage: clones
-target_temperature_water_clones:
-  name: Zieltemperatur-Wasser Samen und Stecklinge
+##### day values
+target_temperature_air_day_clones:
+  name: Zieltemperatur-Luft Samen und Stecklinge Tag
   initial: 24
   min: 15
   max: 35
@@ -10,62 +11,214 @@ target_temperature_water_clones:
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_clones:
-  name: Zieltemperatur-Wasser-Toleranz Samen und Stecklinge
-  initial: 2
+target_temperature_air_tolerance_day_clones:
+  name: Zieltemperatur-Luft-Toleranz Samen und Stecklinge
+  initial: 1
   min: 0
   max: 5
   step: 1
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
+### night values
+target_temperature_air_night_clones:
+  name: Zieltemperatur-Luft Samen und Stecklinge Nacht
+  initial: 24
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_tolerance_air_night_clones:
+  name: Zieltemperatur-Luft-Toleranz Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+######## min & max temperature for alerts
+min_temperature_air_clones:
+  name: Min-Temperatur Samen und Stecklinge
+  initial: 23
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+max_temperature_air_clones:
+  name: Max-Temperatur Samen und Stecklinge
+  initial: 26
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
 
 ## Stage: veg
-target_temperature_water_veg:
-  name: Zieltemperatur-Wasser Wachstum
-  initial: 24
+##### day values
+target_temperature_air_day_veg:
+  name: Zieltemperatur-Luft Wachstum Tag
+  initial: 27
   min: 15
   max: 35
   step: 1
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_veg:
-  name: Zieltemperatur-Wasser-Toleranz Wachstum
-  initial: 2
+target_temperature_air_tolerance_day_veg:
+  name: Zieltemperatur-Luft-Toleranz Wachstum
+  initial: 1
   min: 0
   max: 5
   step: 1
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
+### night values
+target_temperature_air_night_veg:
+  name: Zieltemperatur-Luft Wachstum Nacht
+  initial: 25
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_tolerance_air_night_veg:
+  name: Zieltemperatur-Luft-Toleranz Wachstum
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+######## min & max temperature for alerts
+min_temperature_air_veg:
+  name: Min-Temperatur Wachstum
+  initial: 22
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+max_temperature_air_veg:
+  name: Max-Temperatur Wachstum
+  initial: 28
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
 
 ## Stage: flower_stretch
-target_temperature_water_flower_stretch:
-  name: Zieltemperatur-Wasser Blüte Streckung
-  initial: 24
+##### day values
+target_temperature_air_day_flower_stretch:
+  name: Zieltemperatur-Luft Blüte Streckung Tag
+  initial: 26
   min: 15
   max: 35
   step: 1
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_flower_stretch:
-  name: Zieltemperatur-Wasser-Toleranz Blüte Streckung
-  initial: 2
+target_temperature_air_tolerance_day_flower_stretch:
+  name: Zieltemperatur-Luft-Toleranz Blüte Streckung
+  initial: 1
   min: 0
   max: 5
   step: 1
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
+### night values
+target_temperature_air_night_flower_stretch:
+  name: Zieltemperatur-Luft Blüte Streckung Nacht
+  initial: 26
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_tolerance_air_night_flower_stretch:
+  name: Zieltemperatur-Luft-Toleranz Blüte Streckung
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+######## min & max temperature for alerts
+min_temperature_air_flower_stretch:
+  name: Min-Temperatur Blüte Streckung
+  initial: 25
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+max_temperature_air_flower_stretch:
+  name: Max-Temperatur Blüte Streckung
+  initial: 28
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
 
 ## Stage: flower_bulk
-target_temperature_water_flower_bulk:
-  name: Zieltemperatur-Wasser Blüte Bulk
+##### day values
+target_temperature_air_day_flower_bulk:
+  name: Zieltemperatur-Luft Blüte Bulk Tag
+  initial: 25
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_air_tolerance_day_flower_bulk:
+  name: Zieltemperatur-Luft-Toleranz Blüte Bulk
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+### night values
+target_temperature_air_night_flower_bulk:
+  name: Zieltemperatur-Luft Blüte Bulk Nacht
+  initial: 25
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_tolerance_air_night_flower_bulk:
+  name: Zieltemperatur-Luft-Toleranz Blüte Bulk
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+######## min & max temperature for alerts
+min_temperature_air_flower_bulk:
+  name: Min-Temperatur Blüte Bulk
   initial: 24
   min: 15
   max: 35
@@ -73,20 +226,67 @@ target_temperature_water_flower_bulk:
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_flower_bulk:
-  name: Zieltemperatur-Wasser-Toleranz Blüte Bulk
-  initial: 2
-  min: 0
-  max: 5
+max_temperature_air_flower_bulk:
+  name: Max-Temperatur Blüte Bulk
+  initial: 26
+  min: 15
+  max: 35
   step: 1
   unit_of_measurement: °C
   mode: box
-  icon: mdi:vector-difference
+  icon: mdi:temperature-celsius
 
 ## Stage: flower_finish
-target_temperature_water_flower_finish:
-  name: Zieltemperatur-Wasser Blüte Ende
+##### day values
+target_temperature_air_day_flower_finish:
+  name: Zieltemperatur-Luft Blüte Ende Tag
+  initial: 23
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_air_tolerance_day_flower_finish:
+  name: Zieltemperatur-Luft-Toleranz Blüte Ende
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+### night values
+target_temperature_air_night_flower_finish:
+  name: Zieltemperatur-Luft Blüte Ende Nacht
+  initial: 21
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+target_temperature_tolerance_air_night_flower_finish:
+  name: Zieltemperatur-Luft-Toleranz Blüte Ende
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+######## min & max temperature for alerts
+min_temperature_air_flower_finish:
+  name: Min-Temperatur Blüte Ende
+  initial: 18
+  min: 15
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+max_temperature_air_flower_finish:
+  name: Max-Temperatur Blüte Ende
   initial: 24
   min: 15
   max: 35
@@ -94,34 +294,43 @@ target_temperature_water_flower_finish:
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_flower_finish:
-  name: Zieltemperatur-Wasser-Toleranz Blüte Ende
-  initial: 2
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
 
 ## Stage: dry
-target_temperature_water_dry:
-  name: Zieltemperatur-Wasser Trocknung
-  initial: 24
-  min: 15
+##### day values
+target_temperature_air_dry:
+  name: Zieltemperatur-Luft Trocknung
+  initial: 16
+  min: 10
   max: 35
   step: 1
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_dry:
-  name: Zieltemperatur-Wasser-Toleranz Trocknung
-  initial: 2
+target_temperature_air_tolerance_dry:
+  name: Zieltemperatur-Luft-Toleranz Trocknung
+  initial: 1
   min: 0
   max: 5
   step: 1
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
+######## min & max temperature for alerts
+min_temperature_air_dry:
+  name: Min-Temperatur Trocknung
+  initial: 15
+  min: 10
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius
+max_temperature_air_dry:
+  name: Max-Temperatur Trocknung
+  initial: 18
+  min: 10
+  max: 35
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:temperature-celsius

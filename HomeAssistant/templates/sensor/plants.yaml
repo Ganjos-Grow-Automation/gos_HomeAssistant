@@ -1,0 +1,106 @@
+### modify area specific to the area of the plant
+
+###### plant 1
+- name: plant_1_max_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('sensor.soil_moisture_max_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('sensor.soil_moisture_max_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('sensor.soil_moisture_max_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('sensor.soil_moisture_max_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.soil_moisture_max_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.soil_moisture_max_dry')}}
+    {% endif %}
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+- name: plant_1_target_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('input_number.target_soil_moisture_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('input_number.target_soil_moisture_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('input_number.target_soil_moisture_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('input_number.target_soil_moisture_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('input_number.target_soil_moisture_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('input_number.target_soil_moisture_dry')}}
+    {% endif %}
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+- name: plant_1_min_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('sensor.soil_moisture_min_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('sensor.soil_moisture_min_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('sensor.soil_moisture_min_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('sensor.soil_moisture_min_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.soil_moisture_min_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.soil_moisture_min_dry')}}
+    {% endif %}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+
+###### plant 2
+- name: plant_2_max_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('sensor.soil_moisture_max_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('sensor.soil_moisture_max_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('sensor.soil_moisture_max_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('sensor.soil_moisture_max_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.soil_moisture_max_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.soil_moisture_max_dry')}}
+    {% endif %}
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+- name: plant_2_target_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('input_number.target_soil_moisture_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('input_number.target_soil_moisture_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('input_number.target_soil_moisture_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('input_number.target_soil_moisture_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('input_number.target_soil_moisture_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('input_number.target_soil_moisture_dry')}}
+    {% endif %}
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+- name: plant_2_min_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('sensor.soil_moisture_min_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('sensor.soil_moisture_min_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('sensor.soil_moisture_min_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('sensor.soil_moisture_min_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.soil_moisture_min_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.soil_moisture_min_dry')}}
+    {% endif %}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+
+###### plant 3
+- name: plant_3_max_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('sensor.soil_moisture_max_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('sensor.soil_moisture_max_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('sensor.soil_moisture_max_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('sensor.soil_moisture_max_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.soil_moisture_max_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.soil_moisture_max_dry')}}
+    {% endif %}
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+- name: plant_3_target_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('input_number.target_soil_moisture_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('input_number.target_soil_moisture_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('input_number.target_soil_moisture_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('input_number.target_soil_moisture_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('input_number.target_soil_moisture_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('input_number.target_soil_moisture_dry')}}
+    {% endif %}
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+- name: plant_3_min_soil_moisture
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('sensor.soil_moisture_min_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('sensor.soil_moisture_min_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('sensor.soil_moisture_min_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('sensor.soil_moisture_min_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.soil_moisture_min_flower_finish')}}
+    {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.soil_moisture_min_dry')}}
+    {% endif %}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent

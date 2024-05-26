@@ -1,0 +1,105 @@
+### Status: to do
+## Stage: clones
+##### day values
+target_soil_moisture_clones:
+  name: Ziel-Bodenfeuchtigkeit Samen und Stecklinge Tag
+  initial: 60
+  min: 0
+  max: 100
+  step: 100
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:water-percent
+target_soil_moisture_tolerance_clones:
+  name: Ziel-Bodenfeuchtigkeit-Toleranz Samen und Stecklinge
+  initial: 20
+  min: 0
+  max: 40
+  step: 5
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: veg
+##### day values
+target_soil_moisture_veg:
+  name: Ziel-Bodenfeuchtigkeit Wachstum Tag
+  initial: 60
+  min: 0
+  max: 100
+  step: 100
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:water-percent
+target_soil_moisture_tolerance_veg:
+  name: Ziel-Bodenfeuchtigkeit-Toleranz Wachstum
+  initial: 20
+  min: 0
+  max: 40
+  step: 5
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_stretch
+##### day values
+target_soil_moisture_flower_stretch:
+  name: Ziel-Bodenfeuchtigkeit Blüte Streckung Tag
+  initial: 60
+  min: 0
+  max: 100
+  step: 100
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:water-percent
+target_soil_moisture_tolerance_flower_stretch:
+  name: Ziel-Bodenfeuchtigkeit-Toleranz Blüte Streckung
+  initial: 20
+  min: 0
+  max: 40
+  step: 5
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_bulk
+##### day values
+target_soil_moisture_flower_bulk:
+  name: Ziel-Bodenfeuchtigkeit Blüte Bulk Tag
+  initial: 60
+  min: 0
+  max: 100
+  step: 100
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:water-percent
+target_soil_moisture_tolerance_flower_bulk:
+  name: Ziel-Bodenfeuchtigkeit-Toleranz Blüte Bulk
+  initial: 20
+  min: 0
+  max: 40
+  step: 5
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference
+
+## Stage: flower_finish
+##### day values
+target_soil_moisture_flower_finish:
+  name: Ziel-Bodenfeuchtigkeit Blüte Ende Tag
+  initial: 60
+  min: 0
+  max: 100
+  step: 100
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:water-percent
+target_soil_moisture_tolerance_flower_finish:
+  name: Ziel-Bodenfeuchtigkeit-Toleranz Blüte Ende
+  initial: 20
+  min: 0
+  max: 40
+  step: 5
+  unit_of_measurement: "%"
+  mode: box
+  icon: mdi:vector-difference

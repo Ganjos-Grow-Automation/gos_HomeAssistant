@@ -1,6 +1,6 @@
 ### Area 1
 - name: area_1_is_day
-  state: "{{states('switch.growlight_schalter')}}"
+  state: "{{states('switch.sanlight_evo6_schalter')}}"
   icon: mdi:theme-light-dark
 
 - name: area_1_is_ac_eq_dehumidifier

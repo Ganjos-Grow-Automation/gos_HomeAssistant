@@ -109,23 +109,14 @@
   icon: mdi:humidity-celsius
 
 ### Stage: dry
-- name: humidity_max_day_dry
+- name: humidity_max_dry
   state: >
-    {{ [states('input_number.target_humidity_day_dry'), states('input_number.target_humidity_tolerance_day_dry')] | map('float') | sum }}
+    {{ [states('input_number.target_humidity_dry'), states('input_number.target_humidity_tolerance_dry')] | map('float') | sum }}
   unit_of_measurement: '%'
   icon: mdi:humidity-celsius
-- name: humidity_min_day_dry
+- name: humidity_min_dry
   state: >
-    {{ states('input_number.target_humidity_day_dry') | float - states('input_number.target_humidity_tolerance_day_dry') | float}}
+    {{ states('input_number.target_humidity_dry') | float - states('input_number.target_humidity_tolerance_dry') | float}}
   unit_of_measurement: '%'
   icon: mdi:humidity-celsius
-- name: humidity_max_night_dry
-  state: >
-    {{ [states('input_number.target_humidity_night_dry'), states('input_number.target_humidity_tolerance_night_dry')] | map('float') | sum }}
-  unit_of_measurement: '%'
-  icon: mdi:humidity-celsius
-- name: humidity_min_night_dry
-  state: >
-    {{ states('input_number.target_humidity_night_dry') | float - states('input_number.target_humidity_tolerance_night_dry') | float}}
-  unit_of_measurement: '%'
-  icon: mdi:humidity-celsius
+
