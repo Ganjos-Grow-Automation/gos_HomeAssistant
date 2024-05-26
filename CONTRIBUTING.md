@@ -30,7 +30,7 @@ Bitte beachte unseren [Code of Conduct](./CODE_OF_CONDUCT.md), um eine respektvo
 
 ## Kontakt
 
-Für Fragen oder Hilfe kannst du uns über die [GitHub Issues](https://github.com/dein-repo/growbot/issues) oder unserem Community-Forum auf [Discord](https://discord.gg/neJdSvxnPf) erreichen.
+Für Fragen oder Hilfe kannst du uns über die [GitHub Discussions](https://github.com/orgs/GrowBot-Open-Source/discussions), über die [GitHub Issues](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/issues) oder unserem Community-Forum auf [Discord](https://discord.gg/neJdSvxnPf) erreichen.
 
 Wir freuen uns auf deine Beiträge!
 
