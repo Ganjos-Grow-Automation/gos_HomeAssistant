@@ -35,6 +35,7 @@ Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://g
 
 ## Sponsoren
 * **Drain Master** - *Perfekte Drainage & einfache EC/pH-Messung* - [Kaufe deinen Abtropfständer hier](https://drain-master.de/produkt/drainmaster-4er-set/?ref=GrowBot)
+- **TRUESOIL** - Unser Partner rund um das Thema Living Soil - Exklusiv bekommt die GrowBot Community mit dem Code "Growbot" 10% auf das komplette Sortiment im Onlineshop. Zum Onlineshop von TRUESOIL gelangst du [hier](https://truesoil.at/collections).
 
 
 ## Autoren
