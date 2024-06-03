@@ -1,0 +1,621 @@
+title: "Bulk Einstellungen"
+path: "flower_bulk_settings"
+subview: true
+cards:
+  - type: vertical-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Luftbedingungen
+          ### VPD
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_vpd_flower_bulk
+                name: VPD in kPa
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:bullseye
+                icon_color: green
+
+              - type: custom:mushroom-number-card
+                entity: input_number.target_vpd_tolerance_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+          - type: custom:mushroom-number-card
+            entity: input_number.target_vpd_tolerance_alerting_flower_bulk
+            display_mode: buttons
+            name: Benachrichtungs Toleranz
+            secondary_info: last-changed
+            icon: mdi:bell-alert
+            icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.min_vpd_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_vpd_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.max_vpd_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          #### Temperatur
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_temperature_air_day_flower_bulk
+                name: Temperatur in °C
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:temperature-celsius
+                icon_color: green
+              - type: custom:mushroom-number-card
+                entity: input_number.target_temperature_air_tolerance_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_temperature_air_day_night_difference_flower_bulk
+                name: Unterschied Nacht in °C
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:set-right
+                icon_color: green
+              - type: custom:mushroom-number-card
+                entity: input_number.target_temperature_air_tolerance_alerting_flower_bulk
+                display_mode: buttons
+                name: Benachrichtungs Toleranz
+                secondary_info: last-changed
+                icon: mdi:bell-alert
+                icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Am Tag
+                icon: "mdi:white-balance-sunny"
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.min_temperature_air_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_temperature_air_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.max_temperature_air_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Bei Nacht
+                icon: "mdi:weather-night"
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.min_temperature_air_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.target_temperature_air_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.max_temperature_air_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          ### Luftfeuchtigkeit
+          ##### Luftfeuchtigkeit
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_humidity_day_flower_bulk
+                name: Luftfeuchtigkeit in %
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:water-percent
+                icon_color: green
+
+              - type: custom:mushroom-number-card
+                entity: input_number.target_humidity_tolerance_day_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_humidity_day_night_difference_flower_bulk
+                name: Unterschied Nacht in %
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:set-right
+                icon_color: green
+              - type: custom:mushroom-number-card
+                entity: input_number.target_humidity_tolerance_alerting_flower_bulk
+                display_mode: buttons
+                name: Benachrichtungs Toleranz
+                secondary_info: last-changed
+                icon: mdi:bell-alert
+                icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Am Tag
+                icon: "mdi:white-balance-sunny"
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.min_humidity_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_humidity_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.max_humidity_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Bei Nacht
+                icon: "mdi:weather-night"
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.min_humidity_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.target_humidity_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.max_humidity_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          ##### CO2
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_co2_day_flower_bulk
+                name: CO2 in ppm
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:molecule-co2
+                icon_color: green
+
+              - type: custom:mushroom-number-card
+                entity: input_number.target_co2_tolerance_day_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_co2_day_night_difference_flower_bulk
+                name: Unterschied Nacht in ppm
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:set-right
+                icon_color: green
+              - type: custom:mushroom-number-card
+                entity: input_number.target_co2_tolerance_alerting_flower_bulk
+                display_mode: buttons
+                name: Benachrichtungs Toleranz
+                secondary_info: last-changed
+                icon: mdi:bell-alert
+                icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Am Tag
+                icon: "mdi:white-balance-sunny"
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.min_co2_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_co2_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.max_co2_day_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Bei Nacht
+                icon: "mdi:weather-night"
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.min_co2_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.target_co2_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.max_co2_night_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+      ##############################################
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Substratbedingungen
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: aktuell ohne Auswirkungen
+                icon: mdi:alert-box
+          ##############################
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_soil_moisture_flower_bulk
+                name: Bodenfeuchtigkeit in %
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:water-percent
+                icon_color: green
+
+              - type: custom:mushroom-number-card
+                entity: input_number.target_soil_moisture_tolerance_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+          - type: custom:mushroom-number-card
+            entity: input_number.target_soil_moisture_tolerance_alerting_flower_bulk
+            display_mode: buttons
+            name: Benachrichtungs Toleranz
+            secondary_info: last-changed
+            icon: mdi:bell-alert
+            icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.soil_moisture_min_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_soil_moisture_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.soil_moisture_max_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+      ##############################################
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Lichtbedingungen
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: aktuell ohne Auswirkungen
+                icon: mdi:alert-box
+          ##############################
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_light_distance_flower_bulk
+                name: Abstand in Meter
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:arrow-expand-vertical
+                icon_color: green
+
+              - type: custom:mushroom-number-card
+                entity: input_number.target_light_distance_tolerance_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+          - type: custom:mushroom-number-card
+            entity: input_number.target_light_distance_tolerance_alerting_flower_bulk
+            display_mode: buttons
+            name: Benachrichtungs Toleranz
+            secondary_info: last-changed
+            icon: mdi:bell-alert
+            icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.light_distance_min_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_light_distance_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.light_distance_max_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          ##############################
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_light_intensity_flower_bulk
+                name: Lichtintensität in Lux
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:lightbulb-question
+                icon_color: green
+
+          ##############################################
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Wasserbedingungen
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: aktuell ohne Auswirkungen
+                icon: mdi:alert-box
+          ############################## ph
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_ph_flower_bulk
+                name: pH Wert
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:water-check-outline
+                icon_color: green
+              - type: custom:mushroom-number-card
+                entity: input_number.target_ph_tolerance_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+          - type: custom:mushroom-number-card
+            entity: input_number.target_ph_tolerance_alerting_flower_bulk
+            display_mode: buttons
+            name: Benachrichtungs Toleranz
+            secondary_info: last-changed
+            icon: mdi:bell-alert
+            icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.ph_min_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_ph_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.ph_max_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          ####### ec
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_ec_flower_bulk
+                name: EC
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:water-check-outline
+                icon_color: green
+
+              - type: custom:mushroom-number-card
+                entity: input_number.target_ec_tolerance_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+          - type: custom:mushroom-number-card
+            entity: input_number.target_ec_tolerance_alerting_flower_bulk
+            display_mode: buttons
+            name: Benachrichtungs Toleranz
+            secondary_info: last-changed
+            icon: mdi:bell-alert
+            icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.ec_min_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_ec_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.ec_max_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card
+          ### wasser temperatur
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-number-card
+                entity: input_number.target_temperature_water_flower_bulk
+                name: H20 Temperatur in °C
+                display_mode: buttons
+                secondary_info: last-changed
+                icon: mdi:temperature-celsius
+                icon_color: green
+
+              - type: custom:mushroom-number-card
+                entity: input_number.target_temperature_water_tolerance_flower_bulk
+                display_mode: buttons
+                name: Toleranz
+                secondary_info: last-changed
+                icon: mdi:vector-difference
+                icon_color: green
+          - type: custom:mushroom-number-card
+            entity: input_number.target_temperature_water_tolerance_alerting_flower_bulk
+            display_mode: buttons
+            name: Benachrichtungs Toleranz
+            secondary_info: last-changed
+            icon: mdi:bell-alert
+            icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.temperature_water_min_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-down-bold
+                  ulm_chip_mdi_icon_state_icon_color: blue
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: input_number.target_temperature_water_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:target
+                  ulm_chip_mdi_icon_state_icon_color: green
+              - type: "custom:button-card"
+                template: chip_mdi_icon_state
+                variables:
+                  ulm_chip_mdi_icon_state_entity: sensor.temperature_water_max_flower_bulk
+                  ulm_chip_mdi_icon_state_icon: mdi:arrow-up-bold
+                  ulm_chip_mdi_icon_state_icon_color: red
+              - type: "custom:button-card"
+                color_type: blank-card

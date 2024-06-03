@@ -11,9 +11,73 @@ area_1_stage:
     - Flower-finish
     - Dry
   icon: mdi:form-dropdown
-area_1_aircontrol_prio_current:
+area_1_aircontrol_prio:
   name: Bereich 1 Priorität bei den Luftbedingungen
   options:
     - Temperature
     - Humidity
   icon: mdi:form-dropdown
+
+area_1_aircontrol_mode:
+  name: Luftkontrollmodus
+  options:
+    - VPD
+    - Statisch
+    - Temp
+  icon: mdi:form-dropdown
+
+area_1_exhaust_dimmable:
+  name: Ist die Abluft in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-conditioner
+
+area_1_ventilation_dimmable:
+  name: Ist die Umluft in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:fan
+
+area_1_heater_dimmable:
+  name: Ist die Heizung in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:radiator
+
+area_1_light_dimmable:
+  name: Ist die Beleuchtung in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:lightbulb
+
+area_1_humidifier_dimmable:
+  name: Ist die Luftbefeuchtung in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier
+
+area_1_dehumidifier_dimmable:
+  name: Ist die Luftentfeuchtung in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier-off
+
+area_1_exhaust_eq_ac:
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-conditioner
+
+area_1_exhaust_eq_dehumidifer:
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier-off

@@ -1,0 +1,25 @@
+title: "Debugging"
+path: "debugging"
+subview: true
+cards:
+  #### Zustandsanzeige
+
+  - type: vertical-stack
+    cards:
+      - type: history-graph
+        entities:
+          - entity: switch.grow_heater_switch_0
+            name: Heizung
+          - entity: switch.grow_exhaust_switch_0
+            name: Abluft
+          - entity: switch.grow_ventilation_switch_0
+            name: Ventilator
+          - entity: switch.grow_humidifier_switch_0
+            name: Luftbefeuchter
+          - entity: switch.grow_dehumidifier_switch_0
+            name: Luftentfeuchter
+          - entity: switch.grow_ac_switch_0
+            name: Klima
+        logarithmic_scale: false
+        hours_to_show: 1
+        title: Area 1 Devices

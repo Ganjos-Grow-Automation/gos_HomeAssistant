@@ -1,0 +1,16 @@
+## Area 1
+- name: area_1_automation_air_control_data_general
+  state: >
+    {{ {"Area": "area_1", "AirControlMode": states('input_select.area_1_aircontrol_mode'), "AirControlPrio": states('input_select.area_1_aircontrol_prio'), "ExhaustEqualsAC": states("binary_sensor.area_1_is_ac_eq_exhaust"), "ExhaustEqualsDehumidifier": states("binary_sensor.area_1_is_exhaust_eq_dehumidifier") } | tojson }}
+- name: area_1_automation_air_control_data_current
+  state: >
+    {{ {"CurrentTempAir": states("sensor.area_1_temperature_air"), "CurrentTempLeaf": states("sensor.area_1_temperature_leaf"), "CurrentHum": states("sensor.area_1_humidity"), "CurrentCO2": states("sensor.area_1_co2")} | tojson }}
+- name: area_1_automation_air_control_data_automation
+  state: >
+    {{ {"MaxTempAir": states("sensor.area_1_max_temperature_air"), "TargetTempAir": states("sensor.area_1_target_temperature_air"), "MinTempAir": states("sensor.area_1_min_temperature_air"),"CurrentTempAir": states("sensor.area_1_temperature_air"),"MaxHum": states("sensor.area_1_max_humidity"), "TargetHum": states("sensor.area_1_target_humidity"), "MinHum": states("sensor.area_1_min_humidity"), "CurrentHum": states("sensor.area_1_humidity"),"MaxVpd": states("sensor.area_1_max_vpd"), "TargetVpd": states("sensor.area_1_target_vpd"), "MinVpd": states("sensor.area_1_min_vpd"), "CurrentVpd": states("sensor.nodered_25ccff830bb64afb")} | tojson }}
+- name: area_1_automation_air_control_device_states
+  state: >
+    {{ {"ExhaustState": states("binary_sensor.area_1_exhaust_state"), "VentilationState": states("binary_sensor.area_1_ventilation_state"), "HeaterState": states("binary_sensor.area_1_heater_state"),"HumidifierState": states("binary_sensor.area_1_humidifier_state"),"DehumidifierState": states("binary_sensor.area_1_dehumidifier_state"), "LightState": states("binary_sensor.area_1_light_state")} | tojson }}
+- name: area_1_automation_air_control_device_dimmable
+  state: >
+    {{ {"ExhaustIsDimmable": states("binary_sensor.area_1_is_exhaust_dimmable"), "VentilationIsDimmable": states("binary_sensor.area_1_is_ventilation_dimmable"), "HeaterIsDimmable": states("binary_sensor.area_1_is_heater_dimmable"), "HumidifierIsDimmable": states("binary_sensor.area_1_is_humidifier_dimmable"),"DehumidifierIsDimmable": states("binary_sensor.area_1_is_dehumidifier_dimmable"), "LightIsDimmable": states("binary_sensor.area_1_is_light_dimmable") } | tojson }}

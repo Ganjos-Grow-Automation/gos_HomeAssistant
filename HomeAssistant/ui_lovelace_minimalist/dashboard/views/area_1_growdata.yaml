@@ -1,0 +1,271 @@
+title: "Growzelt Daten des Grows"
+path: "area_1_growdata"
+subview: true
+####### Open: Lichtbedingungen hier einfügen, wenn ja was?
+cards:
+  - type: vertical-stack
+    cards:
+      #######################
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Pflanzen
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Pflanze 1
+                icon: "mdi:sprout"
+                icon_color: green
+              - type: "custom:button-card"
+                template: chip_icon_double_state
+                variables:
+                  ulm_chip_icon_double_state_icon: "🧬"
+                  ulm_chip_icon_double_state_entity_1: input_text.plant_1_strain
+                  ulm_chip_icon_double_state_entity_2: input_text.plant_1_seedbank
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Pflanze 2
+                icon: "mdi:sprout"
+                icon_color: green
+              - type: "custom:button-card"
+                template: chip_icon_double_state
+                variables:
+                  ulm_chip_icon_double_state_icon: "🧬"
+                  ulm_chip_icon_double_state_entity_1: input_text.plant_2_strain
+                  ulm_chip_icon_double_state_entity_2: input_text.plant_2_seedbank
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: chip_icon_label
+                label: Pflanze 3
+                icon: "mdi:sprout"
+                icon_color: green
+              - type: "custom:button-card"
+                template: chip_icon_double_state
+                variables:
+                  ulm_chip_icon_double_state_icon: "🧬"
+                  ulm_chip_icon_double_state_entity_1: input_text.plant_3_strain
+                  ulm_chip_icon_double_state_entity_2: input_text.plant_3_seedbank
+      #########################
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Allgemein
+          #######
+          # Startdatum; vorraussichtliches Enddatum; Ziel Tage je Stage; Startdatum je Stage; Enddatum je Stage
+          # Startdatum je Stage ggfs. durch Wechsel des input_select über Automatismus?
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-select-card
+                entity: input_select.area_1_stage
+                fill_container: false
+                name: Phase
+                secondary_info: last-changed
+                icon: mdi:sprout
+                icon_color: green
+              - type: vertical-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+                  - type: horizontal-stack
+                    cards:
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_days_since_grow_start
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_current_week_of_grow
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+        ###  Phase
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Wachstum
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_clones_days_target
+                    display_mode: buttons
+                    icon_color: green
+
+                  - type: horizontal-stack
+                    cards:
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_days_since_grow_start
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_current_week_of_grow
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Blüte
+          - type: "custom:button-card"
+            template: chip_icon_label
+            label: Stretch
+            icon: mdi:flower
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_clones_days_target
+                    display_mode: buttons
+                    icon_color: green
+
+                  - type: horizontal-stack
+                    cards:
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_days_since_grow_start
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_current_week_of_grow
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+          - type: "custom:button-card"
+            template: chip_icon_label
+            label: Bulk
+            icon: mdi:flower
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_clones_days_target
+                    display_mode: buttons
+                    icon_color: green
+
+                  - type: horizontal-stack
+                    cards:
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_days_since_grow_start
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_current_week_of_grow
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+          - type: "custom:button-card"
+            template: chip_icon_label
+            label: Finish
+            icon: mdi:flower
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_clones_days_target
+                    display_mode: buttons
+                    icon_color: green
+
+                  - type: horizontal-stack
+                    cards:
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_days_since_grow_start
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_current_week_of_grow
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Trocknung
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+                  - type: custom:mushroom-entity-card
+                    entity: input_datetime.grow_startdate
+                    icon_color: green
+                    name: Startdatum
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_clones_days_target
+                    display_mode: buttons
+                    icon_color: green
+
+                  - type: horizontal-stack
+                    cards:
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_days_since_grow_start
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
+                      - type: "custom:button-card"
+                        template: chip_mdi_icon_state
+                        variables:
+                          ulm_chip_mdi_icon_state_entity: sensor.area_1_current_week_of_grow
+                          ulm_chip_mdi_icon_state_icon: mdi:calendar-clock

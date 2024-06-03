@@ -1,0 +1,30 @@
+###
+###
+# Area 1
+###
+##
+# current data
+##
+- name: area_1_temperature_air
+  state: >
+    {{states("sensor.airmonitoring_grow_temperature") | float }}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_1_temperature_leaf
+  state: >
+    {{states('sensor.airmonitoring_grow_temperature') | float - states('input_number.area_1_temperature_leaf_offset') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_1_humidity
+  state: >
+    {{states("sensor.airmonitoring_grow_humidity") | float }}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+
+- name: area_1_co2
+  state: >
+    {{states("sensor.airmonitoring_grow_eco2") | float }}
+  unit_of_measurement: "ppm"
+  icon: mdi:molecule-co2

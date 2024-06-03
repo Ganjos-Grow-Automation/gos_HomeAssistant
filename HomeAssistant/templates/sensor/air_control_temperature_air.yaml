@@ -1,121 +1,158 @@
 ### Stage: clones
-- name: temperature_air_max_day_clones
+- name: max_temperature_air_day_clones
   state: >
-    {{ [states('input_number.target_temperature_air_day_clones'), states('input_number.target_temperature_air_tolerance_day_clones')] | map('float') | sum }}
+    {{ [states('input_number.target_temperature_air_day_clones'), states('input_number.target_temperature_air_tolerance_clones')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_day_clones
+- name: min_temperature_air_day_clones
   state: >
-    {{ (states('input_number.target_temperature_air_day_clones') | float - states('input_number.target_temperature_air_tolerance_day_clones') | float)}}
+    {{ (states('input_number.target_temperature_air_day_clones') | float - states('input_number.target_temperature_air_tolerance_clones') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_max_night_clones
+- name: max_temperature_air_night_clones
   state: >
-    {{ [states('input_number.target_temperature_air_night_clones'), states('input_number.target_temperature_tolerance_air_night_clones')] | map('float') | sum }}
+    {{ [(states('sensor.target_temperature_air_night_clones') | float) , (states('input_number.target_temperature_air_tolerance_clones') | float )] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_night_clones
+- name: min_temperature_air_night_clones
   state: >
-    {{ (states('input_number.target_temperature_air_night_clones') | float - states('input_number.target_temperature_tolerance_air_night_clones') | float)}}
+    {{ (states('sensor.target_temperature_air_night_clones') | float) - (states('input_number.target_temperature_air_tolerance_clones') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
 
 ### Stage: veg
-- name: temperature_air_max_day_veg
+- name: max_temperature_air_day_veg
   state: >
-    {{ [states('input_number.target_temperature_air_day_veg'), states('input_number.target_temperature_air_tolerance_day_veg')] | map('float') | sum }}
+    {{ [states('input_number.target_temperature_air_day_veg'), states('input_number.target_temperature_air_tolerance_veg')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_day_veg
+- name: min_temperature_air_day_veg
   state: >
-    {{ (states('input_number.target_temperature_air_day_veg') | float - states('input_number.target_temperature_air_tolerance_day_veg') | float)}}
+    {{ (states('input_number.target_temperature_air_day_veg') | float - states('input_number.target_temperature_air_tolerance_veg') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_max_night_veg
+- name: max_temperature_air_night_veg
   state: >
-    {{ [states('input_number.target_temperature_air_night_veg'), states('input_number.target_temperature_tolerance_air_night_veg')] | map('float') | sum }}
+    {{ [(states('sensor.target_temperature_air_night_veg') | float) , states('input_number.target_temperature_air_tolerance_veg')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_night_veg
+- name: min_temperature_air_night_veg
   state: >
-    {{ (states('input_number.target_temperature_air_night_veg') | float - states('input_number.target_temperature_tolerance_air_night_veg') | float)}}
+    {{ ((states('sensor.target_temperature_air_night_veg') | float) - states('input_number.target_temperature_air_tolerance_veg') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
 
 ### Stage: flower_stretch
-- name: temperature_air_max_day_flower_stretch
+- name: max_temperature_air_day_flower_stretch
   state: >
-    {{ [states('input_number.target_temperature_air_day_flower_stretch'), states('input_number.target_temperature_air_tolerance_day_flower_stretch')] | map('float') | sum }}
+    {{ [states('input_number.target_temperature_air_day_flower_stretch'), states('input_number.target_temperature_air_tolerance_flower_stretch')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_day_flower_stretch
+- name: min_temperature_air_day_flower_stretch
   state: >
-    {{ (states('input_number.target_temperature_air_day_flower_stretch') | float - states('input_number.target_temperature_air_tolerance_day_flower_stretch') | float)}}
+    {{ (states('input_number.target_temperature_air_day_flower_stretch') | float - states('input_number.target_temperature_air_tolerance_flower_stretch') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_max_night_flower_stretch
+- name: max_temperature_air_night_flower_stretch
   state: >
-    {{ [states('input_number.target_temperature_air_night_flower_stretch'), states('input_number.target_temperature_tolerance_air_night_flower_stretch')] | map('float') | sum }}
+    {{ [(states('sensor.target_temperature_air_night_flower_stretch') | float) , states('input_number.target_temperature_air_tolerance_flower_stretch')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_night_flower_stretch
+- name: min_temperature_air_night_flower_stretch
   state: >
-    {{ (states('input_number.target_temperature_air_night_flower_stretch') | float - states('input_number.target_temperature_tolerance_air_night_flower_stretch') | float)}}
+    {{ ((states('sensor.target_temperature_air_night_flower_stretch') | float) - states('input_number.target_temperature_air_tolerance_flower_stretch') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
 
 ### Stage: flower_bulk
-- name: temperature_air_max_day_flower_bulk
+- name: max_temperature_air_day_flower_bulk
   state: >
-    {{ [states('input_number.target_temperature_air_day_flower_bulk'), states('input_number.target_temperature_air_tolerance_day_flower_bulk')] | map('float') | sum }}
+    {{ [states('input_number.target_temperature_air_day_flower_bulk'), states('input_number.target_temperature_air_tolerance_flower_bulk')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_day_flower_bulk
+- name: min_temperature_air_day_flower_bulk
   state: >
-    {{ (states('input_number.target_temperature_air_day_flower_bulk') | float - states('input_number.target_temperature_air_tolerance_day_flower_bulk') | float)}}
+    {{ (states('input_number.target_temperature_air_day_flower_bulk') | float - states('input_number.target_temperature_air_tolerance_flower_bulk') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_max_night_flower_bulk
+- name: max_temperature_air_night_flower_bulk
   state: >
-    {{ [states('input_number.target_temperature_air_night_flower_bulk'), states('input_number.target_temperature_tolerance_air_night_flower_bulk')] | map('float') | sum }}
+    {{ [(states('sensor.target_temperature_air_night_flower_bulk') | float) , states('input_number.target_temperature_air_tolerance_flower_bulk')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_night_flower_bulk
+- name: min_temperature_air_night_flower_bulk
   state: >
-    {{ (states('input_number.target_temperature_air_night_flower_bulk') | float - states('input_number.target_temperature_tolerance_air_night_flower_bulk') | float)}}
+    {{ ((states('sensor.target_temperature_air_night_flower_bulk') | float) - states('input_number.target_temperature_air_tolerance_flower_bulk') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
 
 ### Stage: flower_finish
-- name: temperature_air_max_day_flower_finish
+- name: max_temperature_air_day_flower_finish
   state: >
-    {{ [states('input_number.target_temperature_air_day_flower_finish'), states('input_number.target_temperature_air_tolerance_day_flower_finish')] | map('float') | sum }}
+    {{ [states('input_number.target_temperature_air_day_flower_finish'), states('input_number.target_temperature_air_tolerance_flower_finish')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_day_flower_finish
+- name: min_temperature_air_day_flower_finish
   state: >
-    {{ (states('input_number.target_temperature_air_day_flower_finish') | float - states('input_number.target_temperature_air_tolerance_day_flower_finish') | float)}}
+    {{ (states('input_number.target_temperature_air_day_flower_finish') | float - states('input_number.target_temperature_air_tolerance_flower_finish') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_max_night_flower_finish
+- name: max_temperature_air_night_flower_finish
   state: >
-    {{ [states('input_number.target_temperature_air_night_flower_finish'), states('input_number.target_temperature_tolerance_air_night_flower_finish')] | map('float') | sum }}
+    {{ [(states('sensor.target_temperature_air_night_flower_finish') | float) , states('input_number.target_temperature_air_tolerance_flower_finish')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_night_flower_finish
+- name: min_temperature_air_night_flower_finish
   state: >
-    {{ (states('input_number.target_temperature_air_night_flower_finish') | float - states('input_number.target_temperature_tolerance_air_night_flower_finish') | float)}}
+    {{ ((states('sensor.target_temperature_air_night_flower_finish') | float) - states('input_number.target_temperature_air_tolerance_flower_finish') | float)}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
 
 ### Stage: dry
-- name: temperature_air_max_dry
+- name: max_temperature_air_dry
   state: >
-    {{ [states('input_number.target_temperature_air_dry'), states('input_number.target_temperature_air_tolerance_dry')] | map('float') | sum }}
+    {{ [states('input_number.target_temperature_air_dry'), states('input_number.target_temperature_air_tolerance_flower_finish')] | map('float') | sum }}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius
-- name: temperature_air_min_dry
+- name: min_temperature_air_dry
   state: >
-    {{ (states('input_number.target_temperature_air_dry') | float - states('input_number.target_temperature_air_tolerance_dry') | float)}}
+    {{ (states('input_number.target_temperature_air_dry') | float - states('input_number.target_temperature_air_tolerance_flower_finish') | float)}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+##. to sort
+- name: target_temperature_air_night_clones
+  state: >
+    {{ states('input_number.target_temperature_air_day_clones') | float - states('input_number.target_temperature_air_day_night_difference_clones') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: target_temperature_air_night_veg
+  state: >
+    {{ states('input_number.target_temperature_air_day_veg') | float - states('input_number.target_temperature_air_day_night_difference_veg') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: target_temperature_air_night_flower_stretch
+  state: >
+    {{ states('input_number.target_temperature_air_day_flower_stretch') | float - states('input_number.target_temperature_air_day_night_difference_flower_stretch') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: target_temperature_air_night_flower_bulk
+  state: >
+    {{ states('input_number.target_temperature_air_day_flower_bulk') | float - states('input_number.target_temperature_air_day_night_difference_flower_bulk') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: target_temperature_air_night_flower_finish
+  state: >
+    {{ states('input_number.target_temperature_air_day_flower_finish') | float - states('input_number.target_temperature_air_day_night_difference_flower_finish') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: target_temperature_air_night_dry
+  state: >
+    {{ states('input_number.target_temperature_air_day_dry') | float - states('input_number.target_temperature_air_day_night_difference_dry') | float}}
   unit_of_measurement: °C
   icon: mdi:temperature-celsius

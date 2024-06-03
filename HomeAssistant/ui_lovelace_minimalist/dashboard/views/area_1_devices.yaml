@@ -1,0 +1,96 @@
+title: "Bereich 1 Monitoring"
+path: "area_1_devices"
+subview: true
+####### Open: Lichtbedingungen hier einfügen, wenn ja was?
+cards:
+  - type: vertical-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Geräteübersicht
+          - type: "custom:button-card"
+            template: chip_icon_label
+            label: Licht
+            icon: mdi:lightbulb
+          - type: vertical-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_power_outlet
+                variables:
+                  ulm_card_power_outlet_consumption_sensor:
+                  ulm_card_power_outlet_name: Sanlight Evo 6
+                entity: switch.grow_light_switch_0
+              ##################
+              # Automatismus setzen, der je nach Stage die switche an macht?
+              - type: custom:scheduler-card
+                include:
+                  - automation.lighting_flower_stage
+                  - script.device_control_led_off
+                  - script.device_control_led_on
+                exclude: []
+                title: Belichtungsplan
+                display_options:
+                  primary_info: default
+                  secondary_info:
+                    - relative-time
+                    - days
+                    - time
+                    - additional-tasks
+                  icon: action
+                show_header_toggle: true
+                show_add_button: false
+          - type: "custom:button-card"
+            template: chip_icon_label
+            label: Klimasteuerung
+            icon: mdi:fan
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_power_outlet
+                variables:
+                  ulm_card_power_outlet_consumption_sensor:
+                  ulm_card_power_outlet_name: Abluft
+                  ulm_card_power_outlet_icon: mdi:air-conditioner
+                entity: switch.grow_exhaust_switch_0
+              - type: "custom:button-card"
+                template: card_power_outlet
+                variables:
+                  ulm_card_power_outlet_consumption_sensor:
+                  ulm_card_power_outlet_name: Umluft
+                  ulm_card_power_outlet_icon: mdi:fan
+                entity: switch.grow_ventilation_switch_0
+              - type: "custom:button-card"
+                template: card_power_outlet
+                variables:
+                  ulm_card_power_outlet_consumption_sensor:
+                  ulm_card_power_outlet_name: Heizung
+                  ulm_card_power_outlet_icon: mdi:radiator
+                entity: switch.grow_heater_switch_0
+          - type: "custom:button-card"
+            template: chip_icon_label
+            label: Luftfeuchtigkeit
+            icon: mdi:air-humidifier
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_power_outlet
+                variables:
+                  ulm_card_power_outlet_consumption_sensor:
+                  ulm_card_power_outlet_name: Luftbefeuchter
+                  ulm_card_power_outlet_icon: mdi:air-humidifier
+                entity: switch.grow_humidifier_switch_0
+              - type: "custom:button-card"
+                template: card_power_outlet
+                variables:
+                  ulm_card_power_outlet_consumption_sensor:
+                  ulm_card_power_outlet_name: Luftentfeuchter
+                  ulm_card_power_outlet_icon: mdi:air-humidifier-off
+                entity: switch.grow_dehumidifier_switch_0
+      ###########################
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Stromverbrauch

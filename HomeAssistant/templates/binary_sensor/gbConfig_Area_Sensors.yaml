@@ -1,0 +1,15 @@
+- name: multiple_sensors_area_1_temperature_air
+  state: false
+  icon: mdi:temperature-celsius
+
+- name: multiple_sensors_area_1_temperature_leaf
+  state: false
+  icon: mdi:temperature-celsius
+
+- name: multiple_sensors_area_1_humidity
+  state: false
+  icon: mdi:water-percent
+
+- name: multiple_sensors_area_1_co2
+  state: false
+  icon: mdi:molecule-co2

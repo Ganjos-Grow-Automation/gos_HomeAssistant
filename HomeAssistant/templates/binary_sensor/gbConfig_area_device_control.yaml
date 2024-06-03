@@ -1,0 +1,71 @@
+### Area 1
+- name: area_1_is_exhaust_dimmable
+  state: >
+    {% if is_state("input_select.area_1_exhaust_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_1_is_ventilation_dimmable
+  state: >
+    {% if is_state("input_select.area_1_ventilation_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_1_is_heater_dimmable
+  state: >
+    {% if is_state("input_select.area_1_heater_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_1_is_light_dimmable
+  state: >
+    {% if is_state("input_select.area_1_light_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_1_is_humidifier_dimmable
+  state: >
+    {% if is_state("input_select.area_1_humidifier_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_1_is_dehumidifier_dimmable
+  state: >
+    {% if is_state("input_select.area_1_dehumidifier_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_1_is_exhaust_eq_dehumidifier
+  icon: mdi:toggle-switch
+  state: >
+    {% if is_state("input_select.area_1_exhaust_eq_dehumidifer", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_1_is_ac_eq_exhaust
+  icon: mdi:toggle-switch
+  state: >
+    {% if is_state("input_select.area_1_exhaust_eq_ac", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_1_ventilation_state
+  state: "{{states('switch.grow_ventilation_switch_0')}}"
+
+- name: area_1_exhaust_state
+  state: "{{states('switch.grow_exhaust_switch_0')}}"
+
+- name: area_1_heater_state
+  state: "{{states('switch.grow_heater_switch_0')}}"
+
+- name: area_1_humidifier_state
+  state: "{{states('switch.grow_humidifier_switch_0')}}"
+
+- name: area_1_dehumidifier_state
+  state: "{{states('switch.grow_dehumidifier_switch_0')}}"
+
+- name: area_1_light_state
+  state: "{{states('switch.grow_light_switch_0')}}"
+
+- name: area_1_is_day
+  state: "{{states('switch.area_1_light_state')}}"

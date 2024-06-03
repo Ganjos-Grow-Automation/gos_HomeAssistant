@@ -11,106 +11,12 @@ target_temperature_air_day_clones:
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-target_temperature_air_tolerance_day_clones:
-  name: Zieltemperatur-Luft-Toleranz Samen und Stecklinge
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_temperature_air_night_clones:
-  name: Zieltemperatur-Luft Samen und Stecklinge Nacht
-  initial: 24
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-target_temperature_tolerance_air_night_clones:
-  name: Zieltemperatur-Luft-Toleranz Samen und Stecklinge
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-######## min & max temperature for alerts
-min_temperature_air_clones:
-  name: Min-Temperatur Samen und Stecklinge
-  initial: 23
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-max_temperature_air_clones:
-  name: Max-Temperatur Samen und Stecklinge
-  initial: 26
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
 
 ## Stage: veg
 ##### day values
 target_temperature_air_day_veg:
   name: Zieltemperatur-Luft Wachstum Tag
   initial: 27
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-target_temperature_air_tolerance_day_veg:
-  name: Zieltemperatur-Luft-Toleranz Wachstum
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_temperature_air_night_veg:
-  name: Zieltemperatur-Luft Wachstum Nacht
-  initial: 25
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-target_temperature_tolerance_air_night_veg:
-  name: Zieltemperatur-Luft-Toleranz Wachstum
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-######## min & max temperature for alerts
-min_temperature_air_veg:
-  name: Min-Temperatur Wachstum
-  initial: 22
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-max_temperature_air_veg:
-  name: Max-Temperatur Wachstum
-  initial: 28
   min: 15
   max: 35
   step: 1
@@ -129,106 +35,12 @@ target_temperature_air_day_flower_stretch:
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-target_temperature_air_tolerance_day_flower_stretch:
-  name: Zieltemperatur-Luft-Toleranz Blüte Streckung
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_temperature_air_night_flower_stretch:
-  name: Zieltemperatur-Luft Blüte Streckung Nacht
-  initial: 26
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-target_temperature_tolerance_air_night_flower_stretch:
-  name: Zieltemperatur-Luft-Toleranz Blüte Streckung
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-######## min & max temperature for alerts
-min_temperature_air_flower_stretch:
-  name: Min-Temperatur Blüte Streckung
-  initial: 25
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-max_temperature_air_flower_stretch:
-  name: Max-Temperatur Blüte Streckung
-  initial: 28
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
 
 ## Stage: flower_bulk
 ##### day values
 target_temperature_air_day_flower_bulk:
   name: Zieltemperatur-Luft Blüte Bulk Tag
   initial: 25
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-target_temperature_air_tolerance_day_flower_bulk:
-  name: Zieltemperatur-Luft-Toleranz Blüte Bulk
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_temperature_air_night_flower_bulk:
-  name: Zieltemperatur-Luft Blüte Bulk Nacht
-  initial: 25
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-target_temperature_tolerance_air_night_flower_bulk:
-  name: Zieltemperatur-Luft-Toleranz Blüte Bulk
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-######## min & max temperature for alerts
-min_temperature_air_flower_bulk:
-  name: Min-Temperatur Blüte Bulk
-  initial: 24
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-max_temperature_air_flower_bulk:
-  name: Max-Temperatur Blüte Bulk
-  initial: 26
   min: 15
   max: 35
   step: 1
@@ -247,53 +59,6 @@ target_temperature_air_day_flower_finish:
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-target_temperature_air_tolerance_day_flower_finish:
-  name: Zieltemperatur-Luft-Toleranz Blüte Ende
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_temperature_air_night_flower_finish:
-  name: Zieltemperatur-Luft Blüte Ende Nacht
-  initial: 21
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-target_temperature_tolerance_air_night_flower_finish:
-  name: Zieltemperatur-Luft-Toleranz Blüte Ende
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-######## min & max temperature for alerts
-min_temperature_air_flower_finish:
-  name: Min-Temperatur Blüte Ende
-  initial: 18
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-max_temperature_air_flower_finish:
-  name: Max-Temperatur Blüte Ende
-  initial: 24
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
 
 ## Stage: dry
 ##### day values
@@ -306,8 +71,12 @@ target_temperature_air_dry:
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
-target_temperature_air_tolerance_dry:
-  name: Zieltemperatur-Luft-Toleranz Trocknung
+
+# ## Stage: clones
+# ##### day values
+
+target_temperature_air_tolerance_clones:
+  name: Zieltemperatur-Luft-Toleranz Samen und Stecklinge
   initial: 1
   min: 0
   max: 5
@@ -315,22 +84,159 @@ target_temperature_air_tolerance_dry:
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
-######## min & max temperature for alerts
-min_temperature_air_dry:
-  name: Min-Temperatur Trocknung
-  initial: 15
-  min: 10
-  max: 35
+
+target_temperature_air_day_night_difference_clones:
+  name: Zieltemperatur Luft Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
   step: 1
   unit_of_measurement: °C
   mode: box
-  icon: mdi:temperature-celsius
-max_temperature_air_dry:
-  name: Max-Temperatur Trocknung
-  initial: 18
-  min: 10
-  max: 35
+  icon: mdi:set-right
+
+target_temperature_air_tolerance_alerting_clones:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
   step: 1
   unit_of_measurement: °C
   mode: box
-  icon: mdi:temperature-celsius
+  icon: mdi:bell-alert
+
+# ## Stage: veg
+target_temperature_air_tolerance_veg:
+  name: Zieltemperatur-Luft-Toleranz Wachstum
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+target_temperature_air_day_night_difference_veg:
+  name: Zieltemperatur Luft Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_temperature_air_tolerance_alerting_veg:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: flower_stretch
+target_temperature_air_tolerance_flower_stretch:
+  name: Zieltemperatur-Luft-Toleranz Blüte Streckung
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+target_temperature_air_day_night_difference_flower_stretch:
+  name: Zieltemperatur Luft Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_temperature_air_tolerance_alerting_flower_stretch:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: flower_bulk
+target_temperature_air_tolerance_flower_bulk:
+  name: Zieltemperatur-Luft-Toleranz Blüte Bulk
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+target_temperature_air_day_night_difference_flower_bulk:
+  name: Zieltemperatur Luft Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_temperature_air_tolerance_alerting_flower_bulk:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: flower_finish
+target_temperature_air_tolerance_flower_finish:
+  name: Zieltemperatur-Luft-Toleranz Blüte Ende
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+target_temperature_air_day_night_difference_flower_finish:
+  name: Zieltemperatur Luft Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_temperature_air_tolerance_alerting_flower_finish:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: dry
+
+target_temperature_air_tolerance_alerting_dry:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert

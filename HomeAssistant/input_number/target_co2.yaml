@@ -38,25 +38,6 @@ target_co2_tolerance_night_clones:
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
-######## min & max co2 for alerts
-min_co2_clones:
-  name: Min-CO2 Samen und Stecklinge
-  initial: 600
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
-max_co2_clones:
-  name: Max-CO2 Samen und Stecklinge
-  initial: 600
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
 
 ## Stage: veg
 ##### day values
@@ -97,25 +78,6 @@ target_co2_tolerance_night_veg:
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
-######## min & max co2 for alerts
-min_co2_veg:
-  name: Min-CO2 Wachstum
-  initial: 1200
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
-max_co2_veg:
-  name: Max-CO2 Wachstum
-  initial: 1500
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
 
 ## Stage: flower_stretch
 ##### day values
@@ -156,25 +118,6 @@ target_co2_tolerance_night_flower_stretch:
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
-######## min & max co2 for alerts
-min_co2_flower_stretch:
-  name: Min-CO2 Blüte Streckung
-  initial: 1200
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
-max_co2_flower_stretch:
-  name: Max-CO2 Blüte Streckung
-  initial: 1500
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
 
 ## Stage: flower_bulk
 ##### day values
@@ -216,24 +159,6 @@ target_co2_tolerance_night_flower_bulk:
   mode: box
   icon: mdi:vector-difference
 ######## min & max co2 for alerts
-min_co2_flower_bulk:
-  name: Min-CO2 Blüte Bulk
-  initial: 1200
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
-max_co2_flower_bulk:
-  name: Max-CO2 Blüte Bulk
-  initial: 1500
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
-  mode: box
-  icon: mdi:molecule-co2
 
 ## Stage: flower_finish
 ##### day values
@@ -274,22 +199,249 @@ target_co2_tolerance_night_flower_finish:
   unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
-######## min & max co2 for alerts
-min_co2_flower_finish:
-  name: Min-CO2 Blüte Ende
-  initial: 500
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
+
+# ## Stage: clones
+# ##### day values
+# target_co2_day_clones:
+#   name: ZielCO2 Samen und Stecklinge Tag
+#   initial: 24
+#   min: 15
+#   max: 35
+#   step: 1
+#   unit_of_measurement: °C
+#   mode: box
+#   icon: mdi:CO2e-celsius
+target_co2_tolerance_clones:
+  name: ZielCO2-Toleranz Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
   mode: box
-  icon: mdi:molecule-co2
-max_co2_flower_finish:
-  name: Max-CO2 Blüte Ende
-  initial: 800
-  min: 400
-  max: 2500
-  step: 100
-  unit_of_measurement: "ppm"
+  icon: mdi:vector-difference
+
+target_co2_day_night_difference_clones:
+  name: ZielCO2  Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
   mode: box
-  icon: mdi:molecule-co2
+  icon: mdi:set-right
+
+target_co2_tolerance_alerting_clones:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: veg
+# ##### day values
+# target_co2_day_veg:
+#   name: ZielCO2 Wachstum Tag
+#   initial: 27
+#   min: 15
+#   max: 35
+#   step: 1
+#   unit_of_measurement: °C
+#   mode: box
+#   icon: mdi:CO2e-celsius
+target_co2_tolerance_veg:
+  name: ZielCO2-Toleranz Wachstum
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+target_co2_day_night_difference_veg:
+  name: ZielCO2 Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_co2_tolerance_alerting_veg:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: flower_stretch
+# ##### day values
+# target_co2_day_flower_stretch:
+#   name: ZielCO2 Blüte Streckung Tag
+#   initial: 26
+#   min: 15
+#   max: 35
+#   step: 1
+#   unit_of_measurement: °C
+#   mode: box
+#   icon: mdi:CO2e-celsius
+target_co2_tolerance_flower_stretch:
+  name: ZielCO2-Toleranz Blüte Streckung
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+target_co2_day_night_difference_flower_stretch:
+  name: ZielCO2  Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_co2_tolerance_alerting_flower_stretch:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: flower_bulk
+# ##### day values
+# target_co2_day_flower_bulk:
+#   name: ZielCO2 Blüte Bulk Tag
+#   initial: 25
+#   min: 15
+#   max: 35
+#   step: 1
+#   unit_of_measurement: °C
+#   mode: box
+#   icon: mdi:CO2e-celsius
+target_co2_tolerance_flower_bulk:
+  name: ZielCO2-Toleranz Blüte Bulk
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+target_co2_day_night_difference_flower_bulk:
+  name: ZielCO2  Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_co2_tolerance_alerting_flower_bulk:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: flower_finish
+# ##### day values
+# target_co2_day_flower_finish:
+#   name: ZielCO2 Blüte Ende Tag
+#   initial: 23
+#   min: 15
+#   max: 35
+#   step: 1
+#   unit_of_measurement: °C
+#   mode: box
+#   icon: mdi:CO2e-celsius
+target_co2_tolerance_flower_finish:
+  name: ZielCO2-Toleranz Blüte Ende
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
+
+target_co2_day_night_difference_flower_finish:
+  name: ZielCO2  Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_co2_tolerance_alerting_flower_finish:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
+
+# ## Stage: dry
+# ##### day values
+# target_co2_dry:
+#   name: ZielCO2 Trocknung
+#   initial: 16
+#   min: 10
+#   max: 35
+#   step: 1
+#   unit_of_measurement: °C
+#   mode: box
+#   icon: mdi:CO2e-celsius
+# target_co2_tolerance_dry:
+#   name: ZielCO2-Toleranz Trocknung
+#   initial: 1
+#   min: 0
+#   max: 5
+#   step: 1
+#   unit_of_measurement: °C
+#   mode: box
+#   icon: mdi:vector-difference
+
+target_co2_day_night_difference_dry:
+  name: ZielCO2  Tag/Nacht Unterschied Samen und Stecklinge
+  initial: 2
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:set-right
+
+target_co2_tolerance_alerting_dry:
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  initial: 1
+  min: 0
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
