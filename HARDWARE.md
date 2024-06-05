@@ -4,8 +4,13 @@
 Für die Basis wird ein Home Assistant fähiger Host benötigt. Dieser kann sowohl ein Raspberry Pi, ein Thin Client oder ähnliches sein. 
 
 Interessante Links zu diesem Thema sind folgende:
-* [Simon 42 - Hardware EMpfehlungen für deine Home Assistant OS Installation](https://www.simon42.com/home-assistant-hardware/)
+* [Simon 42 - Hardware Empfehlungen für deine Home Assistant OS Installation](https://www.simon42.com/home-assistant-hardware/)
 * [Simon 42 - Home Assistant als virtuelle Maschine auf Proxmox installieren](https://www.simon42.com/home-assistant-proxmox/)
+
+
+Mögliche Hardware: 
+* [Fujitsu Thin Client Refurbished](https://amzn.to/4aRsIdT)
+* [Lenovo Thin Client](https://amzn.to/3VuXxQ7)
 
 ## Module
 Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung wurden hierbei folgende Bestandteile verwendet:
