@@ -1,0 +1,150 @@
+title: "Growzelt Einstellungen"
+path: "area_1_settings"
+subview: true
+cards:
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Air Control Einstellungen
+          - type: custom:mushroom-select-card
+            entity: input_select.area_1_aircontrol_mode
+            fill_container: false
+            name: Wählen Sie den Modus der Klimasteuerung
+            secondary_info: last-changed
+            icon: mdi:controller
+            icon_color: green
+          - type: custom:mushroom-select-card
+            entity: input_select.area_1_aircontrol_prio
+            fill_container: false
+            name: Was ist der maßgebende Faktor?
+            secondary_info: last-changed
+            icon: mdi:air-purifier
+            icon_color: green
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Multi-Use-Devices
+          - type: custom:mushroom-select-card
+            entity: input_select.area_1_exhaust_eq_ac
+            fill_container: false
+            name: Ist die Abluft auch die Klimaregulierung?
+            secondary_info: last-changed
+            icon: mdi:air-conditioner
+            icon_color: green
+          - type: custom:mushroom-select-card
+            entity: input_select.area_1_exhaust_eq_dehumidifer
+            fill_container: false
+            name: Ist die Abluft auch die Entfeuchtung?
+            secondary_info: last-changed
+            icon: mdi:air-humidifier-off
+            icon_color: green
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Welche Geräte sind dimmbar?
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-select-card
+                entity: input_select.area_1_exhaust_dimmable
+                fill_container: false
+                name: Abluft
+                secondary_info: last-changed
+                icon: mdi:air-conditioner
+                icon_color: green
+              - type: custom:mushroom-select-card
+                entity: input_select.area_1_ventilation_dimmable
+                fill_container: false
+                name: Umluft
+                secondary_info: last-changed
+                icon: mdi:fan
+                icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-select-card
+                entity: input_select.area_1_heater_dimmable
+                fill_container: false
+                name: Heizung
+                secondary_info: last-changed
+                icon: mdi:radiator
+                icon_color: green
+              - type: custom:mushroom-select-card
+                entity: input_select.area_1_light_dimmable
+                fill_container: false
+                name: Licht
+                secondary_info: last-changed
+                icon: mdi:lightbulb
+                icon_color: green
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-select-card
+                entity: input_select.area_1_humidifier_dimmable
+                fill_container: false
+                name: Luftbefeuchtung
+                secondary_info: last-changed
+                icon: mdi:air-humidifier
+                icon_color: green
+              - type: custom:mushroom-select-card
+                entity: input_select.area_1_dehumidifier_dimmable
+                fill_container: false
+                name: Luftentfeuchter
+                secondary_info: last-changed
+                icon: mdi:air-humidifier-off
+                icon_color: green
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_title
+            name: Interval Timer in Sekunden
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_automation_exhaust_interval_duration
+                    name: Abluft
+                    display_mode: buttons
+                    secondary_info: last-changed
+                    icon: mdi:air-conditioner
+                    icon_color: green
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_automation_ventilation_interval_duration
+                    name: Umluft
+                    display_mode: buttons
+                    secondary_info: last-changed
+                    icon: mdi:fan
+                    icon_color: green
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_automation_heater_interval_duration
+                    name: Heizung
+                    display_mode: buttons
+                    secondary_info: last-changed
+                    icon: mdi:radiator
+                    icon_color: green
+                  # - type: custom:mushroom-number-card
+                  #   entity: input_number.area_1_automation_light_interval_duration
+                  #   name: Licht
+                  #   display_mode: buttons
+                  #   secondary_info: last-changed
+                  #   icon: mdi:lightbulb
+                  #   icon_color: green
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_automation_humidifier_interval_duration
+                    name: Luftbefeuchter
+                    display_mode: buttons
+                    secondary_info: last-changed
+                    icon: mdi:air-conditioner
+                    icon_color: green
+                  - type: custom:mushroom-number-card
+                    entity: input_number.area_1_automation_dehumidifier_interval_duration
+                    name: Luftentfeuchter
+                    display_mode: buttons
+                    secondary_info: last-changed
+                    icon: mdi:fan
+                    icon_color: green

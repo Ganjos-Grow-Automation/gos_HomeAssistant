@@ -1,8 +1,10 @@
-title: "Growzelt Geräte"
-path: "area_1_devices"
+title: "Trocknungzelt Monitoring"
+path: "area_3_devices"
 subview: true
 ####### Open: Lichtbedingungen hier einfügen, wenn ja was?
 cards:
+  - type: vertical-stack
+    cards:
       - type: vertical-stack
         cards:
           - type: "custom:button-card"
@@ -97,6 +99,3 @@ cards:
           - type: "custom:button-card"
             template: card_title
             name: Stromverbrauch
-          - type: energy-date-selection
-          - type: energy-devices-graph  
-          - type: energy-sources-table

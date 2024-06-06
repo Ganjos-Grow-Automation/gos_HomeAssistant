@@ -1,7 +1,9 @@
-title: "Growzelt"
-path: "area_1"
+title: "Propagator"
+path: "area_2"
 subview: true
 cards:
+  - type: vertical-stack
+    cards:
       #####
       - type: vertical-stack
         cards:
@@ -16,7 +18,7 @@ cards:
                 template: chip_navigate
                 label: "Detailansicht"
                 variables:
-                  ulm_chip_navigate_path: area_1_monitoring
+                  ulm_chip_navigate_path: area_2_monitoring
                   ulm_chip_navigate_icon: mdi:arrow-right-circle
           - type: custom:ha-vpd-chart
             air_text: Temp
@@ -35,8 +37,8 @@ cards:
             enable_triangle: false
             min_height: 300
             sensors:
-              - temperature: sensor.area_1_temperature_air
-                humidity: sensor.area_1_humidity
+              - temperature: sensor.area_2_temperature_air
+                humidity: sensor.area_2_humidity
                 # to be configured
                 vpd: sensor.nodered_25ccff830bb64afb
                 name: Growzelt
@@ -62,63 +64,62 @@ cards:
                   # to be configured
                   - entity: sensor.nodered_25ccff830bb64afb
                     aggregate_func: last
-                    color: "#44A047"
-                  - entity: sensor.area_1_max_vpd
-                    aggregate_func: last
-                    color: "#FF453A"
-                  - entity: sensor.area_1_min_vpd
-                    aggregate_func: last
-                    color: "#edf542"
+                    name: VPD
                 show:
-                  name: false
-                  legend: false
+                  name: true
+                  legend: true
                   icon: false
-                  labels: false
+                  labels: true
+                color_thresholds:
+                  - value: 1.0
+                    color: "#FF453A"
+                  - value: 1.1
+                    color: "#44A047"
+                  - value: 1.2
+                    color: "#FF453A"
                 hours_to_show: 24
                 points_per_hour: 60
                 group_by: minute
-                height: 300
               - type: custom:mini-graph-card
                 entities:
-                  - entity: sensor.area_1_temperature_air
+                  - entity: sensor.area_2_temperature_air
                     aggregate_func: last
-                    color: "#44A047"
-                  - entity: sensor.area_1_max_temperature_air
-                    aggregate_func: last
-                    color: "#FF453A"
-                  - entity: sensor.area_1_min_temperature_air
-                    aggregate_func: last
-                    color: "#edf542"
+                    name: Temperatur
                 show:
-                  name: false
-                  legend: false
+                  name: true
+                  legend: true
                   icon: false
-                  labels: false
+                  labels: true
+                color_thresholds:
+                  - value: 24
+                    color: "#FF453A"
+                  - value: 25
+                    color: "#44A047"
+                  - value: 26
+                    color: "#FF453A"
                 hours_to_show: 24
                 points_per_hour: 120
                 group_by: minute
-                height: 300
               - type: custom:mini-graph-card
                 entities:
-                  - entity: sensor.area_1_humidity
+                  - entity: sensor.area_2_humidity
                     aggregate_func: last
-                    color: "#44A047"
-                  - entity: sensor.area_1_max_humidity
-                    aggregate_func: last
-                    color: "#FF453A"
-                  - entity: sensor.area_1_min_humidity
-                    aggregate_func: last
-                    color: "#edf542"
+                    name: Luftfeuchtigkeit
                 show:
-                  name: false
-                  legend: false
+                  name: true
+                  legend: true
                   icon: false
-                  labels: false
+                  labels: true
+                color_thresholds:
+                  - value: 52
+                    color: "#FF453A"
+                  - value: 55
+                    color: "#44A047"
+                  - value: 58
+                    color: "#FF453A"
                 hours_to_show: 24
                 points_per_hour: 120
                 group_by: minute
-                height: 300
-
       #####################################################
       - type: vertical-stack
         cards:
@@ -133,7 +134,7 @@ cards:
                 template: chip_navigate
                 label: "Detailansicht"
                 variables:
-                  ulm_chip_navigate_path: area_1_growdata
+                  ulm_chip_navigate_path: area_2_growdata
                   ulm_chip_navigate_icon: mdi:arrow-right-circle
           - type: horizontal-stack
             cards:
@@ -147,17 +148,17 @@ cards:
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
-                  ulm_chip_mdi_icon_state_entity: sensor.area_1_days_since_grow_start
+                  ulm_chip_mdi_icon_state_entity: sensor.area_2_days_since_grow_start
                   ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
-                  ulm_chip_mdi_icon_state_entity: sensor.area_1_current_week_of_grow
+                  ulm_chip_mdi_icon_state_entity: sensor.area_2_current_week_of_grow
                   ulm_chip_mdi_icon_state_icon: mdi:calendar-clock
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
-                  ulm_chip_mdi_icon_state_entity: input_select.area_1_stage
+                  ulm_chip_mdi_icon_state_entity: input_select.area_2_stage
                   ulm_chip_mdi_icon_state_icon: mdi:list-status
               - type: "custom:button-card"
                 color_type: blank-card
@@ -248,7 +249,7 @@ cards:
                 template: chip_navigate
                 label: "Detailansicht"
                 variables:
-                  ulm_chip_navigate_path: area_1_devices
+                  ulm_chip_navigate_path: area_2_devices
                   ulm_chip_navigate_icon: mdi:arrow-right-circle
           #######################################################################
           - type: vertical-stack

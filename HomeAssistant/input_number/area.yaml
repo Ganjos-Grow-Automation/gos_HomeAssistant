@@ -2,8 +2,32 @@
 #### Area 1
 
 ## general
-
 area_1_temperature_leaf_offset:
+  name: Blatttemperatur Offset
+  initial: 2
+  min: 1
+  max: 3
+  unit_of_measurement: °C
+  mode: slider
+
+area_1_planned_grow_days:
+  name: geplante Anzahl an Grow-Tagen
+  initial: 90
+  min: 0
+  max: 365
+  unit_of_measurement: days
+  mode: box
+  icon: mdi:calendar-clock
+
+area_2_temperature_leaf_offset:
+  name: Blatttemperatur Offset
+  initial: 2
+  min: 1
+  max: 3
+  unit_of_measurement: °C
+  mode: slider
+
+area_3_temperature_leaf_offset:
   name: Blatttemperatur Offset
   initial: 2
   min: 1

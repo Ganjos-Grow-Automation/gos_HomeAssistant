@@ -2,8 +2,6 @@ title: "Samen und Stecklinge Einstellungen"
 path: "clones_settings"
 subview: true
 cards:
-  - type: vertical-stack
-    cards:
       - type: vertical-stack
         cards:
           - type: "custom:button-card"

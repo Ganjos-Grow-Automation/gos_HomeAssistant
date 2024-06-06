@@ -4,6 +4,15 @@ area_1_name:
   name: Name des Bereichs
 area_1_description:
   name: Kurzbeschreibung des Bereichs
-area_1_air_control_last_job:
-  name: Air Control Bereich 1 letzter Job
 
+# area 2
+area_2_name:
+  name: Name des Bereichs
+area_2_description:
+  name: Kurzbeschreibung des Bereichs
+
+# area 3
+area_3_name:
+  name: Name des Bereichs
+area_3_description:
+  name: Kurzbeschreibung des Bereichs

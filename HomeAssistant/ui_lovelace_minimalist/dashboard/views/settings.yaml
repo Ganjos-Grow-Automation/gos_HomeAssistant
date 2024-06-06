@@ -3,7 +3,7 @@ path: "settings"
 subview: true
 cards:
   - type: vertical-stack
-    cards:
+    cards:  
       - type: horizontal-stack
         cards:
           - type: "custom:button-card"
@@ -43,6 +43,8 @@ cards:
             variables:
               ulm_chip_navigate_path: backup
               ulm_chip_navigate_icon: mdi:cloud-upload
+  - type: vertical-stack
+    cards:
       - type: markdown
         ### Insert short description of GrowBot here
         content: >-
@@ -78,7 +80,8 @@ cards:
           Euer GrowBot Open Source Team
 
         title: GrowBot Open Source
-
+  - type: vertical-stack
+    cards:
       - type: markdown
         title: Offizielle GrowBot Partner & Unterstützer
         content: >-

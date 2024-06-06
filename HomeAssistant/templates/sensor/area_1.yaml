@@ -32,6 +32,15 @@
   state: >
     {{ ((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0)}}
   unit_of_measurement: Weeks
+- name: area_1_planned_weeks_of_grow
+  icon: mdi:calendar
+  state: >
+    {{ (states('input_number.area_1_planned_grow_days') | int /7)  | round(0)}}
+  unit_of_measurement: Weeks
+- name: area_1_days_until_grow_end
+  icon: mdi:calendar-clock
+  state: >
+    "NaN"
 
 ############ air control values
 - name: area_1_max_temperature_air

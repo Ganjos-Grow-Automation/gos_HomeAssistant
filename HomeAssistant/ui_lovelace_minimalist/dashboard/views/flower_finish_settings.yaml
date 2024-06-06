@@ -2,8 +2,6 @@ title: "Blüte-Ende Einstellungen"
 path: "flower_finish_settings"
 subview: true
 cards:
-  - type: vertical-stack
-    cards:
       - type: vertical-stack
         cards:
           - type: "custom:button-card"

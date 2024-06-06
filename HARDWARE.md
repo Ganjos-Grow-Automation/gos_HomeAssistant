@@ -10,7 +10,8 @@ Interessante Links zu diesem Thema sind folgende:
 
 Mögliche Hardware: 
 * [Fujitsu Thin Client Refurbished](https://amzn.to/4aRsIdT)
-* [Lenovo Thin Client](https://amzn.to/3VuXxQ7)
+* [Lenovo Thin Client v1](https://amzn.to/3VuXxQ7)
+* [Lenovo Thin Client v2](https://amzn.to/3KsXgrs)
 
 ## Module
 Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung wurden hierbei folgende Bestandteile verwendet:
@@ -29,11 +30,12 @@ Für das Monitoring der Luftbedingungen sind folgende Sensoren bereits vom GrowB
 #### CO2-Messung
 * [ENS160](https://www.dfrobot.com/product-2623.html?tracking=WjyQJqF2zJKV41fDEVNqlL8iIoSaXJXcs510uBhCzQJ0RftedpYAlvGH8TibE7eY) - Air Quality Sensor, der solide funktioniert. 
 
-
+### Soil Monitoring
+* []()
 
 ### Air Control 
 
-## Generelle Grow Ausrüstung (kompatibel mit dem GrowBot)
+## Generelle Grow Ausrüstung / Zubehör (kompatibel mit dem GrowBot)
 
 ### Funksteckdosen
 * [Sehlly Smart Plugs](https://amzn.to/3WRTe3u) - WLAN Steckdose 5er Set

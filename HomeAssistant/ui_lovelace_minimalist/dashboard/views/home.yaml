@@ -1,11 +1,58 @@
 title: "Home"
 path: "home"
 cards:
-  - type: vertical-stack
-    cards:
-      - type: custom:digital-clock
+      - type: horizontal-stack
+        cards:
+          - type: custom:digital-clock
+          - type: "custom:button-card"
+            template: chip_navigate
+            label: "Helfer"
+            variables:
+              ulm_chip_navigate_path: helper
+              ulm_chip_navigate_icon: mdi:lifebuoy
+          - type: "custom:button-card"
+            template: chip_navigate
+            label: "Settings"
+            variables:
+              ulm_chip_navigate_path: settings
+              ulm_chip_navigate_icon: mdi:cog
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Propagator
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_navigate
+                label: "mehr Informationen"
+                variables:
+                  ulm_chip_navigate_path: area_2
+                  ulm_chip_navigate_icon: mdi:arrow-right-circle
+          - type: custom:mini-graph-card
+            entities:
 
-      #### maybe Navigation nach unten
+              # to be configured
+              - entity: sensor.nodered_25ccff830bb64afb
+                aggregate_func: last
+                color: "#44A047"
+              - entity: sensor.area_2_max_vpd
+                aggregate_func: last
+                color: "#FF453A"
+              - entity: sensor.area_2_min_vpd
+                aggregate_func: last
+                color: "#edf542"
+            show:
+                  name: false
+                  legend: false
+                  icon: false
+                  labels: false
+            hours_to_show: 24
+            points_per_hour: 60
+            group_by: minute
+            height: 200
       - type: vertical-stack
         cards:
           - type: horizontal-stack
@@ -22,7 +69,7 @@ cards:
                   ulm_chip_navigate_path: area_1
                   ulm_chip_navigate_icon: mdi:arrow-right-circle
           - type: custom:ha-vpd-chart
-            air_text: Temp.
+            air_text: Temp
             rh_text: Hum
             kpa_text: VPD
             min_temperature: 12
@@ -40,6 +87,7 @@ cards:
             sensors:
               - temperature: sensor.area_1_temperature_air
                 humidity: sensor.area_1_humidity
+                # to be configured
                 vpd: sensor.nodered_25ccff830bb64afb
                 name: Growzelt
             vpd_phases:
@@ -59,75 +107,26 @@ cards:
           ######################
           - type: custom:mini-graph-card
             entities:
-              - entity: sensor.nodered_25ccff830bb64afb
-                aggregate_func: last
+
+                  # to be configured
+                  - entity: sensor.nodered_25ccff830bb64afb
+                    aggregate_func: last
+                    color: "#44A047"
+                  - entity: sensor.area_1_max_vpd
+                    aggregate_func: last
+                    color: "#FF453A"
+                  - entity: sensor.area_1_min_vpd
+                    aggregate_func: last
+                    color: "#edf542"
             show:
-              name: false
-              legend: true
-              icon: false
-              labels: true
-            color_thresholds:
-              - value: 1.0
-                color: "#FF453A"
-              - value: 1.1
-                color: "#44A047"
-              - value: 1.2
-                color: "#FF453A"
+                  name: false
+                  legend: false
+                  icon: false
+                  labels: false
             hours_to_show: 24
             points_per_hour: 60
             group_by: minute
-          #- type: horizontal-stack
-          #  cards:
-          #    - type: custom:mini-graph-card
-          #      entities:
-          #        - entity: sensor.area_1_temperature_air
-          #          aggregate_func: last
-          #          color: white
-          #          name: Temperatur
-          #      line_width: 4
-          #      font_size: 75
-          #      points_per_hour: 6
-          #      hours_to_show: 12
-          #      show:
-          #        fill: true
-          #        name: true
-          #        legend: false
-          #        icon: false
-          #      align_icon: center
-          #      align_state: center
-          #    - type: custom:mini-graph-card
-          #      entities:
-          #        - entity: sensor.area_1_humidity
-          #          aggregate_func: last
-          #          color: white
-          #          name: Luftfeuchtigkeit
-          #      font_size: 75
-          #      points_per_hour: 6
-          #      hours_to_show: 12
-          #      show:
-          #        fill: true
-          #        name: true
-          #        legend: false
-          #        icon: false
-          #      align_icon: center
-          #      align_state: center
-          #    - type: custom:mini-graph-card
-          #      entities:
-          #        - entity: sensor.area_1_co2
-          #          aggregate_func: last
-          #          color: white
-          #          name: CO2
-          #      line_width: 4
-          #      font_size: 75
-          #      points_per_hour: 6
-          #      hours_to_show: 12
-          #      show:
-          #        fill: true
-          #        name: true
-          #        legend: false
-          #        icon: false
-          #      align_icon: center
-          #      align_state: center
+            height: 200
           - type: horizontal-stack
             cards:
               - type: "custom:button-card"
@@ -135,16 +134,19 @@ cards:
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
+                  # to be configured
                   ulm_chip_mdi_icon_state_entity: switch.grow_exhaust_switch_0
                   ulm_chip_mdi_icon_state_icon: mdi:air-conditioner
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
+                  # to be configured
                   ulm_chip_mdi_icon_state_entity: switch.grow_ventilation_switch_0
                   ulm_chip_mdi_icon_state_icon: mdi:fan
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
+                  # to be configured
                   ulm_chip_mdi_icon_state_entity: switch.grow_heater_switch_0
                   ulm_chip_mdi_icon_state_icon: mdi:radiator
               - type: "custom:button-card"
@@ -156,36 +158,57 @@ cards:
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
+                  # to be configured
                   ulm_chip_mdi_icon_state_entity: switch.grow_humidifier_switch_0
                   ulm_chip_mdi_icon_state_icon: mdi:air-humidifier
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
+                  # to be configured
                   ulm_chip_mdi_icon_state_entity: switch.grow_dehumidifier_switch_0
                   ulm_chip_mdi_icon_state_icon: mdi:air-humidifier-off
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
+                  # to be configured
                   ulm_chip_mdi_icon_state_entity: switch.grow_light_switch_0
                   ulm_chip_mdi_icon_state_icon: mdi:lightbulb
               - type: "custom:button-card"
                 color_type: blank-card
-      - type: horizontal-stack
+      - type: vertical-stack
         cards:
-          - type: "custom:button-card"
-            template: card_title
-            name: Sonstiges
-          - type: "custom:button-card"
-            color_type: blank-card
-          - type: "custom:button-card"
-            template: chip_navigate
-            label: "Helfer"
-            variables:
-              ulm_chip_navigate_path: helper
-              ulm_chip_navigate_icon: mdi:lifebuoy
-          - type: "custom:button-card"
-            template: chip_navigate
-            label: "Settings"
-            variables:
-              ulm_chip_navigate_path: settings
-              ulm_chip_navigate_icon: mdi:cog
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Trocknungszelt
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_navigate
+                label: "mehr Informationen"
+                variables:
+                  ulm_chip_navigate_path: area_3
+                  ulm_chip_navigate_icon: mdi:arrow-right-circle
+          - type: custom:mini-graph-card
+            entities:
+
+              # to be configured
+              - entity: sensor.nodered_25ccff830bb64afb
+                aggregate_func: last
+                color: "#44A047"
+              - entity: sensor.area_3_max_vpd
+                aggregate_func: last
+                color: "#FF453A"
+              - entity: sensor.area_3_min_vpd
+                aggregate_func: last
+                color: "#edf542"
+            show:
+                  name: false
+                  legend: false
+                  icon: false
+                  labels: false
+            hours_to_show: 24
+            points_per_hour: 60
+            group_by: minute
+            height: 200

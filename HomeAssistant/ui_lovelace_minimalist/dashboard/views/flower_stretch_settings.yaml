@@ -2,8 +2,6 @@ title: "Streckung Einstellungen"
 path: "flower_stretch_settings"
 subview: true
 cards:
-  - type: vertical-stack
-    cards:
       - type: vertical-stack
         cards:
           - type: "custom:button-card"

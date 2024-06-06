@@ -156,3 +156,18 @@ cards:
                 template: chip_icon_label
                 label: Bald verfügbar
                 icon: "mdi:rocket-launch"
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_title
+                name: Ottcouture AI Modelle
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                template: chip_navigate
+                label: "zu den Modellen"
+                variables:
+                  ulm_chip_navigate_path: ottcouture
+                  ulm_chip_navigate_icon: mdi:arrow-right-circle

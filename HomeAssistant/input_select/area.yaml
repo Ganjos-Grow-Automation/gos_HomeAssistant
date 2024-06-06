@@ -23,7 +23,6 @@ area_1_aircontrol_mode:
   options:
     - VPD
     - Statisch
-    - Temp
   icon: mdi:form-dropdown
 
 area_1_exhaust_dimmable:
@@ -76,6 +75,168 @@ area_1_exhaust_eq_ac:
   icon: mdi:air-conditioner
 
 area_1_exhaust_eq_dehumidifer:
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier-off
+
+# area 2
+area_2_stage:
+  name: Bereich 2 Pflanzenstadium
+  options:
+    - Clone
+    - Veg
+    - Flower-stretch
+    - Flower-bulk
+    - Flower-finish
+    - Dry
+  icon: mdi:form-dropdown
+area_2_aircontrol_prio:
+  name: Bereich 2 Priorität bei den Luftbedingungen
+  options:
+    - Temperature
+    - Humidity
+  icon: mdi:form-dropdown
+
+area_2_aircontrol_mode:
+  name: Luftkontrollmodus
+  options:
+    - VPD
+    - Statisch
+  icon: mdi:form-dropdown
+
+area_2_exhaust_dimmable:
+  name: Ist die Abluft in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-conditioner
+
+area_2_ventilation_dimmable:
+  name: Ist die Umluft in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:fan
+
+area_2_heater_dimmable:
+  name: Ist die Heizung in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:radiator
+
+area_2_light_dimmable:
+  name: Ist die Beleuchtung in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:lightbulb
+
+area_2_humidifier_dimmable:
+  name: Ist die Luftbefeuchtung in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier
+
+area_2_dehumidifier_dimmable:
+  name: Ist die Luftentfeuchtung in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier-off
+
+area_2_exhaust_eq_ac:
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-conditioner
+
+area_2_exhaust_eq_dehumidifer:
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier-off
+
+# area 3
+area_3_stage:
+  name: Bereich 3 Pflanzenstadium
+  options:
+    - Clone
+    - Veg
+    - Flower-stretch
+    - Flower-bulk
+    - Flower-finish
+    - Dry
+  icon: mdi:form-dropdown
+area_3_aircontrol_prio:
+  name: Bereich 3 Priorität bei den Luftbedingungen
+  options:
+    - Temperature
+    - Humidity
+  icon: mdi:form-dropdown
+
+area_3_aircontrol_mode:
+  name: Luftkontrollmodus
+  options:
+    - VPD
+    - Statisch
+  icon: mdi:form-dropdown
+
+area_3_exhaust_dimmable:
+  name: Ist die Abluft in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-conditioner
+
+area_3_ventilation_dimmable:
+  name: Ist die Umluft in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:fan
+
+area_3_heater_dimmable:
+  name: Ist die Heizung in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:radiator
+
+area_3_light_dimmable:
+  name: Ist die Beleuchtung in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:lightbulb
+
+area_3_humidifier_dimmable:
+  name: Ist die Luftbefeuchtung in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier
+
+area_3_dehumidifier_dimmable:
+  name: Ist die Luftentfeuchtung in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-humidifier-off
+
+area_3_exhaust_eq_ac:
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:air-conditioner
+
+area_3_exhaust_eq_dehumidifer:
   name: Ist die Abluft auch für die Klima zuständig?
   options:
     - Ja
