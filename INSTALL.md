@@ -1,6 +1,8 @@
 # Die Installation des GrowBots
 
-## Voraussetzungen
+## Disclaimer 
+
+## Vorraussetzungen
 
 ### Was wird benötigt?
 
