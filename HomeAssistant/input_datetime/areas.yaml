@@ -1,0 +1,52 @@
+area_1_startdate:
+  name: Startdatum des Bereichs
+  has_date: true
+  has_time: false
+area_1_clones_startdate:
+  name: Samen und Stecklinge Startdatum
+  has_date: true
+  has_time: false
+area_1_clones_enddate:
+  name: Samen und Stecklinge Enddatum
+  has_date: true
+  has_time: false
+area_1_veg_startdate:
+  name: Wachstum Startdatum
+  has_date: true
+  has_time: false
+area_1_veg_enddate:
+  name: Wachstum Enddatum
+  has_date: true
+  has_time: false
+area_1_flower_stretch_startdate:
+  name: Blüte Streckung Startdatum
+  has_date: true
+  has_time: false
+area_1_flower_stretch_enddate:
+  name: Blüte Streckung Enddatum
+  has_date: true
+  has_time: false
+area_1_flower_bulk_startdate:
+  name: Blüte Bulk Startdatum
+  has_date: true
+  has_time: false
+area_1_flower_bulk_enddate:
+  name: Blüte Bulk Enddatum
+  has_date: true
+  has_time: false
+area_1_flower_finish_startdate:
+  name: Blüte Ende Startdatum
+  has_date: true
+  has_time: false
+area_1_flower_finish_enddate:
+  name: Blüte Ende Enddatum
+  has_date: true
+  has_time: false
+area_1_dry_startdate:
+  name: Trocknen Startdatum
+  has_date: true
+  has_time: false
+area_1_dry_enddate:
+  name: Trocknen Enddatum
+  has_date: true
+  has_time: false

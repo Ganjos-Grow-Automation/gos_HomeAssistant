@@ -16,6 +16,15 @@ target_ec_tolerance_clones:
   step: 0.1
   mode: box
   icon: mdi:vector-difference
+target_ec_tolerance_alerting_clones:
+  name: Toleranz Benachrichtigung 
+  initial: 0.3
+  min: 0.1
+  max: 1.0
+  step: 0.01
+   
+  mode: box
+  icon: mdi:bell-alert
 
 ## Stage: veg
 target_ec_veg:
@@ -35,6 +44,15 @@ target_ec_tolerance_veg:
   step: 0.1
   mode: box
   icon: mdi:vector-difference
+target_ec_tolerance_alerting_veg:
+  name: Toleranz Benachrichtigung 
+  initial: 0.3
+  min: 0.1
+  max: 1.0
+  step: 0.01
+   
+  mode: box
+  icon: mdi:bell-alert
 
 ## Stage: flower_stretch
 target_ec_flower_stretch:
@@ -54,6 +72,15 @@ target_ec_tolerance_flower_stretch:
   step: 0.1
   mode: box
   icon: mdi:vector-difference
+target_ec_tolerance_alerting_flower_stretch:
+  name: Toleranz Benachrichtigung 
+  initial: 0.3
+  min: 0.1
+  max: 1.0
+  step: 0.01
+   
+  mode: box
+  icon: mdi:bell-alert
 
 ## Stage: flower_bulk
 target_ec_flower_bulk:
@@ -73,6 +100,16 @@ target_ec_tolerance_flower_bulk:
   step: 0.1
   mode: box
   icon: mdi:vector-difference
+target_ec_tolerance_alerting_flower_bulk:
+  name: Toleranz Benachrichtigung 
+  initial: 0.3
+  min: 0.1
+  max: 1.0
+  step: 0.01
+   
+  mode: box
+  icon: mdi:bell-alert
+
 
 ## Stage: flower_finish
 target_ec_flower_finish:
@@ -92,3 +129,12 @@ target_ec_tolerance_flower_finish:
   step: 0.1
   mode: box
   icon: mdi:vector-difference
+target_ec_tolerance_alerting_flower_finish:
+  name: Toleranz Benachrichtigung 
+  initial: 0.3
+  min: 0.1
+  max: 1.0
+  step: 0.01
+   
+  mode: box
+  icon: mdi:bell-alert

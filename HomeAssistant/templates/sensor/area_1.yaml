@@ -25,22 +25,84 @@
 - name: area_1_days_since_grow_start
   icon: mdi:calendar-start
   state: >
-    {{((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+    {{((as_timestamp(now()) - (states.input_datetime.area_1_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
   unit_of_measurement: Tage
 - name: area_1_current_week_of_grow
   icon: mdi:calendar
   state: >
-    {{ ((as_timestamp(now()) - (states.input_datetime.grow_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0)}}
-  unit_of_measurement: Weeks
+    {{ ((as_timestamp(now()) - (states.input_datetime.area_1_startdate.attributes.timestamp)) | int /60/1440//7 +1)  | round(0)}}
+  unit_of_measurement: Wochen
 - name: area_1_planned_weeks_of_grow
   icon: mdi:calendar
   state: >
     {{ (states('input_number.area_1_planned_grow_days') | int /7)  | round(0)}}
-  unit_of_measurement: Weeks
+  unit_of_measurement: Wochen
 - name: area_1_days_until_grow_end
   icon: mdi:calendar-clock
   state: >
-    "NaN"
+    {{(states('input_number.area_1_planned_grow_days') | int - states('sensor.area_1_days_since_grow_start') | int )}}
+  unit_of_measurement: Tage
+- name: area_1_datediff_days_clones
+  icon: mdi:calendar-start
+  state: >
+      {{(((states.input_datetime.area_1_clones_enddate.attributes.timestamp) - (states.input_datetime.area_1_clones_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+  unit_of_measurement: Tage
+- name: area_1_datediff_days_veg
+  icon: mdi:calendar-start
+  state: >
+      {{(((states.input_datetime.area_1_veg_enddate.attributes.timestamp) - (states.input_datetime.area_1_veg_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+  unit_of_measurement: Tage
+- name: area_1_datediff_days__flower_stretch
+  icon: mdi:calendar-start
+  state: >
+      {{(((states.input_datetime.area_1_flower_stretch_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_stretch_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+  unit_of_measurement: Tage
+- name: area_1_datediff_days__flower_bulk
+  icon: mdi:calendar-start
+  state: >
+      {{(((states.input_datetime.area_1_flower_bulk_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_bulk_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+  unit_of_measurement: Tage
+- name: area_1_datediff_days__flower_finish
+  icon: mdi:calendar-start
+  state: >
+      {{(((states.input_datetime.area_1_flower_finish_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_finish_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+  unit_of_measurement: Tage
+- name: area_1_datediff_days__dry
+  icon: mdi:calendar-start
+  state: >
+      {{(((states.input_datetime.area_1_dry_enddate.attributes.timestamp) - (states.input_datetime.area_1_dry_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+  unit_of_measurement: Tage
+- name: area_1_datediff_weeks_clones
+  icon: mdi:calendar-start
+  state: >
+      {{(states('sensor.area_1_datediff_days_clones') | int / 7 ) | round(0)}}
+  unit_of_measurement: Wochen
+- name: area_1_datediff_weeks_veg
+  icon: mdi:calendar-start
+  state: >
+      {{(states('sensor.area_1_datediff_days_veg') | int / 7 ) | round(0)}}
+  unit_of_measurement: Wochen
+- name: area_1_datediff_weeks__flower_stretch
+  icon: mdi:calendar-start
+  state: >
+      {{(states('sensor.area_1_datediff_days_flower_stretch') | int / 7 ) | round(0)}}
+  unit_of_measurement: Wochen
+- name: area_1_datediff_weeks__flower_bulk
+  icon: mdi:calendar-start
+  state: >
+      {{(states('sensor.area_1_datediff_days_flower_bulk') | int / 7 ) | round(0)}}
+  unit_of_measurement: Wochen
+- name: area_1_datediff_weeks__flower_finish
+  icon: mdi:calendar-start
+  state: >
+      {{(states('sensor.area_1_datediff_days_flower_finish') | int / 7 ) | round(0)}}
+  unit_of_measurement: Wochen
+- name: area_1_datediff_weeks__dry
+  icon: mdi:calendar-start
+  state: >
+      {{(states('sensor.area_1_datediff_days_dry') | int / 7 ) | round(0)}}
+  unit_of_measurement: Wochen
+
 
 ############ air control values
 - name: area_1_max_temperature_air

@@ -45,46 +45,10 @@ area_1_clones_days_target:
   unit_of_measurement: days
   mode: box
   icon: mdi:hours-24
-area_1_clones_days_current:
-  name: Aktuelle Anzahl der Tage Samen und Stecklinge
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-area_1_clones_days_finished:
-  name: Endgültige Anzahl der Tage Samen und Stecklinge
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
 
 ## Stage: veg
 area_1_veg_days_target:
   name: Ziel Anzahl der Tage Wachstum
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-area_1_veg_days_current:
-  name: Aktuelle Anzahl der Tage Wachstum
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-area_1_veg_days_finished:
-  name: Endgültige Anzahl der Tage Wachstum
   initial: 18
   min: 0
   max: 80
@@ -103,24 +67,6 @@ area_1_flower_stretch_days_target:
   unit_of_measurement: days
   mode: box
   icon: mdi:hours-24
-area_1_flower_stretch_days_current:
-  name: Aktuelle Anzahl der Tage Blüte Streckung
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-area_1_flower_stretch_days_finished:
-  name: Endgültige Anzahl der Tage Blüte Streckung
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
 
 ## Stage: flower_bulk
 area_1_flower_bulk_days_target:
@@ -132,24 +78,7 @@ area_1_flower_bulk_days_target:
   unit_of_measurement: days
   mode: box
   icon: mdi:hours-24
-area_1_flower_bulk_days_current:
-  name: Aktuelle Anzahl der Tage Blüte Bulk
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-area_1_flower_bulk_days_finished:
-  name: Endgültige Anzahl der Tage Blüte Bulk
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
+
 
 ## Stage: flower_finish
 area_1_flower_finish_days_target:
@@ -161,46 +90,11 @@ area_1_flower_finish_days_target:
   unit_of_measurement: days
   mode: box
   icon: mdi:hours-24
-area_1_flower_finish_days_current:
-  name: Aktuelle Anzahl der Tage Blüte Ende
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-area_1_flower_finish_days_finished:
-  name: Endgültige Anzahl der Tage Blüte Ende
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
+
 
 ## Stage: dry
 area_1_dry_days_target:
   name: Ziel Anzahl der Tage Trocknung
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-area_1_dry_days_current:
-  name: Aktuelle Anzahl der Tage Trocknung
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-area_1_dry_days_finished:
-  name: Endgültige Anzahl der Tage Trocknung
   initial: 18
   min: 0
   max: 80

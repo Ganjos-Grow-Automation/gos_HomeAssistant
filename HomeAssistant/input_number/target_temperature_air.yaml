@@ -71,6 +71,15 @@ target_temperature_air_dry:
   unit_of_measurement: °C
   mode: box
   icon: mdi:temperature-celsius
+target_temperature_air_tolerance_dry:
+  name: Zieltemperatur-Luft-Toleranz Trocknung
+  initial: 1
+  min: 0
+  max: 5
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:vector-difference
 
 # ## Stage: clones
 # ##### day values

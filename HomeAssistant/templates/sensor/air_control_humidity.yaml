@@ -111,12 +111,12 @@
 ### Stage: dry
 - name: max_humidity_dry
   state: >
-    {{ [states('input_number.target_humidity_dry'), states('input_number.target_humidity_tolerance_flower_finish')] | map('float') | sum }}
+    {{ [states('input_number.target_humidity_dry'), states('input_number.target_humidity_tolerance_dry')] | map('float') | sum }}
   unit_of_measurement: "%"
   icon: mdi:water-percent
 - name: min_humidity_dry
   state: >
-    {{ (states('input_number.target_humidity_dry') | float - states('input_number.target_humidity_tolerance_flower_finish') | float)}}
+    {{ (states('input_number.target_humidity_dry') | float - states('input_number.target_humidity_tolerance_dry') | float)}}
   unit_of_measurement: "%"
   icon: mdi:water-percent
 
@@ -149,11 +149,5 @@
 - name: target_humidity_night_flower_finish
   state: >
     {{ states('input_number.target_humidity_day_flower_finish') | float - states('input_number.target_humidity_day_night_difference_flower_finish') | float}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-- name: target_humidity_night_dry
-  state: >
-    {{ states('input_number.target_humidity_day_dry') | float - states('input_number.target_humidity_day_night_difference_dry') | float}}
   unit_of_measurement: "%"
   icon: mdi:water-percent

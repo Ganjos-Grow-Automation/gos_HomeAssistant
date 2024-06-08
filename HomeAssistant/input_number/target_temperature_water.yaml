@@ -20,7 +20,15 @@ target_temperature_water_tolerance_clones:
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
-
+target_temperature_water_tolerance_alerting_clones:
+  name: Toleranz Benachrichtigung 
+  initial: 4
+  min: 1
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
 ## Stage: veg
 target_temperature_water_veg:
   name: Zieltemperatur-Wasser Wachstum
@@ -41,7 +49,15 @@ target_temperature_water_tolerance_veg:
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
-
+target_temperature_water_tolerance_alerting_veg:
+  name: Toleranz Benachrichtigung 
+  initial: 4
+  min: 1
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
 ## Stage: flower_stretch
 target_temperature_water_flower_stretch:
   name: Zieltemperatur-Wasser Blüte Streckung
@@ -62,7 +78,15 @@ target_temperature_water_tolerance_flower_stretch:
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
-
+target_temperature_water_tolerance_alerting_flower_stretch:
+  name: Toleranz Benachrichtigung 
+  initial: 4
+  min: 1
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
 ## Stage: flower_bulk
 target_temperature_water_flower_bulk:
   name: Zieltemperatur-Wasser Blüte Bulk
@@ -83,6 +107,15 @@ target_temperature_water_tolerance_flower_bulk:
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
+target_temperature_water_tolerance_alerting_flower_bulk:
+  name: Toleranz Benachrichtigung 
+  initial: 4
+  min: 1
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert
 
 ## Stage: flower_finish
 target_temperature_water_flower_finish:
@@ -104,3 +137,12 @@ target_temperature_water_tolerance_flower_finish:
   unit_of_measurement: °C
   mode: box
   icon: mdi:vector-difference
+target_temperature_water_tolerance_alerting_flower_finish:
+  name: Toleranz Benachrichtigung 
+  initial: 4
+  min: 1
+  max: 10
+  step: 1
+  unit_of_measurement: °C
+  mode: box
+  icon: mdi:bell-alert

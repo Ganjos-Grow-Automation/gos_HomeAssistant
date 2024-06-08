@@ -1,5 +1,5 @@
 - name: area_1_is_day
-  state: "{{states('switch.area_1_light_state')}}"
+  state: "{{states('binary_sensor.area_1_light_state')}}"
 
 - name: area_1_is_exhaust_dimmable
   state: >

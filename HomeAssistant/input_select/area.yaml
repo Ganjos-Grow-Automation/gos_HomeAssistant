@@ -80,6 +80,14 @@ area_1_exhaust_eq_dehumidifer:
     - Ja
     - Nein
   icon: mdi:air-humidifier-off
+  
+area_1_area_type:
+  name: Bereichstype
+  options:
+    - Growzelt
+    - Raum
+    - Outdoor
+  icon: mdi:form-dropdown
 
 # area 2
 area_2_stage:
@@ -162,6 +170,14 @@ area_2_exhaust_eq_dehumidifer:
     - Nein
   icon: mdi:air-humidifier-off
 
+area_2_area_type:
+  name: Bereichstype
+  options:
+    - Growzelt
+    - Raum
+    - Outdoor
+  icon: mdi:form-dropdown
+
 # area 3
 area_3_stage:
   name: Bereich 3 Pflanzenstadium
@@ -242,3 +258,11 @@ area_3_exhaust_eq_dehumidifer:
     - Ja
     - Nein
   icon: mdi:air-humidifier-off
+
+area_3_area_type:
+  name: Bereichstype
+  options:
+    - Growzelt
+    - Raum
+    - Outdoor
+  icon: mdi:form-dropdown

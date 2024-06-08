@@ -142,7 +142,7 @@ cards:
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
-                  ulm_chip_mdi_icon_state_entity: input_datetime.grow_startdate
+                  ulm_chip_mdi_icon_state_entity: input_datetime.area_1_startdate
                   ulm_chip_mdi_icon_state_icon: mdi:calendar-arrow-right
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
@@ -161,41 +161,6 @@ cards:
                   ulm_chip_mdi_icon_state_icon: mdi:list-status
               - type: "custom:button-card"
                 color_type: blank-card
-          - type: horizontal-stack
-            cards:
-              - type: "custom:button-card"
-                template: custom_card_bar_card
-                variables:
-                  ulm_custom_card_bar_card_entity: sensor.airmonitoring_grow_temperature
-                  ulm_custom_card_bar_card_name: Wachstum
-                  ulm_custom_card_bar_card_value: true
-                  ulm_custom_card_bar_card_indicator: false
-                  ulm_custom_card_bar_card_color: "var(--google-green)"
-                  ulm_custom_card_bar_card_min: 10
-                  ulm_custom_card_bar_card_max: 35
-              - type: "custom:button-card"
-                template: custom_card_bar_card
-                variables:
-                  ulm_custom_card_bar_card_entity: sensor.airmonitoring_grow_temperature
-                  ulm_custom_card_bar_card_name: Blüte
-                  ulm_custom_card_bar_card_value: true
-                  ulm_custom_card_bar_card_indicator: false
-                  ulm_custom_card_bar_card_color: "var(--google-green)"
-                  ulm_custom_card_bar_card_min: 10
-                  ulm_custom_card_bar_card_max: 35
-              - entity: sensor.airmonitoring_grow_temperature
-                title: Severity
-                type: "custom:bar-card"
-                severity:
-                  - color: Red
-                    from: 0
-                    to: 25
-                  - color: Orange
-                    from: 26
-                    to: 50
-                  - color: Green
-                    from: 51
-                    to: 100
           - type: vertical-stack
             cards:
               - type: horizontal-stack

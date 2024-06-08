@@ -18,6 +18,15 @@ target_light_distance_tolerance_clones:
   unit_of_measurement: meter
   mode: box
   icon: mdi:arrow-expand-vertical
+target_light_distance_tolerance_alerting_clones:
+  name: Toleranz Benachrichtigung 
+  initial: 0.5
+  min: 0.1
+  max: 1.0
+  step: 0.1
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:bell-alert
 
 ## Stage: veg
 target_light_distance_veg:
@@ -39,6 +48,15 @@ target_light_distance_tolerance_veg:
   unit_of_measurement: meter
   mode: box
   icon: mdi:arrow-expand-vertical
+target_light_distance_tolerance_alerting_veg:
+  name: Toleranz Benachrichtigung 
+  initial: 0.5
+  min: 0.1
+  max: 1.0
+  step: 0.1
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:bell-alert
 
 ## Stage: flower_stretch
 target_light_distance_flower_stretch:
@@ -60,7 +78,15 @@ target_light_distance_tolerance_flower_stretch:
   unit_of_measurement: meter
   mode: box
   icon: mdi:arrow-expand-vertical
-
+target_light_distance_tolerance_alerting_flower_stretch:
+  name: Toleranz Benachrichtigung 
+  initial: 0.5
+  min: 0.1
+  max: 1.0
+  step: 0.1
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:bell-alert
 
 ## Stage: flower_bulk
 target_light_distance_flower_bulk:
@@ -82,6 +108,15 @@ target_light_distance_tolerance_flower_bulk:
   unit_of_measurement: meter
   mode: box
   icon: mdi:arrow-expand-vertical
+target_light_distance_tolerance_alerting_flower_bulk:
+  name: Toleranz Benachrichtigung 
+  initial: 0.5
+  min: 0.1
+  max: 1.0
+  step: 0.1
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:bell-alert
 
 ## Stage: flower_finish
 target_light_distance_flower_finish:
@@ -103,3 +138,12 @@ target_light_distance_tolerance_flower_finish:
   unit_of_measurement: meter
   mode: box
   icon: mdi:arrow-expand-vertical
+target_light_distance_tolerance_alerting_flower_finish:
+  name: Toleranz Benachrichtigung 
+  initial: 0.5
+  min: 0.1
+  max: 1.0
+  step: 0.1
+  unit_of_measurement: meter
+  mode: box
+  icon: mdi:bell-alert
