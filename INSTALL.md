@@ -46,6 +46,46 @@ Dieses Modul ist noch in der Entwicklung und wir in einem zukünftigen Release v
 
 Innerhalb Home Assistant benötigen wir für den GrowBot weitere Integrationen und Addons, um die Dashboards und weitere Funktionen nutzen zu können. 
 
+#### Add-Ons
+In den Add-Ons sind nachfolgende von uns im Einsatz und sind teilweise für die Verwendung des GrowBots erforderlich.
+
+* Advanced SSH & Web Terminal 
+* Node-RED  - **erforderlich**
+* Samba Backup - **empfohlen**
+* Samba Share - **Samba share**
+* InfluxDB - **erforderlich**
+* Studio Code Server - **empfohlen**
+* ESPHome - **erforderlich**
+
+#### HACS Add-Ons und Integrationen
+Im Bereich von HACS müssen folgende Integrationen und Lovelace Add-Ons hinzugefügt werden:
+
+##### Integrationen
+* HACS
+* UI Lovelace Minimalist
+* Scheduler component
+* Node-RED Companion
+* [Home Assistant Plant](https://github.com/Olen/homeassistant-plant) - Das müsst ihr als benutzerdefiniertes Repository einbinden.
+
+##### Lovelace
+* Mushroom
+* mini-graph-card
+* button-card
+* Scheduler Card
+* Config Template Card
+* Bar Card
+* [Home Assistant VPD Chart](https://github.com/mentalilll/ha-vpd-chart) - Das müsst ihr als benutzerdefiniertes Repository einbinden.
+
+#### Integrationen
+Im Bereich der Integrationen müssen folgende Integrationen hinzugefügt und eine Instanz erstellt werden: 
+
+* Lokales To-Do
+* Einkaufsliste
+* Node-RED Companion
+* Plant Monitor
+* Scheduler 
+* Shelly - Wenn ihr Shelly-Funksteckdosen verwendet
+* UI Lovelace Minimalist
 
 ## Die Installation des GrowBots
 

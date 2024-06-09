@@ -1,6 +1,8 @@
 esphome:
-  name: airmonitoring-grow
-  friendly_name: AirMonitoring-Grow
+  #to be configured
+  name: airmonitoring-YourAreaName
+  #to be configured
+  friendly_name: AirMonitoring-YourAreaName
 
 esp32:
   board: esp32dev
@@ -24,7 +26,8 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Airmonitoring-Grow"
+    #to be configured
+    ssid: "Airmonitoring-YourAreaName"
     password: "3RGnyLbTn2bN"
 
 captive_portal:
@@ -35,34 +38,44 @@ i2c:
   scan: true
   id: bus_a
 
+  #to be configured for your sensors
 sensor:
-  - platform: am2315c 
-    address: 0x40
+  #- platform: hdc1080
+  #  address: 0x40
+  #  i2c_id: bus_a
+  #  temperature:
+  #    name: "Temperature"
+  #    unit_of_measurement: "°C"
+  #    id: temperature
+  #  humidity:
+  #    name: "Humidity"
+  #    id: humidity
+  #  update_interval: 15s
+
+  - platform: sht3xd
     i2c_id: bus_a
     temperature:
-      name: "Grow Temperature"
+      name: "Temperature"
       unit_of_measurement: "°C"
-      icon: "mdi:water-percent"
-      device_class: "temperature"
-      state_class: "measurement"
-      accuracy_decimals: 1
-      id: grow_temperature
+      id: temperature
     humidity:
-      name: "Grow Humidity"
-      state_class: measurement
-      id: grow_humidity
-    update_interval: 30s
-  
+      name: "Humidity"
+      id: humidity
+      unit_of_measurement: "%"
+    update_interval: 15s
+
+
   - platform: ens160
     eco2:
-      name: "Grow eCO2"
+      name: "eCO2"
+      id: co2
     tvoc:
-      name: "Grow Total Volatile Organic Compounds"
+      name: "Total Volatile Organic Compounds"
     aqi:
-      name: "Grow Air Quality Index"
-    update_interval: 60s
+      name: "Air Quality Index"
+    update_interval: 30s
     i2c_id: bus_a
     address: 0x53
     compensation:
-      temperature: grow_temperature
-      humidity: grow_humidity
+      temperature: temperature
+      humidity: humidity

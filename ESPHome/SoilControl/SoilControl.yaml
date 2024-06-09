@@ -1,0 +1,113 @@
+esphome:
+  #to be configured 
+  name: soilcontrol-YourAreaName
+  #to be configured 
+  friendly_name: SoilControl-YourAreaName
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "MsQR2JbvUMtDXAUynurFw5TvSW15JtdenfA4NgwYlKI="
+
+ota:
+  password: "8b06a9671242712275840e22f067aec8"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    #to be configured 
+    ssid: "Soilcontrol-YourAreaName"
+    password: "vhdy4eRwISHi"
+
+captive_portal:
+
+esp32_ble_tracker:
+
+xiaomi_ble:
+
+#to be configured with your sensors and mac addresses
+sensor:
+  # mini 1 5C:85:7E:12:D9:16
+  - platform: xiaomi_hhccjcy01
+    mac_address: '5C:85:7E:12:D9:16'
+    temperature:
+      name: "Flower Care Mini 1 Temperature"
+    moisture:
+      name: "Flower Care Mini 1 Moisture"
+    illuminance:
+      name: "Flower Care Mini 1 Illuminance"
+    conductivity:
+      name: "Flower Care Mini 1 Soil Conductivity"
+    battery_level:
+      name: "Flower Care Mini 1 Battery Level"
+  # mini 2 5C:85:7E:12:CD:DB 
+  - platform: xiaomi_hhccjcy01
+    mac_address: '5C:85:7E:12:CD:DB'
+    temperature:
+      name: "Flower Care Mini 2 Temperature"
+    moisture:
+      name: "Flower Care Mini 2 Moisture"
+    illuminance:
+      name: "Flower Care Mini 2 Illuminance"
+    conductivity:
+      name: "Flower Care Mini 2 Soil Conductivity"
+    battery_level:
+      name: "Flower Care Mini 2 Battery Level"
+  # mini 3 5C:85:7E:12:B4:8F
+  - platform: xiaomi_hhccjcy01
+    mac_address: '5C:85:7E:12:B4:8F'
+    temperature:
+      name: "Flower Care Mini 3 Temperature"
+    moisture:
+      name: "Flower Care Mini 3 Moisture"
+    illuminance:
+      name: "Flower Care Mini 3 Illuminance"
+    conductivity:
+      name: "Flower Care Mini 3 Soil Conductivity"
+    battery_level:
+      name: "Flower Care Mini 3 Battery Level"
+      ##### Max sensor
+  # Max 1 C4:7C:8D:6D:5E:28  
+  - platform: xiaomi_gcls002
+    mac_address: "C4:7C:8D:6D:5E:28"
+    temperature:
+      name: "Flower Care Max 1 Temperature"
+    moisture:
+      name: "Flower Care Max 1 Moisture"
+    conductivity:
+      name: "Flower Care Max 1 Soil Conductivity"
+    illuminance:
+      name: "Flower Care Max 1 Illuminance"
+  # Max 2 C4:7C:8D:6D:62:1B
+  - platform: xiaomi_gcls002
+    mac_address: "C4:7C:8D:6D:62:1B"
+    temperature:
+      name: "Flower Care Max 2 Temperature"
+    moisture:
+      name: "Flower Care Max 2 Moisture"
+    conductivity:
+      name: "Flower Care Max 2 Soil Conductivity"
+    illuminance:
+      name: "Flower Care Max 2 Illuminance"
+  # Max 3 C4:7C:8D:6D:5E:CC
+  - platform: xiaomi_gcls002
+    mac_address: "C4:7C:8D:6D:5E:CC"
+    temperature:
+      name: "Flower Care Max 3 Temperature"
+    moisture:
+      name: "Flower Care Max 3 Moisture"
+    conductivity:
+      name: "Flower Care Max 3 Soil Conductivity"
+    illuminance:
+      name: "Flower Care Max 3 Illuminance"
