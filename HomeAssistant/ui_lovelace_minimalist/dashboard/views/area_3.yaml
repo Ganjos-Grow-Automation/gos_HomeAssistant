@@ -1,9 +1,7 @@
-title: "Trocknungzelt"
+title: "Trocknungszelt"
 path: "area_3"
 subview: true
 cards:
-  - type: vertical-stack
-    cards:
       #####
       - type: vertical-stack
         cards:
@@ -64,62 +62,63 @@ cards:
                   # to be configured
                   - entity: sensor.nodered_25ccff830bb64afb
                     aggregate_func: last
-                    name: VPD
-                show:
-                  name: true
-                  legend: true
-                  icon: false
-                  labels: true
-                color_thresholds:
-                  - value: 1.0
-                    color: "#FF453A"
-                  - value: 1.1
                     color: "#44A047"
-                  - value: 1.2
+                  - entity: sensor.area_3_max_vpd
+                    aggregate_func: last
                     color: "#FF453A"
+                  - entity: sensor.area_3_min_vpd
+                    aggregate_func: last
+                    color: "#edf542"
+                show:
+                  name: false
+                  legend: false
+                  icon: false
+                  labels: false
                 hours_to_show: 24
                 points_per_hour: 60
                 group_by: minute
+                height: 300
               - type: custom:mini-graph-card
                 entities:
                   - entity: sensor.area_3_temperature_air
                     aggregate_func: last
-                    name: Temperatur
-                show:
-                  name: true
-                  legend: true
-                  icon: false
-                  labels: true
-                color_thresholds:
-                  - value: 24
-                    color: "#FF453A"
-                  - value: 25
                     color: "#44A047"
-                  - value: 26
+                  - entity: sensor.area_3_max_temperature_air
+                    aggregate_func: last
                     color: "#FF453A"
+                  - entity: sensor.area_3_min_temperature_air
+                    aggregate_func: last
+                    color: "#edf542"
+                show:
+                  name: false
+                  legend: false
+                  icon: false
+                  labels: false
                 hours_to_show: 24
                 points_per_hour: 120
                 group_by: minute
+                height: 300
               - type: custom:mini-graph-card
                 entities:
                   - entity: sensor.area_3_humidity
                     aggregate_func: last
-                    name: Luftfeuchtigkeit
-                show:
-                  name: true
-                  legend: true
-                  icon: false
-                  labels: true
-                color_thresholds:
-                  - value: 52
-                    color: "#FF453A"
-                  - value: 55
                     color: "#44A047"
-                  - value: 58
+                  - entity: sensor.area_3_max_humidity
+                    aggregate_func: last
                     color: "#FF453A"
+                  - entity: sensor.area_3_min_humidity
+                    aggregate_func: last
+                    color: "#edf542"
+                show:
+                  name: false
+                  legend: false
+                  icon: false
+                  labels: false
                 hours_to_show: 24
                 points_per_hour: 120
                 group_by: minute
+                height: 300
+
       #####################################################
       - type: vertical-stack
         cards:
@@ -143,7 +142,7 @@ cards:
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
                 variables:
-                  ulm_chip_mdi_icon_state_entity: input_datetime.grow_startdate
+                  ulm_chip_mdi_icon_state_entity: input_datetime.area_3_startdate
                   ulm_chip_mdi_icon_state_icon: mdi:calendar-arrow-right
               - type: "custom:button-card"
                 template: chip_mdi_icon_state
@@ -162,41 +161,6 @@ cards:
                   ulm_chip_mdi_icon_state_icon: mdi:list-status
               - type: "custom:button-card"
                 color_type: blank-card
-          - type: horizontal-stack
-            cards:
-              - type: "custom:button-card"
-                template: custom_card_bar_card
-                variables:
-                  ulm_custom_card_bar_card_entity: sensor.airmonitoring_grow_temperature
-                  ulm_custom_card_bar_card_name: Wachstum
-                  ulm_custom_card_bar_card_value: true
-                  ulm_custom_card_bar_card_indicator: false
-                  ulm_custom_card_bar_card_color: "var(--google-green)"
-                  ulm_custom_card_bar_card_min: 10
-                  ulm_custom_card_bar_card_max: 35
-              - type: "custom:button-card"
-                template: custom_card_bar_card
-                variables:
-                  ulm_custom_card_bar_card_entity: sensor.airmonitoring_grow_temperature
-                  ulm_custom_card_bar_card_name: Blüte
-                  ulm_custom_card_bar_card_value: true
-                  ulm_custom_card_bar_card_indicator: false
-                  ulm_custom_card_bar_card_color: "var(--google-green)"
-                  ulm_custom_card_bar_card_min: 10
-                  ulm_custom_card_bar_card_max: 35
-              - entity: sensor.airmonitoring_grow_temperature
-                title: Severity
-                type: "custom:bar-card"
-                severity:
-                  - color: Red
-                    from: 0
-                    to: 25
-                  - color: Orange
-                    from: 26
-                    to: 50
-                  - color: Green
-                    from: 51
-                    to: 100
           - type: vertical-stack
             cards:
               - type: horizontal-stack
