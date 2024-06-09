@@ -42,9 +42,6 @@ Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://g
 ### Official GrowBot Dev Team
 * **Marco aka. Rocky** - *Founder* - [Rocky](https://github.com/MrcoSchrnr)
 
-### weitere Mitwirkende
-- **Luca aka. 0xw3bjun6l3** - [0xw3bjun6l3](https://github.com/orgs/GrowBot-Open-Source/people/0xW3bJun6l3)
-
 Die ausführliche Liste der Mitwirkenden am Projekt findest du [hier](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/contributors).
 
 
@@ -54,6 +51,7 @@ Ehre wem Ehre gebührt - Folgende Personen haben direkt oder indirekt dazu beige
 * HomeGrow Pro
 * Ben Green
 * LEDGardener
+* Luca 
 
 
 ---
