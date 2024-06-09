@@ -68,6 +68,7 @@ Im Bereich von HACS müssen folgende Integrationen und Lovelace Add-Ons hinzugef
 * [Home Assistant Plant](https://github.com/Olen/homeassistant-plant) - Das müsst ihr als benutzerdefiniertes Repository einbinden.
 
 ##### Lovelace
+* Digital Clock
 * Mushroom
 * mini-graph-card
 * button-card
@@ -113,7 +114,7 @@ longitude: X
 ```
 
 #### Anpassungen im Quellcode
-Im Quellcode der Lösung müssen bestimmte Zeilen auf deine Geräte und deine Sensoren angepasst werden. Die entsprechenden Zeilen wurden mit folgendem vorangestellten Kommentar gekennzeichnet 
+Im Quellcode der Lösung müssen bestimmte Zeilen auf deine Geräte und deine Sensoren angepasst werden. Die entsprechenden Zeilen wurden mit folgendem vorangestellten Kommentar gekennzeichnet oder dem Dateinamen gbConfig_*.yaml gekennzeichnet. 
 ```
 #to be configured
 ```
