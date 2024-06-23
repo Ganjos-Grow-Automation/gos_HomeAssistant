@@ -34,8 +34,9 @@ Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://g
 * Hardware - Die kompatible Hardware findest ist [hier](./HARDWARE.md) hinterlegt. 
 
 ## Sponsoren
+* **High4Life** - Dein Shop für Seeds, Stecklinge und Rauchbedarf. Mit dem Code "growbot" gibt es 10% Rabatt. Zum Shop von High4Life kommst du [hier](https://high4life.shop/).
+* **TRUESOIL** - Unser Partner rund um das Thema Living Soil - Exklusiv bekommt die GrowBot Community mit dem Code "Growbot" 10% auf das komplette Sortiment im Onlineshop. Zum Onlineshop von TRUESOIL gelangst du [hier](https://truesoil.at/collections).
 * **Drain Master** - *Perfekte Drainage & einfache EC/pH-Messung* - [Kaufe deinen Abtropfständer hier](https://drain-master.de/produkt/drainmaster-4er-set/?ref=GrowBot)
-- **TRUESOIL** - Unser Partner rund um das Thema Living Soil - Exklusiv bekommt die GrowBot Community mit dem Code "Growbot" 10% auf das komplette Sortiment im Onlineshop. Zum Onlineshop von TRUESOIL gelangst du [hier](https://truesoil.at/collections).
 
 
 ## Autoren
