@@ -1,8 +1,8 @@
-# GrowBot Open Source 
+# GanjOS grow automation
 
-GrowBot Open Source ist ein Community-Projekt, das sich der Automatisierung des Homegrows widmet. Unser Ziel ist es, Heimzüchtern zu helfen, ihre Pflanzen optimal zu pflegen, indem wir moderne Automatisierungstechnologien nutzen. Das Projekt basiert auf Home Assistant, einer Open-Source-Plattform für Heimautomatisierung, die eine zentrale Steuerung und Überwachung ermöglicht. Wir verwenden ESP32-Platinen zur Integration verschiedener Sensoren. Diese Sensoren überwachen wichtige Umgebungsparameter wie Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtintensität, und liefern Echtzeitdaten an Home Assistant.
+GanjOS ist ein Open Source Community-Projekt, das sich der Automatisierung des Homegrows widmet. Unser Ziel ist es, Heimzüchtern zu helfen, ihre Pflanzen optimal zu pflegen, indem wir moderne Automatisierungstechnologien nutzen. Das Projekt basiert auf Home Assistant, einer Open-Source-Plattform für Heimautomatisierung, die eine zentrale Steuerung und Überwachung ermöglicht. Wir verwenden ESP32-Platinen zur Integration verschiedener Sensoren. Diese Sensoren überwachen wichtige Umgebungsparameter wie Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtintensität, und liefern Echtzeitdaten an Home Assistant.
 
-Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des Projekts [hier](https://link.space/@growbotopensource).
+Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des Projekts [hier](https://link.space/@ganjosgrowautomation).
 
 ## geplante Funktionen
 - **Echtzeitüberwachung**: Kontinuierliche Überwachung aller wichtigen Umgebungsbedingungen.
@@ -12,7 +12,7 @@ Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des P
 
 ## Mitmachen
 
-Wir laden alle Interessierten ein, Teil unserer Community zu werden und gemeinsam an der Verbesserung und Erweiterung von GrowBot Open Source zu arbeiten. Egal, ob du ein erfahrener Entwickler, ein Technik-Enthusiast oder ein Homegrower bist – jeder Beitrag ist willkommen!
+Wir laden alle Interessierten ein, Teil unserer Community zu werden und gemeinsam an der Verbesserung und Erweiterung von GanjOS zu arbeiten. Egal, ob du ein erfahrener Entwickler, ein Technik-Enthusiast oder ein Homegrower bist – jeder Beitrag ist willkommen!
 Bitte lese dir hier die [Mitwirkungsrichtlinien](./CONTRIBUTING.md) und den [Verhaltenskodex](./CODE_OF_CONDUCT.md) durch, um am Projekt mitzuwirken. 
 
 ## Installation
@@ -25,7 +25,7 @@ Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE).
 
 ## Kontakt
 
-Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/issues) oder unser Community-Forum auf [Discord](https://discord.gg/neJdSvxnPf).
+Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://github.com/Ganjos-Grow-Automation/gb_HomeAssistant/issues) oder unser Community-Forum auf [Discord](https://discord.gg/neJdSvxnPf).
 
 
 ## Bestandteile
@@ -35,15 +35,15 @@ Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://g
 
 ## Sponsoren
 * **High4Life** - Dein Shop für Seeds, Stecklinge und Rauchbedarf. Mit dem Code "growbot" gibt es 10% Rabatt. Zum Shop von High4Life kommst du [hier](https://high4life.shop/).
-* **TRUESOIL** - Unser Partner rund um das Thema Living Soil - Exklusiv bekommt die GrowBot Community mit dem Code "Growbot" 10% auf das komplette Sortiment im Onlineshop. Zum Onlineshop von TRUESOIL gelangst du [hier](https://truesoil.at/collections).
+* **TRUESOIL** - Unser Partner rund um das Thema Living Soil - Exklusiv bekommt die GanjOS Community mit dem Code "Growbot" 10% auf das komplette Sortiment im Onlineshop. Zum Onlineshop von TRUESOIL gelangst du [hier](https://truesoil.at/collections).
 * **Drain Master** - *Perfekte Drainage & einfache EC/pH-Messung* - [Kaufe deinen Abtropfständer hier](https://drain-master.de/produkt/drainmaster-4er-set/?ref=GrowBot)
 
 
 ## Autoren
-### Official GrowBot Dev Team
+### Official GanjOS Dev Team
 * **Marco aka. Rocky** - *Founder* - [Rocky](https://github.com/MrcoSchrnr)
 
-Die ausführliche Liste der Mitwirkenden am Projekt findest du [hier](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/contributors).
+Die ausführliche Liste der Mitwirkenden am Projekt findest du [hier](https://github.com/Ganjos-Grow-Automation/gb_HomeAssistant/contributors).
 
 
 ## Annerkennung
@@ -59,4 +59,4 @@ Ehre wem Ehre gebührt - Folgende Personen haben direkt oder indirekt dazu beige
 
 Wir freuen uns auf deine Teilnahme und Unterstützung!
 
-Das GrowBot Open Source Team
+Das GanjOS Team
