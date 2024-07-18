@@ -4,6 +4,8 @@ GanjOS ist ein Open Source Community-Projekt, das sich der Automatisierung des H
 
 Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des Projekts [hier](https://link.space/@ganjosgrowautomation).
 
+## Preview
+
 ## geplante Funktionen
 - **Echtzeitüberwachung**: Kontinuierliche Überwachung aller wichtigen Umgebungsbedingungen.
 - **Automatische Steuerung**: Anpassung von Licht, Bewässerung und Lüftung basierend auf den Sensordaten.
