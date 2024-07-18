@@ -1,0 +1,107 @@
+- name: area_1_exhaust_percentage
+  state: >
+    {% if states("binary_sensor.area_1_is_exhaust_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_1_exhaust_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_1_exhaust_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_1_light_percentage
+  state: >
+    {% if states("binary_sensor.area_1_is_light_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_1_light_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_1_light_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_1_ventilation_percentage
+  state: >
+    {% if states("binary_sensor.area_1_is_ventilation_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_1_ventilation_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_1_ventilation_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_1_heater_percentage
+  state: >
+    {% if states("binary_sensor.area_1_is_heater_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_1_heater_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_1_heater_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_1_humidifier_percentage
+  state: >
+    {% if states("binary_sensor.area_1_is_humidifier_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_1_humidifier_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_1_humidifier_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_1_dehumidifier_percentage
+  state: >
+    {% if states("binary_sensor.area_1_is_dehumidifier_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_1_dehumidifier_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_1_dehumidifier_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_2_exhaust_percentage
+  state: >
+    {% if states("binary_sensor.area_2_is_exhaust_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_2_exhaust_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_2_exhaust_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_2_light_percentage
+  state: >
+    {% if states("binary_sensor.area_2_is_light_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_2_light_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_2_light_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_2_ventilation_percentage
+  state: >
+    {% if states("binary_sensor.area_2_is_ventilation_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_2_ventilation_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_2_ventilation_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_2_heater_percentage
+  state: >
+    {% if states("binary_sensor.area_2_is_heater_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_2_heater_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_2_heater_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_2_humidifier_percentage
+  state: >
+    {% if states("binary_sensor.area_2_is_humidifier_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_2_humidifier_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_2_humidifier_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"
+
+- name: area_2_dehumidifier_percentage
+  state: >
+    {% if states("binary_sensor.area_2_is_dehumidifier_dimmable") == 'on' %}{{states.fan.aircontrol_grow_ruck_ec.attributes.percentage}}
+    {% elif states("binary_sensor.area_2_dehumidifier_state") == 'on' %}{{100}}
+    {% elif states("binary_sensor.area_2_dehumidifier_state") == 'off' %}{{0}}
+    {% else %} NaN
+    {% endif %}
+  unit_of_measurement: "%"

@@ -158,3 +158,33 @@ target_vpd_tolerance_alerting_flower_finish:
   unit_of_measurement: kPa
   mode: box
   icon: mdi:bell-alert
+
+target_vpd_dry:
+  name: Ziel-VPD Trocknung
+  initial: 1.2
+  min: 0.6
+  max: 1.8
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:target
+
+target_vpd_tolerance_dry:
+  name: Ziel-VPD-Toleranz Trocknung
+  initial: 0.1
+  min: 0.0
+  max: 1.0
+  step: 0.05
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:vector-difference
+
+target_vpd_tolerance_alerting_dry:
+  name: Toleranz Benachrichtigung Trocknung
+  initial: 0.4
+  min: 0.1
+  max: 1.0
+  step: 0.1
+  unit_of_measurement: kPa
+  mode: box
+  icon: mdi:bell-alert

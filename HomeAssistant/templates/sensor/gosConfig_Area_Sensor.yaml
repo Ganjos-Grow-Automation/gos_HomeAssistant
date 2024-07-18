@@ -1,0 +1,59 @@
+###
+###
+# Area 1
+###
+##
+# current data
+##
+- name: area_1_temperature_air
+  state: >
+    {{states("sensor.growtent_air_monitoring_temperature") | float }}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_1_temperature_leaf
+  state: >
+    {{states('sensor.growtent_air_monitoring_temperature') | float - states('input_number.area_1_temperature_leaf_offset') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_1_humidity
+  state: >
+    {{states("sensor.growtent_air_monitoring_humidity") | float }}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+
+- name: area_1_co2
+  state: >
+    {{states("sensor.growtent_air_monitoring_eco2") | float }}
+  unit_of_measurement: "ppm"
+  icon: mdi:molecule-co2
+
+# Area 2
+###
+##
+# current data
+##
+- name: area_2_temperature_air
+  state: >
+    {{states("sensor.propagator_air_monitoring_temperature") | float }}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_2_temperature_leaf
+  state: >
+    {{states('sensor.propagator_air_monitoring_temperature') | float - states('input_number.area_2_temperature_leaf_offset') | float}}
+  unit_of_measurement: °C
+  icon: mdi:temperature-celsius
+
+- name: area_2_humidity
+  state: >
+    {{states("sensor.propagator_air_monitoring_humidity") | float }}
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+
+- name: area_2_co2
+  state: >
+    {{states("sensor.propagator_air_monitoring_eco2") | float }}
+  unit_of_measurement: "ppm"
+  icon: mdi:molecule-co2

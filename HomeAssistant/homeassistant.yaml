@@ -1,4 +1,4 @@
-name: "GrowBot Open Source"
+name: "GanjOS Grow Automation"
 latitude: !secret latitude
 longitude: !secret longitude
 unit_system: metric

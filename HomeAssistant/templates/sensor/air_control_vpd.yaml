@@ -57,3 +57,14 @@
     {{ states('input_number.target_vpd_flower_finish') | float - states('input_number.target_vpd_tolerance_flower_finish') | float}}
   unit_of_measurement: kPa
   icon: mdi:target
+
+- name: max_vpd_dry
+  state: >
+    {{ [states('input_number.target_vpd_dry'), states('input_number.target_vpd_tolerance_dry')] | map('float') | sum }}
+  unit_of_measurement: kPa
+  icon: mdi:target
+- name: min_vpd_dry
+  state: >
+    {{ states('input_number.target_vpd_dry') | float - states('input_number.target_vpd_tolerance_dry') | float}}
+  unit_of_measurement: kPa
+  icon: mdi:target

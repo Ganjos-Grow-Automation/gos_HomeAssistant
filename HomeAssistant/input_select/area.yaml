@@ -266,3 +266,151 @@ area_3_area_type:
     - Raum
     - Outdoor
   icon: mdi:form-dropdown
+
+
+area_1_is_active:
+  name: Ist Bereich 1 aktiv?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_2_is_active:
+  name: Ist Bereich 2 aktiv?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_3_is_active:
+  name: Ist Bereich 3 aktiv?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_1_is_humidifier_available:
+  name: Ist im Bereich 1 ein Luftbefeuchter vorhanden?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_1_is_dehumidifier_available:
+  name: Ist im Bereich 1 ein Luftentfeuchter vorhanden?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_1_is_heater_available:
+  name: Ist im Bereich 1 eine Heizung vorhanden?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_1_is_light_available:
+  name: Ist im Bereich 1 ein Licht vorhanden?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_1_is_exhaust_available:
+  name: Ist im Bereich 1 eine Abluft vorhanden?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_1_is_ventilation_available:
+  name: Ist im Bereich 1 ein Ventilator vorhanden?
+  options:
+    - Ja
+    - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_2_is_humidifier_available:
+  name: Ist im Bereich 2 ein Luftbefeuchter vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_2_is_dehumidifier_available:
+  name: Ist im Bereich 2 ein Luftentfeuchter vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_2_is_heater_available:
+  name: Ist im Bereich 2 eine Heizung vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_2_is_light_available:
+  name: Ist im Bereich 2 ein Licht vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_2_is_exhaust_available:
+  name: Ist im Bereich 2 eine Abluft vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_2_is_ventilation_available:
+  name: Ist im Bereich 2 ein Ventilator vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_3_is_humidifier_available:
+  name: Ist im Bereich 3 ein Luftbefeuchter vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_3_is_dehumidifier_available:
+  name: Ist im Bereich 3 ein Luftentfeuchter vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_3_is_heater_available:
+  name: Ist im Bereich 3 eine Heizung vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_3_is_light_available:
+  name: Ist im Bereich 3 ein Licht vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_3_is_exhaust_available:
+  name: Ist im Bereich 3 eine Abluft vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline
+
+area_3_is_ventilation_available:
+  name: Ist im Bereich 3 ein Ventilator vorhanden?
+  options:
+  - Ja
+  - Nein
+  icon: mdi:checkbox-marked-outline

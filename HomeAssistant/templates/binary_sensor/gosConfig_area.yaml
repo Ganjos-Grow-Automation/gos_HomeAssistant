@@ -1,0 +1,102 @@
+### Area 1
+## to be configured
+- name: area_1_ventilation_state
+  state: "{{states('switch.grow_ventilation_switch_0')}}"
+  icon: mdi:fan
+
+## to be configured
+- name: area_1_exhaust_state
+  state: "{{states('switch.grow_exhaust_switch_0')}}"
+  icon: mdi:air-conditioner
+
+## to be configured
+- name: area_1_heater_state
+  state: "{{states('switch.grow_heater_switch_0')}}"
+  icon: mdi:radiator
+
+## to be configured
+- name: area_1_humidifier_state
+  state: "{{states('switch.grow_humidifier_switch_0')}}"
+  icon: mdi:air-humidifier
+
+## to be configured
+- name: area_1_dehumidifier_state
+  state: "{{states('switch.grow_dehumidifier_switch_0')}}"
+  icon: mdi:air-humidifier-off
+
+## to be configured
+- name: area_1_light_state
+  state: "{{states('switch.grow_light_switch_0')}}"
+  icon: mdi:lightbulb
+
+## to be configured
+- name: multiple_sensors_area_1_temperature_air
+  state: false
+  icon: mdi:temperature-celsius
+
+## to be configured
+- name: multiple_sensors_area_1_temperature_leaf
+  state: false
+  icon: mdi:temperature-celsius
+
+## to be configured
+- name: multiple_sensors_area_1_humidity
+  state: false
+  icon: mdi:water-percent
+
+## to be configured
+- name: multiple_sensors_area_1_co2
+  state: false
+  icon: mdi:molecule-co2
+
+
+### Area 2
+## to be configured
+- name: area_2_ventilation_state
+  state: "{{states('switch.grow_ventilation_switch_0')}}"
+  icon: mdi:fan
+
+## to be configured
+- name: area_2_exhaust_state
+  state: "{{states('switch.grow_exhaust_switch_0')}}"
+  icon: mdi:air-conditioner
+
+## to be configured
+- name: area_2_heater_state
+  state: "{{states('switch.grow_heater_switch_0')}}"
+  icon: mdi:radiator
+
+## to be configured
+- name: area_2_humidifier_state
+  state: "{{states('switch.grow_humidifier_switch_0')}}"
+  icon: mdi:air-humidifier
+
+## to be configured
+- name: area_2_dehumidifier_state
+  state: "{{states('switch.grow_dehumidifier_switch_0')}}"
+  icon: mdi:air-humidifier-off
+
+## to be configured
+- name: area_2_light_state
+  state: "{{states('switch.grow_light_switch_0')}}"
+  icon: mdi:lightbulb
+
+## to be configured
+- name: multiple_sensors_area_2_temperature_air
+  state: false
+  icon: mdi:temperature-celsius
+
+## to be configured
+- name: multiple_sensors_area_2_temperature_leaf
+  state: false
+  icon: mdi:temperature-celsius
+
+## to be configured
+- name: multiple_sensors_area_2_humidity
+  state: false
+  icon: mdi:water-percent
+
+## to be configured
+- name: multiple_sensors_area_2_co2
+  state: false
+  icon: mdi:molecule-co2
