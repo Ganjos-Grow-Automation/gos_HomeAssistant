@@ -35,7 +35,7 @@ cards:
             entities:
 
               # to be configured
-              - entity: sensor.nodered_25ccff830bb64afb
+              - entity: sensor.area_1_vpd
                 aggregate_func: last
                 color: "#44A047"
               - entity: sensor.area_2_max_vpd
@@ -88,7 +88,7 @@ cards:
               - temperature: sensor.area_1_temperature_air
                 humidity: sensor.area_1_humidity
                 # to be configured
-                vpd: sensor.nodered_25ccff830bb64afb
+                vpd: sensor.area_1_vpd
                 name: Growzelt
             vpd_phases:
               - upper: 0.4
@@ -109,7 +109,7 @@ cards:
             entities:
 
                   # to be configured
-                  - entity: sensor.nodered_25ccff830bb64afb
+                  - entity: sensor.area_1_vpd
                     aggregate_func: last
                     color: "#44A047"
                   - entity: sensor.area_1_max_vpd
@@ -194,7 +194,7 @@ cards:
             entities:
 
               # to be configured
-              - entity: sensor.nodered_25ccff830bb64afb
+              - entity: sensor.area_1_vpd
                 aggregate_func: last
                 color: "#44A047"
               - entity: sensor.area_3_max_vpd

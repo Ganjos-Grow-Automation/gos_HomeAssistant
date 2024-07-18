@@ -58,7 +58,7 @@ cards:
           - temperature: sensor.area_3_temperature_air
             humidity: sensor.area_3_humidity
             # to be configured
-            vpd: sensor.nodered_25ccff830bb64afb
+            vpd: sensor.area_1_vpd
             name: Growzelt
         vpd_phases:
           - upper: 0.4
@@ -80,12 +80,12 @@ cards:
           - type: custom:config-template-card
             entities:
               # to be configured
-              - sensor.nodered_25ccff830bb64afb
+              - sensor.area_1_vpd
               - sensor.area_3_target_vpd
             card:
               type: gauge
               # to be configured
-              entity: sensor.nodered_25ccff830bb64afb
+              entity: sensor.area_1_vpd
               name: aktuell
               unit: kPa
               min: ${states["sensor.area_3_target_vpd"].state * 0.7778}
@@ -178,7 +178,7 @@ cards:
       - type: custom:mini-graph-card
         entities:
           # to be configured
-          - entity: sensor.nodered_25ccff830bb64afb
+          - entity: sensor.area_1_vpd
             aggregate_func: last
         show:
           name: false

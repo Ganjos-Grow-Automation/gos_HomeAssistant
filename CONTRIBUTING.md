@@ -1,13 +1,13 @@
-# Beitrag zu GrowBot Open Source
+# Beitrag zu GanjOS Grow Automation
 
-Vielen Dank, dass du GrowBot Open Source unterstützen möchtest! Wir freuen uns über Beiträge in jeder Form. Dieser Leitfaden soll dir helfen, deine Beiträge effektiv einzubringen.
+Vielen Dank, dass du GanjOS Grow Automation unterstützen möchtest! Wir freuen uns über Beiträge in jeder Form. Dieser Leitfaden soll dir helfen, deine Beiträge effektiv einzubringen.
 
 ## Wie du beitragen kannst
 
 ### Fehlermeldungen und Feature Requests
 
-1. **Fehlermeldungen**: Wenn du einen Fehler gefunden hast, eröffne bitte ein [GitHub Issue](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/issues). Gib eine detaillierte Beschreibung des Problems an, einschließlich der Schritte, um den Fehler zu reproduzieren, und, wenn möglich, Screenshots.
-2. **Feature Requests**: Wenn du eine neue Funktion vorschlagen möchtest, eröffne ebenfalls ein [GitHub Issue](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/issues) und beschreibe die gewünschte Funktion und ihren Nutzen für die Community.
+1. **Fehlermeldungen**: Wenn du einen Fehler gefunden hast, eröffne bitte ein [GitHub Issue](https://github.com/Ganjos-Grow-Automation/gb_HomeAssistant/issues). Gib eine detaillierte Beschreibung des Problems an, einschließlich der Schritte, um den Fehler zu reproduzieren, und, wenn möglich, Screenshots.
+2. **Feature Requests**: Wenn du eine neue Funktion vorschlagen möchtest, eröffne ebenfalls ein [GitHub Issue](https://github.com/Ganjos-Grow-Automation/gb_HomeAssistant/issues) und beschreibe die gewünschte Funktion und ihren Nutzen für die Community.
 
 ### Code Beiträge
 
@@ -30,8 +30,8 @@ Bitte beachte unseren [Code of Conduct](./CODE_OF_CONDUCT.md), um eine respektvo
 
 ## Kontakt
 
-Für Fragen oder Hilfe kannst du uns über die [GitHub Discussions](https://github.com/orgs/GrowBot-Open-Source/discussions), über die [GitHub Issues](https://github.com/GrowBot-Open-Source/gb_HomeAssistant/issues) oder unserem Community-Forum auf [Discord](https://discord.gg/neJdSvxnPf) erreichen.
+Für Fragen oder Hilfe kannst du uns über die [GitHub Discussions](https://github.com/orgs/Ganjos-Grow-Automation/discussions), über die [GitHub Issues](https://github.com/Ganjos-Grow-Automation/gb_HomeAssistant/issues) oder unserem Community-Forum auf [Discord](https://discord.gg/neJdSvxnPf) erreichen.
 
 Wir freuen uns auf deine Beiträge!
 
-Das GrowBot Open Source Team
+Das GanjOS Grow Automation Team

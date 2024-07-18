@@ -1,16 +1,16 @@
-# Die Installation des GrowBots
-Are you ready for your own GrowBot?
+# Die Installation des GanjOS
+Are you ready for your own GanjOS?
 
 ## Disclaimer 
-Wir vom Projektteam haften für keine Anschlussfehler oder Konfigurationsfehler beim Einsatz des GrowBots. Ihr seid sellbst dafür verantwortlich, dass euer Setup sauber läuft und es euren Pflanzen gut geht. Zudem übernehmen wir keine Haftung für etwaige Anschlussfehler und Fehlfunktionen beim Elektroanschluss. 
+Wir vom Projektteam haften für keine Anschlussfehler oder Konfigurationsfehler beim Einsatz des GanjOS. Ihr seid sellbst dafür verantwortlich, dass euer Setup sauber läuft und es euren Pflanzen gut geht. Zudem übernehmen wir keine Haftung für etwaige Anschlussfehler und Fehlfunktionen beim Elektroanschluss. 
 
 ## Vorraussetzungen
 
-Was wird benötigt? Was brauche ich um den GrowBot einzusetzen? 
+Was wird benötigt? Was brauche ich um den GanjOS einzusetzen? 
 
-Für den Einsatz des GrowBot wird folgendes benötigt:
+Für den Einsatz des GanjOS wird folgendes benötigt:
 * Ein Home Assistant Server
-* Die Hardware für die GrowBot Module
+* Die Hardware für die GanjOS Module
 * ggfs. Funksteckdosen (siehe [Hardwareliste](./HARDWARE.md))
 
 #### Basismodul
@@ -28,9 +28,9 @@ Eine genaue Anleitung, wie du das Modul anschließt findest du [hier](./ESPHome/
 Um die Werte aus dem Air-Monitoring zu reagieren Bedarf es einer Steuerung deiner Geräte. Hierbei gibt es viele Möglichkeiten, welche einene Hebel erzeugen. Bspw. durch einen Luftbefeuchter, Luftentfeuchter, die Abluft oder auch eine Klimaanlage. Da jedes Setup sich hier unterscheidet und nicht jeder alle Geräte zur Verfügung hat haben wir Möglichkeiten integriert, dass Geräte mehrere Aufgaben erledigen, wie z.B. die Luftentfeuchtung und die "Klimaanlage" über die Abluft geregelt wird. Hierbei hast du in den Bereicheinstellungen die Möglichkeiten entsprechende Werte zu setzen.
 
 
-Zudem gibt es auf dem Markt eine große Menge an Gerätschaften, die sich direkt oder indirekt in den Home Assistant / GrowBot integrieren lassen. Um jedoch die einfachste Integration direkt zu ermöglichen nutzen wir Funksteckdosen. Somit werden die Geräte durch einfaches ein-/ausschalten angesteuert.
+Zudem gibt es auf dem Markt eine große Menge an Gerätschaften, die sich direkt oder indirekt in den Home Assistant / GanjOS integrieren lassen. Um jedoch die einfachste Integration direkt zu ermöglichen nutzen wir Funksteckdosen. Somit werden die Geräte durch einfaches ein-/ausschalten angesteuert.
 
-Wir arbeiten jedoch mit Hochdruck daran Geräte inkl. Dimmung direkt integrieren zu können. Da dies jedoch enorme Kosten einnimmt, das Projekt hingegen direkt kein Geld generiert ist hier nur ein langsamer Fortschritt zu erwarten. Hier ist jedoch auch die Community angehalten gerne Integrationen zu teilen oder mit zu entwickeln, damit wir den GrowBot auf ein neues Level heben können. 
+Wir arbeiten jedoch mit Hochdruck daran Geräte inkl. Dimmung direkt integrieren zu können. Da dies jedoch enorme Kosten einnimmt, das Projekt hingegen direkt kein Geld generiert ist hier nur ein langsamer Fortschritt zu erwarten. Hier ist jedoch auch die Community angehalten gerne Integrationen zu teilen oder mit zu entwickeln, damit wir den GanjOS auf ein neues Level heben können. 
 
 Eine genaue Anleitung, wie du das Modul anschließt findest du [hier](./ESPHome/AirControl/moduleDescription.md).
 
@@ -44,10 +44,10 @@ Dieses Modul ist noch in der Entwicklung und wir in einem zukünftigen Release v
 
 ### Welche Addons und Integrationen werden in Home Assistant benötigt?
 
-Innerhalb Home Assistant benötigen wir für den GrowBot weitere Integrationen und Addons, um die Dashboards und weitere Funktionen nutzen zu können. 
+Innerhalb Home Assistant benötigen wir für den GanjOS weitere Integrationen und Addons, um die Dashboards und weitere Funktionen nutzen zu können. 
 
 #### Add-Ons
-In den Add-Ons sind nachfolgende von uns im Einsatz und sind teilweise für die Verwendung des GrowBots erforderlich.
+In den Add-Ons sind nachfolgende von uns im Einsatz und sind teilweise für die Verwendung des GanjOS erforderlich.
 
 * Advanced SSH & Web Terminal 
 * Node-RED  - **erforderlich**
@@ -75,6 +75,7 @@ Im Bereich von HACS müssen folgende Integrationen und Lovelace Add-Ons hinzugef
 * Scheduler Card
 * Config Template Card
 * Bar Card
+* Flower Card
 * [Home Assistant VPD Chart](https://github.com/mentalilll/ha-vpd-chart) - Das müsst ihr als benutzerdefiniertes Repository einbinden.
 
 #### Integrationen
@@ -88,7 +89,7 @@ Im Bereich der Integrationen müssen folgende Integrationen hinzugefügt und ein
 * Shelly - Wenn ihr Shelly-Funksteckdosen verwendet
 * UI Lovelace Minimalist
 
-## Die Installation des GrowBots
+## Die Installation des GanjOS
 
 ### Variante 1: Restore aus einem Backup
 Diese Variante wird gerade getestet und zeitnah veröffentlicht. 
@@ -99,7 +100,7 @@ Die zweite Möglichkeit setzt etwas Geschick oder Erfahrung in Home Assistant vo
 
 Hier werden alle Files aus dem Ordner [Home Assistant](./HomeAssistant/) in den Quellcode deiner Home Assistant Konfiguration eingefügt. Für erfahrene Home Assistant Benutzer ist das bereits bekannt, für Neulinge jedoch eine große Herausforderung. Falls du hier Probleme hast findest du tolle Anleitungen auf YouTube unter dem Suchbegriff "Home Assistant Configuration" oder auch speziell auf dem Kanal von [Simon42](https://www.youtube.com/@simon42).
 
-Um den GrowBot initial einzurichten kopierst du hier alle Dateien in dein Verzeichnis des Home Assistant hinnein und fügst noch zusätzlich eine secrets.yaml Datei mit deinen entsprechenden Daten ein.
+Um den GanjOS initial einzurichten kopierst du hier alle Dateien in dein Verzeichnis des Home Assistant hinnein und fügst noch zusätzlich eine secrets.yaml Datei mit deinen entsprechenden Daten ein.
 
 
 
@@ -126,11 +127,11 @@ Nachdem du alle Flows erfolgreich in Node-Red importiert hast (eine Anleitung hi
 
 Um mehrere Bereiche in diesem Flow steuern zu können musst du ein zukünftiges Update abwarten oder den Haupt-Flow der Air Control anpassen. Das Update von unserer Seite wird vorraussichtlich in den kommenden Wochen veröffentlicht. 
 
-## Den GrowBot updaten
-Um den GrowBot auf eine neue Version zu heben, müssen die entsprechenden YAML Files oder die Node-Red Flows angepasst werden. In den jeweiligen Patchnotes wird vermerkt sein, welche das betrifft, um somit punktuell die Anpassungen einfügen zu können. 
+## Den GanjOS updaten
+Um den GanjOS auf eine neue Version zu heben, müssen die entsprechenden YAML Files oder die Node-Red Flows angepasst werden. In den jeweiligen Patchnotes wird vermerkt sein, welche das betrifft, um somit punktuell die Anpassungen einfügen zu können. 
 
 Wie man ein Update einspielt werden wir zudem in einer Video-Anleitung in Zukunft ausarbeiten. 
 
-## Die eigene GrowBot Konfiguration erstellen
+## Die eigene GanjOS Konfiguration erstellen
 
-Wir werden in naher Zukunft eine komplette Video-Anleitung erstellen in der wir die Installation Schritt für Schritt erklären und auch auf Themen, wie die Konfiguration des GrowBots angepasst auf das eigene Setup eingehen werden. 
+Wir werden in naher Zukunft eine komplette Video-Anleitung erstellen in der wir die Installation Schritt für Schritt erklären und auch auf Themen, wie die Konfiguration des GanjOS angepasst auf das eigene Setup eingehen werden. 
