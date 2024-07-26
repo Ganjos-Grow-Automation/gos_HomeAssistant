@@ -1,153 +1,135 @@
-### Stage: clones
-- name: max_humidity_day_clones
+- icon: mdi:water-percent
+  name: max_humidity_day_clones
   state: >
     {{ [states('input_number.target_humidity_day_clones'), states('input_number.target_humidity_tolerance_clones')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_day_clones
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_day_clones
   state: >
     {{ (states('input_number.target_humidity_day_clones') | float - states('input_number.target_humidity_tolerance_clones') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: max_humidity_night_clones
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_night_clones
   state: >
     {{ [(states('sensor.target_humidity_night_clones') | float) , (states('input_number.target_humidity_tolerance_clones') | float )] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_night_clones
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_night_clones
   state: >
     {{ (states('sensor.target_humidity_night_clones') | float) - (states('input_number.target_humidity_tolerance_clones') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-### Stage: veg
-- name: max_humidity_day_veg
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_day_veg
   state: >
     {{ [states('input_number.target_humidity_day_veg'), states('input_number.target_humidity_tolerance_veg')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_day_veg
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_day_veg
   state: >
     {{ (states('input_number.target_humidity_day_veg') | float - states('input_number.target_humidity_tolerance_veg') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: max_humidity_night_veg
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_night_veg
   state: >
     {{ [(states('sensor.target_humidity_night_veg') | float) , states('input_number.target_humidity_tolerance_veg')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_night_veg
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_night_veg
   state: >
     {{ ((states('sensor.target_humidity_night_veg') | float) - states('input_number.target_humidity_tolerance_veg') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-### Stage: flower_stretch
-- name: max_humidity_day_flower_stretch
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_day_flower_stretch
   state: >
     {{ [states('input_number.target_humidity_day_flower_stretch'), states('input_number.target_humidity_tolerance_flower_stretch')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_day_flower_stretch
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_day_flower_stretch
   state: >
     {{ (states('input_number.target_humidity_day_flower_stretch') | float - states('input_number.target_humidity_tolerance_flower_stretch') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: max_humidity_night_flower_stretch
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_night_flower_stretch
   state: >
     {{ [(states('sensor.target_humidity_night_flower_stretch') | float) , states('input_number.target_humidity_tolerance_flower_stretch')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_night_flower_stretch
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_night_flower_stretch
   state: >
     {{ ((states('sensor.target_humidity_night_flower_stretch') | float) - states('input_number.target_humidity_tolerance_flower_stretch') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-### Stage: flower_bulk
-- name: max_humidity_day_flower_bulk
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_day_flower_bulk
   state: >
     {{ [states('input_number.target_humidity_day_flower_bulk'), states('input_number.target_humidity_tolerance_flower_bulk')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_day_flower_bulk
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_day_flower_bulk
   state: >
     {{ (states('input_number.target_humidity_day_flower_bulk') | float - states('input_number.target_humidity_tolerance_flower_bulk') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: max_humidity_night_flower_bulk
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_night_flower_bulk
   state: >
     {{ [(states('sensor.target_humidity_night_flower_bulk') | float) , states('input_number.target_humidity_tolerance_flower_bulk')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_night_flower_bulk
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_night_flower_bulk
   state: >
     {{ ((states('sensor.target_humidity_night_flower_bulk') | float) - states('input_number.target_humidity_tolerance_flower_bulk') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-### Stage: flower_finish
-- name: max_humidity_day_flower_finish
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_day_flower_finish
   state: >
     {{ [states('input_number.target_humidity_day_flower_finish'), states('input_number.target_humidity_tolerance_flower_finish')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_day_flower_finish
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_day_flower_finish
   state: >
     {{ (states('input_number.target_humidity_day_flower_finish') | float - states('input_number.target_humidity_tolerance_flower_finish') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: max_humidity_night_flower_finish
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_night_flower_finish
   state: >
     {{ [(states('sensor.target_humidity_night_flower_finish') | float) , states('input_number.target_humidity_tolerance_flower_finish')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_night_flower_finish
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_night_flower_finish
   state: >
     {{ ((states('sensor.target_humidity_night_flower_finish') | float) - states('input_number.target_humidity_tolerance_flower_finish') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-### Stage: dry
-- name: max_humidity_dry
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: max_humidity_dry
   state: >
     {{ [states('input_number.target_humidity_dry'), states('input_number.target_humidity_tolerance_dry')] | map('float') | sum }}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-- name: min_humidity_dry
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: min_humidity_dry
   state: >
     {{ (states('input_number.target_humidity_dry') | float - states('input_number.target_humidity_tolerance_dry') | float)}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-## to sort
-
-- name: target_humidity_night_clones
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: target_humidity_night_clones
   state: >
     {{ states('input_number.target_humidity_day_clones') | float - states('input_number.target_humidity_day_night_difference_clones') | float}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-- name: target_humidity_night_veg
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: target_humidity_night_veg
   state: >
     {{ states('input_number.target_humidity_day_veg') | float - states('input_number.target_humidity_day_night_difference_veg') | float}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-- name: target_humidity_night_flower_stretch
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: target_humidity_night_flower_stretch
   state: >
     {{ states('input_number.target_humidity_day_flower_stretch') | float - states('input_number.target_humidity_day_night_difference_flower_stretch') | float}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-- name: target_humidity_night_flower_bulk
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: target_humidity_night_flower_bulk
   state: >
     {{ states('input_number.target_humidity_day_flower_bulk') | float - states('input_number.target_humidity_day_night_difference_flower_bulk') | float}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
-
-- name: target_humidity_night_flower_finish
+  unit_of_measurement: '%'
+- icon: mdi:water-percent
+  name: target_humidity_night_flower_finish
   state: >
     {{ states('input_number.target_humidity_day_flower_finish') | float - states('input_number.target_humidity_day_night_difference_flower_finish') | float}}
-  unit_of_measurement: "%"
-  icon: mdi:water-percent
+  unit_of_measurement: '%'

@@ -1,6 +1,0 @@
-title: "To Dos"
-path: "todo_list"
-subview: true
-cards:
-  - type: todo-list
-    entity: todo.growbot_todo

@@ -1,6 +1,0 @@
-title: "Einkaufsliste"
-path: "buying_list"
-subview: true
-cards:
-  - type: todo-list
-    entity: todo.growbot_buying

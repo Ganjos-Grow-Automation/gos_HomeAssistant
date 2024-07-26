@@ -1,54 +1,45 @@
-## Stage: clones
 target_light_intensity_clones:
+  icon: mdi:arrow-expand-vertical
+  initial: 1000
+  max: 100000
+  min: 0
+  mode: box
   name: Ziel-Lampenabstand Samen und Stecklinge
-  initial: 1000
-  min: 0
-  max: 100000
   step: 1000
   unit_of_measurement: lx
-  mode: box
-  icon: mdi:arrow-expand-vertical
-
-## Stage: veg
-target_light_intensity_veg:
-  name: Ziel-Lampenabstand Wachstum
-  initial: 1000
-  min: 0
-  max: 100000
-  step: 1000
-  unit_of_measurement: lx
-  mode: box
-  icon: mdi:arrow-expand-vertical
-
-## Stage: flower_stretch
-target_light_intensity_flower_stretch:
-  name: Ziel-Lampenabstand Blüte Streckung
-  initial: 1000
-  min: 0
-  max: 100000
-  step: 1000
-  unit_of_measurement: lx
-  mode: box
-  icon: mdi:arrow-expand-vertical
-
-## Stage: flower_bulk
 target_light_intensity_flower_bulk:
+  icon: mdi:arrow-expand-vertical
+  initial: 1000
+  max: 100000
+  min: 0
+  mode: box
   name: Ziel-Lampenabstand Blüte Bulk
-  initial: 1000
-  min: 0
-  max: 100000
   step: 1000
   unit_of_measurement: lx
-  mode: box
-  icon: mdi:arrow-expand-vertical
-
-## Stage: flower_finish
 target_light_intensity_flower_finish:
-  name: Ziel-Lampenabstand Blüte Ende
+  icon: mdi:arrow-expand-vertical
   initial: 1000
-  min: 0
   max: 100000
+  min: 0
+  mode: box
+  name: Ziel-Lampenabstand Blüte Ende
   step: 1000
   unit_of_measurement: lx
-  mode: box
+target_light_intensity_flower_stretch:
   icon: mdi:arrow-expand-vertical
+  initial: 1000
+  max: 100000
+  min: 0
+  mode: box
+  name: Ziel-Lampenabstand Blüte Streckung
+  step: 1000
+  unit_of_measurement: lx
+target_light_intensity_veg:
+  icon: mdi:arrow-expand-vertical
+  initial: 1000
+  max: 100000
+  min: 0
+  mode: box
+  name: Ziel-Lampenabstand Wachstum
+  step: 1000
+  unit_of_measurement: lx

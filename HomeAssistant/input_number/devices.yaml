@@ -1,53 +1,144 @@
-area_1_dimm_step_exhaust:
-  name: Dimmstufe Abluft
-  initial: 10
-  min: 5
-  max: 50
-  step: 5
-  unit_of_measurement: "%"
-  mode: slider
-
-area_1_dimm_step_light:
-  name: Dimmstufe Licht
-  initial: 10
-  min: 5
-  max: 50
-  step: 5
-  unit_of_measurement: "%"
-  mode: slider
-
-area_1_dimm_step_ventilation:
-  name: Dimmstufe Ventilator
-  initial: 10
-  min: 5
-  max: 50
-  step: 5
-  unit_of_measurement: "%"
-  mode: slider
-
-area_1_dimm_step_heater:
-  name: Dimmstufe Heizung
-  initial: 10
-  min: 5
-  max: 50
-  step: 5
-  unit_of_measurement: "%"
-  mode: slider
-
-area_1_dimm_step_humidifier:
-  name: Dimmstufe Luftbefeuchter
-  initial: 10
-  min: 5
-  max: 50
-  step: 5
-  unit_of_measurement: "%"
-  mode: slider
-
 area_1_dimm_step_dehumidifier:
-  name: Dimmstufe Luftentfeuchter
   initial: 10
-  min: 5
   max: 50
-  step: 5
-  unit_of_measurement: "%"
+  min: 5
   mode: slider
+  name: Dimmstufe Luftentfeuchter
+  step: 5
+  unit_of_measurement: '%'
+area_1_dimm_step_exhaust:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Abluft
+  step: 5
+  unit_of_measurement: '%'
+area_1_dimm_step_heater:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Heizung
+  step: 5
+  unit_of_measurement: '%'
+area_1_dimm_step_humidifier:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Luftbefeuchter
+  step: 5
+  unit_of_measurement: '%'
+area_1_dimm_step_light:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Licht
+  step: 5
+  unit_of_measurement: '%'
+area_1_dimm_step_ventilation:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Ventilator
+  step: 5
+  unit_of_measurement: '%'
+area_2_dimm_step_dehumidifier:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Luftentfeuchter
+  step: 5
+  unit_of_measurement: '%'
+area_2_dimm_step_exhaust:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Abluft
+  step: 5
+  unit_of_measurement: '%'
+area_2_dimm_step_heater:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Heizung
+  step: 5
+  unit_of_measurement: '%'
+area_2_dimm_step_humidifier:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Luftbefeuchter
+  step: 5
+  unit_of_measurement: '%'
+area_2_dimm_step_light:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Licht
+  step: 5
+  unit_of_measurement: '%'
+area_2_dimm_step_ventilation:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Ventilator
+  step: 5
+  unit_of_measurement: '%'
+area_3_dimm_step_dehumidifier:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Luftentfeuchter
+  step: 5
+  unit_of_measurement: '%'
+area_3_dimm_step_exhaust:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Abluft
+  step: 5
+  unit_of_measurement: '%'
+area_3_dimm_step_heater:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Heizung
+  step: 5
+  unit_of_measurement: '%'
+area_3_dimm_step_humidifier:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Luftbefeuchter
+  step: 5
+  unit_of_measurement: '%'
+area_3_dimm_step_light:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Licht
+  step: 5
+  unit_of_measurement: '%'
+area_3_dimm_step_ventilation:
+  initial: 10
+  max: 50
+  min: 5
+  mode: slider
+  name: Dimmstufe Ventilator
+  step: 5
+  unit_of_measurement: '%'
