@@ -1,8 +1,65 @@
 # GanjOS grow automation
 
+>[!IMPORTANT]
+> 
+> Aktuell befindet sich die GanjOS Grow Automation noch in der Beta Phase und kann daher vermehrt Bugs aufweisen. 
+
 GanjOS ist ein Open Source Community-Projekt, das sich der Automatisierung des Homegrows widmet. Unser Ziel ist es, Heimzüchtern zu helfen, ihre Pflanzen optimal zu pflegen, indem wir moderne Automatisierungstechnologien nutzen. Das Projekt basiert auf Home Assistant, einer Open-Source-Plattform für Heimautomatisierung, die eine zentrale Steuerung und Überwachung ermöglicht. Wir verwenden ESP32-Platinen zur Integration verschiedener Sensoren. Diese Sensoren überwachen wichtige Umgebungsparameter wie Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtintensität, und liefern Echtzeitdaten an Home Assistant.
 
 Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des Projekts [hier](https://link.space/@ganjosgrowautomation).
+
+>[!NOTE]
+>
+> Der Einsatz der GanjOS Grow Automation ist auf eigene Gefahr und lediglich für den Einsatz im Rahmen der gesetzlich geltenden Rahmen bestimmt. Jegliche illegale Nutzung der Grow Automation wird vom offiziellen GanjOS Team aufs tiefte verurteilt und nicht unterstützt. 
+
+>[!NOTE]
+>
+> Testeintrag
+
+>[!TIP]
+>
+> Testeintrag
+
+>[!IMPORTANT]
+>
+> Testeintrag
+
+>[!CAUTION]
+>
+> Testeintrag
+
+>[!WARNING]
+>
+> Testeintrag
+
+>[!ADMINISTRATION]
+>
+> Testeintrag
+
+>[!AVAILABILITY]
+>
+> Testeintrag
+
+>[!PREREQUISITES]
+>
+> Testeintrag
+
+>[!ERROR]
+>
+> Testeintrag
+
+>[!ADMINISTRATION]
+>
+> Testeintrag
+
+>[!INFO]
+>
+> Testeintrag
+
+>[!SUCCESS]
+>
+> Testeintrag
+
 
 ## Preview
 
