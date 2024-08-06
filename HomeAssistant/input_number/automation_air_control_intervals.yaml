@@ -1,104 +1,90 @@
-area_1_automation_humidifier_interval_duration:  
-  name: Bereich 1 Automation Luftbefeuchter Intervall Dauer
-  initial: 5
-  min: 0
-  max: 30
-  unit_of_measurement: seconds
-
 area_1_automation_dehumidifier_interval_duration:
-  name: Bereich 1 Automation Luftentfeuchter Intervall Dauer
   initial: 10
-  min: 0
   max: 30
-  unit_of_measurement: seconds
-
-area_1_automation_heater_interval_duration:
-  name: Bereich 1 Automation Heizung Intervall Dauer
-  initial: 5
   min: 0
-  max: 30
+  name: Bereich 1 Automation Luftentfeuchter Intervall Dauer
   unit_of_measurement: seconds
-
 area_1_automation_exhaust_interval_duration:
+  initial: 5
+  max: 30
+  min: 0
   name: Bereich 1 Automation Abluft Intervall Dauer
-  initial: 5
-  min: 0
-  max: 30
   unit_of_measurement: seconds
-
+area_1_automation_heater_interval_duration:
+  initial: 5
+  max: 30
+  min: 0
+  name: Bereich 1 Automation Heizung Intervall Dauer
+  unit_of_measurement: seconds
+area_1_automation_humidifier_interval_duration:
+  initial: 5
+  max: 30
+  min: 0
+  name: Bereich 1 Automation Luftbefeuchter Intervall Dauer
+  unit_of_measurement: seconds
 area_1_automation_ventilation_interval_duration:
+  initial: 60
+  max: 600
+  min: 0
   name: Bereich 1 Automation Umluft Intervall Dauer
-  initial: 60
-  min: 0
-  max: 600
   unit_of_measurement: seconds
-
-area_2_automation_humidifier_interval_duration:  
-  name: Bereich 2 Automation Luftbefeuchter Intervall Dauer
-  initial: 5
-  min: 0
-  max: 30
-  unit_of_measurement: seconds
-
 area_2_automation_dehumidifier_interval_duration:
-  name: Bereich 2 Automation Luftentfeuchter Intervall Dauer
   initial: 20
-  min: 0
   max: 30
-  unit_of_measurement: seconds
-
-area_2_automation_heater_interval_duration:
-  name: Bereich 2 Automation Heizung Intervall Dauer
-  initial: 5
   min: 0
-  max: 30
+  name: Bereich 2 Automation Luftentfeuchter Intervall Dauer
   unit_of_measurement: seconds
-
 area_2_automation_exhaust_interval_duration:
+  initial: 5
+  max: 30
+  min: 0
   name: Bereich 2 Automation Abluft Intervall Dauer
-  initial: 5
-  min: 0
-  max: 30
   unit_of_measurement: seconds
-
+area_2_automation_heater_interval_duration:
+  initial: 5
+  max: 30
+  min: 0
+  name: Bereich 2 Automation Heizung Intervall Dauer
+  unit_of_measurement: seconds
+area_2_automation_humidifier_interval_duration:
+  initial: 5
+  max: 30
+  min: 0
+  name: Bereich 2 Automation Luftbefeuchter Intervall Dauer
+  unit_of_measurement: seconds
 area_2_automation_ventilation_interval_duration:
+  initial: 60
+  max: 600
+  min: 0
   name: Bereich 2 Automation Umluft Intervall Dauer
-  initial: 60
-  min: 0
-  max: 600
   unit_of_measurement: seconds
-
-area_3_automation_humidifier_interval_duration:  
-  name: Bereich 3 Automation Luftbefeuchter Intervall Dauer
-  initial: 5
-  min: 0
-  max: 30
-  unit_of_measurement: seconds
-
 area_3_automation_dehumidifier_interval_duration:
-  name: Bereich 3 Automation Luftentfeuchter Intervall Dauer
   initial: 30
-  min: 0
   max: 30
-  unit_of_measurement: seconds
-
-area_3_automation_heater_interval_duration:
-  name: Bereich 3 Automation Heizung Intervall Dauer
-  initial: 5
   min: 0
-  max: 30
+  name: Bereich 3 Automation Luftentfeuchter Intervall Dauer
   unit_of_measurement: seconds
-
 area_3_automation_exhaust_interval_duration:
-  name: Bereich 3 Automation Abluft Intervall Dauer
   initial: 5
-  min: 0
   max: 30
-  unit_of_measurement: seconds
-
-area_3_automation_ventilation_interval_duration:
-  name: Bereich 3 Automation Umluft Intervall Dauer
-  initial: 60
   min: 0
+  name: Bereich 3 Automation Abluft Intervall Dauer
+  unit_of_measurement: seconds
+area_3_automation_heater_interval_duration:
+  initial: 5
+  max: 30
+  min: 0
+  name: Bereich 3 Automation Heizung Intervall Dauer
+  unit_of_measurement: seconds
+area_3_automation_humidifier_interval_duration:
+  initial: 5
+  max: 30
+  min: 0
+  name: Bereich 3 Automation Luftbefeuchter Intervall Dauer
+  unit_of_measurement: seconds
+area_3_automation_ventilation_interval_duration:
+  initial: 60
   max: 600
+  min: 0
+  name: Bereich 3 Automation Umluft Intervall Dauer
   unit_of_measurement: seconds

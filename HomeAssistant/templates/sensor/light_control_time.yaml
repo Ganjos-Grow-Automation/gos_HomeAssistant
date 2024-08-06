@@ -1,0 +1,26 @@
+- icon: mdi:weather-sunset-down
+  name: area_1_lighthours
+  state: >
+    {% if is_state("input_select.area_1_lightcontrol_time_mode", "18/6") -%}{{18}}
+    {% elif is_state("input_select.area_1_lightcontrol_time_mode", "16/8") -%}{{16}}
+    {% elif is_state("input_select.area_1_lightcontrol_time_mode", "12/12") -%}{{12}}
+    {%- else -%}{{0}}
+    {%- endif %}
+
+- icon: mdi:weather-sunset-down
+  name: area_2_lighthours
+  state: >
+    {% if is_state("input_select.area_2_lightcontrol_time_mode", "18/6") -%}{{18}}
+    {% elif is_state("input_select.area_2_lightcontrol_time_mode", "16/8") -%}{{16}}
+    {% elif is_state("input_select.area_2_lightcontrol_time_mode", "12/12") -%}{{12}}
+    {%- else -%}{{0}}
+    {%- endif %}
+
+- icon: mdi:weather-sunset-down
+  name: area_3_lighthours
+  state: >
+    {% if is_state("input_select.area_3_lightcontrol_time_mode", "18/6") -%}{{18}}
+    {% elif is_state("input_select.area_3_lightcontrol_time_mode", "16/8") -%}{{16}}
+    {% elif is_state("input_select.area_3_lightcontrol_time_mode", "12/12") -%}{{12}}
+    {%- else -%}{{0}}
+    {%- endif %}

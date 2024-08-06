@@ -1,6 +1,6 @@
 - name: area_1_is_day
-  state: "{{states('binary_sensor.area_1_light_state')}}"
-
+  state: >
+    {{states('binary_sensor.area_1_light_state')}}
 - name: area_1_is_exhaust_dimmable
   state: >
     {% if is_state("input_select.area_1_exhaust_dimmable", "Ja") %} true
@@ -37,16 +37,82 @@
     {% else %} false
     {% endif %}
 
-- name: area_1_is_exhaust_eq_dehumidifier
-  icon: mdi:toggle-switch
+- icon: mdi:toggle-switch
+  name: area_1_is_exhaust_eq_dehumidifier
   state: >
     {% if is_state("input_select.area_1_exhaust_eq_dehumidifer", "Ja") %} true
     {% else %} false
     {% endif %}
 
-- name: area_1_is_ac_eq_exhaust
-  icon: mdi:toggle-switch
+- icon: mdi:toggle-switch
+  name: area_1_is_ac_eq_exhaust
   state: >
     {% if is_state("input_select.area_1_exhaust_eq_ac", "Ja") %} true
     {% else %} false
     {% endif %}
+
+- name: area_2_is_day
+  state: >
+    {{states('binary_sensor.area_2_light_state')}}
+- name: area_2_is_exhaust_dimmable
+  state: >
+    {% if is_state("input_select.area_2_exhaust_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_2_is_ventilation_dimmable
+  state: >
+    {% if is_state("input_select.area_2_ventilation_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_2_is_heater_dimmable
+  state: >
+    {% if is_state("input_select.area_2_heater_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_2_is_light_dimmable
+  state: >
+    {% if is_state("input_select.area_2_light_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_2_is_humidifier_dimmable
+  state: >
+    {% if is_state("input_select.area_2_humidifier_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- name: area_2_is_dehumidifier_dimmable
+  state: >
+    {% if is_state("input_select.area_2_dehumidifier_dimmable", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- icon: mdi:toggle-switch
+  name: area_2_is_exhaust_eq_dehumidifier
+  state: >
+    {% if is_state("input_select.area_2_exhaust_eq_dehumidifer", "Ja") %} true
+    {% else %} false
+    {% endif %}
+
+- icon: mdi:toggle-switch
+  name: area_2_is_ac_eq_exhaust
+  state: |
+    {% if is_state("input_select.area_2_exhaust_eq_ac", "Ja") %} true 
+    {% else %} false 
+    {% endif %}
+
+- icon: mdi:toggle-switch
+  name: area_1_is_active
+  state: |
+    {% if is_state("input_select.area_1_is_active", "Ja") %} true 
+    {% else %} false {% endif %}
+
+- icon: mdi:toggle-switch
+  name: area_2_is_active
+  state: |
+    {% if is_state("input_select.area_2_is_active", "Ja") %} true 
+    {% else %} false 
+    {% endif %}    

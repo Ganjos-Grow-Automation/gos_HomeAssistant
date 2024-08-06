@@ -1,582 +1,459 @@
-## Status: to do
-
-## Stage: clones
-##### day values
-target_humidity_day_clones:
-  name: Zielluftfeuchtigkeit Samen und Stecklinge Tag
-  initial: 70
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_day_clones:
-  name: Zielluftfeuchtigkeit-Toleranz Samen und Stecklinge
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_humidity_night_clones:
-  name: Zielluftfeuchtigkeit Samen und Stecklinge Nacht
-  initial: 70
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_night_clones:
-  name: Zielluftfeuchtigkeit-Toleranz Samen und Stecklinge
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-######## min & max humidity for alerts
-min_humidity_clones:
-  name: Min-Luftfeuchtigkeit Samen und Stecklinge
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
 max_humidity_clones:
+  icon: mdi:water-percent
+  initial: 75
+  max: 80
+  min: 40
+  mode: box
   name: Max-Luftfeuchtigkeit Samen und Stecklinge
-  initial: 75
-  min: 40
-  max: 80
   step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-
-## Stage: veg
-##### day values
-target_humidity_day_veg:
-  name: Zielluftfeuchtigkeit Wachstum Tag
-  initial: 70
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_day_veg:
-  name: Zielluftfeuchtigkeit-Toleranz Wachstum
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_humidity_night_veg:
-  name: Zielluftfeuchtigkeit Wachstum Nacht
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_night_veg:
-  name: Zielluftfeuchtigkeit-Toleranz Wachstum
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-######## min & max humidity for alerts
-min_humidity_veg:
-  name: Min-Luftfeuchtigkeit Wachstum
-  initial: 58
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-max_humidity_veg:
-  name: Max-Luftfeuchtigkeit Wachstum
-  initial: 75
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-
-## Stage: flower_stretch
-##### day values
-target_humidity_day_flower_stretch:
-  name: Zielluftfeuchtigkeit Blüte Streckung Tag
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_day_flower_stretch:
-  name: Zielluftfeuchtigkeit-Toleranz Blüte Streckung
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_humidity_night_flower_stretch:
-  name: Zielluftfeuchtigkeit Blüte Streckung Nacht
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_night_flower_stretch:
-  name: Zielluftfeuchtigkeit-Toleranz Blüte Streckung
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-######## min & max humidity for alerts
-min_humidity_flower_stretch:
-  name: Min-Luftfeuchtigkeit Blüte Streckung
-  initial: 60
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-max_humidity_flower_stretch:
-  name: Max-Luftfeuchtigkeit Blüte Streckung
-  initial: 72
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-
-## Stage: flower_bulk
-##### day values
-target_humidity_day_flower_bulk:
-  name: Zielluftfeuchtigkeit Blüte Bulk Tag
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_day_flower_bulk:
-  name: Zielluftfeuchtigkeit-Toleranz Blüte Bulk
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_humidity_night_flower_bulk:
-  name: Zielluftfeuchtigkeit Blüte Bulk Nacht
-  initial: 65
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_night_flower_bulk:
-  name: Zielluftfeuchtigkeit-Toleranz Blüte Bulk
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-######## min & max humidity for alerts
-min_humidity_flower_bulk:
-  name: Min-Luftfeuchtigkeit Blüte Bulk
-  initial: 60
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-max_humidity_flower_bulk:
-  name: Max-Luftfeuchtigkeit Blüte Bulk
-  initial: 70
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-
-## Stage: flower_finish
-##### day values
-target_humidity_day_flower_finish:
-  name: Zielluftfeuchtigkeit Blüte Ende Tag
-  initial: 55
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_day_flower_finish:
-  name: Zielluftfeuchtigkeit-Toleranz Blüte Ende
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-### night values
-target_humidity_night_flower_finish:
-  name: Zielluftfeuchtigkeit Blüte Ende Nacht
-  initial: 55
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_night_flower_finish:
-  name: Zielluftfeuchtigkeit-Toleranz Blüte Ende
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-######## min & max humidity for alerts
-min_humidity_flower_finish:
-  name: Min-Luftfeuchtigkeit Blüte Ende
-  initial: 50
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-max_humidity_flower_finish:
-  name: Max-Luftfeuchtigkeit Blüte Ende
-  initial: 60
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-
-## Stage: dry
-#####
-target_humidity_dry:
-  name: Zielluftfeuchtigkeit Trocknung
-  initial: 57
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
-target_humidity_tolerance_dry:
-  name: Zielluftfeuchtigkeit-Toleranz Trocknung
-  initial: 5
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:vector-difference
-######## min & max humidity for alerts
-min_humidity_dry:
-  name: Min-Luftfeuchtigkeit Trocknung
-  initial: 55
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
-  icon: mdi:water-percent
+  unit_of_measurement: '%'
 max_humidity_dry:
-  name: Max-Luftfeuchtigkeit Trocknung
-  initial: 60
-  min: 40
-  max: 80
-  step: 5
-  unit_of_measurement: "%"
-  mode: box
   icon: mdi:water-percent
-
-# ## Stage: clones
-# ##### day values
-# target_humidity_day_clones:
-#   name: ZielLuftfeuchtigkeit-Luft Samen und Stecklinge Tag
-#   initial: 24
-#   min: 15
-#   max: 35
-#   step: 1
-#   unit_of_measurement: °C
-#   mode: box
-#   icon: mdi:water-percent
-target_humidity_tolerance_clones:
-  name: ZielLuftfeuchtigkeit-Toleranz Samen und Stecklinge
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
+  initial: 60
+  max: 80
+  min: 40
   mode: box
-  icon: mdi:vector-difference
-
+  name: Max-Luftfeuchtigkeit Trocknung
+  step: 5
+  unit_of_measurement: '%'
+max_humidity_flower_bulk:
+  icon: mdi:water-percent
+  initial: 70
+  max: 80
+  min: 40
+  mode: box
+  name: Max-Luftfeuchtigkeit Blüte Bulk
+  step: 5
+  unit_of_measurement: '%'
+max_humidity_flower_finish:
+  icon: mdi:water-percent
+  initial: 60
+  max: 80
+  min: 40
+  mode: box
+  name: Max-Luftfeuchtigkeit Blüte Ende
+  step: 5
+  unit_of_measurement: '%'
+max_humidity_flower_stretch:
+  icon: mdi:water-percent
+  initial: 72
+  max: 80
+  min: 40
+  mode: box
+  name: Max-Luftfeuchtigkeit Blüte Streckung
+  step: 5
+  unit_of_measurement: '%'
+max_humidity_veg:
+  icon: mdi:water-percent
+  initial: 75
+  max: 80
+  min: 40
+  mode: box
+  name: Max-Luftfeuchtigkeit Wachstum
+  step: 5
+  unit_of_measurement: '%'
+min_humidity_clones:
+  icon: mdi:water-percent
+  initial: 65
+  max: 80
+  min: 40
+  mode: box
+  name: Min-Luftfeuchtigkeit Samen und Stecklinge
+  step: 5
+  unit_of_measurement: '%'
+min_humidity_dry:
+  icon: mdi:water-percent
+  initial: 55
+  max: 80
+  min: 40
+  mode: box
+  name: Min-Luftfeuchtigkeit Trocknung
+  step: 5
+  unit_of_measurement: '%'
+min_humidity_flower_bulk:
+  icon: mdi:water-percent
+  initial: 60
+  max: 80
+  min: 40
+  mode: box
+  name: Min-Luftfeuchtigkeit Blüte Bulk
+  step: 5
+  unit_of_measurement: '%'
+min_humidity_flower_finish:
+  icon: mdi:water-percent
+  initial: 50
+  max: 80
+  min: 40
+  mode: box
+  name: Min-Luftfeuchtigkeit Blüte Ende
+  step: 5
+  unit_of_measurement: '%'
+min_humidity_flower_stretch:
+  icon: mdi:water-percent
+  initial: 60
+  max: 80
+  min: 40
+  mode: box
+  name: Min-Luftfeuchtigkeit Blüte Streckung
+  step: 5
+  unit_of_measurement: '%'
+min_humidity_veg:
+  icon: mdi:water-percent
+  initial: 58
+  max: 80
+  min: 40
+  mode: box
+  name: Min-Luftfeuchtigkeit Wachstum
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_day_clones:
+  icon: mdi:water-percent
+  initial: 70
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Samen und Stecklinge Tag
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_day_flower_bulk:
+  icon: mdi:water-percent
+  initial: 65
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Blüte Bulk Tag
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_day_flower_finish:
+  icon: mdi:water-percent
+  initial: 55
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Blüte Ende Tag
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_day_flower_stretch:
+  icon: mdi:water-percent
+  initial: 65
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Blüte Streckung Tag
+  step: 5
+  unit_of_measurement: '%'
 target_humidity_day_night_difference_clones:
-  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
-  initial: 2
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
   icon: mdi:set-right
-
-target_humidity_tolerance_alerting_clones:
-  name: Toleranz Benachrichtigung Samen und Stecklinge
-  initial: 1
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:bell-alert
-
-# ## Stage: veg
-# ##### day values
-# target_humidity_day_veg:
-#   name: ZielLuftfeuchtigkeit-Luft Wachstum Tag
-#   initial: 27
-#   min: 15
-#   max: 35
-#   step: 1
-#   unit_of_measurement: °C
-#   mode: box
-#   icon: mdi:water-percent
-target_humidity_tolerance_veg:
-  name: ZielLuftfeuchtigkeit-Toleranz Wachstum
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-
-target_humidity_day_night_difference_veg:
-  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
   initial: 2
-  min: 0
   max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:set-right
-
-target_humidity_tolerance_alerting_veg:
-  name: Toleranz Benachrichtigung Samen und Stecklinge
-  initial: 1
   min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: °C
   mode: box
-  icon: mdi:bell-alert
-
-# ## Stage: flower_stretch
-# ##### day values
-# target_humidity_day_flower_stretch:
-#   name: ZielLuftfeuchtigkeit-Luft Blüte Streckung Tag
-#   initial: 26
-#   min: 15
-#   max: 35
-#   step: 1
-#   unit_of_measurement: °C
-#   mode: box
-#   icon: mdi:water-percent
-target_humidity_tolerance_flower_stretch:
-  name: ZielLuftfeuchtigkeit-Toleranz Blüte Streckung
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-
-target_humidity_day_night_difference_flower_stretch:
   name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
-  initial: 2
-  min: 0
-  max: 5
   step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:set-right
-
-target_humidity_tolerance_alerting_flower_stretch:
-  name: Toleranz Benachrichtigung Samen und Stecklinge
-  initial: 1
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:bell-alert
-
-# ## Stage: flower_bulk
-# ##### day values
-# target_humidity_day_flower_bulk:
-#   name: ZielLuftfeuchtigkeit-Luft Blüte Bulk Tag
-#   initial: 25
-#   min: 15
-#   max: 35
-#   step: 1
-#   unit_of_measurement: °C
-#   mode: box
-#   icon: mdi:water-percent
-target_humidity_tolerance_flower_bulk:
-  name: ZielLuftfeuchtigkeit-Toleranz Blüte Bulk
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-
-target_humidity_day_night_difference_flower_bulk:
-  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
-  initial: 2
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:set-right
-
-target_humidity_tolerance_alerting_flower_bulk:
-  name: Toleranz Benachrichtigung Samen und Stecklinge
-  initial: 1
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:bell-alert
-
-# ## Stage: flower_finish
-# ##### day values
-# target_humidity_day_flower_finish:
-#   name: ZielLuftfeuchtigkeit-Luft Blüte Ende Tag
-#   initial: 23
-#   min: 15
-#   max: 35
-#   step: 1
-#   unit_of_measurement: °C
-#   mode: box
-#   icon: mdi:water-percent
-target_humidity_tolerance_flower_finish:
-  name: ZielLuftfeuchtigkeit-Toleranz Blüte Ende
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-
-target_humidity_day_night_difference_flower_finish:
-  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
-  initial: 2
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:set-right
-
-target_humidity_tolerance_alerting_flower_finish:
-  name: Toleranz Benachrichtigung Samen und Stecklinge
-  initial: 1
-  min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:bell-alert
-
-# ## Stage: dry
-# ##### day values
-# target_humidity_dry:
-#   name: ZielLuftfeuchtigkeit-Luft Trocknung
-#   initial: 16
-#   min: 10
-#   max: 35
-#   step: 1
-#   unit_of_measurement: °C
-#   mode: box
-#   icon: mdi:water-percent
-# target_humidity_tolerance_dry:
-#   name: ZielLuftfeuchtigkeit-Luft-Toleranz Trocknung
-#   initial: 1
-#   min: 0
-#   max: 5
-#   step: 1
-#   unit_of_measurement: °C
-#   mode: box
-#   icon: mdi:vector-difference
-
+  unit_of_measurement: '%'
 target_humidity_day_night_difference_dry:
-  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
-  initial: 2
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
   icon: mdi:set-right
-
-target_humidity_tolerance_alerting_dry:
-  name: Toleranz Benachrichtigung Samen und Stecklinge
-  initial: 1
+  initial: 2
+  max: 5
   min: 0
-  max: 10
-  step: 1
-  unit_of_measurement: °C
   mode: box
+  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_day_night_difference_flower_bulk:
+  icon: mdi:set-right
+  initial: 2
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_day_night_difference_flower_finish:
+  icon: mdi:set-right
+  initial: 2
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_day_night_difference_flower_stretch:
+  icon: mdi:set-right
+  initial: 2
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_day_night_difference_veg:
+  icon: mdi:set-right
+  initial: 2
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit Tag/Nacht Unterschied Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_day_veg:
+  icon: mdi:water-percent
+  initial: 70
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Wachstum Tag
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_dry:
+  icon: mdi:water-percent
+  initial: 57
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Trocknung
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_night_clones:
+  icon: mdi:water-percent
+  initial: 70
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Samen und Stecklinge Nacht
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_night_flower_bulk:
+  icon: mdi:water-percent
+  initial: 65
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Blüte Bulk Nacht
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_night_flower_finish:
+  icon: mdi:water-percent
+  initial: 55
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Blüte Ende Nacht
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_night_flower_stretch:
+  icon: mdi:water-percent
+  initial: 65
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Blüte Streckung Nacht
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_night_veg:
+  icon: mdi:water-percent
+  initial: 65
+  max: 80
+  min: 40
+  mode: box
+  name: Zielluftfeuchtigkeit Wachstum Nacht
+  step: 5
+  unit_of_measurement: '%'
+target_humidity_tolerance_alerting_clones:
   icon: mdi:bell-alert
+  initial: 1
+  max: 10
+  min: 0
+  mode: box
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_alerting_dry:
+  icon: mdi:bell-alert
+  initial: 1
+  max: 10
+  min: 0
+  mode: box
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_alerting_flower_bulk:
+  icon: mdi:bell-alert
+  initial: 1
+  max: 10
+  min: 0
+  mode: box
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_alerting_flower_finish:
+  icon: mdi:bell-alert
+  initial: 1
+  max: 10
+  min: 0
+  mode: box
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_alerting_flower_stretch:
+  icon: mdi:bell-alert
+  initial: 1
+  max: 10
+  min: 0
+  mode: box
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_alerting_veg:
+  icon: mdi:bell-alert
+  initial: 1
+  max: 10
+  min: 0
+  mode: box
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_clones:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit-Toleranz Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_day_clones:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_day_flower_bulk:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Blüte Bulk
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_day_flower_finish:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Blüte Ende
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_day_flower_stretch:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Blüte Streckung
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_day_veg:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Wachstum
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_dry:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Trocknung
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_flower_bulk:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit-Toleranz Blüte Bulk
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_flower_finish:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit-Toleranz Blüte Ende
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_flower_stretch:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit-Toleranz Blüte Streckung
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_night_clones:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Samen und Stecklinge
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_night_flower_bulk:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Blüte Bulk
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_night_flower_finish:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Blüte Ende
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_night_flower_stretch:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Blüte Streckung
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_night_veg:
+  icon: mdi:vector-difference
+  initial: 5
+  max: 10
+  min: 0
+  mode: box
+  name: Zielluftfeuchtigkeit-Toleranz Wachstum
+  step: 1
+  unit_of_measurement: '%'
+target_humidity_tolerance_veg:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: ZielLuftfeuchtigkeit-Toleranz Wachstum
+  step: 1
+  unit_of_measurement: '%'

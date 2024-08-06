@@ -1,0 +1,56 @@
+- icon: mdi:temperature-celsius
+  name: area_1_temperature_air
+  state: > #to be configured
+    {% if states('sensor.growtent_air_monitoring_temperature') == "unknown"%} {{0.040 | float }}
+    {% else %} {{states("sensor.growtent_air_monitoring_temperature") | float }}
+    {% endif %}
+  unit_of_measurement: °C
+- icon: mdi:temperature-celsius
+  name: area_1_temperature_leaf
+  state: > #to be configured
+    {% if states('sensor.growtent_air_monitoring_temperature') == "unknown"%} {{0.040 | float }}
+    {% else %} {{states('sensor.growtent_air_monitoring_temperature') | float - states('input_number.area_1_temperature_leaf_offset') | float}}
+    {% endif %}
+  unit_of_measurement: °C
+- icon: mdi:water-percent
+  name: area_1_humidity
+  state: > #to be configured
+    {% if states('sensor.growtent_air_monitoring_humidity') == "unknown"%} {{0.040 | float }}
+    {% else %} {{states("sensor.growtent_air_monitoring_humidity") | float }}
+    {% endif %}
+  unit_of_measurement: "%"
+- icon: mdi:molecule-co2
+  name: area_1_co2
+  state: > #to be configured
+    {% if states('sensor.growtent_air_monitoring_eco2') == "unknown"%} {{0.040 | float }}
+    {% else %} {{states("sensor.growtent_air_monitoring_eco2") | float }}
+    {% endif %}
+  unit_of_measurement: ppm
+- icon: mdi:temperature-celsius
+  name: area_2_temperature_air
+  state: > #to be configured
+    {% if states('sensor.propagator_air_monitoring_temperature') == "unknown"%} {{0.040 | float }}
+    {% else %} {{states("sensor.propagator_air_monitoring_temperature") | float }}
+    {% endif %}
+  unit_of_measurement: °C
+- icon: mdi:temperature-celsius
+  name: area_2_temperature_leaf
+  state: > #to be configured
+    {% if states('sensor.propagator_air_monitoring_temperature') == "unknown"%} {{0.040 | float }}
+    {% else %} {{states('sensor.propagator_air_monitoring_temperature') | float - states('input_number.area_2_temperature_leaf_offset') | float}}
+    {% endif %}
+  unit_of_measurement: °C
+- icon: mdi:water-percent
+  name: area_2_humidity
+  state: > #to be configured
+    {% if states('sensor.propagator_air_monitoring_humidity') == "unknown"%} {{0.040 | float }}
+    {% else %} {{states("sensor.propagator_air_monitoring_humidity") | float }}
+    {% endif %}
+  unit_of_measurement: "%"
+- icon: mdi:molecule-co2
+  name: area_2_co2
+  state: > #to be configured
+    {% if states('sensor.propagator_air_monitoring_eco2') == "unknown"%} {{0.040 | float }}
+    {% else %} {{states("sensor.propagator_air_monitoring_eco2") | float }}
+    {% endif %}
+  unit_of_measurement: ppm

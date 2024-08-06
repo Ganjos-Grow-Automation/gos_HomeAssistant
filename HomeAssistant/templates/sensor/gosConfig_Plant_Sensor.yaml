@@ -1,0 +1,87 @@
+- device_class: moisture
+  icon: mdi:water-percent
+  name: plant_1_soil_moisture
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_1_moisture") | float }}
+  unit_of_measurement: '%'
+- device_class: temperature
+  icon: mdi:temperature-celsius
+  name: plant_1_temperature
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_1_temperature") | float }}
+  unit_of_measurement: '%'
+- icon: mdi:flash-triangle-outline
+  name: plant_1_soil_conductivity
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_1_soil_conductivity") | float }}
+  unit_of_measurement: µS/cm
+- device_class: illuminance
+  icon: mdi:flash-triangle-outline
+  name: plant_1_brightness
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_1_soil_conductivity") | float }}
+  unit_of_measurement: µS/cm
+- device_class: humidity
+  icon: mdi:water-percent
+  name: plant_1_humidity
+  state: > #to be configured
+    {{states("sensor.area_1_humidity") | float }}
+  unit_of_measurement: '%'
+- device_class: moisture
+  icon: mdi:water-percent
+  name: plant_2_soil_moisture
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_2_moisture") | float }}
+  unit_of_measurement: '%'
+- device_class: temperature
+  icon: mdi:temperature-celsius
+  name: plant_2_temperature
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_2_temperature") | float }}
+  unit_of_measurement: '%'
+- icon: mdi:flash-triangle-outline
+  name: plant_2_soil_conductivity
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_2_soil_conductivity") | float }}
+  unit_of_measurement: µS/cm
+- device_class: illuminance
+  icon: mdi:flash-triangle-outline
+  name: plant_2_soil_brightness
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_2_soil_conductivity") | float }}
+  unit_of_measurement: µS/cm
+- device_class: humidity
+  icon: mdi:water-percent
+  name: plant_2_humidity
+  state: > #to be configured
+    {{states("sensor.area_1_humidity") | float }}
+  unit_of_measurement: '%'
+- device_class: moisture
+  icon: mdi:water-percent
+  name: plant_3_soil_moisture
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_3_moisture") | float }}
+  unit_of_measurement: '%'
+- device_class: temperature
+  icon: mdi:temperature-celsius
+  name: plant_3_temperature
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_3_temperature") | float }}
+  unit_of_measurement: '%'
+- icon: mdi:flash-triangle-outline
+  name: plant_3_soil_conductivity
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_3_soil_conductivity") | float }}
+  unit_of_measurement: µS/cm
+- device_class: illuminance
+  icon: mdi:flash-triangle-outline
+  name: plant_3_soil_brightness
+  state: > #to be configured
+    {{states("sensor.soilcontrol_grow_flower_care_mini_3_soil_conductivity") | float }}
+  unit_of_measurement: µS/cm
+- device_class: humidity
+  icon: mdi:water-percent
+  name: plant_3_humidity
+  state: > #to be configured
+    {{states("sensor.area_1_humidity") | float }}
+  unit_of_measurement: '%'

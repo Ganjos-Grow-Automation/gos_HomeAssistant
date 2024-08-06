@@ -208,7 +208,7 @@ target_co2_tolerance_night_flower_finish:
 #   min: 15
 #   max: 35
 #   step: 1
-#   unit_of_measurement: °C
+#   unit_of_measurement: "ppm"
 #   mode: box
 #   icon: mdi:CO2e-celsius
 target_co2_tolerance_clones:
@@ -217,7 +217,7 @@ target_co2_tolerance_clones:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 
@@ -227,7 +227,7 @@ target_co2_day_night_difference_clones:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:set-right
 
@@ -237,7 +237,7 @@ target_co2_tolerance_alerting_clones:
   min: 0
   max: 10
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:bell-alert
 
@@ -249,7 +249,7 @@ target_co2_tolerance_alerting_clones:
 #   min: 15
 #   max: 35
 #   step: 1
-#   unit_of_measurement: °C
+#   unit_of_measurement: "ppm"
 #   mode: box
 #   icon: mdi:CO2e-celsius
 target_co2_tolerance_veg:
@@ -258,7 +258,7 @@ target_co2_tolerance_veg:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 
@@ -268,7 +268,7 @@ target_co2_day_night_difference_veg:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:set-right
 
@@ -278,7 +278,7 @@ target_co2_tolerance_alerting_veg:
   min: 0
   max: 10
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:bell-alert
 
@@ -290,7 +290,7 @@ target_co2_tolerance_alerting_veg:
 #   min: 15
 #   max: 35
 #   step: 1
-#   unit_of_measurement: °C
+#   unit_of_measurement: "ppm"
 #   mode: box
 #   icon: mdi:CO2e-celsius
 target_co2_tolerance_flower_stretch:
@@ -299,7 +299,7 @@ target_co2_tolerance_flower_stretch:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 
@@ -309,7 +309,7 @@ target_co2_day_night_difference_flower_stretch:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:set-right
 
@@ -319,7 +319,7 @@ target_co2_tolerance_alerting_flower_stretch:
   min: 0
   max: 10
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:bell-alert
 
@@ -331,7 +331,7 @@ target_co2_tolerance_alerting_flower_stretch:
 #   min: 15
 #   max: 35
 #   step: 1
-#   unit_of_measurement: °C
+#   unit_of_measurement: "ppm"
 #   mode: box
 #   icon: mdi:CO2e-celsius
 target_co2_tolerance_flower_bulk:
@@ -340,7 +340,7 @@ target_co2_tolerance_flower_bulk:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 
@@ -350,7 +350,7 @@ target_co2_day_night_difference_flower_bulk:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:set-right
 
@@ -360,7 +360,7 @@ target_co2_tolerance_alerting_flower_bulk:
   min: 0
   max: 10
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:bell-alert
 
@@ -372,7 +372,7 @@ target_co2_tolerance_alerting_flower_bulk:
 #   min: 15
 #   max: 35
 #   step: 1
-#   unit_of_measurement: °C
+#   unit_of_measurement: "ppm"
 #   mode: box
 #   icon: mdi:CO2e-celsius
 target_co2_tolerance_flower_finish:
@@ -381,7 +381,7 @@ target_co2_tolerance_flower_finish:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:vector-difference
 
@@ -391,7 +391,7 @@ target_co2_day_night_difference_flower_finish:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:set-right
 
@@ -401,7 +401,7 @@ target_co2_tolerance_alerting_flower_finish:
   min: 0
   max: 10
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:bell-alert
 
@@ -413,7 +413,7 @@ target_co2_tolerance_alerting_flower_finish:
 #   min: 10
 #   max: 35
 #   step: 1
-#   unit_of_measurement: °C
+#   unit_of_measurement: "ppm"
 #   mode: box
 #   icon: mdi:CO2e-celsius
 # target_co2_tolerance_dry:
@@ -422,7 +422,7 @@ target_co2_tolerance_alerting_flower_finish:
 #   min: 0
 #   max: 5
 #   step: 1
-#   unit_of_measurement: °C
+#   unit_of_measurement: "ppm"
 #   mode: box
 #   icon: mdi:vector-difference
 
@@ -432,7 +432,7 @@ target_co2_day_night_difference_dry:
   min: 0
   max: 5
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:set-right
 
@@ -442,6 +442,6 @@ target_co2_tolerance_alerting_dry:
   min: 0
   max: 10
   step: 1
-  unit_of_measurement: °C
+  unit_of_measurement: "ppm"
   mode: box
   icon: mdi:bell-alert

@@ -1,160 +1,162 @@
-## Status: to do
-
-## Se: clones
-##### day values
 target_vpd_clones:
-  name: Ziel-VPD Samen und Stecklinge
+  icon: mdi:target
   initial: 0.8
-  min: 0.6
   max: 1.8
-  step: 0.1
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:target
-target_vpd_tolerance_clones:
-  name: Ziel-VPD-Toleranz Samen und Stecklinge
-  initial: 0.1
-  min: 0.0
-  max: 1.0
-  step: 0.05
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:vector-difference
-
-target_vpd_tolerance_alerting_clones:
-  name: Toleranz Benachrichtigung Samen und Stecklinge
-  initial: 0.4
-  min: 0.1
-  max: 1.0
-  step: 0.1
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:bell-alert
-
-## Se: veg
-##### day values
-target_vpd_veg:
-  name: Ziel-VPD Wachstum
-  initial: 0.9
   min: 0.6
-  max: 1.8
+  mode: box
+  name: Ziel-VPD Samen und Stecklinge
   step: 0.1
   unit_of_measurement: kPa
-  mode: box
+target_vpd_dry:
   icon: mdi:target
-
-target_vpd_tolerance_veg:
-  name: Ziel-VPD-Toleranz Wachstum
-  initial: 0.1
-  min: 0.0
-  max: 1.0
-  step: 0.05
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:vector-difference
-
-target_vpd_tolerance_alerting_veg:
-  name: Toleranz Benachrichtigung Wachstum
-  initial: 0.4
-  min: 0.1
-  max: 1.0
-  step: 0.1
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:bell-alert
-
-## Se: flower_stretch
-##### day values
-target_vpd_flower_stretch:
-  name: Ziel-VPD Blüte Streckung
-  initial: 1.1
+  initial: 1.2
+  max: 1.8
   min: 0.6
-  max: 1.8
+  mode: box
+  name: Ziel-VPD Trocknung
   step: 0.1
   unit_of_measurement: kPa
-  mode: box
-  icon: mdi:target
-
-target_vpd_tolerance_flower_stretch:
-  name: Ziel-VPD-Toleranz Streckung
-  initial: 0.1
-  min: 0.0
-  max: 1.0
-  step: 0.05
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:vector-difference
-
-target_vpd_tolerance_alerting_flower_stretch:
-  name: Toleranz Benachrichtigung Streckung
-  initial: 0.4
-  min: 0.1
-  max: 1.0
-  step: 0.1
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:bell-alert
-
-## Se: flower_bulk
-##### day values
 target_vpd_flower_bulk:
-  name: Ziel-VPD Blüte Bulk
+  icon: mdi:target
   initial: 1.1
-  min: 0.6
   max: 1.8
+  min: 0.6
+  mode: box
+  name: Ziel-VPD Blüte Bulk
   step: 0.1
   unit_of_measurement: kPa
-  mode: box
-  icon: mdi:target
-
-target_vpd_tolerance_flower_bulk:
-  name: Ziel-VPD-Toleranz Bulk
-  initial: 0.1
-  min: 0.0
-  max: 1.0
-  step: 0.05
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:vector-difference
-
-target_vpd_tolerance_alerting_flower_bulk:
-  name: Toleranz Benachrichtigung Bulk
-  initial: 0.4
-  min: 0.1
-  max: 1.0
-  step: 0.1
-  unit_of_measurement: kPa
-  mode: box
-  icon: mdi:bell-alert
-
-## Se: flower_finish
-##### day values
 target_vpd_flower_finish:
-  name: Ziel-VPD Blüte Ende
+  icon: mdi:target
   initial: 1.3
-  min: 0.6
   max: 1.8
+  min: 0.6
+  mode: box
+  name: Ziel-VPD Blüte Ende
   step: 0.1
   unit_of_measurement: kPa
-  mode: box
+target_vpd_flower_stretch:
   icon: mdi:target
-
-target_vpd_tolerance_flower_finish:
-  name: Ziel-VPD-Toleranz Ende
+  initial: 1.1
+  max: 1.8
+  min: 0.6
+  mode: box
+  name: Ziel-VPD Blüte Streckung
+  step: 0.1
+  unit_of_measurement: kPa
+target_vpd_tolerance_alerting_clones:
+  icon: mdi:bell-alert
+  initial: 0.4
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung Samen und Stecklinge
+  step: 0.1
+  unit_of_measurement: kPa
+target_vpd_tolerance_alerting_dry:
+  icon: mdi:bell-alert
+  initial: 0.4
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung Trocknung
+  step: 0.1
+  unit_of_measurement: kPa
+target_vpd_tolerance_alerting_flower_bulk:
+  icon: mdi:bell-alert
+  initial: 0.4
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung Bulk
+  step: 0.1
+  unit_of_measurement: kPa
+target_vpd_tolerance_alerting_flower_finish:
+  icon: mdi:bell-alert
+  initial: 0.4
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung Ende
+  step: 0.1
+  unit_of_measurement: kPa
+target_vpd_tolerance_alerting_flower_stretch:
+  icon: mdi:bell-alert
+  initial: 0.4
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung Streckung
+  step: 0.1
+  unit_of_measurement: kPa
+target_vpd_tolerance_alerting_veg:
+  icon: mdi:bell-alert
+  initial: 0.4
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung Wachstum
+  step: 0.1
+  unit_of_measurement: kPa
+target_vpd_tolerance_clones:
+  icon: mdi:vector-difference
   initial: 0.1
-  min: 0.0
-  max: 1.0
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-VPD-Toleranz Samen und Stecklinge
   step: 0.05
   unit_of_measurement: kPa
-  mode: box
+target_vpd_tolerance_dry:
   icon: mdi:vector-difference
-
-target_vpd_tolerance_alerting_flower_finish:
-  name: Toleranz Benachrichtigung Ende
-  initial: 0.4
-  min: 0.1
-  max: 1.0
+  initial: 0.1
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-VPD-Toleranz Trocknung
+  step: 0.05
+  unit_of_measurement: kPa
+target_vpd_tolerance_flower_bulk:
+  icon: mdi:vector-difference
+  initial: 0.1
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-VPD-Toleranz Bulk
+  step: 0.05
+  unit_of_measurement: kPa
+target_vpd_tolerance_flower_finish:
+  icon: mdi:vector-difference
+  initial: 0.1
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-VPD-Toleranz Ende
+  step: 0.05
+  unit_of_measurement: kPa
+target_vpd_tolerance_flower_stretch:
+  icon: mdi:vector-difference
+  initial: 0.1
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-VPD-Toleranz Streckung
+  step: 0.05
+  unit_of_measurement: kPa
+target_vpd_tolerance_veg:
+  icon: mdi:vector-difference
+  initial: 0.1
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-VPD-Toleranz Wachstum
+  step: 0.05
+  unit_of_measurement: kPa
+target_vpd_veg:
+  icon: mdi:target
+  initial: 0.9
+  max: 1.8
+  min: 0.6
+  mode: box
+  name: Ziel-VPD Wachstum
   step: 0.1
   unit_of_measurement: kPa
-  mode: box
-  icon: mdi:bell-alert

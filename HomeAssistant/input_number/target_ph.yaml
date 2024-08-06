@@ -1,150 +1,135 @@
-## Stage: clones
 target_ph_clones:
+  icon: mdi:water-check-outline
+  initial: 6
+  max: 9
+  min: 4
+  mode: box
   name: Ziel-pH-Wert Samen und Stecklinge
-  initial: 6
-  min: 4
-  max: 9
   step: 0.1
   unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:water-check-outline
-#### tolerance
-target_ph_tolerance_clones:
-  name: Ziel-pH-Wert-Toleranz Samen und Stecklinge
-  initial: 0.2
-  min: 0
-  max: 1
-  step: 0.1
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:vector-difference
-target_ph_tolerance_alerting_clones:
-  name: Toleranz Benachrichtigung 
-  initial: 0.3
-  min: 0.1
-  max: 1.0
-  step: 0.01
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:bell-alert
-
-
-## Stage: veg
-target_ph_veg:
-  name: Ziel-pH-Wert Wachstum
-  initial: 6
-  min: 4
-  max: 9
-  step: 0.1
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:water-check-outline
-#### tolerance
-target_ph_tolerance_veg:
-  name: Ziel-pH-Wert-Toleranz Wachstum
-  initial: 0.2
-  min: 0
-  max: 1
-  step: 0.1
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:vector-difference
-target_ph_tolerance_alerting_veg:
-  name: Toleranz Benachrichtigung 
-  initial: 0.3
-  min: 0.1
-  max: 1.0
-  step: 0.01
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:bell-alert
-
-## Stage: flower_stretch
-target_ph_flower_stretch:
-  name: Ziel-pH-Wert Blüte Streckung
-  initial: 6
-  min: 4
-  max: 9
-  step: 0.1
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:water-check-outline
-#### tolerance
-target_ph_tolerance_flower_stretch:
-  name: Ziel-pH-Wert-Toleranz Blüte Streckung
-  initial: 0.2
-  min: 0
-  max: 1
-  step: 0.1
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:vector-difference
-target_ph_tolerance_alerting_flower_stretch:
-  name: Toleranz Benachrichtigung 
-  initial: 0.3
-  min: 0.1
-  max: 1.0
-  step: 0.01
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:bell-alert
-
-## Stage: flower_bulk
 target_ph_flower_bulk:
+  icon: mdi:water-check-outline
+  initial: 6
+  max: 9
+  min: 4
+  mode: box
   name: Ziel-pH-Wert Blüte Bulk
-  initial: 6
-  min: 4
-  max: 9
   step: 0.1
   unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:water-check-outline
-#### tolerance
-target_ph_tolerance_flower_bulk:
-  name: Ziel-pH-Wert-Toleranz Blüte Bulk
-  initial: 0.2
-  min: 0
-  max: 1
-  step: 0.1
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:vector-difference
-target_ph_tolerance_alerting_flower_bulk:
-  name: Toleranz Benachrichtigung 
-  initial: 0.3
-  min: 0.1
-  max: 1.0
-  step: 0.01
-  unit_of_measurement: mol/l
-  mode: box
-  icon: mdi:bell-alert
-
-## Stage: flower_finish
 target_ph_flower_finish:
-  name: Ziel-pH-Wert Blüte Ende
-  initial: 6
-  min: 4
-  max: 9
-  step: 0.1
-  unit_of_measurement: mol/l
-  mode: box
   icon: mdi:water-check-outline
-#### tolerance
-target_ph_tolerance_flower_finish:
-  name: Ziel-pH-Wert-Toleranz Blüte Ende
-  initial: 0.2
-  min: 0
-  max: 1
+  initial: 6
+  max: 9
+  min: 4
+  mode: box
+  name: Ziel-pH-Wert Blüte Ende
   step: 0.1
   unit_of_measurement: mol/l
+target_ph_flower_stretch:
+  icon: mdi:water-check-outline
+  initial: 6
+  max: 9
+  min: 4
   mode: box
-  icon: mdi:vector-difference
-target_ph_tolerance_alerting_flower_finish:
-  name: Toleranz Benachrichtigung 
+  name: Ziel-pH-Wert Blüte Streckung
+  step: 0.1
+  unit_of_measurement: mol/l
+target_ph_tolerance_alerting_clones:
+  icon: mdi:bell-alert
   initial: 0.3
+  max: 1
   min: 0.1
-  max: 1.0
+  mode: box
+  name: Toleranz Benachrichtigung
   step: 0.01
   unit_of_measurement: mol/l
-  mode: box
+target_ph_tolerance_alerting_flower_bulk:
   icon: mdi:bell-alert
+  initial: 0.3
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 0.01
+  unit_of_measurement: mol/l
+target_ph_tolerance_alerting_flower_finish:
+  icon: mdi:bell-alert
+  initial: 0.3
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 0.01
+  unit_of_measurement: mol/l
+target_ph_tolerance_alerting_flower_stretch:
+  icon: mdi:bell-alert
+  initial: 0.3
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 0.01
+  unit_of_measurement: mol/l
+target_ph_tolerance_alerting_veg:
+  icon: mdi:bell-alert
+  initial: 0.3
+  max: 1
+  min: 0.1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 0.01
+  unit_of_measurement: mol/l
+target_ph_tolerance_clones:
+  icon: mdi:vector-difference
+  initial: 0.2
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-pH-Wert-Toleranz Samen und Stecklinge
+  step: 0.1
+  unit_of_measurement: mol/l
+target_ph_tolerance_flower_bulk:
+  icon: mdi:vector-difference
+  initial: 0.2
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-pH-Wert-Toleranz Blüte Bulk
+  step: 0.1
+  unit_of_measurement: mol/l
+target_ph_tolerance_flower_finish:
+  icon: mdi:vector-difference
+  initial: 0.2
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-pH-Wert-Toleranz Blüte Ende
+  step: 0.1
+  unit_of_measurement: mol/l
+target_ph_tolerance_flower_stretch:
+  icon: mdi:vector-difference
+  initial: 0.2
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-pH-Wert-Toleranz Blüte Streckung
+  step: 0.1
+  unit_of_measurement: mol/l
+target_ph_tolerance_veg:
+  icon: mdi:vector-difference
+  initial: 0.2
+  max: 1
+  min: 0
+  mode: box
+  name: Ziel-pH-Wert-Toleranz Wachstum
+  step: 0.1
+  unit_of_measurement: mol/l
+target_ph_veg:
+  icon: mdi:water-check-outline
+  initial: 6
+  max: 9
+  min: 4
+  mode: box
+  name: Ziel-pH-Wert Wachstum
+  step: 0.1
+  unit_of_measurement: mol/l

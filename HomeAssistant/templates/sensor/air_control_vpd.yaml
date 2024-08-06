@@ -1,59 +1,60 @@
-### Stage: clones
-- name: max_vpd_clones
+- icon: mdi:target
+  name: max_vpd_clones
   state: >
     {{ [states('input_number.target_vpd_clones'), states('input_number.target_vpd_tolerance_clones')] | map('float') | sum }}
   unit_of_measurement: kPa
-  icon: mdi:target
-- name: min_vpd_clones
+- icon: mdi:target
+  name: min_vpd_clones
   state: >
     {{ states('input_number.target_vpd_clones') | float - states('input_number.target_vpd_tolerance_clones') | float}}
   unit_of_measurement: kPa
-  icon: mdi:target
-
-### Stage: veg
-- name: max_vpd_veg
+- icon: mdi:target
+  name: max_vpd_veg
   state: >
     {{ [states('input_number.target_vpd_veg'), states('input_number.target_vpd_tolerance_veg')] | map('float') | sum }}
   unit_of_measurement: kPa
-  icon: mdi:target
-- name: min_vpd_veg
+- icon: mdi:target
+  name: min_vpd_veg
   state: >
     {{ states('input_number.target_vpd_veg') | float - states('input_number.target_vpd_tolerance_veg') | float}}
   unit_of_measurement: kPa
-  icon: mdi:target
-
-### Stage: flower_stretch
-- name: max_vpd_flower_stretch
+- icon: mdi:target
+  name: max_vpd_flower_stretch
   state: >
     {{ [states('input_number.target_vpd_flower_stretch'), states('input_number.target_vpd_tolerance_flower_stretch')] | map('float') | sum }}
   unit_of_measurement: kPa
-  icon: mdi:target
-- name: min_vpd_flower_stretch
+- icon: mdi:target
+  name: min_vpd_flower_stretch
   state: >
     {{ states('input_number.target_vpd_flower_stretch') | float - states('input_number.target_vpd_tolerance_flower_stretch') | float}}
   unit_of_measurement: kPa
-  icon: mdi:target
-
-### Stage: flower_bulk
-- name: max_vpd_flower_bulk
+- icon: mdi:target
+  name: max_vpd_flower_bulk
   state: >
     {{ [states('input_number.target_vpd_flower_bulk'), states('input_number.target_vpd_tolerance_flower_bulk')] | map('float') | sum }}
   unit_of_measurement: kPa
-  icon: mdi:target
-- name: min_vpd_flower_bulk
+- icon: mdi:target
+  name: min_vpd_flower_bulk
   state: >
     {{ states('input_number.target_vpd_flower_bulk') | float - states('input_number.target_vpd_tolerance_flower_bulk') | float}}
   unit_of_measurement: kPa
-  icon: mdi:target
-
-### Stage: flower_finish
-- name: max_vpd_flower_finish
+- icon: mdi:target
+  name: max_vpd_flower_finish
   state: >
     {{ [states('input_number.target_vpd_flower_finish'), states('input_number.target_vpd_tolerance_flower_finish')] | map('float') | sum }}
   unit_of_measurement: kPa
-  icon: mdi:target
-- name: min_vpd_flower_finish
+- icon: mdi:target
+  name: min_vpd_flower_finish
   state: >
     {{ states('input_number.target_vpd_flower_finish') | float - states('input_number.target_vpd_tolerance_flower_finish') | float}}
   unit_of_measurement: kPa
-  icon: mdi:target
+- icon: mdi:target
+  name: max_vpd_dry
+  state: >
+    {{ [states('input_number.target_vpd_dry'), states('input_number.target_vpd_tolerance_dry')] | map('float') | sum }}
+  unit_of_measurement: kPa
+- icon: mdi:target
+  name: min_vpd_dry
+  state: >
+    {{ states('input_number.target_vpd_dry') | float - states('input_number.target_vpd_tolerance_dry') | float}}
+  unit_of_measurement: kPa

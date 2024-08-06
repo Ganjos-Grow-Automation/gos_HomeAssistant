@@ -1,7 +1,122 @@
-# all area select fields
-
-# area 1
+area_1_aircontrol_mode:
+  icon: mdi:form-dropdown
+  name: Luftkontrollmodus
+  options:
+    - VPD
+    - Statisch
+area_1_aircontrol_prio:
+  icon: mdi:form-dropdown
+  name: Bereich 1 Priorität bei den Luftbedingungen
+  options:
+    - Temperature
+    - Humidity
+area_1_area_type:
+  icon: mdi:form-dropdown
+  name: Bereichstype
+  options:
+    - Growzelt
+    - Raum
+    - Outdoor
+area_1_dehumidifier_dimmable:
+  icon: mdi:air-humidifier-off
+  name: Ist die Luftentfeuchtung in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_1_exhaust_dimmable:
+  icon: mdi:air-conditioner
+  name: Ist die Abluft in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_1_exhaust_eq_ac:
+  icon: mdi:air-conditioner
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+area_1_exhaust_eq_dehumidifer:
+  icon: mdi:air-humidifier-off
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+area_1_heater_dimmable:
+  icon: mdi:radiator
+  name: Ist die Heizung in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_1_humidifier_dimmable:
+  icon: mdi:air-humidifier
+  name: Ist die Luftbefeuchtung in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_1_is_active:
+  icon: mdi:checkbox-marked-outline
+  name: Ist Bereich 1 aktiv?
+  options:
+    - Ja
+    - Nein
+area_1_is_dehumidifier_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 1 ein Luftentfeuchter vorhanden?
+  options:
+    - Ja
+    - Nein
+area_1_is_exhaust_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 1 eine Abluft vorhanden?
+  options:
+    - Ja
+    - Nein
+area_1_is_heater_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 1 eine Heizung vorhanden?
+  options:
+    - Ja
+    - Nein
+area_1_is_humidifier_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 1 ein Luftbefeuchter vorhanden?
+  options:
+    - Ja
+    - Nein
+area_1_is_light_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 1 ein Licht vorhanden?
+  options:
+    - Ja
+    - Nein
+area_1_is_ventilation_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 1 ein Ventilator vorhanden?
+  options:
+    - Ja
+    - Nein
+area_1_light_dimmable:
+  icon: mdi:lightbulb
+  name: Ist die Beleuchtung in Bereich 1 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_1_lightcontrol_mode:
+  icon: mdi:form-dropdown
+  name: Lichtmodus
+  options:
+    - On/Off
+    - Sunrise
+area_1_lightcontrol_time_mode:
+  icon: mdi:form-dropdown
+  name: Lichtmodus
+  options:
+    - 18/6
+    - 16/8
+    - 12/12
+    - Darkness
 area_1_stage:
+  icon: mdi:form-dropdown
   name: Bereich 1 Pflanzenstadium
   options:
     - Clone
@@ -10,87 +125,123 @@ area_1_stage:
     - Flower-bulk
     - Flower-finish
     - Dry
-  icon: mdi:form-dropdown
-area_1_aircontrol_prio:
-  name: Bereich 1 Priorität bei den Luftbedingungen
-  options:
-    - Temperature
-    - Humidity
-  icon: mdi:form-dropdown
-
-area_1_aircontrol_mode:
-  name: Luftkontrollmodus
-  options:
-    - VPD
-    - Statisch
-  icon: mdi:form-dropdown
-
-area_1_exhaust_dimmable:
-  name: Ist die Abluft in Bereich 1 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-conditioner
-
 area_1_ventilation_dimmable:
+  icon: mdi:fan
   name: Ist die Umluft in Bereich 1 dimmbar?
   options:
     - Ja
     - Nein
-  icon: mdi:fan
-
-area_1_heater_dimmable:
-  name: Ist die Heizung in Bereich 1 dimmbar?
+area_2_aircontrol_mode:
+  icon: mdi:form-dropdown
+  name: Luftkontrollmodus
   options:
-    - Ja
-    - Nein
-  icon: mdi:radiator
-
-area_1_light_dimmable:
-  name: Ist die Beleuchtung in Bereich 1 dimmbar?
+    - VPD
+    - Statisch
+area_2_aircontrol_prio:
+  icon: mdi:form-dropdown
+  name: Bereich 2 Priorität bei den Luftbedingungen
   options:
-    - Ja
-    - Nein
-  icon: mdi:lightbulb
-
-area_1_humidifier_dimmable:
-  name: Ist die Luftbefeuchtung in Bereich 1 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier
-
-area_1_dehumidifier_dimmable:
-  name: Ist die Luftentfeuchtung in Bereich 1 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier-off
-
-area_1_exhaust_eq_ac:
-  name: Ist die Abluft auch für die Klima zuständig?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-conditioner
-
-area_1_exhaust_eq_dehumidifer:
-  name: Ist die Abluft auch für die Klima zuständig?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier-off
-  
-area_1_area_type:
+    - Temperature
+    - Humidity
+area_2_area_type:
+  icon: mdi:form-dropdown
   name: Bereichstype
   options:
     - Growzelt
     - Raum
     - Outdoor
+area_2_dehumidifier_dimmable:
+  icon: mdi:air-humidifier-off
+  name: Ist die Luftentfeuchtung in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_2_exhaust_dimmable:
+  icon: mdi:air-conditioner
+  name: Ist die Abluft in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_2_exhaust_eq_ac:
+  icon: mdi:air-conditioner
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+area_2_exhaust_eq_dehumidifer:
+  icon: mdi:air-humidifier-off
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+area_2_heater_dimmable:
+  icon: mdi:radiator
+  name: Ist die Heizung in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_2_humidifier_dimmable:
+  icon: mdi:air-humidifier
+  name: Ist die Luftbefeuchtung in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_2_is_active:
+  icon: mdi:checkbox-marked-outline
+  name: Ist Bereich 2 aktiv?
+  options:
+    - Ja
+    - Nein
+area_2_is_dehumidifier_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 2 ein Luftentfeuchter vorhanden?
+  options:
+    - Ja
+    - Nein
+area_2_is_exhaust_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 2 eine Abluft vorhanden?
+  options:
+    - Ja
+    - Nein
+area_2_is_heater_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 2 eine Heizung vorhanden?
+  options:
+    - Ja
+    - Nein
+area_2_is_humidifier_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 2 ein Luftbefeuchter vorhanden?
+  options:
+    - Ja
+    - Nein
+area_2_is_light_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 2 ein Licht vorhanden?
+  options:
+    - Ja
+    - Nein
+area_2_is_ventilation_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 2 ein Ventilator vorhanden?
+  options:
+    - Ja
+    - Nein
+area_2_light_dimmable:
+  icon: mdi:lightbulb
+  name: Ist die Beleuchtung in Bereich 2 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_2_lightcontrol_mode:
   icon: mdi:form-dropdown
-
-# area 2
+  name: Lichtmodus
+  options:
+    - On/Off
+    - Sunrise
 area_2_stage:
+  icon: mdi:form-dropdown
   name: Bereich 2 Pflanzenstadium
   options:
     - Clone
@@ -99,87 +250,123 @@ area_2_stage:
     - Flower-bulk
     - Flower-finish
     - Dry
-  icon: mdi:form-dropdown
-area_2_aircontrol_prio:
-  name: Bereich 2 Priorität bei den Luftbedingungen
-  options:
-    - Temperature
-    - Humidity
-  icon: mdi:form-dropdown
-
-area_2_aircontrol_mode:
-  name: Luftkontrollmodus
-  options:
-    - VPD
-    - Statisch
-  icon: mdi:form-dropdown
-
-area_2_exhaust_dimmable:
-  name: Ist die Abluft in Bereich 2 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-conditioner
-
 area_2_ventilation_dimmable:
+  icon: mdi:fan
   name: Ist die Umluft in Bereich 2 dimmbar?
   options:
     - Ja
     - Nein
-  icon: mdi:fan
-
-area_2_heater_dimmable:
-  name: Ist die Heizung in Bereich 2 dimmbar?
+area_3_aircontrol_mode:
+  icon: mdi:form-dropdown
+  name: Luftkontrollmodus
   options:
-    - Ja
-    - Nein
-  icon: mdi:radiator
-
-area_2_light_dimmable:
-  name: Ist die Beleuchtung in Bereich 2 dimmbar?
+    - VPD
+    - Statisch
+area_3_aircontrol_prio:
+  icon: mdi:form-dropdown
+  name: Bereich 3 Priorität bei den Luftbedingungen
   options:
-    - Ja
-    - Nein
-  icon: mdi:lightbulb
-
-area_2_humidifier_dimmable:
-  name: Ist die Luftbefeuchtung in Bereich 2 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier
-
-area_2_dehumidifier_dimmable:
-  name: Ist die Luftentfeuchtung in Bereich 2 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier-off
-
-area_2_exhaust_eq_ac:
-  name: Ist die Abluft auch für die Klima zuständig?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-conditioner
-
-area_2_exhaust_eq_dehumidifer:
-  name: Ist die Abluft auch für die Klima zuständig?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier-off
-
-area_2_area_type:
+    - Temperature
+    - Humidity
+area_3_area_type:
+  icon: mdi:form-dropdown
   name: Bereichstype
   options:
     - Growzelt
     - Raum
     - Outdoor
+area_3_dehumidifier_dimmable:
+  icon: mdi:air-humidifier-off
+  name: Ist die Luftentfeuchtung in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_3_exhaust_dimmable:
+  icon: mdi:air-conditioner
+  name: Ist die Abluft in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_3_exhaust_eq_ac:
+  icon: mdi:air-conditioner
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+area_3_exhaust_eq_dehumidifer:
+  icon: mdi:air-humidifier-off
+  name: Ist die Abluft auch für die Klima zuständig?
+  options:
+    - Ja
+    - Nein
+area_3_heater_dimmable:
+  icon: mdi:radiator
+  name: Ist die Heizung in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_3_humidifier_dimmable:
+  icon: mdi:air-humidifier
+  name: Ist die Luftbefeuchtung in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_3_is_active:
+  icon: mdi:checkbox-marked-outline
+  name: Ist Bereich 3 aktiv?
+  options:
+    - Ja
+    - Nein
+area_3_is_dehumidifier_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 3 ein Luftentfeuchter vorhanden?
+  options:
+    - Ja
+    - Nein
+area_3_is_exhaust_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 3 eine Abluft vorhanden?
+  options:
+    - Ja
+    - Nein
+area_3_is_heater_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 3 eine Heizung vorhanden?
+  options:
+    - Ja
+    - Nein
+area_3_is_humidifier_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 3 ein Luftbefeuchter vorhanden?
+  options:
+    - Ja
+    - Nein
+area_3_is_light_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 3 ein Licht vorhanden?
+  options:
+    - Ja
+    - Nein
+area_3_is_ventilation_available:
+  icon: mdi:checkbox-marked-outline
+  name: Ist im Bereich 3 ein Ventilator vorhanden?
+  options:
+    - Ja
+    - Nein
+area_3_light_dimmable:
+  icon: mdi:lightbulb
+  name: Ist die Beleuchtung in Bereich 3 dimmbar?
+  options:
+    - Ja
+    - Nein
+area_3_lightcontrol_mode:
   icon: mdi:form-dropdown
-
-# area 3
+  name: Lichtmodus
+  options:
+    - On/Off
+    - Sunrise
 area_3_stage:
+  icon: mdi:form-dropdown
   name: Bereich 3 Pflanzenstadium
   options:
     - Clone
@@ -188,81 +375,27 @@ area_3_stage:
     - Flower-bulk
     - Flower-finish
     - Dry
-  icon: mdi:form-dropdown
-area_3_aircontrol_prio:
-  name: Bereich 3 Priorität bei den Luftbedingungen
-  options:
-    - Temperature
-    - Humidity
-  icon: mdi:form-dropdown
-
-area_3_aircontrol_mode:
-  name: Luftkontrollmodus
-  options:
-    - VPD
-    - Statisch
-  icon: mdi:form-dropdown
-
-area_3_exhaust_dimmable:
-  name: Ist die Abluft in Bereich 3 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-conditioner
-
 area_3_ventilation_dimmable:
+  icon: mdi:fan
   name: Ist die Umluft in Bereich 3 dimmbar?
   options:
     - Ja
-    - Nein
-  icon: mdi:fan
+    - Nein# all area select fields
 
-area_3_heater_dimmable:
-  name: Ist die Heizung in Bereich 3 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:radiator
-
-area_3_light_dimmable:
-  name: Ist die Beleuchtung in Bereich 3 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:lightbulb
-
-area_3_humidifier_dimmable:
-  name: Ist die Luftbefeuchtung in Bereich 3 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier
-
-area_3_dehumidifier_dimmable:
-  name: Ist die Luftentfeuchtung in Bereich 3 dimmbar?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier-off
-
-area_3_exhaust_eq_ac:
-  name: Ist die Abluft auch für die Klima zuständig?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-conditioner
-
-area_3_exhaust_eq_dehumidifer:
-  name: Ist die Abluft auch für die Klima zuständig?
-  options:
-    - Ja
-    - Nein
-  icon: mdi:air-humidifier-off
-
-area_3_area_type:
-  name: Bereichstype
-  options:
-    - Growzelt
-    - Raum
-    - Outdoor
+area_2_lightcontrol_time_mode:
   icon: mdi:form-dropdown
+  name: Lichtmodus
+  options:
+    - 18/6
+    - 16/8
+    - 12/12
+    - Darkness
+
+area_3_lightcontrol_time_mode:
+  icon: mdi:form-dropdown
+  name: Lichtmodus
+  options:
+    - 18/6
+    - 16/8
+    - 12/12
+    - Darkness

@@ -1,104 +1,83 @@
-## all area regarded input numbers
-#### Area 1
-
-## general
-area_1_temperature_leaf_offset:
-  name: Blatttemperatur Offset
-  initial: 2
-  min: 1
-  max: 3
-  unit_of_measurement: °C
-  mode: slider
-
-area_1_planned_grow_days:
-  name: geplante Anzahl an Grow-Tagen
-  initial: 90
-  min: 0
-  max: 365
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:calendar-clock
-
-area_2_temperature_leaf_offset:
-  name: Blatttemperatur Offset
-  initial: 2
-  min: 1
-  max: 3
-  unit_of_measurement: °C
-  mode: slider
-
-area_3_temperature_leaf_offset:
-  name: Blatttemperatur Offset
-  initial: 2
-  min: 1
-  max: 3
-  unit_of_measurement: °C
-  mode: slider
-
-## Stage: clones
 area_1_clones_days_target:
+  icon: mdi:hours-24
+  initial: 18
+  max: 80
+  min: 0
+  mode: box
   name: Ziel Anzahl der Tage Samen und Stecklinge
-  initial: 18
-  min: 0
-  max: 80
   step: 1
   unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-
-## Stage: veg
-area_1_veg_days_target:
-  name: Ziel Anzahl der Tage Wachstum
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-
-## Stage: flower_stretch
-area_1_flower_stretch_days_target:
-  name: Ziel Anzahl der Tage Blüte Streckung
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-
-## Stage: flower_bulk
-area_1_flower_bulk_days_target:
-  name: Ziel Anzahl der Tage Blüte Bulk
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-
-
-## Stage: flower_finish
-area_1_flower_finish_days_target:
-  name: Ziel Anzahl der Tage Blüte Ende
-  initial: 18
-  min: 0
-  max: 80
-  step: 1
-  unit_of_measurement: days
-  mode: box
-  icon: mdi:hours-24
-
-
-## Stage: dry
 area_1_dry_days_target:
-  name: Ziel Anzahl der Tage Trocknung
+  icon: mdi:hours-24
   initial: 18
-  min: 0
   max: 80
+  min: 0
+  mode: box
+  name: Ziel Anzahl der Tage Trocknung
   step: 1
   unit_of_measurement: days
-  mode: box
+area_1_flower_bulk_days_target:
   icon: mdi:hours-24
+  initial: 18
+  max: 80
+  min: 0
+  mode: box
+  name: Ziel Anzahl der Tage Blüte Bulk
+  step: 1
+  unit_of_measurement: days
+area_1_flower_finish_days_target:
+  icon: mdi:hours-24
+  initial: 18
+  max: 80
+  min: 0
+  mode: box
+  name: Ziel Anzahl der Tage Blüte Ende
+  step: 1
+  unit_of_measurement: days
+area_1_flower_stretch_days_target:
+  icon: mdi:hours-24
+  initial: 18
+  max: 80
+  min: 0
+  mode: box
+  name: Ziel Anzahl der Tage Blüte Streckung
+  step: 1
+  unit_of_measurement: days
+area_1_planned_grow_days:
+  icon: mdi:calendar-clock
+  initial: 90
+  max: 365
+  min: 0
+  mode: box
+  name: geplante Anzahl an Grow-Tagen
+  unit_of_measurement: days
+area_1_temperature_leaf_offset:
+  initial: 2
+  max: 3
+  min: 1
+  mode: slider
+  name: Blatttemperatur Offset
+  unit_of_measurement: °C
+area_1_veg_days_target:
+  icon: mdi:hours-24
+  initial: 18
+  max: 80
+  min: 0
+  mode: box
+  name: Ziel Anzahl der Tage Wachstum
+  step: 1
+  unit_of_measurement: days
+area_2_temperature_leaf_offset:
+  initial: 2
+  max: 3
+  min: 1
+  mode: slider
+  name: Blatttemperatur Offset
+  unit_of_measurement: °C
+area_3_temperature_leaf_offset:
+  initial: 2
+  max: 3
+  min: 1
+  mode: slider
+  name: Blatttemperatur Offset
+  unit_of_measurement: °C

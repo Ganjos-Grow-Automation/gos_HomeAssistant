@@ -1,59 +1,50 @@
-### Stage: clones
-- name: ec_max_clones
+- icon: mdi:water-check
+  name: ec_max_clones
   state: >
     {{ [states('input_number.target_ec_clones'), states('input_number.target_ec_tolerance_clones')] | map('float') | sum }}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-- name: ec_min_clones
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_min_clones
   state: >
     {{ (states('input_number.target_ec_clones') | float - states('input_number.target_ec_tolerance_clones') | float)}}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-
-### Stage: veg
-- name: ec_max_veg
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_max_veg
   state: >
     {{ [states('input_number.target_ec_veg'), states('input_number.target_ec_tolerance_veg')] | map('float') | sum }}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-- name: ec_min_veg
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_min_veg
   state: >
     {{ (states('input_number.target_ec_veg') | float - states('input_number.target_ec_tolerance_veg') | float)}}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-
-### Stage: flower_stretch
-- name: ec_max_flower_stretch
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_max_flower_stretch
   state: >
     {{ [states('input_number.target_ec_flower_stretch'), states('input_number.target_ec_tolerance_flower_stretch')] | map('float') | sum }}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-- name: ec_min_flower_stretch
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_min_flower_stretch
   state: >
     {{ (states('input_number.target_ec_flower_stretch') | float - states('input_number.target_ec_tolerance_flower_stretch') | float)}}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-
-### Stage: flower_bulk
-- name: ec_max_flower_bulk
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_max_flower_bulk
   state: >
     {{ [states('input_number.target_ec_flower_bulk'), states('input_number.target_ec_tolerance_flower_bulk')] | map('float') | sum }}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-- name: ec_min_flower_bulk
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_min_flower_bulk
   state: >
     {{ (states('input_number.target_ec_flower_bulk') | float - states('input_number.target_ec_tolerance_flower_bulk') | float)}}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-
-### Stage: flower_finish
-- name: ec_max_flower_finish
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_max_flower_finish
   state: >
     {{ [states('input_number.target_ec_flower_finish'), states('input_number.target_ec_tolerance_flower_finish')] | map('float') | sum }}
-  unit_of_measurement: ""
-  icon: mdi:water-check
-- name: ec_min_flower_finish
+  unit_of_measurement: ''
+- icon: mdi:water-check
+  name: ec_min_flower_finish
   state: >
     {{ (states('input_number.target_ec_flower_finish') | float - states('input_number.target_ec_tolerance_flower_finish') | float)}}
-  unit_of_measurement: ""
-  icon: mdi:water-check
+  unit_of_measurement: ''

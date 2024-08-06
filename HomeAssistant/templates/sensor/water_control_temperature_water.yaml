@@ -1,61 +1,50 @@
-### Stage: clones
-- name: temperature_water_max_clones
+- icon: mdi:water-check
+  name: temperature_water_max_clones
   state: >
     {{ [states('input_number.target_temperature_water_clones'), states('input_number.target_temperature_water_tolerance_clones')] | map('float') | sum }}
   unit_of_measurement: °C
-  icon: mdi:water-check
-- name: temperature_water_min_clones
+- icon: mdi:water-check
+  name: temperature_water_min_clones
   state: >
     {{ (states('input_number.target_temperature_water_clones') | float - states('input_number.target_temperature_water_tolerance_clones') | float)}}
   unit_of_measurement: °C
-  icon: mdi:water-check
-
-### Stage: veg
-- name: temperature_water_max_veg
+- icon: mdi:water-check
+  name: temperature_water_max_veg
   state: >
     {{ [states('input_number.target_temperature_water_veg'), states('input_number.target_temperature_water_tolerance_veg')] | map('float') | sum }}
   unit_of_measurement: °C
-  icon: mdi:water-check
-- name: temperature_water_min_veg
+- icon: mdi:water-check
+  name: temperature_water_min_veg
   state: >
     {{ (states('input_number.target_temperature_water_veg') | float - states('input_number.target_temperature_water_tolerance_veg') | float)}}
   unit_of_measurement: °C
-  icon: mdi:water-check
-
-### Stage: flower_stretch
-- name: temperature_water_max_flower_stretch
+- icon: mdi:water-check
+  name: temperature_water_max_flower_stretch
   state: >
     {{ [states('input_number.target_temperature_water_flower_stretch'), states('input_number.target_temperature_water_tolerance_flower_stretch')] | map('float') | sum }}
   unit_of_measurement: °C
-  icon: mdi:water-check
-- name: temperature_water_min_flower_stretch
+- icon: mdi:water-check
+  name: temperature_water_min_flower_stretch
   state: >
     {{ (states('input_number.target_temperature_water_flower_stretch') | float - states('input_number.target_temperature_water_tolerance_flower_stretch') | float)}}
   unit_of_measurement: °C
-  icon: mdi:water-check
-
-### Stage: flower_bulk
-- name: temperature_water_max_flower_bulk
+- icon: mdi:water-check
+  name: temperature_water_max_flower_bulk
   state: >
     {{ [states('input_number.target_temperature_water_flower_bulk'), states('input_number.target_temperature_water_tolerance_flower_bulk')] | map('float') | sum }}
   unit_of_measurement: °C
-  icon: mdi:water-check
-- name: temperature_water_min_flower_bulk
+- icon: mdi:water-check
+  name: temperature_water_min_flower_bulk
   state: >
     {{ (states('input_number.target_temperature_water_flower_bulk') | float - states('input_number.target_temperature_water_tolerance_flower_bulk') | float)}}
   unit_of_measurement: °C
-  icon: mdi:water-check
-
-### Stage: flower_finish
-- name: temperature_water_max_flower_finish
+- icon: mdi:water-check
+  name: temperature_water_max_flower_finish
   state: >
     {{ [states('input_number.target_temperature_water_flower_finish'), states('input_number.target_temperature_water_tolerance_flower_finish')] | map('float') | sum }}
   unit_of_measurement: °C
-  icon: mdi:water-check
-- name: temperature_water_min_flower_finish
+- icon: mdi:water-check
+  name: temperature_water_min_flower_finish
   state: >
     {{ (states('input_number.target_temperature_water_flower_finish') | float - states('input_number.target_temperature_water_tolerance_flower_finish') | float)}}
   unit_of_measurement: °C
-  icon: mdi:water-check
-
-

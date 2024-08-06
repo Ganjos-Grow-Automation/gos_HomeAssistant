@@ -1,6 +1,5 @@
-## substrate of each plant
-### Plant 1
 plant_1_subtrate:
+  icon: mdi:form-dropdown
   name: plant1_subtrate
   options:
     - soil
@@ -9,10 +8,8 @@ plant_1_subtrate:
     - living soil
     - hydro
     - aero
-  icon: mdi:form-dropdown
-
-### Plant 2
 plant_2_subtrate:
+  icon: mdi:form-dropdown
   name: plant2_subtrate
   options:
     - soil
@@ -21,11 +18,8 @@ plant_2_subtrate:
     - living soil
     - hydro
     - aero
-  icon: mdi:form-dropdown
-
-## substrate of each plant
-### Plant 3
 plant_3_subtrate:
+  icon: mdi:form-dropdown
   name: plant3_subtrate
   options:
     - soil
@@ -34,4 +28,3 @@ plant_3_subtrate:
     - living soil
     - hydro
     - aero
-  icon: mdi:form-dropdown

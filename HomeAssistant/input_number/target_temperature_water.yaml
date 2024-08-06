@@ -1,148 +1,135 @@
-### Status: ready to test
-
-## Stage: clones
 target_temperature_water_clones:
+  icon: mdi:temperature-celsius
+  initial: 20
+  max: 35
+  min: 15
+  mode: box
   name: Zieltemperatur-Wasser Samen und Stecklinge
-  initial: 20
-  min: 15
-  max: 35
   step: 1
   unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_clones:
-  name: Zieltemperatur-Wasser-Toleranz Samen und Stecklinge
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-target_temperature_water_tolerance_alerting_clones:
-  name: Toleranz Benachrichtigung 
-  initial: 4
-  min: 1
-  max: 10
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:bell-alert
-## Stage: veg
-target_temperature_water_veg:
-  name: Zieltemperatur-Wasser Wachstum
-  initial: 20
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_veg:
-  name: Zieltemperatur-Wasser-Toleranz Wachstum
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-target_temperature_water_tolerance_alerting_veg:
-  name: Toleranz Benachrichtigung 
-  initial: 4
-  min: 1
-  max: 10
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:bell-alert
-## Stage: flower_stretch
-target_temperature_water_flower_stretch:
-  name: Zieltemperatur-Wasser Blüte Streckung
-  initial: 20
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_flower_stretch:
-  name: Zieltemperatur-Wasser-Toleranz Blüte Streckung
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-target_temperature_water_tolerance_alerting_flower_stretch:
-  name: Toleranz Benachrichtigung 
-  initial: 4
-  min: 1
-  max: 10
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:bell-alert
-## Stage: flower_bulk
 target_temperature_water_flower_bulk:
+  icon: mdi:temperature-celsius
+  initial: 20
+  max: 35
+  min: 15
+  mode: box
   name: Zieltemperatur-Wasser Blüte Bulk
-  initial: 20
-  min: 15
-  max: 35
   step: 1
   unit_of_measurement: °C
-  mode: box
-  icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_flower_bulk:
-  name: Zieltemperatur-Wasser-Toleranz Blüte Bulk
-  initial: 1
-  min: 0
-  max: 5
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:vector-difference
-target_temperature_water_tolerance_alerting_flower_bulk:
-  name: Toleranz Benachrichtigung 
-  initial: 4
-  min: 1
-  max: 10
-  step: 1
-  unit_of_measurement: °C
-  mode: box
-  icon: mdi:bell-alert
-
-## Stage: flower_finish
 target_temperature_water_flower_finish:
-  name: Zieltemperatur-Wasser Blüte Ende
-  initial: 20
-  min: 15
-  max: 35
-  step: 1
-  unit_of_measurement: °C
-  mode: box
   icon: mdi:temperature-celsius
-
-target_temperature_water_tolerance_flower_finish:
-  name: Zieltemperatur-Wasser-Toleranz Blüte Ende
-  initial: 1
-  min: 0
-  max: 5
+  initial: 20
+  max: 35
+  min: 15
+  mode: box
+  name: Zieltemperatur-Wasser Blüte Ende
   step: 1
   unit_of_measurement: °C
+target_temperature_water_flower_stretch:
+  icon: mdi:temperature-celsius
+  initial: 20
+  max: 35
+  min: 15
   mode: box
-  icon: mdi:vector-difference
-target_temperature_water_tolerance_alerting_flower_finish:
-  name: Toleranz Benachrichtigung 
-  initial: 4
-  min: 1
-  max: 10
+  name: Zieltemperatur-Wasser Blüte Streckung
   step: 1
   unit_of_measurement: °C
-  mode: box
+target_temperature_water_tolerance_alerting_clones:
   icon: mdi:bell-alert
+  initial: 4
+  max: 10
+  min: 1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_alerting_flower_bulk:
+  icon: mdi:bell-alert
+  initial: 4
+  max: 10
+  min: 1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_alerting_flower_finish:
+  icon: mdi:bell-alert
+  initial: 4
+  max: 10
+  min: 1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_alerting_flower_stretch:
+  icon: mdi:bell-alert
+  initial: 4
+  max: 10
+  min: 1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_alerting_veg:
+  icon: mdi:bell-alert
+  initial: 4
+  max: 10
+  min: 1
+  mode: box
+  name: Toleranz Benachrichtigung
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_clones:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: Zieltemperatur-Wasser-Toleranz Samen und Stecklinge
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_flower_bulk:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: Zieltemperatur-Wasser-Toleranz Blüte Bulk
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_flower_finish:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: Zieltemperatur-Wasser-Toleranz Blüte Ende
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_flower_stretch:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: Zieltemperatur-Wasser-Toleranz Blüte Streckung
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_tolerance_veg:
+  icon: mdi:vector-difference
+  initial: 1
+  max: 5
+  min: 0
+  mode: box
+  name: Zieltemperatur-Wasser-Toleranz Wachstum
+  step: 1
+  unit_of_measurement: °C
+target_temperature_water_veg:
+  icon: mdi:temperature-celsius
+  initial: 20
+  max: 35
+  min: 15
+  mode: box
+  name: Zieltemperatur-Wasser Wachstum
+  step: 1
+  unit_of_measurement: °C

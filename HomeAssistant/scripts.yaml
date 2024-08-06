@@ -21,3 +21,30 @@ custom_message_to_phone:
       name: message
       description: enter the message of the alert
       required: true
+device_control_led_off:
+  alias: device_control_led_off
+  sequence:
+  - type: turn_off
+    device_id: 4294d7d4268b0fe51515e09e021e5236
+    entity_id: d48266a20bd36fff97a57862fc221631
+    domain: switch
+  mode: single
+  icon: mdi:lightbulb-off
+device_control_led_on:
+  alias: device_control_led_on
+  sequence:
+  - type: turn_on
+    device_id: 4294d7d4268b0fe51515e09e021e5236
+    entity_id: d48266a20bd36fff97a57862fc221631
+    domain: switch
+  mode: single
+  icon: mdi:lightbulb-on
+backup_2:
+  alias: Backup
+  sequence:
+  - service: hassio.addon_stdin
+    metadata: {}
+    data:
+      addon: 15d21743_samba_backup
+  description: ''
+  icon: mdi:cloud-upload
