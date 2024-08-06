@@ -6,6 +6,15 @@ Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des P
 
 ## Preview
 
+![image](https://github.com/user-attachments/assets/ddf5a8eb-5d33-4348-8c36-1cb051d0e90e)
+
+![image](https://github.com/user-attachments/assets/2afe4348-411e-4719-bee6-292ee979a8a4)
+
+![image](https://github.com/user-attachments/assets/a660bdb6-b177-47de-9349-2e881c453ad8)
+
+![image](https://github.com/user-attachments/assets/e07214e1-4957-42bc-aa66-bc48d1135835)
+
+
 
 ## geplante Funktionen
 - **Echtzeitüberwachung**: Kontinuierliche Überwachung aller wichtigen Umgebungsbedingungen.
