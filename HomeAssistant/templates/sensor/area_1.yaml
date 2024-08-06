@@ -40,62 +40,62 @@
 - icon: mdi:calendar-start
   name: area_1_datediff_days_clones
   state: >
-      {{(((states.input_datetime.area_1_clones_enddate.attributes.timestamp) - (states.input_datetime.area_1_clones_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+    {{(((states.input_datetime.area_1_clones_enddate.attributes.timestamp) - (states.input_datetime.area_1_clones_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
   unit_of_measurement: Tage
 - icon: mdi:calendar-start
   name: area_1_datediff_days_veg
   state: >
-      {{(((states.input_datetime.area_1_veg_enddate.attributes.timestamp) - (states.input_datetime.area_1_veg_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+    {{(((states.input_datetime.area_1_veg_enddate.attributes.timestamp) - (states.input_datetime.area_1_veg_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
   unit_of_measurement: Tage
 - icon: mdi:calendar-start
   name: area_1_datediff_days__flower_stretch
   state: >
-      {{(((states.input_datetime.area_1_flower_stretch_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_stretch_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+    {{(((states.input_datetime.area_1_flower_stretch_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_stretch_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
   unit_of_measurement: Tage
 - icon: mdi:calendar-start
   name: area_1_datediff_days__flower_bulk
   state: >
-      {{(((states.input_datetime.area_1_flower_bulk_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_bulk_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+    {{(((states.input_datetime.area_1_flower_bulk_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_bulk_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
   unit_of_measurement: Tage
 - icon: mdi:calendar-start
   name: area_1_datediff_days__flower_finish
   state: >
-      {{(((states.input_datetime.area_1_flower_finish_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_finish_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+    {{(((states.input_datetime.area_1_flower_finish_enddate.attributes.timestamp) - (states.input_datetime.area_1_flower_finish_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
   unit_of_measurement: Tage
 - icon: mdi:calendar-start
   name: area_1_datediff_days__dry
   state: >
-      {{(((states.input_datetime.area_1_dry_enddate.attributes.timestamp) - (states.input_datetime.area_1_dry_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
+    {{(((states.input_datetime.area_1_dry_enddate.attributes.timestamp) - (states.input_datetime.area_1_dry_startdate.attributes.timestamp)) | int /60/1440) | round(0)}}
   unit_of_measurement: Tage
 - icon: mdi:calendar-start
   name: area_1_datediff_weeks_clones
   state: >
-      {{(states('sensor.area_1_datediff_days_clones') | int / 7 ) | round(0)}}
+    {{(states('sensor.area_1_datediff_days_clones') | int / 7 ) | round(0)}}
   unit_of_measurement: Wochen
 - icon: mdi:calendar-start
   name: area_1_datediff_weeks_veg
   state: >
-      {{(states('sensor.area_1_datediff_days_veg') | int / 7 ) | round(0)}}
+    {{(states('sensor.area_1_datediff_days_veg') | int / 7 ) | round(0)}}
   unit_of_measurement: Wochen
 - icon: mdi:calendar-start
   name: area_1_datediff_weeks__flower_stretch
   state: >
-      {{(states('sensor.area_1_datediff_days_flower_stretch') | int / 7 ) | round(0)}}
+    {{(states('sensor.area_1_datediff_days_flower_stretch') | int / 7 ) | round(0)}}
   unit_of_measurement: Wochen
 - icon: mdi:calendar-start
   name: area_1_datediff_weeks__flower_bulk
   state: >
-      {{(states('sensor.area_1_datediff_days_flower_bulk') | int / 7 ) | round(0)}}
+    {{(states('sensor.area_1_datediff_days_flower_bulk') | int / 7 ) | round(0)}}
   unit_of_measurement: Wochen
 - icon: mdi:calendar-start
   name: area_1_datediff_weeks__flower_finish
   state: >
-      {{(states('sensor.area_1_datediff_days_flower_finish') | int / 7 ) | round(0)}}
+    {{(states('sensor.area_1_datediff_days_flower_finish') | int / 7 ) | round(0)}}
   unit_of_measurement: Wochen
 - icon: mdi:calendar-start
   name: area_1_datediff_weeks__dry
   state: >
-      {{(states('sensor.area_1_datediff_days_dry') | int / 7 ) | round(0)}}
+    {{(states('sensor.area_1_datediff_days_dry') | int / 7 ) | round(0)}}
   unit_of_measurement: Wochen
 - icon: mdi:temperature-celsius
   name: area_1_max_temperature_air
@@ -168,7 +168,7 @@
     {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.max_humidity_dry')}}
     {% else %} NaN
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:water-percent
   name: area_1_target_humidity
   state: >
@@ -186,7 +186,7 @@
     {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('input_number.target_humidity_dry')}}
     {% else %} NaN
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:water-percent
   name: area_1_min_humidity
   state: >
@@ -204,7 +204,7 @@
     {% elif states('input_select.area_1_stage') == 'Dry' and  states('binary_sensor.area_1_is_day') == 'off' %} {{states('sensor.min_humidity_dry')}}
     {% else %} NaN
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:molecule-co2
   name: area_1_max_co2
   state: >
@@ -353,7 +353,7 @@
     {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.max_humidity_day_flower_finish')}}
     {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.max_humidity_dry')}}
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:water-percent
   name: area_1_target_humidity_day
   state: >
@@ -364,7 +364,7 @@
     {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('input_number.target_humidity_day_flower_finish')}}
     {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('input_number.target_humidity_dry')}}
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:water-percent
   name: area_1_min_humidity_day
   state: >
@@ -375,7 +375,7 @@
     {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.min_humidity_day_flower_finish')}}
     {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.min_humidity_dry')}}
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:target
   name: area_1_max_vpd
   state: >
@@ -452,7 +452,7 @@
     {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.max_humidity_night_flower_finish')}}
     {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.max_humidity_dry')}}
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:water-percent
   name: area_1_target_humidity_night
   state: >
@@ -463,7 +463,7 @@
     {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('input_number.target_humidity_night_flower_finish')}}
     {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('input_number.target_humidity_dry')}}
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:water-percent
   name: area_1_min_humidity_night
   state: >
@@ -474,7 +474,7 @@
     {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.min_humidity_night_flower_finish')}}
     {% elif states('input_select.area_1_stage') == 'Dry'%} {{states('sensor.min_humidity_dry')}}
     {% endif %}
-  unit_of_measurement: '%'
+  unit_of_measurement: "%"
 - icon: mdi:water-percent
   name: area_1_max_co2_day
   state: >
@@ -605,3 +605,25 @@
     {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('sensor.target_light_intensity_flower_finish')}}
     {% endif %}
   unit_of_measurement: lx
+
+- icon: mdi:water-check
+  name: area_1_light_max_power
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('input_number.area_1_light_max_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('input_number.area_1_light_max_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('input_number.area_1_light_max_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('input_number.area_1_light_max_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('input_number.area_1_light_max_flower_finish')}}
+    {% endif %}
+  unit_of_measurement: "%"
+
+- icon: mdi:water-check
+  name: area_1_light_min_power
+  state: >
+    {% if states('input_select.area_1_stage') == 'Clone'%} {{states('input_number.area_1_light_min_clones')}}
+    {% elif states('input_select.area_1_stage') == 'Veg'%} {{states('input_number.area_1_light_min_veg')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-stretch'%} {{states('input_number.area_1_light_min_flower_stretch')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-bulk'%} {{states('input_number.area_1_light_min_flower_bulk')}}
+    {% elif states('input_select.area_1_stage') == 'Flower-finish'%} {{states('input_number.area_1_light_min_flower_finish')}}
+    {% endif %}
+  unit_of_measurement: "%"

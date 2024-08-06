@@ -5,7 +5,65 @@ views:
     icon: mdi:home
     sections:
       - type: grid
-        cards: []
+        cards:
+          - type: custom:digital-clock
+          - show_current: true
+            show_forecast: true
+            type: weather-forecast
+            entity: weather.forecast_home
+            forecast_type: daily
+            name: Wettervorhersage
+            secondary_info_attribute: dew_point
+          - type: custom:ha-vpd-chart
+            sensors:
+              - temperature: sensor.area_1_temperature_air
+                humidity: sensor.area_1_humidity
+                name: Growzelt
+                leaf_temperature: sensor.area_1_temperature_leaf
+              - temperature: sensor.area_2_temperature_air
+                humidity: sensor.area_2_humidity
+                name: Propagator
+                leaf_temperature: sensor.area_2_temperature_leaf
+            air_text: Temp
+            rh_text: Hum
+            kpa_text: VPD
+            min_height: 400
+            min_temperature: 15
+            min_humidity: 35
+            enable_ghostmap: true
+            enable_axes: true
+            enable_triangle: true
+            is_bar_view: false
+            vpd_phases:
+              - lower: -0.59
+                upper: 0.58
+                className: too low
+                color: '#ce4134'
+              - lower: 0.58
+                upper: 0.74
+                className: tolerance Low
+                color: '#ecf000'
+              - lower: 0.74
+                upper: 1
+                className: vegetative Phase
+                color: '#40b800'
+              - lower: 1
+                upper: 1.18
+                className: generative Phase
+                color: '#1f7500'
+              - lower: 1.18
+                className: Endphase
+                color: '#57c52f'
+                upper: 1.45
+              - lower: 1.45
+                upper: 1.58
+                className: Tolerance high
+                color: '#ecf000'
+              - lower: 1.58
+                upper: 3.06
+                className: too high
+                color: '#ce4134'
+        title: Welcome to GanjOS
     cards: []
     background: {}
     type: sections
@@ -428,40 +486,29 @@ views:
         title: Luftbedingungen
       - type: grid
         cards:
-          - type: custom:flower-card
-            entity: plant.plant_1
-            battery_sensor: sensor.myflower_battery
-            show_bars:
-              - moisture
-              - conductivity
-              - humidity
-              - dli
-              - illuminance
-              - temperature
-            display_type: full
-          - type: custom:flower-card
-            entity: plant.plant_2
-            battery_sensor: sensor.myflower_battery
-            show_bars:
-              - moisture
-              - conductivity
-              - temperature
-              - illuminance
-              - humidity
-              - dli
-          - type: custom:flower-card
-            entity: plant.plant_3
-            battery_sensor: sensor.myflower_battery
-            show_bars:
-              - moisture
-              - conductivity
-              - temperature
-              - illuminance
-              - humidity
-              - dli
-        title: Substratbedingungen
-      - type: grid
-        cards:
+          - type: custom:bubble-card
+            card_type: select
+            entity: input_select.area_2_is_active
+            card_layout: large
+            name: Ist der Bereich aktiv?
+            icon: mdi:power
+            icon_color: green
+            show_state: true
+            sub_button: []
+            show_last_changed: true
+            show_attribute: false
+            show_name: true
+            force_icon: true
+            show_icon: true
+            scrolling_effect: true
+            layout_options:
+              grid_columns: 4
+              grid_rows: 1
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_is_active'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_stage
@@ -517,8 +564,13 @@ views:
       - type: grid
         cards:
           - type: custom:bubble-card
+            card_type: separator
+            name: Licht
+            icon: mdi:lightbulb
+            card_layout: large
+          - type: custom:bubble-card
             card_type: button
-            entity: switch.propgator_light_switch_0
+            entity: switch.propagator_light_switch_0
             force_icon: true
             show_state: false
             show_last_changed: true
@@ -542,6 +594,35 @@ views:
             button_type: switch
             icon: mdi:lightbulb
           - type: custom:bubble-card
+            card_type: select
+            entity: input_select.area_2_lightcontrol_time_mode
+            name: Beleuchtungszeit Modus
+            icon: mdi:lightbulb-question
+            show_state: true
+            show_last_changed: true
+            card_layout: large
+          - type: custom:bubble-card
+            card_type: button
+            button_type: state
+            entity: time.area_2_schedule_light_start
+            name: Zeiten
+            show_last_changed: true
+            show_state: false
+            sub_button:
+              - entity: time.area_2_schedule_light_start
+                show_state: true
+                icon: mdi:weather-sunset-up
+              - entity: time.area_2_schedule_light_end
+                icon: mdi:weather-sunset-down
+                show_state: true
+            card_layout: large
+            icon: mdi:lightbulb-auto
+          - type: custom:bubble-card
+            card_type: separator
+            name: Klimatechnik
+            icon: mdi:fan
+            card_layout: large
+          - type: custom:bubble-card
             card_type: button
             button_type: slider
             entity: fan.aircontrol_propagator_ruck_ec
@@ -563,10 +644,71 @@ views:
                 show_last_changed: false
                 show_icon: true
                 show_background: true
+              - entity: switch.propagator_exhaust_switch_0
+                show_state: true
+                show_attribute: false
             visibility:
               - condition: state
                 entity: input_select.area_2_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                animation: ${hass.states['switch.propagator_exhaust_switch_0'].state === 'on' ? 'slow-rotate 2s linear infinite' : ''};
+              }
+              @keyframes slow-rotate {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
+          - type: custom:bubble-card
+            card_type: separator
+            name: Ventilatoren
+            icon: mdi:fan
+            card_layout: large
+          - type: custom:bubble-card
+            card_type: button
+            button_type: state
+            entity: switch.grow_ventilation_1_switch_0
+            icon: mdi:fan
+            name: Ventilatoren
+            show_state: false
+            show_last_changed: true
+            layout_options:
+              grid_columns: 4
+              grid_rows: 1
+            card_layout: large
+            force_icon: false
+            sub_button:
+              - entity: switch.grow_ventilation_1_switch_0
+                show_name: false
+                show_last_changed: false
+                show_state: true
+                show_attribute: false
+            visibility:
+              - condition: state
+                entity: input_select.area_2_is_humidifier_available
+                state: Ja
+            styles: |
+              .bubble-sub-button-1 {
+                background-color: ${hass.states['switch.grow_ventilation_1_switch_0'].state === 'on' ? 'green' : 'red'} !important;
+              }
+          - graph: line
+            type: sensor
+            detail: 2
+            entity: sensor.area_2_exhaust_percentage
+            name: Abluft Power (letzte 24h)
+            hours_to_show: 24
+            layout_options:
+              grid_columns: 4
+              grid_rows: 2
+            visibility:
+              - condition: state
+                entity: binary_sensor.area_2_is_ventilation_dimmable
+                state: 'on'
+          - type: custom:bubble-card
+            card_type: separator
+            name: Luftfeuchtigkeitsregelung
+            icon: mdi:fan
+            card_layout: large
           - type: custom:bubble-card
             card_type: button
             button_type: state
@@ -590,28 +732,14 @@ views:
               - condition: state
                 entity: input_select.area_2_is_humidifier_available
                 state: Ja
-          - type: custom:bubble-card
-            card_type: button
-            button_type: state
-            entity: switch.grow_dehumidifier_switch_0
-            icon: mdi:air-humidifier
-            name: Luftentfeuchter
-            show_state: false
-            show_last_changed: true
-            layout_options:
-              grid_columns: 4
-              grid_rows: 1
-            card_layout: large
-            sub_button:
-              - entity: switch.grow_dehumidifier_switch_0
-                show_name: false
-                show_last_changed: false
-                show_state: true
-            visibility:
-              - condition: state
-                entity: input_select.area_2_is_dehumidifier_available
-                state: Ja
-        title: Geräteübersicht
+            styles: |
+              .bubble-sub-button-1 {
+                background-color: ${hass.states['switch.grow_humidifier_switch_0'].state === 'on' ? 'green' : 'red'} !important;
+              }
+        visibility:
+          - condition: state
+            entity: input_select.area_2_is_active
+            state: Ja
   - title: Grow
     path: grow
     cards: []
@@ -621,6 +749,11 @@ views:
     sections:
       - type: grid
         cards:
+          - type: custom:bubble-card
+            card_type: separator
+            name: Luftbedingungen
+            icon: mdi:cloud
+            card_layout: large
           - type: custom:config-template-card
             entities:
               - sensor.area_1_vpd
@@ -724,11 +857,14 @@ views:
             type: statistics-graph
             entities:
               - sensor.area_1_vpd
-              - area_1_target_vpd
             hide_legend: true
-            title: VPD (letzte 24h)
+            title: VPD
             days_to_show: 1
             logarithmic_scale: false
+            stat_types:
+              - mean
+              - min
+              - max
           - type: custom:config-template-card
             entities:
               - sensor.area_1_temperature_air
@@ -1020,6 +1156,22 @@ views:
             layout_options:
               grid_columns: 2
               grid_rows: auto
+          - type: vertical-stack
+            cards:
+              - show_name: false
+                show_icon: true
+                show_state: true
+                type: glance
+                entities:
+                  - sensor.max_co2_day_clones
+                  - sensor.min_co2_day_clones
+                  - sensor.max_co2_night_clones
+                state_color: false
+                title: test
+                columns: 1
+            layout_options:
+              grid_columns: 2
+              grid_rows: auto
           - chart_type: line
             period: hour
             type: statistics-graph
@@ -1046,9 +1198,17 @@ views:
                 entity: sensor.area_1_co2
                 state: unknown
             name: CO2
-        title: Luftbedingungen
+        visibility:
+          - condition: state
+            entity: input_select.area_1_is_active
+            state: Ja
       - type: grid
         cards:
+          - type: custom:bubble-card
+            card_type: separator
+            name: Substratbedingungen
+            icon: mdi:sprout
+            card_layout: large
           - type: custom:flower-card
             entity: plant.plant_1
             battery_sensor: sensor.myflower_battery
@@ -1060,6 +1220,10 @@ views:
               - temperature
               - conductivity
             display_type: full
+            visibility:
+              - condition: state
+                entity: input_select.area_1_is_active
+                state: Ja
           - chart_type: line
             period: hour
             type: statistics-graph
@@ -1073,9 +1237,44 @@ views:
             hide_legend: true
             logarithmic_scale: false
             days_to_show: 5
-        title: Substratbedingungen
+            visibility:
+              - condition: state
+                entity: input_select.area_1_is_active
+                state: Ja
+        visibility:
+          - condition: state
+            entity: input_select.area_1_is_active
+            state: Ja
       - type: grid
         cards:
+          - type: custom:bubble-card
+            card_type: separator
+            name: Growdaten
+            icon: mdi:database
+            card_layout: large
+          - type: custom:bubble-card
+            card_type: select
+            entity: input_select.area_1_is_active
+            card_layout: large
+            name: Ist der Bereich aktiv?
+            icon: mdi:power
+            icon_color: green
+            show_state: true
+            sub_button: []
+            show_last_changed: true
+            show_attribute: false
+            show_name: true
+            force_icon: true
+            show_icon: true
+            scrolling_effect: true
+            layout_options:
+              grid_columns: 4
+              grid_rows: 1
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_is_active'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_stage
@@ -1094,42 +1293,17 @@ views:
             layout_options:
               grid_columns: 4
               grid_rows: 1
-          - type: custom:bubble-card
-            card_type: button
-            icon: mdi:sprout
-            name: Samen & Stecklinge
-            show_state: false
-            show_last_changed: true
-            layout_options:
-              grid_columns: 4
-              grid_rows: 1
-            card_layout: large-2-rows
-            sub_button:
-              - entity: sensor.area_1_datediff_days_clones
-                show_name: false
-                show_last_changed: false
-                show_state: true
-                tap_action:
-                  action: none
-              - show_background: false
-                show_icon: true
-                name: Prozent
-                show_name: true
-                show_attribute: false
-              - show_name: true
-                show_last_changed: false
-                show_state: true
-                name: Start
-                entity: input_datetime.area_1_clones_startdate
-              - entity: input_datetime.area_1_clones_enddate
-                name: Ende
-                show_name: true
-                show_state: true
-            button_type: name
-            show_name: false
-        title: Growdaten
+            visibility:
+              - condition: state
+                entity: input_select.area_1_is_active
+                state: Ja
       - type: grid
         cards:
+          - type: custom:bubble-card
+            card_type: separator
+            name: Licht
+            icon: mdi:lightbulb
+            card_layout: large
           - type: custom:bubble-card
             card_type: button
             button_type: slider
@@ -1152,6 +1326,7 @@ views:
                 show_icon: true
                 show_background: true
                 attribute: brightness
+                icon: mdi:lightbulb-on-40
               - entity: switch.grow_light_switch_0
                 name: Power
                 show_name: false
@@ -1159,11 +1334,28 @@ views:
                 show_last_changed: false
                 show_attribute: false
                 tap_action:
-                  action: toggle
+                  action: call-service
+                  target:
+                    entity_id: light.growlightdimmer_light_0
+                  service: turn_off
             visibility:
               - condition: state
                 entity: input_select.area_1_is_light_available
                 state: Ja
+            styles: >
+              .bubble-sub-button-2 {
+                display: ${hass.states['light.growlightdimmer_light_0'].state === 'off' ? 'none' : ''} !important;
+                background-color: ${hass.states['light.growlightdimmer_light_0'].state === 'off' ? 'red' : 'green'} !important;
+              }
+
+              .bubble-sub-button-1 {
+                background-color: ${hass.states['light.growlightdimmer_light_0'].state === 'off' ? 'red' : 'green'} !important;
+              }
+
+              ${icon.setAttribute("icon",
+              hass.states['light.growlightdimmer_light_0'].state === 'off' ?
+              'mdi:lightbulb' : 'mdi:lightbulb-on')}
+            icon: light
           - graph: line
             type: sensor
             detail: 2
@@ -1177,6 +1369,37 @@ views:
               - condition: state
                 entity: binary_sensor.area_1_is_light_dimmable
                 state: 'on'
+          - type: custom:bubble-card
+            card_type: select
+            entity: input_select.area_1_lightcontrol_time_mode
+            name: Beleuchtungszeit Modus
+            icon: mdi:lightbulb-question
+            show_state: true
+            show_last_changed: true
+            card_layout: large
+          - type: custom:bubble-card
+            card_type: button
+            button_type: state
+            entity: time.area_1_schedule_light_start
+            name: Zeiten
+            show_last_changed: true
+            show_state: false
+            sub_button:
+              - entity: time.area_1_schedule_light_start
+                show_state: true
+                icon: mdi:weather-sunset-up
+              - entity: time.area_1_schedule_light_end
+                icon: mdi:weather-sunset-down
+                show_state: true
+                tap_action:
+                  action: none
+            card_layout: large
+            icon: mdi:lightbulb-auto
+          - type: custom:bubble-card
+            card_type: separator
+            name: Klimatechnik
+            icon: mdi:fan
+            card_layout: large
           - type: custom:bubble-card
             card_type: button
             button_type: slider
@@ -1213,6 +1436,20 @@ views:
                 entity: input_select.area_1_is_exhaust_available
                 state: Ja
             icon: mdi:fan
+            styles: |
+              .bubble-sub-button-1 {
+                display: ${hass.states['switch.grow_exhaust_switch_0'].state === 'on' ? '' : 'none'} !important;
+              }
+              .bubble-sub-button-2 {
+                background-color: ${hass.states['switch.grow_exhaust_switch_0'].state === 'on' ? 'green' : 'red'} !important;
+              }
+              .bubble-icon {
+                animation: ${hass.states['switch.grow_exhaust_switch_0'].state === 'on' ? 'slow-rotate 2s linear infinite' : ''};
+              }
+              @keyframes slow-rotate {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
           - graph: line
             type: sensor
             detail: 2
@@ -1226,6 +1463,11 @@ views:
               - condition: state
                 entity: binary_sensor.area_1_is_exhaust_dimmable
                 state: 'on'
+          - type: custom:bubble-card
+            card_type: separator
+            name: Ventilatoren
+            icon: mdi:fan
+            card_layout: large
           - type: custom:bubble-card
             card_type: button
             button_type: slider
@@ -1290,6 +1532,10 @@ views:
               - condition: state
                 entity: input_select.area_1_is_humidifier_available
                 state: Ja
+            styles: |
+              .bubble-sub-button-1 {
+                background-color: ${hass.states['switch.grow_ventilation_1_switch_0'].state === 'on' ? 'green' : 'red'} !important;
+              }
           - graph: line
             type: sensor
             detail: 2
@@ -1303,6 +1549,11 @@ views:
               - condition: state
                 entity: binary_sensor.area_1_is_ventilation_dimmable
                 state: 'on'
+          - type: custom:bubble-card
+            card_type: separator
+            name: Luftfeuchtigkeitsregelung
+            icon: mdi:fan
+            card_layout: large
           - type: custom:bubble-card
             card_type: button
             button_type: state
@@ -1326,6 +1577,10 @@ views:
               - condition: state
                 entity: input_select.area_1_is_humidifier_available
                 state: Ja
+            styles: |
+              .bubble-sub-button-1 {
+                background-color: ${hass.states['switch.grow_humidifier_switch_0'].state === 'on' ? 'green' : 'red'} !important;
+              }
           - graph: line
             type: sensor
             detail: 2
@@ -1360,6 +1615,10 @@ views:
               - condition: state
                 entity: input_select.area_1_is_dehumidifier_available
                 state: Ja
+            styles: |
+              .bubble-sub-button-1 {
+                background-color: ${hass.states['switch.grow_dehumidifier_switch_0'].state === 'on' ? 'green' : 'red'} !important;
+              }
           - graph: line
             type: sensor
             detail: 2
@@ -1373,7 +1632,10 @@ views:
               - condition: state
                 entity: binary_sensor.area_1_is_dehumidifier_dimmable
                 state: 'on'
-        title: Geräteübersicht
+        visibility:
+          - condition: state
+            entity: input_select.area_1_is_active
+            state: Ja
   - title: Drytent
     path: drytent
     cards: []
@@ -1385,6 +1647,17 @@ views:
     layout: {}
     subview: true
     icon: mdi:forest
+    type: sections
+    sections:
+      - type: grid
+        cards:
+          - show_current: true
+            show_forecast: true
+            type: weather-forecast
+            entity: weather.forecast_home
+            forecast_type: daily
+            name: Wettervorhersage
+            secondary_info_attribute: dew_point
   - title: Stromverbrauch
     path: stromverbrauch
     icon: mdi:flash
@@ -1473,6 +1746,19 @@ views:
               tap_action:
                 action: navigate
                 navigation_path: trichome-color-harvest-determination
+          - type: custom:bubble-card
+            card_type: button
+            button_type: name
+            name: Grow Diaries
+            icon: mdi:book-alert
+            card_layout: large
+            tap_action:
+              action: navigate
+              navigation_path: grow-diaries
+            button_action:
+              tap_action:
+                action: navigate
+                navigation_path: grow-diaries
         title: Sonstige nützliche Helfer
       - type: grid
         cards:
@@ -2001,6 +2287,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_is_light_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_light_dimmable
@@ -2013,11 +2304,16 @@ views:
               - condition: state
                 entity: input_select.area_2_is_light_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_light_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_2_dimm_step_light
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2056,6 +2352,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                  color: ${hass.states['input_select.area_2_is_exhaust_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_exhaust_eq_ac
@@ -2068,6 +2369,11 @@ views:
               - condition: state
                 entity: input_select.area_2_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_exhaust_eq_ac'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_exhaust_eq_dehumidifer
@@ -2080,6 +2386,11 @@ views:
               - condition: state
                 entity: input_select.area_2_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_exhaust_eq_dehumidifer'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_exhaust_dimmable
@@ -2092,11 +2403,16 @@ views:
               - condition: state
                 entity: input_select.area_2_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_exhaust_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_2_dimm_step_exhaust
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2114,7 +2430,7 @@ views:
             card_type: button
             entity: input_number.area_2_automation_exhaust_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2139,6 +2455,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_is_ventilation_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_ventilation_dimmable
@@ -2151,11 +2472,16 @@ views:
               - condition: state
                 entity: input_select.area_2_is_ventilation_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_ventilation_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_2_dimm_step_ventilation
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2173,7 +2499,7 @@ views:
             card_type: button
             entity: input_number.area_2_automation_ventilation_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2198,6 +2524,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_is_heater_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_heater_dimmable
@@ -2210,11 +2541,16 @@ views:
               - condition: state
                 entity: input_select.area_2_is_heater_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_heater_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_2_dimm_step_heater
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2232,7 +2568,7 @@ views:
             card_type: button
             entity: input_number.area_2_automation_heater_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2257,6 +2593,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_is_humidifier_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_humidifier_dimmable
@@ -2269,11 +2610,16 @@ views:
               - condition: state
                 entity: input_select.area_2_is_humidifier_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_humidifier_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_2_dimm_step_humidifier
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2291,7 +2637,7 @@ views:
             card_type: button
             entity: input_number.area_2_automation_humidifier_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2316,6 +2662,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_is_dehumidifier_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_2_dehumidifier_dimmable
@@ -2328,11 +2679,16 @@ views:
               - condition: state
                 entity: input_select.area_2_is_dehumidifier_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_2_dehumidifier_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_2_dimm_step_dehumidifier
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2350,7 +2706,7 @@ views:
             card_type: button
             entity: input_number.area_2_automation_dehumidifier_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2405,22 +2761,30 @@ views:
               - condition: state
                 entity: input_select.area_1_is_light_available
                 state: Ja
+              - condition: state
+                entity: input_select.area_1_light_dimmable
+                state: Ja
           - type: custom:bubble-card
             card_type: button
-            button_type: slider
-            name: Dauer Sonnenauf/-untergang
-            icon: mdi:weather-sunset-up
-            card_layout: large
-            tap_action:
-              navigation_path: stretch-settings
-            button_action:
-              tap_action:
-                navigation_path: stretch-settings
-            entity: input_number.target_temperature_air_day_night_difference_clones
+            entity: input_number.area_1_duration_sunrise
+            name: Dauer Sonnenaufgang/-untergang
+            icon: mdi:theme-light-dark
             show_state: true
-            show_attribute: false
             show_last_changed: true
-            sub_button: []
+            card_layout: large
+            visibility:
+              - condition: and
+                conditions:
+                  - condition: state
+                    entity: input_select.area_1_is_light_available
+                    state: Ja
+                  - condition: state
+                    entity: input_select.area_1_light_dimmable
+                    state: Ja
+                  - condition: state
+                    entity: input_select.area_1_lightcontrol_mode
+                    state: Sunrise
+            button_type: slider
         title: GanjOS Modes
       - type: grid
         cards:
@@ -2432,6 +2796,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_is_light_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_light_dimmable
@@ -2444,19 +2813,29 @@ views:
               - condition: state
                 entity: input_select.area_1_is_light_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_light_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_1_dimm_step_light
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
             button_type: slider
             visibility:
-              - condition: state
-                entity: binary_sensor.area_1_is_light_dimmable
-                state: 'on'
+              - condition: and
+                conditions:
+                  - condition: state
+                    entity: input_select.area_1_is_light_available
+                    state: Ja
+                  - condition: state
+                    entity: input_select.area_1_light_dimmable
+                    state: Ja
           - type: custom:bubble-card
             card_type: button
             name: Pflanzenstadieneinstellungen
@@ -2466,16 +2845,21 @@ views:
             card_layout: large
             button_type: name
             visibility:
-              - condition: state
-                entity: binary_sensor.area_1_is_light_dimmable
-                state: 'on'
+              - condition: and
+                conditions:
+                  - condition: state
+                    entity: input_select.area_1_is_light_available
+                    state: Ja
+                  - condition: state
+                    entity: input_select.area_1_light_dimmable
+                    state: Ja
             tap_action:
               action: navigate
-              navigation_path: light-settings-area-1
+              navigation_path: light-settings-area-2
             button_action:
               tap_action:
                 action: navigate
-                navigation_path: light-settings-area-1
+                navigation_path: light-settings-area-2
         title: Licht
       - type: grid
         cards:
@@ -2487,6 +2871,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                  color: ${hass.states['input_select.area_1_is_exhaust_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_exhaust_eq_ac
@@ -2499,6 +2888,11 @@ views:
               - condition: state
                 entity: input_select.area_1_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_exhaust_eq_ac'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_exhaust_eq_dehumidifer
@@ -2511,6 +2905,11 @@ views:
               - condition: state
                 entity: input_select.area_1_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_exhaust_eq_dehumidifer'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_exhaust_dimmable
@@ -2523,11 +2922,16 @@ views:
               - condition: state
                 entity: input_select.area_1_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_exhaust_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_1_dimm_step_exhaust
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2545,7 +2949,7 @@ views:
             card_type: button
             entity: input_number.area_1_automation_exhaust_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2570,6 +2974,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_is_ventilation_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_ventilation_dimmable
@@ -2582,11 +2991,16 @@ views:
               - condition: state
                 entity: input_select.area_1_is_ventilation_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_ventilation_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_1_dimm_step_ventilation
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2604,7 +3018,7 @@ views:
             card_type: button
             entity: input_number.area_1_automation_ventilation_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2629,6 +3043,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_is_heater_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_heater_dimmable
@@ -2641,11 +3060,16 @@ views:
               - condition: state
                 entity: input_select.area_1_is_heater_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_heater_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_1_dimm_step_heater
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2663,7 +3087,7 @@ views:
             card_type: button
             entity: input_number.area_1_automation_heater_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2688,6 +3112,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_is_humidifier_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_humidifier_dimmable
@@ -2700,11 +3129,16 @@ views:
               - condition: state
                 entity: input_select.area_1_is_humidifier_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_humidifier_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_1_dimm_step_humidifier
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2722,7 +3156,7 @@ views:
             card_type: button
             entity: input_number.area_1_automation_humidifier_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2747,6 +3181,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_is_dehumidifier_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_1_dehumidifier_dimmable
@@ -2759,11 +3198,16 @@ views:
               - condition: state
                 entity: input_select.area_1_is_dehumidifier_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_1_dehumidifier_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_1_dimm_step_dehumidifier
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2781,7 +3225,7 @@ views:
             card_type: button
             entity: input_number.area_1_automation_dehumidifier_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2800,7 +3244,6 @@ views:
           - condition: state
             entity: binary_sensor.area_1_is_exhaust_eq_dehumidifier
             state: 'off'
-    max_columns: 4
   - title: Trocknungszelt Einstellungen
     path: drytent-settings
     subview: true
@@ -2848,6 +3291,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_is_light_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_3_light_dimmable
@@ -2860,11 +3308,16 @@ views:
               - condition: state
                 entity: input_select.area_3_is_light_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_light_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_3_dimm_step_light
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2885,6 +3338,13 @@ views:
               - condition: state
                 entity: binary_sensor.area_3_is_light_dimmable
                 state: 'on'
+            tap_action:
+              action: navigate
+              navigation_path: light-settings-area-2
+            button_action:
+              tap_action:
+                action: navigate
+                navigation_path: light-settings-area-2
         title: Licht
       - type: grid
         cards:
@@ -2896,6 +3356,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                  color: ${hass.states['input_select.area_3_is_exhaust_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_3_exhaust_eq_ac
@@ -2908,6 +3373,11 @@ views:
               - condition: state
                 entity: input_select.area_3_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_exhaust_eq_ac'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_3_exhaust_eq_dehumidifer
@@ -2920,6 +3390,11 @@ views:
               - condition: state
                 entity: input_select.area_3_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_exhaust_eq_dehumidifer'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_3_exhaust_dimmable
@@ -2932,11 +3407,16 @@ views:
               - condition: state
                 entity: input_select.area_3_is_exhaust_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_exhaust_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_3_dimm_step_exhaust
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2954,7 +3434,7 @@ views:
             card_type: button
             entity: input_number.area_3_automation_exhaust_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -2979,6 +3459,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_is_ventilation_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_3_ventilation_dimmable
@@ -2991,11 +3476,16 @@ views:
               - condition: state
                 entity: input_select.area_3_is_ventilation_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_ventilation_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_3_dimm_step_ventilation
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -3013,7 +3503,7 @@ views:
             card_type: button
             entity: input_number.area_3_automation_ventilation_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -3038,6 +3528,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_is_heater_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_3_heater_dimmable
@@ -3050,11 +3545,16 @@ views:
               - condition: state
                 entity: input_select.area_3_is_heater_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_heater_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_3_dimm_step_heater
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -3072,7 +3572,7 @@ views:
             card_type: button
             entity: input_number.area_3_automation_heater_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -3097,6 +3597,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_is_humidifier_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_3_humidifier_dimmable
@@ -3109,11 +3614,16 @@ views:
               - condition: state
                 entity: input_select.area_3_is_humidifier_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_humidifier_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_3_dimm_step_humidifier
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -3131,7 +3641,7 @@ views:
             card_type: button
             entity: input_number.area_3_automation_humidifier_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -3156,6 +3666,11 @@ views:
             show_state: true
             show_last_changed: true
             card_layout: large
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_is_dehumidifier_available'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: select
             entity: input_select.area_3_dehumidifier_dimmable
@@ -3168,11 +3683,16 @@ views:
               - condition: state
                 entity: input_select.area_3_is_dehumidifier_available
                 state: Ja
+            styles: |-
+              .bubble-icon {
+                opacity: 1 !important;
+                color: ${hass.states['input_select.area_3_dehumidifier_dimmable'].state === 'Nein' ? 'red' : 'green'} !important;
+              }
           - type: custom:bubble-card
             card_type: button
             entity: input_number.area_3_dimm_step_dehumidifier
             name: In welchen Stufen soll gedimmt werden?
-            icon: ''
+            icon: mdi:percent
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -3190,7 +3710,7 @@ views:
             card_type: button
             entity: input_number.area_3_automation_dehumidifier_interval_duration
             name: Wie lange soll die Intervallschaltung laufen?
-            icon: ''
+            icon: mdi:clock
             show_state: true
             show_last_changed: true
             card_layout: large
@@ -3209,7 +3729,6 @@ views:
           - condition: state
             entity: binary_sensor.area_3_is_exhaust_eq_dehumidifier
             state: 'off'
-    max_columns: 4
   - title: Samen und Stecklinge Einstellungen
     path: clones-settings
     cards: []
@@ -5801,3 +6320,11 @@ views:
         title: Blütenende
     max_columns: 4
     cards: []
+  - title: Grow Diaries
+    path: grow-diaries
+    type: panel
+    cards:
+      - type: iframe
+        url: https://growdiaries.com/
+        aspect_ratio: 50%
+    subview: true

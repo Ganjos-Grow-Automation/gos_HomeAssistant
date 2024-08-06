@@ -107,6 +107,14 @@ area_1_lightcontrol_mode:
   options:
     - On/Off
     - Sunrise
+area_1_lightcontrol_time_mode:
+  icon: mdi:form-dropdown
+  name: Lichtmodus
+  options:
+    - 18/6
+    - 16/8
+    - 12/12
+    - Darkness
 area_1_stage:
   icon: mdi:form-dropdown
   name: Bereich 1 Pflanzenstadium
@@ -373,3 +381,21 @@ area_3_ventilation_dimmable:
   options:
     - Ja
     - Nein# all area select fields
+
+area_2_lightcontrol_time_mode:
+  icon: mdi:form-dropdown
+  name: Lichtmodus
+  options:
+    - 18/6
+    - 16/8
+    - 12/12
+    - Darkness
+
+area_3_lightcontrol_time_mode:
+  icon: mdi:form-dropdown
+  name: Lichtmodus
+  options:
+    - 18/6
+    - 16/8
+    - 12/12
+    - Darkness

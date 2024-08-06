@@ -100,4 +100,19 @@
 - icon: mdi:toggle-switch
   name: area_2_is_ac_eq_exhaust
   state: |
-    {% if is_state("input_select.area_2_exhaust_eq_ac", "Ja") %} true {% else %} false {% endif %}
+    {% if is_state("input_select.area_2_exhaust_eq_ac", "Ja") %} true 
+    {% else %} false 
+    {% endif %}
+
+- icon: mdi:toggle-switch
+  name: area_1_is_active
+  state: |
+    {% if is_state("input_select.area_1_is_active", "Ja") %} true 
+    {% else %} false {% endif %}
+
+- icon: mdi:toggle-switch
+  name: area_2_is_active
+  state: |
+    {% if is_state("input_select.area_2_is_active", "Ja") %} true 
+    {% else %} false 
+    {% endif %}    

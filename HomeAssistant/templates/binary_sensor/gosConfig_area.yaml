@@ -1,7 +1,7 @@
 - icon: mdi:fan
   name: area_1_ventilation_state
   state: > #to be configured
-    {{states('switch.grow_ventilation_switch_0')}} 
+    {{states('switch.grow_ventilation_switch_0')}}
 - icon: mdi:air-conditioner
   name: area_1_exhaust_state
   state: > #to be configured
@@ -41,7 +41,7 @@
 - icon: mdi:air-conditioner
   name: area_2_exhaust_state
   state: > #to be configured
-    {{states('switch.grow_exhaust_switch_0')}}
+    {{states('switch.propagator_exhaust_switch_0')}}
 - icon: mdi:radiator
   name: area_2_heater_state
   state: > #to be configured
@@ -57,7 +57,7 @@
 - icon: mdi:lightbulb
   name: area_2_light_state
   state: > #to be configured
-    {{states('switch.grow_light_switch_0')}}
+    {{states('switch.propagator_light_switch_0')}}
 - icon: mdi:temperature-celsius
   name: multiple_sensors_area_2_temperature_air
   state: false

@@ -1,72 +1,78 @@
 - name: area_1_data_general
   state: |
-    {{ {"Area": "area_1", "AirControlMode": states('input_select.area_1_aircontrol_mode'), "AirControlPrio": states('input_select.area_1_aircontrol_prio')} | tojson}}
+    {{ {"Area": "area_1", "AreaState": states("binary_sensor.area_1_is_active") | bool,"AirControlMode": states('input_select.area_1_aircontrol_mode'), "AirControlPrio": states('input_select.area_1_aircontrol_prio')} | tojson}}
 - name: area_1_data_current
   state: |
-    {{ {"CurrentTempAir": states("sensor.area_1_temperature_air"), "CurrentTempLeaf": states("sensor.area_1_temperature_leaf"), "CurrentHum": states("sensor.area_1_humidity"), "CurrentCO2": states("sensor.area_1_co2")} | tojson }}
+    {{ {"CurrentTempAir": states("sensor.area_1_temperature_air") | float, "CurrentTempLeaf": states("sensor.area_1_temperature_leaf") | float , "CurrentHum": states("sensor.area_1_humidity") | float, "CurrentCO2": states("sensor.area_1_co2") | float} | tojson }}
 - name: area_1_data_air_temp
   state: |
-    {{ {"MaxTempAir": states("sensor.area_1_max_temperature_air"), "TargetTempAir": states("sensor.area_1_target_temperature_air"), "MinTempAir": states("sensor.area_1_min_temperature_air"),"CurrentTempAir": states("sensor.area_1_temperature_air")} | tojson}}
+    {{ {"MaxTempAir": states("sensor.area_1_max_temperature_air")| float, "TargetTempAir": states("sensor.area_1_target_temperature_air")| float, "MinTempAir": states("sensor.area_1_min_temperature_air")| float,"CurrentTempAir": states("sensor.area_1_temperature_air")| float} | tojson}}
 - name: area_1_data_air_hum
   state: |
-    {{ {"MaxHum": states("sensor.area_1_max_humidity"), "TargetHum": states("sensor.area_1_target_humidity"), "MinHum": states("sensor.area_1_min_humidity"), "CurrentHum": states("sensor.area_1_humidity")} | tojson}}
+    {{ {"MaxHum": states("sensor.area_1_max_humidity")| float, "TargetHum": states("sensor.area_1_target_humidity")| float, "MinHum": states("sensor.area_1_min_humidity")| float, "CurrentHum": states("sensor.area_1_humidity")| float} | tojson}}
 - name: area_1_data_air_vpd
   state: |
-    {{ {"MaxVpd": states("sensor.area_1_max_vpd"), "TargetVpd": states("sensor.area_1_target_vpd"), "MinVpd": states("sensor.area_1_min_vpd"), "CurrentVpd": states("sensor.area_1_vpd")} | tojson}}
+    {{ {"MaxVpd": states("sensor.area_1_max_vpd")| float, "TargetVpd": states("sensor.area_1_target_vpd")| float, "MinVpd": states("sensor.area_1_min_vpd")| float, "CurrentVpd": states("sensor.area_1_vpd")| float} | tojson}}
 - name: area_1_data_air_co2
   state: |
-    {{ {"MaxCO2": states("sensor.area_1_max_co2"), "TargetCO2": states("sensor.area_1_target_co2"), "MinCO2": states("sensor.area_1_min_co2"), "CurrentVpd": states("sensor.area_1_co2")} | tojson}}
+    {{ {"MaxCO2": states("sensor.area_1_max_co2")| float, "TargetCO2": states("sensor.area_1_target_co2")| float, "MinCO2": states("sensor.area_1_min_co2")| float, "CurrentVpd": states("sensor.area_1_co2")| float} | tojson}}
 - name: area_1_device_light
   state: |
-    {{ {"LightPowerState": states("binary_sensor.area_1_light_state"), "LightPercentageState": states("sensor.area_1_light_percentage"), "IsLightDimmable": states("binary_sensor.area_1_is_light_dimmable"), "LightDimmSteps": states("input_number.area_1_dimm_step_light")} | tojson}}
+    {{ {"LightPowerState": states("binary_sensor.area_1_light_state") | bool, "LightPercentageState": states("sensor.area_1_light_percentage") | float, "IsLightDimmable": states("binary_sensor.area_1_is_light_dimmable") | bool, "LightDimmSteps": states("input_number.area_1_dimm_step_light") | float, "LightMaxPower": states('sensor.area_1_light_max_power')| float, "LightMinPower": states('sensor.area_1_light_min_power') |float } | tojson}}
 - name: area_1_device_exhaust
   state: |
-    {{ {"ExhaustEqualsAC": states("binary_sensor.area_1_is_ac_eq_exhaust"), "ExhaustEqualsDehumidifier": states("binary_sensor.area_1_is_exhaust_eq_dehumidifier"), "ExhaustPowerState": states("binary_sensor.area_1_exhaust_state"), "ExhaustPercentageState": states("sensor.area_1_exhaust_percentage"), "IsExhaustDimmable": states("binary_sensor.area_1_is_exhaust_dimmable"), "ExhaustDimmSteps": states("input_number.area_1_dimm_step_exhaust")} | tojson}}
+    {{ {"ExhaustEqualsAC": states("binary_sensor.area_1_is_ac_eq_exhaust")| bool, "ExhaustEqualsDehumidifier": states("binary_sensor.area_1_is_exhaust_eq_dehumidifier") | bool, "ExhaustPowerState": states("binary_sensor.area_1_exhaust_state") | bool, "ExhaustPercentageState": states("sensor.area_1_exhaust_percentage") | float, "IsExhaustDimmable": states("binary_sensor.area_1_is_exhaust_dimmable") | bool, "ExhaustDimmSteps": states("input_number.area_1_dimm_step_exhaust") | float} | tojson}}
 - name: area_1_device_ventilation
   state: |
-    {{ {"VentilationPowerState": states("binary_sensor.area_1_ventilation_state"), "VentilationPercentageState": states("sensor.area_1_ventilation_percentage"), "IsVentilationDimmable": states("binary_sensor.area_1_is_ventilation_dimmable"), "VentilationDimmSteps": states("input_number.area_1_dimm_step_ventilation")} | tojson}}
+    {{ {"VentilationPowerState": states("binary_sensor.area_1_ventilation_state") | bool, "VentilationPercentageState": states("sensor.area_1_ventilation_percentage")| float, "IsVentilationDimmable": states("binary_sensor.area_1_is_ventilation_dimmable")| bool, "VentilationDimmSteps": states("input_number.area_1_dimm_step_ventilation") | float} | tojson}}
 - name: area_1_device_heater
   state: |
-    {{ {"HeaterPowerState": states("binary_sensor.area_1_heater_state"), "HeaterPercentageState": states("sensor.area_1_heater_percentage"), "IsHeaterDimmable": states("binary_sensor.area_1_is_heater_dimmable"), "HeaterDimmSteps": states("input_number.area_1_dimm_step_heater")} | tojson}}
+    {{ {"HeaterPowerState": states("binary_sensor.area_1_heater_state") | bool, "HeaterPercentageState": states("sensor.area_1_heater_percentage") | float, "IsHeaterDimmable": states("binary_sensor.area_1_is_heater_dimmable") | bool, "HeaterDimmSteps": states("input_number.area_1_dimm_step_heater") | float} | tojson}}
 - name: area_1_device_humidifier
   state: |
-    {{ {"HumidifierPowerState": states("binary_sensor.area_1_humidifier_state"), "HumidifierPercentageState": states("sensor.area_1_humidifier_percentage"), "IsHumidifierDimmable": states("binary_sensor.area_1_is_humidifier_dimmable"), "HumidifierDimmSteps": states("input_number.area_1_dimm_step_humidifier")} | tojson}}
+    {{ {"HumidifierPowerState": states("binary_sensor.area_1_humidifier_state") | bool, "HumidifierPercentageState": states("sensor.area_1_humidifier_percentage")| float, "IsHumidifierDimmable": states("binary_sensor.area_1_is_humidifier_dimmable") | bool, "HumidifierDimmSteps": states("input_number.area_1_dimm_step_humidifier") | float} | tojson}}
 - name: area_1_device_dehumidifier
   state: |
-    {{ {"DehumidifierPowerState": states("binary_sensor.area_1_dehumidifier_state"), "DehumidifierPercentageState": states("sensor.area_1_dehumidifier_percentage"), "IsDehumidifierDimmable": states("binary_sensor.area_1_is_dehumidifier_dimmable"), "DehumidifierDimmSteps": states("input_number.area_1_dimm_step_dehumidifier")} | tojson}}
+    {{ {"DehumidifierPowerState": states("binary_sensor.area_1_dehumidifier_state") | bool, "DehumidifierPercentageState": states("sensor.area_1_dehumidifier_percentage") | float, "IsDehumidifierDimmable": states("binary_sensor.area_1_is_dehumidifier_dimmable") | bool, "DehumidifierDimmSteps": states("input_number.area_1_dimm_step_dehumidifier") | float} | tojson}}
+- name: area_1_data_light
+  state: |
+    {{ {"Area": "area_1","AreaState": states("binary_sensor.area_1_is_active") | bool,"LightMode": states("input_select.area_1_lightcontrol_mode"), "SunriseSunsetDuration": states("input_number.area_1_duration_sunrise") | float} | tojson}}
 - name: area_2_data_general
   state: |
-    {{ {"Area": "area_2", "AirControlMode": states('input_select.area_2_aircontrol_mode'), "AirControlPrio": states('input_select.area_2_aircontrol_prio')} | tojson}}
+    {{ {"Area": "area_2", "AreaState": states("binary_sensor.area_2_is_active") | bool, "AirControlMode": states('input_select.area_2_aircontrol_mode'), "AirControlPrio": states('input_select.area_2_aircontrol_prio')} | tojson}}
 - name: area_2_data_current
   state: |
-    {{ {"CurrentTempAir": states("sensor.area_2_temperature_air"), "CurrentTempLeaf": states("sensor.area_2_temperature_leaf"), "CurrentHum": states("sensor.area_2_humidity"), "CurrentCO2": states("sensor.area_2_co2")} | tojson }}
+    {{ {"CurrentTempAir": states("sensor.area_2_temperature_air") | float, "CurrentTempLeaf": states("sensor.area_2_temperature_leaf") | float , "CurrentHum": states("sensor.area_2_humidity") | float, "CurrentCO2": states("sensor.area_2_co2") | float} | tojson }}
 - name: area_2_data_air_temp
   state: |
-    {{ {"MaxTempAir": states("sensor.area_2_max_temperature_air"), "TargetTempAir": states("sensor.area_2_target_temperature_air"), "MinTempAir": states("sensor.area_2_min_temperature_air"),"CurrentTempAir": states("sensor.area_2_temperature_air")} | tojson}}
+    {{ {"MaxTempAir": states("sensor.area_2_max_temperature_air")| float, "TargetTempAir": states("sensor.area_2_target_temperature_air")| float, "MinTempAir": states("sensor.area_2_min_temperature_air")| float,"CurrentTempAir": states("sensor.area_2_temperature_air")| float} | tojson}}
 - name: area_2_data_air_hum
   state: |
-    {{ {"MaxHum": states("sensor.area_2_max_humidity"), "TargetHum": states("sensor.area_2_target_humidity"), "MinHum": states("sensor.area_2_min_humidity"), "CurrentHum": states("sensor.area_2_humidity")} | tojson}}
+    {{ {"MaxHum": states("sensor.area_2_max_humidity")| float, "TargetHum": states("sensor.area_2_target_humidity")| float, "MinHum": states("sensor.area_2_min_humidity")| float, "CurrentHum": states("sensor.area_2_humidity")| float} | tojson}}
 - name: area_2_data_air_vpd
   state: |
-    {{ {"MaxVpd": states("sensor.area_2_max_vpd"), "TargetVpd": states("sensor.area_2_target_vpd"), "MinVpd": states("sensor.area_2_min_vpd"), "CurrentVpd": states("sensor.area_1_vpd")} | tojson}}
+    {{ {"MaxVpd": states("sensor.area_2_max_vpd")| float, "TargetVpd": states("sensor.area_2_target_vpd")| float, "MinVpd": states("sensor.area_2_min_vpd")| float, "CurrentVpd": states("sensor.area_2_vpd")| float} | tojson}}
 - name: area_2_data_air_co2
   state: |
-    {{ {"MaxCO2": states("sensor.area_2_max_co2"), "TargetCO2": states("sensor.area_2_target_co2"), "MinCO2": states("sensor.area_2_min_co2"), "CurrentVpd": states("sensor.area_2_co2")} | tojson}}
+    {{ {"MaxCO2": states("sensor.area_2_max_co2")| float, "TargetCO2": states("sensor.area_2_target_co2")| float, "MinCO2": states("sensor.area_2_min_co2")| float, "CurrentVpd": states("sensor.area_2_co2")| float} | tojson}}
 - name: area_2_device_light
   state: |
-    {{ {"LightPowerState": states("binary_sensor.area_2_light_state"), "LightPercentageState": states("sensor.area_2_light_percentage"), "IsLightDimmable": states("binary_sensor.area_2_is_light_dimmable"), "LightDimmSteps": states("input_number.area_2_dimm_step_light")} | tojson}}
+    {{ {"LightPowerState": states("binary_sensor.area_2_light_state") | bool, "LightPercentageState": states("sensor.area_2_light_percentage") | float, "IsLightDimmable": states("binary_sensor.area_2_is_light_dimmable") | bool, "LightDimmSteps": states("input_number.area_2_dimm_step_light") | float, "LightMaxPower": states('sensor.area_2_light_max_power')| float, "LightMinPower": states('sensor.area_2_light_min_power') |float } | tojson}}
 - name: area_2_device_exhaust
   state: |
-    {{ {"ExhaustEqualsAC": states("binary_sensor.area_2_is_ac_eq_exhaust"), "ExhaustEqualsDehumidifier": states("binary_sensor.area_2_is_exhaust_eq_dehumidifier"), "ExhaustPowerState": states("binary_sensor.area_2_exhaust_state"), "ExhaustPercentageState": states("sensor.area_2_exhaust_percentage"), "IsExhaustDimmable": states("binary_sensor.area_2_is_exhaust_dimmable"), "ExhaustDimmSteps": states("input_number.area_2_dimm_step_exhaust")} | tojson}}
+    {{ {"ExhaustEqualsAC": states("binary_sensor.area_2_is_ac_eq_exhaust")| bool, "ExhaustEqualsDehumidifier": states("binary_sensor.area_2_is_exhaust_eq_dehumidifier") | bool, "ExhaustPowerState": states("binary_sensor.area_2_exhaust_state") | bool, "ExhaustPercentageState": states("sensor.area_2_exhaust_percentage") | float, "IsExhaustDimmable": states("binary_sensor.area_2_is_exhaust_dimmable") | bool, "ExhaustDimmSteps": states("input_number.area_2_dimm_step_exhaust") | float} | tojson}}
 - name: area_2_device_ventilation
   state: |
-    {{ {"VentilationPowerState": states("binary_sensor.area_2_ventilation_state"), "VentilationPercentageState": states("sensor.area_2_ventilation_percentage"), "IsVentilationDimmable": states("binary_sensor.area_2_is_ventilation_dimmable"), "VentilationDimmSteps": states("input_number.area_2_dimm_step_ventilation")} | tojson}}
+    {{ {"VentilationPowerState": states("binary_sensor.area_2_ventilation_state") | bool, "VentilationPercentageState": states("sensor.area_2_ventilation_percentage")| float, "IsVentilationDimmable": states("binary_sensor.area_2_is_ventilation_dimmable")| bool, "VentilationDimmSteps": states("input_number.area_2_dimm_step_ventilation") | float} | tojson}}
 - name: area_2_device_heater
   state: |
-    {{ {"HeaterPowerState": states("binary_sensor.area_2_heater_state"), "HeaterPercentageState": states("sensor.area_2_heater_percentage"), "IsHeaterDimmable": states("binary_sensor.area_2_is_heater_dimmable"), "HeaterDimmSteps": states("input_number.area_2_dimm_step_heater")} | tojson}}
+    {{ {"HeaterPowerState": states("binary_sensor.area_2_heater_state") | bool, "HeaterPercentageState": states("sensor.area_2_heater_percentage") | float, "IsHeaterDimmable": states("binary_sensor.area_2_is_heater_dimmable") | bool, "HeaterDimmSteps": states("input_number.area_2_dimm_step_heater") | float} | tojson}}
 - name: area_2_device_humidifier
   state: |
-    {{ {"HumidifierPowerState": states("binary_sensor.area_2_humidifier_state"), "HumidifierPercentageState": states("sensor.area_2_humidifier_percentage"), "IsHumidifierDimmable": states("binary_sensor.area_2_is_humidifier_dimmable"), "HumidifierDimmSteps": states("input_number.area_2_dimm_step_humidifier")} | tojson}}
+    {{ {"HumidifierPowerState": states("binary_sensor.area_2_humidifier_state") | bool, "HumidifierPercentageState": states("sensor.area_2_humidifier_percentage")| float, "IsHumidifierDimmable": states("binary_sensor.area_2_is_humidifier_dimmable") | bool, "HumidifierDimmSteps": states("input_number.area_2_dimm_step_humidifier") | float} | tojson}}
 - name: area_2_device_dehumidifier
   state: |
-    {{ {"DehumidifierPowerState": states("binary_sensor.area_2_dehumidifier_state"), "DehumidifierPercentageState": states("sensor.area_2_dehumidifier_percentage"), "IsDehumidifierDimmable": states("binary_sensor.area_2_is_dehumidifier_dimmable"), "DehumidifierDimmSteps": states("input_number.area_2_dimm_step_dehumidifier")} | tojson}}
+    {{ {"DehumidifierPowerState": states("binary_sensor.area_2_dehumidifier_state") | bool, "DehumidifierPercentageState": states("sensor.area_2_dehumidifier_percentage") | float, "IsDehumidifierDimmable": states("binary_sensor.area_2_is_dehumidifier_dimmable") | bool, "DehumidifierDimmSteps": states("input_number.area_2_dimm_step_dehumidifier") | float} | tojson}}
+- name: area_2_data_light
+  state: |
+    {{ {"Area": "area_2", "AreaState": states("binary_sensor.area_2_is_active") | bool,"LightMode": states("input_select.area_2_lightcontrol_mode"), "SunriseSunsetDuration": states("input_number.area_2_duration_sunrise") | float} | tojson}}
