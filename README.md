@@ -1,67 +1,17 @@
 # GanjOS grow automation
 
->[!IMPORTANT]
+>[!WARNING]
 > 
 > Aktuell befindet sich die GanjOS Grow Automation noch in der Beta Phase und kann daher vermehrt Bugs aufweisen. 
 
-GanjOS ist ein Open Source Community-Projekt, das sich der Automatisierung des Homegrows widmet. Unser Ziel ist es, Heimzüchtern zu helfen, ihre Pflanzen optimal zu pflegen, indem wir moderne Automatisierungstechnologien nutzen. Das Projekt basiert auf Home Assistant, einer Open-Source-Plattform für Heimautomatisierung, die eine zentrale Steuerung und Überwachung ermöglicht. Wir verwenden ESP32-Platinen zur Integration verschiedener Sensoren. Diese Sensoren überwachen wichtige Umgebungsparameter wie Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtintensität, und liefern Echtzeitdaten an Home Assistant.
+GanjOS ist ein Open Source Community-Projekt, das sich der Automatisierung des Homegrows widmet. Unser Ziel ist es, Heimzüchtern zu helfen, ihre Pflanzen optimal zu pflegen, indem wir moderne Automatisierungstechnologien nutzen. Das Projekt basiert auf Home Assistant, einer Open-Source-Plattform für Heimautomatisierung, die eine zentrale Steuerung und Überwachung ermöglicht. Wir verwenden unter anderem ESP32-Platinen zur Integration verschiedener Sensoren. Diese Sensoren überwachen wichtige Umgebungsparameter wie Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtintensität, und liefern Echtzeitdaten an Home Assistant.
 
 Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des Projekts [hier](https://link.space/@ganjosgrowautomation).
 
->[!NOTE]
->
-> Der Einsatz der GanjOS Grow Automation ist auf eigene Gefahr und lediglich für den Einsatz im Rahmen der gesetzlich geltenden Rahmen bestimmt. Jegliche illegale Nutzung der Grow Automation wird vom offiziellen GanjOS Team aufs tiefte verurteilt und nicht unterstützt. 
-
->[!NOTE]
->
-> Testeintrag
-
->[!TIP]
->
-> Testeintrag
-
->[!IMPORTANT]
->
-> Testeintrag
-
->[!CAUTION]
->
-> Testeintrag
-
->[!WARNING]
->
-> Testeintrag
-
->[!ADMINISTRATION]
->
-> Testeintrag
-
->[!AVAILABILITY]
->
-> Testeintrag
-
->[!PREREQUISITES]
->
-> Testeintrag
-
->[!ERROR]
->
-> Testeintrag
-
->[!ADMINISTRATION]
->
-> Testeintrag
-
->[!INFO]
->
-> Testeintrag
-
->[!SUCCESS]
->
-> Testeintrag
-
-
 ## Preview
+
+<details>
+<summary>Screenshots aus dem aktuellen Stand der Lösung</summary>
 
 ![image](https://github.com/user-attachments/assets/ddf5a8eb-5d33-4348-8c36-1cb051d0e90e)
 
@@ -71,11 +21,11 @@ Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des P
 
 ![image](https://github.com/user-attachments/assets/e07214e1-4957-42bc-aa66-bc48d1135835)
 
+</details>
 
-
-## geplante Funktionen
+## geplante Funktionen im Überblick
 - **Echtzeitüberwachung**: Kontinuierliche Überwachung aller wichtigen Umgebungsbedingungen.
-- **Automatische Steuerung**: Anpassung von Licht, Bewässerung und Lüftung basierend auf den Sensordaten.
+- **Automatische Steuerung**: Anpassung von Licht, Bewässerung und Klimatechnik basierend auf den Sensordaten.
 - **Benutzerfreundlichkeit**: Einfache Integration und Verwaltung über Home Assistant.
 - **Erweiterbarkeit**: Modularer Aufbau ermöglicht einfache Erweiterungen und Anpassungen.
 
@@ -83,11 +33,17 @@ Um auf dem aktuellsten Stand des Projekts zu bleiben findest du alle Links des P
 
 Wir laden alle Interessierten ein, Teil unserer Community zu werden und gemeinsam an der Verbesserung und Erweiterung von GanjOS Grow Automation zu arbeiten. Egal, ob du ein erfahrener Entwickler, ein Technik-Enthusiast oder ein Homegrower bist – jeder Beitrag ist willkommen!
 
-Bitte lese dir hier die [Mitwirkungsrichtlinien](./CONTRIBUTING.md) und den [Verhaltenskodex](./CODE_OF_CONDUCT.md) durch, um am Projekt mitzuwirken. 
+>[!IMPORTANT]
+>
+> Bitte lese dir hier die [Mitwirkungsrichtlinien](./CONTRIBUTING.md) und den [Verhaltenskodex](./CODE_OF_CONDUCT.md) durch, um am Projekt mitzuwirken. 
 
 ## Installation
 
 Detaillierte Anweisungen zur Installation und Konfiguration findest du in der [Installationsanleitung](./INSTALL.md).
+
+> [!TIP]
+>
+> Um Tutorials zur Installation oder Konfiguration zu erhalten schau gerne in unserem [Shop](ko-fi.com/ganjos) vorbei, wo du alle entsprechenden Inhalte, wie Tutorials/Anleitungen und vorgefertigten Quellcode, nach und nach finden wirst.
 
 ## Lizenz
 
@@ -110,7 +66,7 @@ Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://g
 - **420Fastbuds** - Hol dir deine Seeds über unseren Affiliate Link [hier](https://myfastbuds.com/?a_aid=65f92e7a635de).
 - **High4Life** - Dein Shop für Seeds, Stecklinge und Rauchbedarf. Mit dem Code "ganjos" gibt es 10% Rabatt im kompletten Shop. Zum Shop von High4Life gelangt ihr [hier](https://high4life.shop/).
 
-## Autoren
+## Autoren & Entwickler 
 ### Official GanjOS Dev Team
 * **Marco aka. Rocky** - *Founder* - [Rocky](https://github.com/MrcoSchrnr)
 

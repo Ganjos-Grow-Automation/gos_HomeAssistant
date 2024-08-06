@@ -1,8 +1,8 @@
 # Die Installation des GanjOS
-Are you ready for your own GanjOS?
 
-## Disclaimer 
-Wir vom Projektteam haften für keine Anschlussfehler oder Konfigurationsfehler beim Einsatz des GanjOS. Ihr seid sellbst dafür verantwortlich, dass euer Setup sauber läuft und es euren Pflanzen gut geht. Zudem übernehmen wir keine Haftung für etwaige Anschlussfehler und Fehlfunktionen beim Elektroanschluss. 
+>[!CAUTION]
+>  
+> Wir vom Projektteam haften für keine Anschlussfehler oder Konfigurationsfehler beim Einsatz der GanjOS Grow Automation. Ihr seid sellbst dafür verantwortlich, dass euer Setup sauber läuft und es euren Pflanzen gut geht. Zudem übernehmen wir keine Haftung für etwaige Anschlussfehler und Fehlfunktionen beim Elektroanschluss. Der Einsatz der Lösung ist lediglich für die geltenden gesetzlichen Rahmen bestimmt. 
 
 ## Vorraussetzungen
 
