@@ -80,7 +80,7 @@ Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung w
 * [12V Netzteil](https://amzn.to/3WTSvy8) [Affiliate]
 
 
-## Generelle Grow Ausrüstung / Zubehör (kompatibel mit dem GrowBot)
+## Generelles Grow Equiptment / Zubehör
 
 >[!NOTE]
 >
