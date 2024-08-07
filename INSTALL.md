@@ -66,7 +66,7 @@ Im Quellcode der Lösung müssen bestimmte Zeilen auf deine Geräte und deine Se
 
 Wenn du diese Zeilen angepasst hast oder die entsprechenden Elemente in den Dashboards bei nicht-Verwendung löschst, sollte die GanjOS Grow Automation bei dir funktionieren.
 
->![TIP]
+>[!TIP]
 >
 >Überprüfen kannst du das in den Entwicklerwerkzeugen indem du überprüfst, welchen Zustand deine jeweiligen Sensoren haben. Ist hier ein Fehler bei den Entitäten _sensor.area_ZAHL_automation_* dann läuft der Automatismus auf Fehler. Behebe zuerst diese Fehler, bevor du mit dem folgenden Schritt weiter machst.
 
@@ -74,7 +74,7 @@ Wenn du diese Zeilen angepasst hast oder die entsprechenden Elemente in den Dash
 
 Nachdem du alle Flows erfolgreich in Node-Red importiert hast, musst du alle Flows mit dem Präfix "[DC]" anpassen, um deine jeweiligen Geräte anzusteuern. Wähle hierzu in der jeweiligen "turn on / turn off / dimm" Aktionen dein Gerät aus, welches hier gesteuert werden soll.
 
->![CAUTION]
+>[!CAUTION]
 >
 >Wenn du die Flows, die den Präfix "[DC]" nicht enthalten anpasst, kann unter umständen der Automatismus auf Fehler laufen. Daher ist dies nur für erfahrene Nutzer empfohlen. 
 
