@@ -43,11 +43,11 @@ Detaillierte Anweisungen zur Installation und Konfiguration findest du in der [I
 
 > [!TIP]
 >
-> Um Tutorials zur Installation oder Konfiguration zu erhalten schau gerne in unserem [Shop](ko-fi.com/ganjos) vorbei, wo du alle entsprechenden Inhalte, wie Tutorials/Anleitungen und vorgefertigten Quellcode, nach und nach finden wirst.
+> Um ausführlichere Videotutorials zur Installation oder Konfiguration zu erhalten schau gerne bei uns auf [Patreon](patreon.com/GanjOS) vorbei, wo du alle entsprechenden Inhalte, wie Tutorials/Anleitungen und den vorgefertigten Quellcode, nach und nach finden wirst.
 
 ## Lizenz
 
-Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE).
+Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE) und frei von jeglicher Gewährleistung oder Garantie. 
 
 ## Kontakt
 
@@ -61,10 +61,13 @@ Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://g
 * Hardware - Die kompatible Hardware findest ist [hier](./HARDWARE.md) hinterlegt. 
 
 ## Sponsoren
-- **Drain Master** - DIE Innovation, wenn es darum geht den Drain-pH zu tracken und Staunässe zu vermeiden. Kaufe deinen Abtropfständer & andere Dinge im Online Shop von Drain Master mit unserem Affiliate Link [hier](https://drain-master.de/?ref=ganjos).
+
 - **TRUESOIL** - Unser Partner rund um das Thema Living Soil - Exklusiv bekommt die GanjOS Community mit dem Code "ganjos" 10% auf das komplette Sortiment im Onlineshop. Zum Onlineshop von TRUESOIL gelangst du [hier](https://truesoil.at/collections).
-- **420Fastbuds** - Hol dir deine Seeds über unseren Affiliate Link [hier](https://myfastbuds.com/?a_aid=65f92e7a635de).
 - **High4Life** - Dein Shop für Seeds, Stecklinge und Rauchbedarf. Mit dem Code "ganjos" gibt es 10% Rabatt im kompletten Shop. Zum Shop von High4Life gelangt ihr [hier](https://high4life.shop/).
+- **Migro Grow Lights** - effiziente Grow LEDs für dein Setup findest du [hier](https://migrolight.de/). 
+- **Root Riot** - Hochwertige Stoff Töpfe und Beete für dein Living Soil findest du [hier](https://truesoil.at/collections/livingsoilbeete).
+- **Drain Master** - DIE Innovation, wenn es darum geht den Drain-pH zu tracken und Staunässe zu vermeiden. Kaufe deinen Abtropfständer & andere Dinge im Online Shop von Drain Master mit unserem Affiliate Link [hier](https://drain-master.de/?ref=ganjos).
+- **420Fastbuds** - Hol dir deine Seeds über unseren Affiliate Link [hier](https://myfastbuds.com/?a_aid=65f92e7a635de).
 
 ## Autoren & Entwickler 
 ### Official GanjOS Dev Team

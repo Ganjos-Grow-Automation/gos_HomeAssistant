@@ -38,7 +38,7 @@ Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung w
 
 * [DFRobot - FireBeetle 2 ESP32-E](https://www.dfrobot.com/product-2231.html?tracking=WjyQJqF2zJKV41fDEVNqlL8iIoSaXJXcs510uBhCzQJ0RftedpYAlvGH8TibE7eY) [Affiliate] - Die Basisplatine
 * [DFRobot - IO Shield for FireBeetle 2](https://www.dfrobot.com/product-2395.html?tracking=WjyQJqF2zJKV41fDEVNqlL8iIoSaXJXcs510uBhCzQJ0RftedpYAlvGH8TibE7eY) [Affiliate] - zur Vereinfachung des Anschluss von mehreren Sensoren
-* [5V USB-C Netzteil für ESP32](https://amzn.to/4bTv2BX) [Affiliate] - zur Stromversorgung
+* [5V USB-C Netzteil für ESP32](https://amzn.to/4bTv2BX) [Affiliate] oder [USB C Mehrfachladegerät](https://amzn.to/4gixd4b) [Affiliate] - zur Stromversorgung
 
 >[!IMPORTANT]
 >
@@ -66,18 +66,18 @@ Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung w
 ### Soil Monitoring
 >[!NOTE]
 >
-> Die Aufgabe dieses Modul liegt in der Überwachung der Substratbedingungen, im Konkreten hier die Boden-Bedingungen.
+> Die Aufgabe dieses Modul liegt in der Überwachung der Substratbedingungen, im Konkreten hier die Boden-Bedingungen. Weitere Sensoren werden bereits von unserem Team getestet.
 
-* [Flower Care Max Sensor](https://www.techpunt.nl/de/xiaomi-hhcc-mi-flower-care-plant-sensor-max.html) [Affiliate]
-* [Flower Care Mini Sensor](https://amzn.to/4d90FZi) [Affiliate]
+* [Flower Care Max Sensor](https://www.techpunt.nl/de/xiaomi-hhcc-mi-flower-care-plant-sensor-max.html) - der etwas größere Sensor
+* [Flower Care Mini Sensor](https://amzn.to/4d90FZi) [Affiliate] - der kleinere Sensor
 
 ### Air Control 
 >[!NOTE]
 >
 > Die Aufgabe dieses Modul liegt in der Steuerung von kompatiblem Equiptment zur Anpassung der Luftbedingungen
 
-* [PWM Converter](https://amzn.to/4fwRR0Z) [Affiliate]
-* [12V Netzteil](https://amzn.to/3WTSvy8) [Affiliate]
+* [PWM Converter](https://amzn.to/4fwRR0Z) [Affiliate] - zur Steuerung von PWM Lüftern
+* [12V Netzteil](https://amzn.to/3WTSvy8) [Affiliate] - zur Stromversorgung der PWM Steuerung
 
 
 ## Generelles Grow Equiptment / Zubehör
@@ -88,17 +88,18 @@ Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung w
 
 ### Abluftventilatoren
 
-* [Ruck EC Lüfter]()  - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/RuckEC.md).
-* [Prima Klima ECBlue Serie]() - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/PKECBlue.md).
+* [Ruck EC Lüfter]()  - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/RuckEC.md). (coming soon)
+* [Prima Klima ECBlue Serie]() - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/PKECBlue.md). (coming soon)
 
 ### Umluftventilatoren
 
-* [DIY PWM Ventilatoren]() - Aufbau und Anschluss siehe [Anleitung](./Guides/PWMVentilation.md).
+* [DIY PWM Ventilatoren]() - Aufbau und Anschluss siehe [Anleitung](./Guides/PWMVentilation.md). (coming soon)
 
 ### Beleuchtung
 
-* [SANLight Evo Serie]() - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/SANLightEvo.md).
+* [SANLight Evo Serie]() - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/SANLightEvo.md). (coming soon)
 * [SANLight Flex Serie]() - Ein-/Ausschalten über eine Funksteckdose möglich
+* [Migro Array Serie] - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/MigroArray.md). (coming soon)
 
 ### Luftbefeuchter
 
@@ -113,6 +114,10 @@ Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung w
 ### Dimmer
 
 * [Shelly Dimmer 0-10V](https://amzn.to/46Ivv8U) - zur Steuerung und Dimmung von kompatiblen Geräten
+
+### Timelapse Aufnahmen
+* [Reolink 4k Kamera](https://amzn.to/4f5R1qu) - Eine sehr hochwertige Outdoor Kamera mit 4K auflösung
+* [Synology NAS](https://amzn.to/3ZAuOMU) - Zur Speicherung der Backups und der Timelapse Aufnahmen
 
 ### Nützliches Equiptment & Sonstiges
 

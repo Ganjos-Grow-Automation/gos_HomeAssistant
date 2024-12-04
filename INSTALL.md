@@ -18,7 +18,7 @@ Für den Einsatz des GanjOS wird folgendes benötigt:
 * ggfs. Funksteckdosen oder andere Hardware (siehe [Hardwareliste](./HARDWARE.md))
 
 ### Basis
-Für das Basismodul wird eine Home Assistant fähige Hardware benötigt. Welche sich hier am Besten eignet findest du im [Hardware Dokument](./HARDWARE.md). 
+Für das Basismodul wird eine Home Assistant fähige Hardware benötigt. Welche sich hier am Besten eignet, findest du im [Hardware Dokument](./HARDWARE.md). 
 
 >[!TIP]
 >
@@ -26,17 +26,20 @@ Für das Basismodul wird eine Home Assistant fähige Hardware benötigt. Welche 
 
 >[!NOTE]
 >
->Eine komplette Einrichtung des Home Assistant Host werden wir in naher Zukunft in form eines Video-Tutorials in unserem Shop für einen kleinen Spendenbetrag veröffentlichen. Einen Link zum Shop findest du [hier](https://ko-fi.com/ganjos). 
+>Eine komplette Einrichtung des Home Assistant Host werden wir in naher Zukunft in Form eines Video-Tutorials auf unserem Patreon Kanal veröffentlichen. Einen Link zum Patreon findest du [hier](patreon.com/GanjOS).
 >
-> Die schriftliche Anleitung wird von unserem Team zusätzlich in den kommenden Wochen erweitert. 
+> Die schriftliche Anleitung wird von unserem Team zusätzlich nach und nach erweitert. 
 
 Falls du schon einen Home Assistant Server im Einsatz hast kannst du den nächsten Schritt überspringen und mit den Schritt der Add-Ons und Integrationen weiter machen.
 
 #### Installation Home Assistant
+Nachfolgend findest möglichkeiten um die GanjOS Home Assistant Konfiguration zu installieren. 
 
+##### Importieren der fertigen Lösung ohne Konfiguration
 >[!TIP]
 >
->Wir arbeiten gerade an einer Lösung, dass eine Konfiguration direkt als Backup importiert werden kann. Diese Möglichkeit wird aktuell von unserem Team ausgearbeitet und getestet. 
+>Wir arbeiten gerade an einer Lösung, dass eine Konfiguration direkt als Backup importiert werden kann. Diese Möglichkeit wird aktuell von unserem Team ausgearbeitet und getestet.
+
 ##### Importieren der GanjOS Konfiguration
 Die zweite Möglichkeit setzt etwas Geschick oder Erfahrung in Home Assistant voraus.
 
@@ -56,20 +59,6 @@ latitude: X
 longitude: X
 ```
 
-###### Anpassungen im Quellcode
-
-Im Quellcode der Lösung müssen bestimmte Zeilen auf deine Geräte und deine Sensoren angepasst werden. Die entsprechenden Zeilen wurden mit folgendem vorangestellten Kommentar gekennzeichnet oder dem Dateinamen gosConfig_*.yaml gekennzeichnet.
-
-```
-#to be configured
-```
-
-Wenn du diese Zeilen angepasst hast oder die entsprechenden Elemente in den Dashboards bei nicht-Verwendung löschst, sollte die GanjOS Grow Automation bei dir funktionieren.
-
->[!TIP]
->
->Überprüfen kannst du das in den Entwicklerwerkzeugen indem du überprüfst, welchen Zustand deine jeweiligen Sensoren haben. Ist hier ein Fehler bei den Entitäten _sensor.area_ZAHL_automation_* dann läuft der Automatismus auf Fehler. Behebe zuerst diese Fehler, bevor du mit dem folgenden Schritt weiter machst.
-
 ###### Anpassungen in Node-Red
 
 Nachdem du alle Flows erfolgreich in Node-Red importiert hast, musst du alle Flows mit dem Präfix "[DC]" anpassen, um deine jeweiligen Geräte anzusteuern. Wähle hierzu in der jeweiligen "turn on / turn off / dimm" Aktionen dein Gerät aus, welches hier gesteuert werden soll.
@@ -78,19 +67,21 @@ Nachdem du alle Flows erfolgreich in Node-Red importiert hast, musst du alle Flo
 >
 >Wenn du die Flows, die den Präfix "[DC]" nicht enthalten anpasst, kann unter umständen der Automatismus auf Fehler laufen. Daher ist dies nur für erfahrene Nutzer empfohlen. 
 
+Zusätzlich musst du im Flow der [Area-Values] Area 1 die Sensoren entsprechend auf die Sensoren, die du im Einsatz hast anpassen. 
+
 ##### Bestehende GanjOS Konfiguration updaten
 Um deinen GanjOS auf eine neue Version zu aktualisieren, müssen die entsprechenden YAML-Files oder die NodeRed-Automationen angepasst werden. In den jeweiligen Patchnotes ist vermerkt, welche Neuerungen im Patch enthalten sind. 
 
 Wie man ein Update einspielt werden wir zudem in einer Video-Anleitung in Zukunft ausarbeiten.
 >[!TIP]
 >
->Wie du deine eigene GanjOS Konfiguration updaten kannst werden wir in naher Zukunft in einem Tutorial-Video genauer erläutern. Das Video wirst du [hier](https://ko-fi.com/ganjos) finden.
+>Wie du deine eigene GanjOS Konfiguration updaten kannst werden wir in naher Zukunft in einem Tutorial-Video genauer erläutern. Das Video wirst du [hier](patreon.com/GanjOS) finden.
 
 ##### Eigene GanjOS Konfiguration erstellen
 
 >[!TIP]
 >
->Wie du deine eigene GanjOS Konfiguration erstellen kannst werden wir in naher Zukunft in einem Tutorial-Video genauer erläutern. Das Video wirst du [hier](https://ko-fi.com/ganjos) finden. 
+>Wie du deine eigene GanjOS Konfiguration erstellen kannst werden wir in naher Zukunft in einem Tutorial-Video genauer erläutern. Das Video wirst du [hier](patreon.com/GanjOS) finden.
 
 #### Installation Integrationen und Add-Ons
 
@@ -101,12 +92,7 @@ Wie man ein Update einspielt werden wir zudem in einer Video-Anleitung in Zukunf
 
 Erforderlich:
 * HACS
-* UI Lovelace Minimalist
 * Node-RED Companion
-
-
-Empfohlen:
-* [Home Assistant Plant](https://github.com/Olen/homeassistant-plant) - als benutzerdefiniertes Repository einbinden.
 
 ##### Add-Ons
 >[!NOTE]
@@ -122,6 +108,7 @@ Empfohlen:
 * Samba Backup 
 * Samba Share 
 * Studio Code Server 
+* Grafana
 
 
 Optional:
@@ -142,32 +129,8 @@ Erfoderlich:
 * Digital Clock
 * Mushroom
 * mini-graph-card
-* button-card
-* Scheduler Card
-* Config Template Card
-* Bar Card
-* Flower Card
 * [Home Assistant VPD Chart](https://github.com/mentalilll/ha-vpd-chart) - Das müsst ihr als benutzerdefiniertes Repository einbinden.
 
-Empfohlen:
-
-#### Integrationen
->[!NOTE]
->
-> Je nach Konfiguration deines GanjOS werden entsprechende Integrationen benötigt. Die hier aufgelisteten Integrationen gehen von der "Standard"-Konfiguration der GanjOS Grow Automation aus. Im Bereich der Integrationen müssen folgende Integrationen hinzugefügt und eine Instanz erstellt werden. 
-
-Erforderlich:
-* Lokales To-Do
-* Einkaufsliste
-* Node-RED Companion
-* Plant Monitor
-* Shelly (Wenn ihr Shelly-Funksteckdosen verwendet)
-* UI Lovelace Minimalist
-
-Empfohlen:
-
-
-Optional: 
 
 #### Air-Monitoring
 Um die Luft-Bedingungen tracken zu können benötigst du die entsprechenden Geräte, wie z.B. eine ESP-32 Platine und Sensoren für die Temperatur, Luftfeuchtigkeit und den CO2 Gehalt deiner Umgebung. Hier kannst du aber auch fertige Sensoren verwenden, die in den Home Assistant integrierbar sind. Wir setzen in unserem Setup auf ESP32 Platinen mit Sensoren, die über ESPHome einbunden werden. Eine genauere Hardware Liste findest du [hier](./HARDWARE.md).
@@ -192,9 +155,9 @@ Wir arbeiten jedoch mit Hochdruck daran Geräte inkl. Dimmung direkt integrieren
 #### Water-Monitoring
 >[!NOTE]
 >
->Dieses Modul ist noch in der Entwicklung und wir in einem zukünftigen Release veröffentlicht.
+>Dieses Modul ist noch in der Entwicklung und wird in einem zukünftigen Release veröffentlicht.
 
 #### Water-Control
 >[!NOTE]
 >
->Dieses Modul ist noch in der Entwicklung und wir in einem zukünftigen Release veröffentlicht.
+>Dieses Modul ist noch in der Entwicklung und wird in einem zukünftigen Release veröffentlicht.

@@ -1,4 +1,0 @@
-- name: nutrition_calculation_ratio
-  icon: mdi:nutrition
-  state: >
-    {{(states('input_number.nutrition_calculation_water_reference') | float / states('sensor.nutrition_calculation_water_amount') | float )}}
