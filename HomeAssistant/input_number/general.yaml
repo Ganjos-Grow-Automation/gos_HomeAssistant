@@ -1,7 +1,0 @@
-energy_costs:
-  name: Strompreis
-  initial: 0.259
-  min: 0.01
-  max: 3.00
-  unit_of_measurement: EUR/kWh
-  mode: slider
