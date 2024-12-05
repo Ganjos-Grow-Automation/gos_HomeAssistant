@@ -16,17 +16,6 @@
     "env": []
   },
   {
-<<<<<<< HEAD
-=======
-    "id": "819e2397bc009597",
-    "type": "tab",
-    "label": "[General] Scheduled Backup",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
     "id": "215c73a99f39d76b",
     "type": "tab",
     "label": "[LC] Main light control automation",
@@ -11200,25 +11189,13 @@
     "name": "link out 5",
     "mode": "link",
     "links": [
-<<<<<<< HEAD
-=======
-      "26c35aaf88189367",
-      "2aac9939b9f30761",
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
       "2bbb510ab031906b",
       "30307cbb707ead83",
       "354b6c9d99b0e9b2",
       "43a8be268154bda4",
       "5074524aa1729939",
-<<<<<<< HEAD
       "5e77c138b5b52a40",
       "70b430923ab6864c",
-=======
-      "576709c5607bb957",
-      "5e77c138b5b52a40",
-      "70b430923ab6864c",
-      "7f8b7e5962b64cf6",
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
       "89295fd3793fd833",
       "b59f634949cce0e9",
       "e9905b09447eb284"
@@ -11233,16 +11210,7 @@
     "z": "81914afd5812ef01",
     "name": "link out 6",
     "mode": "link",
-<<<<<<< HEAD
     "links": ["195b12a87f5c67fd", "30307cbb707ead83"],
-=======
-    "links": [
-      "195b12a87f5c67fd",
-      "26c35aaf88189367",
-      "30307cbb707ead83",
-      "7f8b7e5962b64cf6"
-    ],
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
     "x": 405,
     "y": 480,
     "wires": []
@@ -11275,55 +11243,17 @@
     "wires": [["aa734f9bc4c39477"]]
   },
   {
-<<<<<<< HEAD
-=======
-    "id": "29cade68e09331dd",
-    "type": "inject",
-    "z": "81914afd5812ef01",
-    "name": "Backup Services",
-    "props": [{ "p": "payload" }, { "p": "topic", "vt": "str" }],
-    "repeat": "",
-    "crontab": "00 15 * * *",
-    "once": true,
-    "onceDelay": "5",
-    "topic": "",
-    "payload": "",
-    "payloadType": "date",
-    "x": 230,
-    "y": 440,
-    "wires": [["c1e814a9de93b51a"]]
-  },
-  {
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
     "id": "aa734f9bc4c39477",
     "type": "link out",
     "z": "81914afd5812ef01",
     "name": "link out 7",
     "mode": "link",
-<<<<<<< HEAD
     "links": [],
-=======
-    "links": ["ffbe08c5739d0ee6"],
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
     "x": 385,
     "y": 400,
     "wires": []
   },
   {
-<<<<<<< HEAD
-=======
-    "id": "c1e814a9de93b51a",
-    "type": "link out",
-    "z": "81914afd5812ef01",
-    "name": "link out 9",
-    "mode": "link",
-    "links": ["ee998d58985b9863"],
-    "x": 395,
-    "y": 440,
-    "wires": []
-  },
-  {
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
     "id": "0e1952105139135b",
     "type": "api-current-state",
     "z": "b38a3e39f2656072",
@@ -11624,67 +11554,6 @@
     "wires": [["7f9f38925a92afb6"]]
   },
   {
-<<<<<<< HEAD
-=======
-    "id": "1844293b08b98a9b",
-    "type": "api-call-service",
-    "z": "819e2397bc009597",
-    "name": "Create Backup",
-    "server": "509a4007c3e125c9",
-    "version": 5,
-    "debugenabled": true,
-    "areaId": [],
-    "deviceId": [],
-    "entityId": [],
-    "data": "",
-    "dataType": "json",
-    "mergeContext": "",
-    "mustacheAltTags": false,
-    "outputProperties": [],
-    "queue": "none",
-    "domain": "hassio",
-    "service": "backup_full",
-    "x": 430,
-    "y": 280,
-    "wires": [["fb77f89b9bf6bf30"]]
-  },
-  {
-    "id": "49ed0e738cf00f92",
-    "type": "subflow:3d2d6d9413bf4bce",
-    "z": "819e2397bc009597",
-    "name": "",
-    "x": 940,
-    "y": 280,
-    "wires": []
-  },
-  {
-    "id": "fb77f89b9bf6bf30",
-    "type": "function",
-    "z": "819e2397bc009597",
-    "name": "create notification",
-    "func": "msg.payload = {\n    \"Title\": \"Backup Created\",\n    \"Message\": \"A GanjOS Backup is created by the workflow.\"\n}\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 690,
-    "y": 280,
-    "wires": [["49ed0e738cf00f92"]]
-  },
-  {
-    "id": "ee998d58985b9863",
-    "type": "link in",
-    "z": "819e2397bc009597",
-    "name": "IN-Backup",
-    "links": ["c1e814a9de93b51a"],
-    "x": 255,
-    "y": 280,
-    "wires": [["1844293b08b98a9b"]]
-  },
-  {
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
     "id": "a75e13d82f484b41",
     "type": "subflow:e782138a063dce74",
     "z": "215c73a99f39d76b",
@@ -13166,11 +13035,7 @@
     "type": "link in",
     "z": "6ac8f5b0566d7f9b",
     "name": "IN-InitialSetup",
-<<<<<<< HEAD
     "links": ["2fc056d9eaecd6ab"],
-=======
-    "links": ["2fc056d9eaecd6ab", "9dc6ad0b9848caab"],
->>>>>>> 90bbdabbe56f98e87f01523b80d92f32ac9fcd1e
     "x": 245,
     "y": 360,
     "wires": [["7fc49b1f997f034b"]]
