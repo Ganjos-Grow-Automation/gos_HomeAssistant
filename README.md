@@ -43,7 +43,7 @@ Detaillierte Anweisungen zur Installation und Konfiguration findest du in der [I
 
 > [!TIP]
 >
-> Um ausführlichere Videotutorials zur Installation oder Konfiguration zu erhalten schau gerne bei uns auf [Patreon](patreon.com/GanjOS) vorbei, wo du alle entsprechenden Inhalte, wie Tutorials/Anleitungen und den vorgefertigten Quellcode, nach und nach finden wirst.
+> Um ausführlichere Videotutorials zur Installation oder Konfiguration zu erhalten schau gerne bei uns auf [Patreon](https://www.patreon.com/c/GanjOS) vorbei, wo du alle entsprechenden Inhalte, wie Tutorials/Anleitungen und den vorgefertigten Quellcode, nach und nach finden wirst.
 
 ## Lizenz
 
