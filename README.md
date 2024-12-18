@@ -45,9 +45,14 @@ Detaillierte Anweisungen zur Installation und Konfiguration findest du in der [I
 >
 > Um ausführlichere Videotutorials zur Installation oder Konfiguration zu erhalten schau gerne bei uns auf [Patreon](https://www.patreon.com/c/GanjOS) vorbei, wo du alle entsprechenden Inhalte, wie Tutorials/Anleitungen und den vorgefertigten Quellcode, nach und nach finden wirst.
 
-## Lizenz
+# Lizenz
 
-Dieses Projekt steht unter der [MIT-Lizenz](./LICENSE) und frei von jeglicher Gewährleistung oder Garantie. 
+Diese Software steht unter einer **Dual-Lizenzierung**:
+
+1. **Private und nicht-kommerzielle Nutzung:** Erlaubt unter den Bedingungen der MIT-Lizenz.  
+2. **Kommerzielle Nutzung:** Erfordert eine kostenpflichtige Lizenz. Bitte kontaktieren Sie [info@ganjos.io] für weitere Informationen.
+
+Bitte lesen Sie die vollständigen Lizenztexte in der Datei [`LICENSE`](./LICENSE).
 
 ## Kontakt
 

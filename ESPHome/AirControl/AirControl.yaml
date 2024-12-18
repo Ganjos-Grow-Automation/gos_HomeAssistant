@@ -1,0 +1,52 @@
+esphome:
+  name: propagator-air-monitoring
+  friendly_name: Propagator-Air-Monitoring
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "8m/QsdMJXdcfBFESwCZZA9guk5T2eAl7xAT+58KL5FA="
+
+ota:
+  - platform: esphome
+    password: "2ff5942c466ebc29e6f82447da0ec047"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Propagator-Air-Monitoring"
+    password: "tIWTeO74Geps"
+
+captive_portal:
+    
+i2c:
+  sda: 21
+  scl: 22
+  scan: true
+  id: bus_a
+
+output:
+  - platform: ledc
+    id: exhaust_1
+    pin: 25
+    frequency: 1500
+    min_power: 0.01
+    max_power: 0.60
+
+fan:
+  - platform: speed
+    output: exhaust_1
+    id: exhaust_ruck
+    name: "Ruck EC"
+    speed_count: 100

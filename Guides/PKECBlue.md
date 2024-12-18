@@ -1,4 +1,4 @@
-# Anleitung Integration XXXX
+# Anleitung Integration PK EC Blue Abluftventilatoren
 
 >[!IMPORTANT]
 >

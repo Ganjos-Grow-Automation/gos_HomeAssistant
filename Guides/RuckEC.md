@@ -1,4 +1,4 @@
-# Anleitung Integration XXXX
+# Anleitung Integration Ruck EC 02 Anschluss
 
 >[!IMPORTANT]
 >

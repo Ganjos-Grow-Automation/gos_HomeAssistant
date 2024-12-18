@@ -1,4 +1,4 @@
-# Anleitung Integration XXXX
+# Anleitung Integration PWM Steuerung
 
 >[!IMPORTANT]
 >
