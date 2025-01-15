@@ -10,7 +10,4 @@ Wir verwenden zur Anbindung der SANligth Evo Serie folgende Hardwarekomponenten:
 - **SANlight Evo Kabel GrowControl** - [Link zum Produkt](https://www.eden-grow.de/growshop/klimatechnik/klimasteuerung/growcontrol-kabel-rj45-sanlight-evo/)
 - (optional) **IP68 Verteilerdose** - [Link zum Produkt](https://amzn.to/3WjUYSa) [Affiliate]
 
-
->[!IMPORTANT]
->
-> Anschlussplan Coming soon!
+![SanlightEvo](https://github.com/user-attachments/assets/05c4b83c-93d9-4f94-9265-c94d2f18ed87)
