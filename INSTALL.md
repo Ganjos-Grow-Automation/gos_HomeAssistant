@@ -2,56 +2,54 @@
 
 >[!CAUTION]
 >  
-> Wir vom Projektteam haften für keine Anschlussfehler oder Konfigurationsfehler beim Einsatz der GanjOS Grow Automation. Ihr seid sellbst dafür verantwortlich, dass euer Setup sauber läuft und es euren Pflanzen gut geht. Zudem übernehmen wir keine Haftung für etwaige Anschlussfehler und Fehlfunktionen beim Elektroanschluss. Der Einsatz der Lösung ist lediglich für die geltenden gesetzlichen Rahmen bestimmt. 
+>Wir vom Projektteam übernehmen keine Haftung für Anschluss- oder Konfigurationsfehler, die beim Einsatz der GanjOS Grow Automation auftreten können. Es liegt in eurer Verantwortung, sicherzustellen, dass euer Setup korrekt funktioniert und euren Pflanzen die bestmögliche Umgebung bietet. Ebenso haften wir nicht für Fehler oder Schäden, die durch unsachgemäße Elektroanschlüsse entstehen. Bitte beachtet, dass die Nutzung dieser Lösung ausschließlich im Rahmen der gesetzlichen Bestimmungen in Deutschland oder anderen Ländern erlaubt ist. Die Verantwortung für die Einhaltung dieser Vorschriften liegt bei euch als Anwender.
 
 ## Vorraussetzungen
 
 >[!IMPORTANT]
 >
-> Um die GanjOS Grow Automation nutzen zu können darf es entsprechender Hardware. Eine vollständige Liste der kompatiblen und benötigten Hardware findest du in der [Hardwareliste](./HARDWARE.md).
+>Für die Nutzung der GanjOS Grow Automation wird passende Hardware benötigt. Eine vollständige Übersicht der kompatiblen und erforderlichen Geräte findest du in der [Hardwareliste](./HARDWARE.md).
 
 Was wird benötigt? Was brauche ich um den GanjOS einzusetzen? 
 
 Für den Einsatz des GanjOS wird folgendes benötigt:
 * Ein Home Assistant Server
-* Die Hardware für die GanjOS Module
-* ggfs. Funksteckdosen oder andere Hardware (siehe [Hardwareliste](./HARDWARE.md))
+* Die Hardware für die jeweilig einzusetzenden GanjOS Module
+* ggfs. Funksteckdosen oder andere Hardware (siehe [Hardwareliste](./HARDWARE.md)) zur Ansteuerung entsprechender Hardware
 
 ### Basis
 Für das Basismodul wird eine Home Assistant fähige Hardware benötigt. Welche sich hier am Besten eignet, findest du im [Hardware Dokument](./HARDWARE.md). 
 
 >[!TIP]
 >
->Zur Installation an sich findest du in diversen Online-Foren oder auf YouTube bereits sehr gute Anleitungen, wie du den Home Assistant zum Laufen bekommst. 
+>Für die Installation von Home Assistant findest du bereits zahlreiche hervorragende Anleitungen in Online-Foren und auf YouTube, die dir Schritt für Schritt weiterhelfen. Aus diesem Grund lassen wir diesen Installationsschritt in dieser Anleitung aus.
 
 >[!NOTE]
 >
->Eine komplette Einrichtung des Home Assistant Host werden wir in naher Zukunft in Form eines Video-Tutorials auf unserem Patreon Kanal veröffentlichen. Einen Link zum Patreon findest du [hier](patreon.com/GanjOS).
->
-> Die schriftliche Anleitung wird von unserem Team zusätzlich nach und nach erweitert. 
+>Trotz der bereits verfügbaren Anleitungen planen wir, in Zukunft eine eigene Schritt-für-Schritt-Videoanleitung für die vollständige GanjOS-Konfiguration und alle erforderlichen Schritte auf unseren Social-Media-Kanälen bereitzustellen. Damit möchten wir euch umfassend unterstützen und sicherstellen, dass ihr euer Setup problemlos einrichten könnt. Bleibt dran, um keine Updates zu verpassen!
 
 Falls du schon einen Home Assistant Server im Einsatz hast kannst du den nächsten Schritt überspringen und mit den Schritt der Add-Ons und Integrationen weiter machen.
 
 #### Installation Home Assistant
-Nachfolgend findest möglichkeiten um die GanjOS Home Assistant Konfiguration zu installieren. 
+Nachfolgend findest Möglichkeiten, um die GanjOS Home Assistant Konfiguration zu installieren. 
 
 ##### Importieren der fertigen Lösung ohne Konfiguration
 >[!TIP]
 >
->Wir arbeiten gerade an einer Lösung, dass eine Konfiguration direkt als Backup importiert werden kann. Diese Möglichkeit wird aktuell von unserem Team ausgearbeitet und getestet.
+>Wir entwickeln derzeit eine Lösung, die eine einfache und direkte Installation der Konfiguration ermöglicht. Diese Funktion wird von unserem Team intensiv ausgearbeitet und getestet.
 
 ##### Importieren der GanjOS Konfiguration
 Die zweite Möglichkeit setzt etwas Geschick oder Erfahrung in Home Assistant voraus.
 
-Hier werden alle Files aus dem Ordner [Home Assistant](./HomeAssistant/) in den Quellcode deiner Home Assistant Konfiguration eingefügt. Für erfahrene Home Assistant Benutzer ist das bereits bekannt, für Neulinge jedoch eine große Herausforderung. Falls du hier Probleme hast findest du tolle Anleitungen auf YouTube unter dem Suchbegriff "Home Assistant Configuration" oder auch speziell auf dem Kanal von [Simon42](https://www.youtube.com/@simon42).
+Hierbei werden alle Dateien aus dem Ordner [Home Assistant](./HomeAssistant/) in den Quellcode deiner Home Assistant-Konfiguration integriert. Für erfahrene Benutzer ist dieser Schritt vertraut, kann jedoch für Einsteiger eine größere Herausforderung darstellen. Solltest du dabei auf Schwierigkeiten stoßen, findest du hilfreiche Anleitungen auf YouTube unter dem Suchbegriff "Home Assistant Configuration" oder speziell auf dem Kanal von [Simon42](https://www.youtube.com/@simon42).
 
-Um den GanjOS initial einzurichten kopierst du hier alle Dateien in dein Verzeichnis des Home Assistant hinnein und fügst noch zusätzlich eine secrets.yaml Datei mit deinen entsprechenden Daten ein.
+Um GanjOS initial einzurichten, kopierst du einfach alle Dateien in das Home Assistant-Verzeichnis und fügst zusätzlich eine secrets.yaml-Datei mit deinen persönlichen Daten hinzu.
 
 ##### Anpassungen der GanjOS Konfiguration
 
 ###### Secret Datei
 
-Die secrets.yaml Datei muss folgende Bestandteile haben.
+Die secrets.yaml Datei muss folgende Bestandteile beinhalten.
 
 ```
 influxdb_password: DeinPasswortFürDieInfluxDB
@@ -61,28 +59,26 @@ longitude: X
 
 ###### Anpassungen in Node-Red
 
-Nachdem du alle Flows erfolgreich in Node-Red importiert hast, musst du alle Flows mit dem Präfix "[DC]" anpassen, um deine jeweiligen Geräte anzusteuern. Wähle hierzu in der jeweiligen "turn on / turn off / dimm" Aktionen dein Gerät aus, welches hier gesteuert werden soll.
+Nachdem du alle Flows erfolgreich in Node-Red importiert hast, musst du die Flows mit dem Präfix "[DC]" anpassen, um deine Geräte zu steuern. Wähle dazu in den jeweiligen "turn on", "turn off" oder "dimm"-Aktionen das entsprechende Gerät aus, das du steuern möchtest.
 
 >[!CAUTION]
 >
->Wenn du die Flows, die den Präfix "[DC]" nicht enthalten anpasst, kann unter umständen der Automatismus auf Fehler laufen. Daher ist dies nur für erfahrene Nutzer empfohlen. 
+>Wenn du die Flows, die den Präfix "[DC]" nicht enthalten anpasst, kann unter Umständen der Automatismus auf Fehler laufen. Daher ist dies nur für erfahrene Nutzer empfohlen. 
 
-Zusätzlich musst du im Flow der [Area-Values] Area 1 die Sensoren entsprechend auf die Sensoren, die du im Einsatz hast anpassen. 
+Zusätzlich musst du im Flow "[Area-Values] Area 1" die Sensoren anpassen, damit sie mit den bei dir eingesetzten Sensoren übereinstimmen.
 
 ##### Bestehende GanjOS Konfiguration updaten
-Um deinen GanjOS auf eine neue Version zu aktualisieren, müssen die entsprechenden YAML-Files oder die NodeRed-Automationen angepasst werden. In den jeweiligen Patchnotes ist vermerkt, welche Neuerungen im Patch enthalten sind. 
 
-Wie man ein Update einspielt werden wir zudem in einer Video-Anleitung in Zukunft ausarbeiten.
->[!TIP]
->
->Wie du deine eigene GanjOS Konfiguration updaten kannst werden wir in naher Zukunft in einem Tutorial-Video genauer erläutern. Das Video wirst du [hier](patreon.com/GanjOS) finden.
-
-##### Eigene GanjOS Konfiguration erstellen
+Um deinen GanjOS auf die neueste Version zu aktualisieren, müssen die entsprechenden YAML-Dateien oder Node-RED-Automationen angepasst werden. Die jeweiligen Patchnotes enthalten alle Informationen zu den Neuerungen und Änderungen im Update.
 
 >[!TIP]
 >
->Wie du deine eigene GanjOS Konfiguration erstellen kannst werden wir in naher Zukunft in einem Tutorial-Video genauer erläutern. Das Video wirst du [hier](patreon.com/GanjOS) finden.
+>Wie du deine eigene GanjOS Konfiguration updaten kannst werden wir in naher Zukunft in einem Tutorial-Video genauer erläutern. 
+##### Deine eigene GanjOS Konfiguration erstellen
 
+>[!TIP]
+>
+>Wie du deine eigene GanjOS Konfiguration erstellen kannst werden wir in naher Zukunft in einem Tutorial-Video genauer erläutern.
 #### Installation Integrationen und Add-Ons
 
 ##### Integrationen
@@ -131,22 +127,22 @@ Erfoderlich:
 * mini-graph-card
 * [Home Assistant VPD Chart](https://github.com/mentalilll/ha-vpd-chart) - Das müsst ihr als benutzerdefiniertes Repository einbinden.
 
+### GanjOS Module
+
 
 #### Air-Monitoring
-Um die Luft-Bedingungen tracken zu können benötigst du die entsprechenden Geräte, wie z.B. eine ESP-32 Platine und Sensoren für die Temperatur, Luftfeuchtigkeit und den CO2 Gehalt deiner Umgebung. Hier kannst du aber auch fertige Sensoren verwenden, die in den Home Assistant integrierbar sind. Wir setzen in unserem Setup auf ESP32 Platinen mit Sensoren, die über ESPHome einbunden werden. Eine genauere Hardware Liste findest du [hier](./HARDWARE.md).
+Um die Luftbedingungen zu überwachen, benötigst du entsprechende Geräte wie eine ESP-32-Platine sowie Sensoren für Temperatur, Luftfeuchtigkeit und CO2-Gehalt. Alternativ kannst du auch fertige Sensoren verwenden, die sich in Home Assistant integrieren lassen. In unserem Setup setzen wir auf ESP32-Platinen mit Sensoren, die über ESPHome eingebunden werden. Eine detaillierte Hardware-Liste findest du [hier](./HARDWARE.md).
 
 >[!NOTE]
 >
 >Eine genaue Anleitung, wie du das Modul anschließt findest du [hier](./ESPHome/AirMonitoring/moduleDescription.md).
 
 #### Air-Control
-Um auf die Werte aus dem Air-Monitoring zu reagieren, Bedarf es einer Steuerung deiner Geräte. Hierbei gibt es viele Möglichkeiten, welche eine Reaktion erzeugen. Bspw. durch einen Luftbefeuchter, Luftentfeuchter, eine Abluft oder auch eine Klimaanlage. Da jedes Setup sich hier unterscheidet und nicht jeder Homegrower alle Geräte in seinem Setup vorhanden hat, haben wir die Funktion integriert, dass Geräte mehrere Aufgaben erledigen, wie z.B. die Luftentfeuchtung und die "Klimaregelung" über die Abluft geregelt wird. Hierbei hast du in den Bereicheinstellungen die Möglichkeiten entsprechende Werte zu setzen.
+Um auf die Werte aus dem Air-Monitoring zu reagieren, ist eine Steuerung der Geräte erforderlich. Es gibt viele Möglichkeiten, wie du darauf reagieren kannst, z.B. durch einen Luftbefeuchter, Luftentfeuchter, eine Abluftanlage oder eine Klimaanlage. Da jedes Setup individuell ist und nicht jeder Homegrower alle Geräte im Einsatz hat, haben wir die Funktion integriert, bei der ein Gerät mehrere Aufgaben übernehmen kann – zum Beispiel die Luftentfeuchtung und die Klimaregulierung über die Abluft. In den Bereicheinstellungen kannst du die entsprechenden Werte für diese Funktionen anpassen.
 
+Auf dem Markt gibt es eine Vielzahl an Hardware, die sich direkt oder indirekt in Home Assistant und GanjOS integrieren lässt. Um eine einfache Integration zu ermöglichen, setzen wir teilweise auf Funksteckdosen. Diese Geräte werden durch einfaches Ein- und Ausschalten gesteuert.
 
-Zudem gibt es auf dem Markt eine große Menge an Hardware, die sich direkt oder indirekt in den Home Assistant / GanjOS integrieren lassen. Um jedoch die einfachste Integration direkt zu ermöglichen nutzen wir teilweise Funksteckdosen. Die Geräte werden nach dieser Methode durch einfaches ein-/ausschalten angesteuert.
-
-
-Wir arbeiten jedoch mit Hochdruck daran Geräte inkl. Dimmung direkt integrieren zu können. Da dies jedoch enorme Kosten einnimmt, das Projekt hingegen keinen direkten Ertrag generiert, ist hier nur ein mäßiger Fortschritt in der Entwicklung zu erwarten. Hier ist jedoch auch die Community angehalten Integrationen zu teilen oder sich in der Entwicklung zu beteiligen, damit wir den GanjOS auf ein neues Level heben können. 
+Wir arbeiten jedoch intensiv daran, Geräte mit Dimmfunktion direkt zu integrieren. Da dies jedoch mit erheblichen Kosten verbunden ist und das Projekt keinen direkten finanziellen Ertrag generiert, ist der Fortschritt in diesem Bereich derzeit begrenzt. Wir ermutigen jedoch die Community, Integrationen zu teilen oder sich an der Entwicklung zu beteiligen, damit wir GanjOS weiter verbessern und auf ein neues Level heben können.
 
 >[!NOTE]
 >
@@ -158,6 +154,12 @@ Wir arbeiten jedoch mit Hochdruck daran Geräte inkl. Dimmung direkt integrieren
 >Dieses Modul ist noch in der Entwicklung und wird in einem zukünftigen Release veröffentlicht.
 
 #### Water-Control
+>[!NOTE]
+>
+>Dieses Modul ist noch in der Entwicklung und wird in einem zukünftigen Release veröffentlicht.
+
+
+#### Soil-Monitoring
 >[!NOTE]
 >
 >Dieses Modul ist noch in der Entwicklung und wird in einem zukünftigen Release veröffentlicht.

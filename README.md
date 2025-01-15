@@ -43,14 +43,14 @@ Detaillierte Anweisungen zur Installation und Konfiguration findest du in der [I
 
 > [!TIP]
 >
-> Um ausführlichere Videotutorials zur Installation oder Konfiguration zu erhalten schau gerne bei uns auf [Patreon](https://www.patreon.com/c/GanjOS) vorbei, wo du alle entsprechenden Inhalte, wie Tutorials/Anleitungen und den vorgefertigten Quellcode, nach und nach finden wirst.
+> Für zusätzliche Videotutorials zur Installation oder Konfiguration besuche gerne unsere [Ko-Fi-Seite](https://ko-fi.com/ganjos), wo du die schriftlichen Videoanleitungen findest. In unserem Shop bieten wir zudem vorkonfigurierte GanjOS-Template-Quellcodes an. Mit einer kleinen Spende für die Videos oder die vorkonfigurierten Quellcodes unterstützt du das Open-Source-Projekt, damit es weiterhin bestehen und weitere Hardware getestet werden kann.
 
 # Lizenz
 
 Diese Software steht unter einer **Dual-Lizenzierung**:
 
 1. **Private und nicht-kommerzielle Nutzung:** Erlaubt unter den Bedingungen der MIT-Lizenz.  
-2. **Kommerzielle Nutzung:** Erfordert eine kostenpflichtige Lizenz. Bitte kontaktieren Sie [info@ganjos.io] für weitere Informationen.
+2. **Kommerzielle Nutzung:** Erfordert eine kostenpflichtige Lizenz. Bitte kontaktieren Sie **info@ganjos.io** für weitere Informationen.
 
 Bitte lesen Sie die vollständigen Lizenztexte in der Datei [`LICENSE`](./LICENSE).
 
@@ -67,9 +67,11 @@ Für Fragen oder Anregungen erreichst du uns über die [GitHub Issues](https://g
 
 ## Sponsoren
 
+- **Garten Eden** - Beste Leben, Garten Eden. Zum Growshop unseres Vertrauens gelangst du [hier](https://www.eden-grow.de/).
 - **TRUESOIL** - Unser Partner rund um das Thema Living Soil - Exklusiv bekommt die GanjOS Community mit dem Code "ganjos" 10% auf das komplette Sortiment im Onlineshop. Zum Onlineshop von TRUESOIL gelangst du [hier](https://truesoil.at/collections).
 - **High4Life** - Dein Shop für Seeds, Stecklinge und Rauchbedarf. Mit dem Code "ganjos" gibt es 10% Rabatt im kompletten Shop. Zum Shop von High4Life gelangt ihr [hier](https://high4life.shop/).
 - **Migro Grow Lights** - effiziente Grow LEDs für dein Setup findest du [hier](https://migrolight.de/). 
+- **Cresciense** - ikonische Grow LEDs und individuelle Lösungen für Präzisions-Gartenbau findest du [hier](https://cre.science/). 
 - **Root Riot** - Hochwertige Stoff Töpfe und Beete für dein Living Soil findest du [hier](https://truesoil.at/collections/livingsoilbeete).
 - **Drain Master** - DIE Innovation, wenn es darum geht den Drain-pH zu tracken und Staunässe zu vermeiden. Kaufe deinen Abtropfständer & andere Dinge im Online Shop von Drain Master mit unserem Affiliate Link [hier](https://drain-master.de/?ref=ganjos).
 - **420Fastbuds** - Hol dir deine Seeds über unseren Affiliate Link [hier](https://myfastbuds.com/?a_aid=65f92e7a635de).
@@ -91,7 +93,7 @@ Ehre wem Ehre gebührt - Folgende Personen haben direkt oder indirekt dazu beige
 
 ---
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M5Z4IWO)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/ganjos)
 
 Wir freuen uns auf deine Teilnahme und Unterstützung!
 

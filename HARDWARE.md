@@ -2,7 +2,7 @@
 
 >[!IMPORTANT]
 >
->Die hier hinterlegten Links sind Affiliate Links des Projektes. Wenn du über diese Links einkaufst unterstüzt du das Projekt, da wir hier meist eine Provision erhalten, welche direkt in die Weiterentwicklung der Lösung einfließt. Hierdurch können wir vermehrt Sensoren testen und Erfahrungsberichte hierzu teilen oder auch Grow-Equiptment auf Kompatibilität mit unserer Lösung testen. Die entsprechenden Links werden entsprechend markiert. 
+>Die hier angegebenen Links sind Affiliate-Links des Projekts. Wenn du über diese Links einkaufst, unterstützt du uns, da wir eine Provision erhalten, die direkt in die Weiterentwicklung der Lösung fließt. Dadurch können wir mehr Sensoren testen, Erfahrungsberichte teilen und Grow-Equipment auf die Kompatibilität mit unserer Lösung prüfen. Die entsprechenden Links sind entsprechend gekennzeichnet.
 
 ## Basis
 Für die Basis wird ein Home Assistant fähiger Host benötigt. Dieser kann sowohl ein Raspberry Pi, ein Thin Client oder ähnliches sein. 
@@ -68,8 +68,8 @@ Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung w
 >
 > Die Aufgabe dieses Modul liegt in der Überwachung der Substratbedingungen, im Konkreten hier die Boden-Bedingungen. Weitere Sensoren werden bereits von unserem Team getestet.
 
-* [Flower Care Max Sensor](https://www.techpunt.nl/de/xiaomi-hhcc-mi-flower-care-plant-sensor-max.html) - der etwas größere Sensor
-* [Flower Care Mini Sensor](https://amzn.to/4d90FZi) [Affiliate] - der kleinere Sensor
+* [Flower Care Max Sensor](https://www.techpunt.nl/de/xiaomi-hhcc-mi-flower-care-plant-sensor-max.html) - der etwas größere Sensor (getestet aber vom Projektteam für nicht gut befunden)
+* [Flower Care Mini Sensor](https://amzn.to/4d90FZi) [Affiliate] - der kleinere Sensor (getestet aber vom Projektteam für nicht gut befunden)
 
 ### Air Control 
 >[!NOTE]
@@ -99,11 +99,12 @@ Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung w
 
 * [SANLight Evo Serie]() - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/SANLightEvo.md). (coming soon)
 * [SANLight Flex Serie]() - Ein-/Ausschalten über eine Funksteckdose möglich
-* [Migro Array Serie] - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/MigroArray.md). (coming soon)
+* [Crescience BloomStar]() - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/Crescience.md). (coming soon)
+* [Migro ARAY Serie]() - komplette Steuerung inkl. Dimmung siehe [Anleitung](./Guides/MigroAray.md). (coming soon)
 
 ### Luftbefeuchter
 
-* [LEVOIT 6L Luftbefeuchter](https://amzn.to/3WyrkI8) [Affiliate]
+* [LEVOIT 6L Luftbefeuchter](https://amzn.to/3WyrkI8) [Affiliate] - getestet vom Team und für gut befunden, jedoch hat der Luftbefeuchter über die Integration nur eine limitierte Anzahl an Requests per day, was die Einbindung in GanjOS sehr einschränkt. 
 
 ### Funksteckdosen
 
@@ -113,11 +114,11 @@ Die Basis der Module über ESPHome stellen ESP32 Platinen dar. Zur Entwicklung w
 
 ### Dimmer
 
-* [Shelly Dimmer 0-10V](https://amzn.to/46Ivv8U) - zur Steuerung und Dimmung von kompatiblen Geräten
+* [Shelly Dimmer 0-10V](https://amzn.to/46Ivv8U) [Affiliate]- zur Steuerung und Dimmung von kompatiblen Geräten
 
 ### Timelapse Aufnahmen
-* [Reolink 4k Kamera](https://amzn.to/4f5R1qu) - Eine sehr hochwertige Outdoor Kamera mit 4K auflösung
-* [Synology NAS](https://amzn.to/3ZAuOMU) - Zur Speicherung der Backups und der Timelapse Aufnahmen
+* [Reolink 4k Kamera](https://amzn.to/4f5R1qu) [Affiliate]- Eine sehr hochwertige Outdoor Kamera mit 4K auflösung
+* [Synology NAS](https://amzn.to/3ZAuOMU) [Affiliate]- Zur Speicherung der Backups und der Timelapse Aufnahmen
 
 ### Nützliches Equiptment & Sonstiges
 
