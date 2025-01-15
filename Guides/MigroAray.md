@@ -1,4 +1,4 @@
-# Anleitung Integration PK EC Blue Abluftventilatoren
+# Anleitung Integration Migro ARAY LED
 
 >[!CAUTION]
 >  
