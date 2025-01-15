@@ -1,4 +1,4 @@
-# Anleitung Integration PK EC Blue Abluftventilatoren
+# Anleitung Integration Crescience Bloomstar Serie
 
 >[!CAUTION]
 >  
@@ -9,6 +9,4 @@ Wir verwenden zur Anbindung der Bloomstar Serie folgende Hardwarekomponenten:
 - **Netzkabel** - [Link zum Produkt](https://amzn.to/4hccHmi) [Affiliate]
 - (optional) **IP68 Verteilerdose** - [Link zum Produkt](https://amzn.to/3WjUYSa) [Affiliate]
 
->[!IMPORTANT]
->
-> Anschlussplan Coming soon!
+![Crescience](https://github.com/user-attachments/assets/dc5b616f-dc2f-43b9-9f69-265747fc5e0e)
