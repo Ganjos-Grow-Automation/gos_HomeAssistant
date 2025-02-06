@@ -9,6 +9,4 @@ Wir verwenden zur Anbindung der Prima Klima EC Blue Serie folgende Hardwarekompo
 - **Netzkabel** - [Link zum Produkt](https://amzn.to/4hccHmi) [Affiliate]
 - (optional) **IP68 Verteilerdose** - [Link zum Produkt](https://amzn.to/3WjUYSa) [Affiliate]
 
->[!IMPORTANT]
->
-> Anschlussplan Coming soon!
+![PrimaKlima](https://github.com/user-attachments/assets/313b5e1e-08e7-4960-89e7-073e9c175b4c)
